@@ -66,12 +66,14 @@ export const DEFAULT_LOOP_NAME = {
   ITEM: 'item'
 }
 
+export const WORKFLOW_STATE_KEY = 'workflowSpace'
+
 export const HOST_TYPE = {
   App: 'app',
   Block: 'block'
 }
 
-// ×ª»¯¹ú¼Ê»¯µÄÓ³Éä¹ØÏµ±í
+// ×ªï¿½ï¿½ï¿½ï¿½ï¿½Ê»ï¿½ï¿½ï¿½Ó³ï¿½ï¿½ï¿½Ïµï¿½ï¿½
 export const i18nKeyMaps = {
   zhCN: 'zh_CN',
   enUS: 'en_US'

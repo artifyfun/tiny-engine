@@ -2,83 +2,150 @@
   <tiny-dialog-box
     v-show="dialogVisible"
     title="事件绑定"
-    width="50%"
+    width="1000"
+    :style="{ zIndex: 1 }"
     :append-to-body="true"
     @close="closeDialog"
     @opened="openedDialog"
   >
     <div class="bind-event-dialog-content">
-      <div class="dialog-content-left">
-        <div class="left-title">响应方法</div>
-        <div class="left-list-wrap">
-          <div class="left-action-list">
-            <tiny-search v-model="state.searchValue" placeholder="搜索"></tiny-search>
-            <ul class="action-list-wrap">
-              <li v-for="item in state.filterMethodList" :key="item.name" @click="selectMethod(item)">
-                <div :class="['action-name', { active: item.name === state.bindMethodInfo.name }]">
-                  {{ item.title || item.name }}
-                  <icon-yes v-if="item.name === state.bindMethodInfo.name" class="action-selected-icon"></icon-yes>
-                </div>
-              </li>
-            </ul>
+      <tiny-tabs v-model="bindType" class="bind-type-tabs" tab-style="button-card">
+        <tiny-tab-item class="tab-item-content" title="常用" name="normal">
+          <div class="dialog-content-left">
+            <div class="left-title">响应方法</div>
+            <div class="left-list-wrap">
+              <div class="left-action-list">
+                <tiny-search v-model="state.searchValue" placeholder="搜索"></tiny-search>
+                <ul class="action-list-wrap">
+                  <li v-for="item in state.filterMethodList" :key="item.name" @click="selectMethod(item)">
+                    <div :class="['action-name', { active: item.name === state.bindMethodInfo.name }]">
+                      {{ item.title || item.name }}
+                      <icon-yes v-if="item.name === state.bindMethodInfo.name" class="action-selected-icon"></icon-yes>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="content-right">
-        <div :class="['content-right-top', { 'tip-error': state.tipError }]">
-          <div class="content-right-title">方法名称</div>
-          <tiny-input
-            v-model="state.bindMethodInfo.name"
-            :disabled="state.bindMethodInfo.type !== NEW_METHOD_TYPE"
-            :class="[{ 'status-error': state.tipError }]"
-            placeholder="请从左侧选择一个方法进行绑定，或者选择添加新方法，输入自定义方法名称。"
-            @update:modelValue="change"
-          ></tiny-input>
-          <div class="new-action-tip">{{ state.tip }}</div>
-        </div>
-        <div :class="['content-right-bottom', { 'tip-error': !state.isValidParams }]">
-          <div class="content-right-title">
-            <span class="set-params-tip">扩展参数设置</span>
-            <tiny-popover placement="top-start" width="350" trigger="hover">
-              <template #reference>
-                <icon-help-query></icon-help-query>
-              </template>
-              <p>
-                扩展参数：调用当前事件传入的真实参数，数组格式，追加在原有事件参数之后<br />
-                如:
-                {{ state.bindMethodInfo.name }}(eventArgs, extParam1, extParam2, ...)
-              </p>
-            </tiny-popover>
+          <div class="content-right">
+            <div :class="['content-right-top', { 'tip-error': state.tipError }]">
+              <div class="content-right-title">方法名称</div>
+              <tiny-input
+                v-model="state.bindMethodInfo.name"
+                :disabled="state.bindMethodInfo.type !== NEW_METHOD_TYPE"
+                :class="[{ 'status-error': state.tipError }]"
+                placeholder="请从左侧选择一个方法进行绑定，或者选择添加新方法，输入自定义方法名称。"
+                @update:modelValue="change"
+              ></tiny-input>
+              <div class="new-action-tip">{{ state.tip }}</div>
+            </div>
+            <div :class="['content-right-bottom', { 'tip-error': !state.isValidParams }]">
+              <div class="content-right-title">
+                <span class="set-params-tip">扩展参数设置</span>
+                <tiny-popover placement="top-start" width="350" trigger="hover">
+                  <template #reference>
+                    <icon-help-query></icon-help-query>
+                  </template>
+                  <p>
+                    扩展参数：调用当前事件传入的真实参数，数组格式，追加在原有事件参数之后<br />
+                    如:
+                    {{ state.bindMethodInfo.name }}(eventArgs, extParam1, extParam2, ...)
+                  </p>
+                </tiny-popover>
 
-            <tiny-switch v-model="state.enableExtraParams" class="set-switch" :show-text="true">
-              <template #open>
-                <span>开启</span>
-              </template>
-              <template #close>
-                <span>关闭</span>
-              </template>
-            </tiny-switch>
+                <tiny-switch v-model="state.enableExtraParams" class="set-switch" :show-text="true">
+                  <template #open>
+                    <span>开启</span>
+                  </template>
+                  <template #close>
+                    <span>关闭</span>
+                  </template>
+                </tiny-switch>
+              </div>
+              <div class="content-right-monaco">
+                <monaco-editor
+                  v-if="dialogVisible"
+                  ref="editor"
+                  :value="state.editorContent"
+                  :options="editorOptions"
+                  class="monaco-editor"
+                />
+                <div v-if="!state.enableExtraParams" class="mark"></div>
+              </div>
+              <div v-if="!state.isValidParams && state.enableExtraParams" class="params-tip">
+                请输入数组格式的参数，参数可以为表达式。例如：["extParam1", "item.status", 1, "getNames()"]
+              </div>
+            </div>
           </div>
-          <div class="content-right-monaco">
-            <monaco-editor
-              v-if="dialogVisible"
-              ref="editor"
-              :value="state.editorContent"
-              :options="editorOptions"
-              class="monaco-editor"
-            />
-            <div v-if="!state.enableExtraParams" class="mark"></div>
+        </tiny-tab-item>
+        <tiny-tab-item class="tab-item-content" title="工作流" name="workflow">
+          <div class="content-left workflow">
+            <span class="content-left__title">工作流列表</span>
+            <div class="list-wrap">
+              <div class="item-content">
+                <tiny-search v-model="workflowMethodState.keyword" placeholder="搜索"></tiny-search>
+                <div class="item-content-list lowcode-scrollbar-thin">
+                  <ul>
+                    <li
+                      v-for="item in workflowState.workflows"
+                      v-show="!item.name || item.name.includes(workflowMethodState.keyword)"
+                      :key="item.id"
+                      :class="{ 'item-selected': workflowMethodState.selectedWorkflow === item }"
+                      @click="setWorkflow(item)"
+                    >
+                      <tiny-tooltip
+                        effect="dark"
+                        placement="top"
+                        :content="`${item.name} ${item.description}`"
+                        :open-delay="500"
+                      >
+                        <div class="item-wrap">
+                          <ComfyuiIcon style="margin-right: 4px" v-if="['comfyui'].includes(item.workflowType)" />
+                          <div class="item-text">{{ item.name }}</div>
+                        </div>
+                      </tiny-tooltip>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-          <div v-if="!state.isValidParams && state.enableExtraParams" class="params-tip">
-            请输入数组格式的参数，参数可以为表达式。例如：["extParam1", "item.status", 1, "getNames()"]
+          <div class="content-left variable">
+            <span class="content-left__title">响应方法</span>
+            <div class="list-wrap">
+              <div class="item-content">
+                <div class="item-content-list lowcode-scrollbar-thin">
+                  <ul>
+                    <li
+                      v-for="item in workflowMethodState.methods"
+                      :key="item.key"
+                      :class="{ 'item-selected': workflowMethodState.selectedMethod === item }"
+                      @click="selectWorkflowMethod(item)"
+                    >
+                      <tiny-tooltip
+                        effect="dark"
+                        placement="top"
+                        :content="`${item.name} - ${item.description}`"
+                        :open-delay="500"
+                      >
+                        <div class="item-wrap">
+                          <div class="item-text">{{ item.name }}</div>
+                          <div class="item-alias">{{ item.description }}</div>
+                        </div>
+                      </tiny-tooltip>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </tiny-tab-item>
+      </tiny-tabs>
     </div>
     <template #footer>
       <div class="bind-dialog-footer">
-        <tiny-button type="info" @click="confirm">确 定</tiny-button>
         <tiny-button @click="closeDialog">取 消</tiny-button>
+        <tiny-button type="info" @click="confirm">确 定</tiny-button>
       </div>
     </template>
   </tiny-dialog-box>
@@ -86,9 +153,19 @@
 
 <script>
 import { reactive, ref, watchEffect, nextTick } from 'vue'
-import { VueMonaco } from '@opentiny/tiny-engine-common'
-import { Button, DialogBox, Input, Search, Popover, Switch } from '@opentiny/vue'
-import { useCanvas, useHistory, useLayout } from '@opentiny/tiny-engine-controller'
+import { VueMonaco, ComfyuiIcon } from '@opentiny/tiny-engine-common'
+import {
+  Button,
+  DialogBox,
+  Input,
+  Search,
+  Popover,
+  Switch,
+  Tabs as TinyTabs,
+  TabItem as TinyTabItem
+} from '@opentiny/vue'
+import { WORKFLOW_STATE_KEY } from '@opentiny/tiny-engine-controller/js/constants'
+import { useCanvas, useHistory, useLayout, useWorkflow, useWorkflowMethod } from '@opentiny/tiny-engine-controller'
 import { theme } from '@opentiny/tiny-engine-controller/adapter'
 import { string2Ast, ast2String } from '@opentiny/tiny-engine-controller/js/ast'
 import { iconYes, iconHelpQuery } from '@opentiny/vue-icon'
@@ -122,6 +199,9 @@ export default {
     TinySearch: Search,
     TinyPopover: Popover,
     TinyDialogBox: DialogBox,
+    TinyTabs,
+    TinyTabItem,
+    ComfyuiIcon,
     IconYes: iconYes(),
     IconHelpQuery: iconHelpQuery(),
     TinySwitch: Switch
@@ -134,10 +214,13 @@ export default {
     }
   },
   setup(props) {
+    const bindType = ref('normal')
     const { PLUGIN_NAME, getPluginApi, activePlugin } = useLayout()
     const { pageState } = useCanvas()
     const { getMethodNameList, getMethods, saveMethod, highlightMethod } = getPluginApi(PLUGIN_NAME.PageController)
 
+    const { workflowState, findWorkflows } = useWorkflow()
+    const { workflowMethodState, setWorkflow, setWorkflowMethod, resetWorkflowMethodState } = useWorkflowMethod()
     const editor = ref(null)
 
     const state = reactive({
@@ -200,16 +283,38 @@ export default {
         state.bindMethodInfo = newMethod
       }
 
+      if (props.eventBinding?.ref?.startsWith(WORKFLOW_STATE_KEY)) {
+        const workflowKey = props.eventBinding.params[0]
+        const workflow = workflowState.workflows.find((item) => item.key === workflowKey)
+        if (workflow) {
+          setWorkflow(workflow)
+        }
+
+        const method = workflowMethodState.methods.find((item) => item.key === props.eventBinding.ref)
+        if (method) {
+          setWorkflowMethod(method)
+        }
+        bindType.value = 'workflow'
+        state.bindMethodInfo = {
+          name: props.eventBinding.ref
+        }
+      }
+
       const methodList =
         getMethodNameList?.()
           .filter((item) => item.indexOf(state.searchValue) > -1)
           .map((name) => ({ name })) || []
 
-      state.filterMethodList = [newMethod, ...methodList]
+      state.filterMethodList = [newMethod, ...methodList].filter((item) => !item.name.startsWith(WORKFLOW_STATE_KEY))
     })
 
     const selectMethod = (data) => {
       state.bindMethodInfo = data
+    }
+
+    const selectWorkflowMethod = (data) => {
+      setWorkflowMethod(data)
+      state.bindMethodInfo.name = data.key
     }
 
     const bindMethod = (data) => {
@@ -296,7 +401,7 @@ export default {
 
     const getFunctionBody = () => {
       let method = getMethods()?.[state.bindMethodInfo.name]?.value
-      let preBody = '{}'
+      let preBody = '{\n}'
 
       if (method) {
         let astStr = {}
@@ -326,7 +431,70 @@ export default {
       })
     }
 
+    const bindWorkflowMethod = (data) => {
+      if (!data) {
+        return
+      }
+
+      const eventName = props.eventBinding?.eventName
+
+      if (!eventName) {
+        return
+      }
+
+      const nodeProps = pageState?.currentSchema?.props
+
+      if (!nodeProps) {
+        return
+      }
+
+      const { name, extra } = data
+
+      if (!props[eventName]) {
+        nodeProps[eventName] = {
+          type: 'JSExpression',
+          value: ''
+        }
+      }
+
+      if (extra) {
+        nodeProps[eventName].params = extra
+      }
+
+      nodeProps[eventName].value = `this.${name}`
+
+      useHistory().addHistory()
+    }
+
     const confirm = () => {
+      if (bindType.value === 'workflow') {
+        if (!workflowMethodState.selectedMethod) {
+          return
+        }
+        bindWorkflowMethod({
+          ...state.bindMethodInfo,
+          params: workflowMethodState.selectedWorkflow.key,
+          extra: [workflowMethodState.selectedWorkflow.key]
+        })
+
+        // 需要在bindMethod之后
+        const functionBody = getFunctionBody()
+
+        const content =
+          functionBody === '{\n}'
+            ? workflowMethodState.selectedMethod.content
+            : `function (eventArgs,workflowKey) ${functionBody}`
+
+        saveMethod?.({
+          name: workflowMethodState.selectedMethod.key,
+          content
+        })
+
+        activePagePlugin()
+        close()
+        return
+      }
+
       if (state.tipError) {
         return
       }
@@ -361,6 +529,8 @@ export default {
     }
 
     const openedDialog = () => {
+      findWorkflows()
+      resetWorkflowMethodState()
       state.enableExtraParams = Boolean(props.eventBinding?.params?.length)
       state.editorContent = JSON.stringify(props.eventBinding?.params || [], null, 2)
       resetTipError()
@@ -381,6 +551,11 @@ export default {
       confirm,
       closeDialog,
       openedDialog,
+      bindType,
+      workflowState,
+      workflowMethodState,
+      setWorkflow,
+      selectWorkflowMethod,
       selectMethod
     }
   }
@@ -389,8 +564,109 @@ export default {
 
 <style lang="less" scoped>
 .bind-event-dialog-content {
-  display: flex;
-  min-width: 700px;
+  :deep(.bind-type-tabs) {
+    .tiny-tabs__nav-scroll {
+      text-align: left !important;
+    }
+
+    .content-left {
+      margin-right: 12px;
+      width: 38%;
+      &.workflow,
+      &.category,
+      &.variable {
+        .item-content {
+          width: 100%;
+        }
+      }
+      &.workflow {
+        width: 33%;
+      }
+      &.category {
+        width: 160px;
+      }
+      &.variable {
+        width: 100%;
+        flex: 1;
+      }
+
+      .content-left__title {
+        color: var(--ti-lowcode-meta-bind-variable-content-left-title-color);
+      }
+
+      .list-wrap {
+        border: 1px solid var(--ti-lowcode-meta-bind-variable-list-wrap-border-color);
+        border-radius: 4px;
+        height: 300px;
+        margin-top: 8px;
+        display: flex;
+      }
+
+      .content-left__list {
+        width: 120px;
+        color: var(--ti-lowcode-meta-bind-variable-content-left-list-color);
+        border-right: 1px solid var(--ti-lowcode-meta-bind-variable-content-left-list-border-right-color);
+      }
+
+      .content-left__list-item {
+        padding: 8px 12px;
+        cursor: pointer;
+        transition: background 0.3s;
+        &.active,
+        &:hover {
+          background: var(--ti-lowcode-meta-bind-variable-list-item-hover-bg-color);
+        }
+      }
+
+      .item-selected {
+        // background-color: var(--ti-lowcode-meta-bind-variable-item-selected-bg-color);
+        background-color: var(--ti-base-color-brand-2);
+      }
+
+      .item-text {
+        padding: 8px 12px;
+        cursor: pointer;
+        color: var(--ti-lowcode-meta-bind-variable-item-text-color);
+
+        &:hover {
+          background-color: var(--ti-lowcode-meta-bind-variable-item-hover-bg-color);
+        }
+      }
+
+      .content-left__title {
+        font-weight: 600;
+      }
+
+      .item-content {
+        padding: 12px;
+        width: calc(100% - 140px);
+
+        .item-content-list {
+          margin-top: 10px;
+          height: calc(100% - 32px);
+          overflow-y: auto;
+          li {
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          .item-wrap {
+            display: flex;
+            align-items: center;
+            .item-alias {
+              margin-left: 10px;
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tab-item-content {
+    min-width: 700px;
+    display: flex;
+  }
 
   .dialog-content-left {
     margin-right: 30px;
@@ -497,5 +773,11 @@ export default {
       }
     }
   }
+}
+
+.bind-dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 </style>

@@ -13,7 +13,7 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import { importmapPlugin } from './scripts/externalDeps'
 import visualizer from 'rollup-plugin-visualizer'
 
-const origin = 'http://localhost:9090/'
+const origin = 'http://localhost:7011/'
 
 const config = {
   base: './',
@@ -42,6 +42,12 @@ const config = {
       '/platform-center/api': {
         target: origin,
         changeOrigin: true
+      },
+      '/comfyui': {
+        target: 'http://localhost:8188',
+        changeOrigin: true,
+        ws: true,
+        rewrite: (path) => path.replace(/^\/comfyui/, '')
       }
     }
   },
@@ -157,6 +163,7 @@ const devAlias = {
   '@opentiny/tiny-engine-plugin-bridge': path.resolve(__dirname, '../plugins/bridge/index.js'),
   '@opentiny/tiny-engine-plugin-tutorial': path.resolve(__dirname, '../plugins/tutorial/index.js'),
   '@opentiny/tiny-engine-plugin-robot': path.resolve(__dirname, '../plugins/robot/index.js'),
+  '@opentiny/tiny-engine-plugin-workflow': path.resolve(__dirname, '../plugins/workflow/index.js'),
   '@opentiny/tiny-engine-setting-events': path.resolve(__dirname, '../settings/events/index.js'),
   '@opentiny/tiny-engine-setting-props': path.resolve(__dirname, '../settings/props/index.js'),
   '@opentiny/tiny-engine-setting-styles': path.resolve(__dirname, '../settings/styles/index.js'),

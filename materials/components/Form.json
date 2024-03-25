@@ -1,0 +1,173 @@
+{
+  "icon": "form",
+  "name": {
+    "zh_CN": "表单"
+  },
+  "component": "form",
+  "container": false,
+  "screenshot": "",
+  "tags": "",
+  "keywords": "",
+  "devMode": "proCode",
+  "npm": {},
+  "group": "component",
+  "category": "html",
+  "priority": 100,
+  "schema": {
+    "properties": [
+      {
+        "label": {
+          "zh_CN": "基础信息"
+        },
+        "description": {
+          "zh_CN": "基础信息"
+        },
+        "collapse": {
+          "number": 6,
+          "text": {
+            "zh_CN": "显示更多"
+          }
+        },
+        "content": [
+          {
+            "property": "name",
+            "label": {
+              "text": {
+                "zh_CN": "表单的名称"
+              }
+            },
+            "required": true,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "description": {
+              "zh_CN": ""
+            }
+          },
+          {
+            "property": "action",
+            "label": {
+              "text": {
+                "zh_CN": "提交表单时向何处发送表单数据"
+              }
+            },
+            "required": true,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "description": {
+              "zh_CN": ""
+            }
+          },
+          {
+            "property": "method",
+            "label": {
+              "text": {
+                "zh_CN": "用于发送 form-data 的 HTTP 方法"
+              }
+            },
+            "required": true,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "get",
+                    "value": "get"
+                  },
+                  {
+                    "label": "post",
+                    "value": "post"
+                  }
+                ]
+              }
+            },
+            "description": {
+              "zh_CN": ""
+            }
+          }
+        ]
+      }
+    ],
+    "events": {
+      "onClick": {
+        "label": {
+          "zh_CN": "点击时触发"
+        },
+        "description": {
+          "zh_CN": "点击时触发"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
+    "shortcuts": {
+      "properties": []
+    },
+    "contentMenu": {
+      "actions": []
+    }
+  },
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "表单"
+      },
+      "icon": "form",
+      "screenshot": "",
+      "snippetName": "form",
+      "schema": {
+        "componentName": "form",
+        "props": {
+          "action": "action"
+        },
+        "children": [
+          {
+            "componentName": "label",
+            "props": {
+              "for": "male"
+            },
+            "children": "male"
+          },
+          {
+            "componentName": "input",
+            "props": {
+              "type": "text"
+            }
+          },
+          {
+            "componentName": "br"
+          },
+          {
+            "componentName": "label",
+            "props": {
+              "for": "Female"
+            },
+            "children": "Female"
+          },
+          {
+            "componentName": "input",
+            "props": {
+              "type": "text"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

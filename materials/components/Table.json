@@ -1,0 +1,160 @@
+{
+  "icon": "table",
+  "name": {
+    "zh_CN": "表格"
+  },
+  "component": "table",
+  "container": false,
+  "screenshot": "",
+  "tags": "",
+  "keywords": "",
+  "devMode": "proCode",
+  "npm": {},
+  "group": "component",
+  "category": "html",
+  "priority": 80,
+  "schema": {
+    "properties": [
+      {
+        "label": {
+          "zh_CN": "基础信息"
+        },
+        "description": {
+          "zh_CN": "基础信息"
+        },
+        "collapse": {
+          "number": 6,
+          "text": {
+            "zh_CN": "显示更多"
+          }
+        },
+        "content": [
+          {
+            "property": "width",
+            "label": {
+              "text": {
+                "zh_CN": "表格的宽度"
+              }
+            },
+            "required": true,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "description": {
+              "zh_CN": ""
+            }
+          },
+          {
+            "property": "border",
+            "label": {
+              "text": {
+                "zh_CN": "表格边框的宽度"
+              }
+            },
+            "required": true,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "description": {
+              "zh_CN": ""
+            }
+          },
+          {
+            "property": "attributes3",
+            "label": {
+              "text": {
+                "zh_CN": "原生属性"
+              }
+            },
+            "required": true,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "widget": {
+              "component": "MetaHtmlAttributes",
+              "props": {}
+            },
+            "description": {
+              "zh_CN": ""
+            },
+            "labelPosition": "none"
+          }
+        ]
+      }
+    ],
+    "events": {
+      "onClick": {
+        "label": {
+          "zh_CN": "点击时触发"
+        },
+        "description": {
+          "zh_CN": "点击时触发"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
+    "shortcuts": {
+      "properties": []
+    },
+    "contentMenu": {
+      "actions": []
+    }
+  },
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "表格"
+      },
+      "icon": "table",
+      "screenshot": "",
+      "snippetName": "table",
+      "schema": {
+        "componentName": "table",
+        "props": {
+          "border": "1"
+        },
+        "children": [
+          {
+            "componentName": "tr",
+            "children": [
+              {
+                "componentName": "td",
+                "children": "Month"
+              },
+              {
+                "componentName": "td",
+                "children": "Savings"
+              }
+            ]
+          },
+          {
+            "componentName": "tr",
+            "children": [
+              {
+                "componentName": "td",
+                "children": "January"
+              },
+              {
+                "componentName": "td",
+                "children": "100"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -78,6 +78,7 @@ import MetaRelatedColumns from './component/MetaRelatedColumns.vue'
 import BlockDeployDialog from './component/BlockDeployDialog.vue'
 import ProgressBar from './component/ProgressBar.vue'
 import MetaButtonGroup from './component/MetaButtonGroup.vue'
+import ComfyuiIcon from './component/ComfyuiIcon.vue'
 import MetaTableColumns from './component/MetaTableColumns.vue'
 
 import i18n, { i18nKeyMaps } from '@opentiny/tiny-engine-controller/js/i18n'
@@ -206,5 +207,6 @@ export {
   BindI18n,
   BlockDeployDialog,
   ProgressBar,
+  ComfyuiIcon,
   MetaTableColumns
 }

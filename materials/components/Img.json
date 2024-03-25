@@ -1,0 +1,100 @@
+{
+  "icon": "Image",
+  "name": {
+    "zh_CN": "Img"
+  },
+  "component": "Img",
+  "container": false,
+  "screenshot": "",
+  "tags": "",
+  "keywords": "",
+  "devMode": "proCode",
+  "npm": {},
+  "group": "component",
+  "category": "html",
+  "priority": 60,
+  "schema": {
+    "properties": [
+      {
+        "label": {
+          "zh_CN": "基础信息"
+        },
+        "description": {
+          "zh_CN": "基础信息"
+        },
+        "collapse": {
+          "number": 6,
+          "text": {
+            "zh_CN": "显示更多"
+          }
+        },
+        "content": [
+          {
+            "property": "src",
+            "type": "string",
+            "defaultValue": "",
+            "bindState": true,
+            "label": {
+              "text": {
+                "zh_CN": "src路径"
+              }
+            },
+            "cols": 12,
+            "rules": [],
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            }
+          },
+          {
+            "property": "attributes3",
+            "label": {
+              "text": {
+                "zh_CN": "原生属性"
+              }
+            },
+            "required": true,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "widget": {
+              "component": "MetaHtmlAttributes",
+              "props": {}
+            },
+            "description": {
+              "zh_CN": ""
+            },
+            "labelPosition": "none"
+          }
+        ]
+      }
+    ],
+    "events": {},
+    "shortcuts": {
+      "properties": [
+        "src"
+      ]
+    },
+    "contentMenu": {
+      "actions": []
+    }
+  },
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "图片"
+      },
+      "icon": "Image",
+      "screenshot": "",
+      "snippetName": "img",
+      "schema": {
+        "componentName": "img",
+        "props": {
+          "src": "img/webNova.jpg",
+          "width": "200",
+          "height": "100"
+        }
+      }
+    }
+  ]
+}

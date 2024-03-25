@@ -30,6 +30,9 @@ import { getGlobalConfig, setGlobalConfig } from './globalConfig'
 import useNotify from './useNotify'
 import useData from './useData'
 import useMessage from './useMessage'
+import useWorkflow from './useWorkflow'
+import useWorkflowVariable from './useWorkflowVariable'
+import useWorkflowMethod from './useWorkflowMethod'
 import useHelp from './useHelp'
 
 export const getExample = example
@@ -55,5 +58,8 @@ export {
   useNotify,
   useData,
   useMessage,
+  useWorkflow,
+  useWorkflowVariable,
+  useWorkflowMethod,
   useHelp
 }

@@ -9,100 +9,191 @@
     v-if="dialogShouldInitialize"
     :visible="state.isVisible"
     title="变量绑定"
-    width="48%"
+    width="1200px"
     :append-to-body="true"
     class="meta-bind-variable-dialog-box"
     @update:visible="state.isVisible = $event"
     @close="cancel"
   >
     <div class="bind-dialog-container">
-      <div class="bind-dialog-container-header">
-        <tiny-alert
-          type="info"
-          description="你可以通过点击左侧区域变量列表绑定变量或处理函数，也可以在右边输入模式输入复杂的表达式。"
-          class="header-alert"
-        ></tiny-alert>
-      </div>
-      <div class="bind-dialog-content">
-        <div class="content-left">
-          <span class="content-left__title">变量列表</span>
-          <div class="list-wrap">
-            <ul class="content-left__list">
-              <li
-                v-for="item in state.variableList"
-                :key="item.id"
-                :class="{ 'content-left__list-item': true, active: item.id === state.active }"
-                @click="selectItem(item)"
-              >
-                {{ item.content }}
-              </li>
-            </ul>
-            <div class="item-content">
-              <tiny-search v-model="state.value" placeholder="搜索"></tiny-search>
-              <div class="item-content-list lowcode-scrollbar-thin">
-                <ul>
+      <tiny-tabs v-model="bindType" class="bind-type-tabs" tab-style="button-card">
+        <tiny-tab-item title="常用" name="normal">
+          <div class="bind-dialog-container-header">
+            <tiny-alert
+              type="info"
+              description="你可以通过点击左侧区域变量列表绑定变量或处理函数，也可以在右边输入模式输入复杂的表达式。"
+              class="header-alert"
+            ></tiny-alert>
+          </div>
+          <div class="bind-dialog-content">
+            <div class="content-left">
+              <span class="content-left__title">变量列表</span>
+              <div class="list-wrap">
+                <ul class="content-left__list">
                   <li
-                    v-for="(item, key) in state.variables"
-                    v-show="key.includes(state.value)"
-                    :key="key"
-                    :class="{ 'item-selected': state.variableName === key }"
-                    @click="variableClick(key, item)"
+                    v-for="item in state.variableList"
+                    :key="item.id"
+                    :class="{ 'content-left__list-item': true, active: item.id === state.active }"
+                    @click="selectItem(item)"
                   >
-                    <div class="item-text" :title="state.bindPrefix + key">{{ `${state.bindPrefix}${key}` }}</div>
+                    {{ item.content }}
                   </li>
                 </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="content-right">
-          <div class="content-detail-header">
-            <div class="header-name">
-              <span class="content-right__title">变量</span>
-            </div>
-          </div>
-          <div class="content-wrap">
-            <div v-if="!state.isEditorEditMode" class="top">{{ state.variable }}</div>
-            <div v-else :class="['top', { 'poll-top': isDataSource }]">
-              <monaco-editor
-                ref="editor"
-                :value="state.variable"
-                :options="editorOptions"
-                @editorDidMount="editorDidMount"
-              ></monaco-editor>
-              <div v-if="isDataSource" class="datasource-poll-wrap">
-                <tiny-tooltip
-                  placement="top"
-                  content="定时更新开启后，页面运行时将会定期请求远程数据源，实现数据定时更新。"
-                  ><span>定时更新：</span></tiny-tooltip
-                >
-                <tiny-switch v-model="state.isPoll"></tiny-switch>
-                <div v-if="state.isPoll" class="datasource-poll-interval">
-                  <span>更新时间：</span>
-                  <tiny-input type="number" v-model="state.pollInterval"></tiny-input>
-                  <span>ms</span>
+                <div class="item-content">
+                  <tiny-search v-model="state.value" placeholder="搜索"></tiny-search>
+                  <div class="item-content-list lowcode-scrollbar-thin">
+                    <ul>
+                      <li
+                        v-for="(item, key) in state.variables"
+                        v-show="key.includes(state.value) && ![WORKFLOW_STATE_KEY].includes(key)"
+                        :key="key"
+                        :class="{ 'item-selected': state.variableName === key }"
+                        @click="variableClick(key, item)"
+                      >
+                        <div class="item-text" :title="state.bindPrefix + key">{{ `${state.bindPrefix}${key}` }}</div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="bottom lowcode-scrollbar-thin">
-              <h3>用法</h3>
-              <div class="bottom-demo">
-                <p>
-                  你可以通过点击左侧区域绑定变量或处理函数，或者点击右边的铅笔按钮切换到输入模式，输入复杂的表达式。
-                </p>
-                <p>输入框内默认支持变量，写法和 JS 写法完全一致。</p>
-                <div>页面状态: this.state.xxx</div>
-                <div>字符串: "string"</div>
-                <div>数字: 123</div>
-                <div>布尔值: true / false</div>
-                <div>对象: { name: "张三" }</div>
-                <div>数组: ["1", "2"]</div>
-                <div>空值: null</div>
+            <div class="content-right">
+              <div class="content-detail-header">
+                <div class="header-name">
+                  <span class="content-right__title">变量</span>
+                </div>
+              </div>
+              <div class="content-wrap">
+                <div v-if="!state.isEditorEditMode" class="top">{{ state.variable }}</div>
+                <div v-else :class="['top', { 'poll-top': isDataSource }]">
+                  <monaco-editor
+                    ref="editor"
+                    :value="state.variable"
+                    :options="editorOptions"
+                    @editorDidMount="editorDidMount"
+                  ></monaco-editor>
+                  <div v-if="isDataSource" class="datasource-poll-wrap">
+                    <tiny-tooltip
+                      placement="top"
+                      content="定时更新开启后，页面运行时将会定期请求远程数据源，实现数据定时更新。"
+                      ><span>定时更新：</span></tiny-tooltip
+                    >
+                    <tiny-switch v-model="state.isPoll"></tiny-switch>
+                    <div v-if="state.isPoll" class="datasource-poll-interval">
+                      <span>更新时间：</span>
+                      <tiny-input type="number" v-model="state.pollInterval"></tiny-input>
+                      <span>ms</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom lowcode-scrollbar-thin">
+                  <h3>用法</h3>
+                  <div class="bottom-demo">
+                    <p>
+                      你可以通过点击左侧区域绑定变量或处理函数，或者点击右边的铅笔按钮切换到输入模式，输入复杂的表达式。
+                    </p>
+                    <p>输入框内默认支持变量，写法和 JS 写法完全一致。</p>
+                    <div>页面状态: this.state.xxx</div>
+                    <div>字符串: "string"</div>
+                    <div>数字: 123</div>
+                    <div>布尔值: true / false</div>
+                    <div>对象: { name: "张三" }</div>
+                    <div>数组: ["1", "2"]</div>
+                    <div>空值: null</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </tiny-tab-item>
+        <tiny-tab-item title="工作流" name="workflow">
+          <div class="bind-dialog-content">
+            <div class="content-left workflow">
+              <span class="content-left__title">工作流列表</span>
+              <div class="list-wrap">
+                <div class="item-content">
+                  <tiny-search v-model="workflowVariableState.keyword" placeholder="搜索"></tiny-search>
+                  <div class="item-content-list lowcode-scrollbar-thin">
+                    <ul>
+                      <li
+                        v-for="item in workflowState.workflows"
+                        v-show="!item.name || item.name.includes(workflowVariableState.keyword)"
+                        :key="item.id"
+                        :class="{ 'item-selected': workflowVariableState.selectedWorkflow === item }"
+                        @click="setWorkflow(item)"
+                      >
+                        <tiny-tooltip
+                          effect="dark"
+                          placement="top"
+                          :content="`${item.name} ${item.description}`"
+                          :open-delay="500"
+                        >
+                          <div class="item-wrap">
+                            <ComfyuiIcon style="margin-right: 4px" v-if="['comfyui'].includes(item.workflowType)" />
+                            <div class="item-text">{{ item.name }}</div>
+                          </div>
+                        </tiny-tooltip>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-left category">
+              <span class="content-left__title">类型</span>
+              <div class="list-wrap">
+                <div class="item-content">
+                  <div class="item-content-list lowcode-scrollbar-thin">
+                    <ul>
+                      <li
+                        v-for="item in workflowVariableState.category"
+                        :key="item.key"
+                        :class="{ 'item-selected': workflowVariableState.selectedCategory === item }"
+                        @click="setWorkflowCategory(item)"
+                      >
+                        <tiny-tooltip effect="dark" placement="top" :content="item.name" :open-delay="500">
+                          <div class="item-wrap">
+                            <div class="item-text">{{ item.name }}</div>
+                          </div>
+                        </tiny-tooltip>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-left variable">
+              <span class="content-left__title">变量</span>
+              <div class="list-wrap">
+                <div class="item-content">
+                  <div class="item-content-list lowcode-scrollbar-thin">
+                    <ul>
+                      <li
+                        v-for="item in workflowVariableState.variables"
+                        :key="item.key"
+                        :class="{ 'item-selected': workflowVariableState.selectedVariable === item }"
+                        @click="setWorkflowVariable(item)"
+                      >
+                        <tiny-tooltip
+                          effect="dark"
+                          placement="top"
+                          :content="`${item.name} - ${item.description}`"
+                          :open-delay="500"
+                        >
+                          <div class="item-wrap">
+                            <div class="item-text">{{ item.name }}</div>
+                            <div class="item-alias">{{ item.description }}</div>
+                          </div>
+                        </tiny-tooltip>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </tiny-tab-item>
+      </tiny-tabs>
     </div>
 
     <template #footer>
@@ -122,17 +213,29 @@
 <script>
 import { reactive, ref, computed, nextTick, watch } from 'vue'
 import { camelize, capitalize } from '@vue/shared'
-import { Button, DialogBox, Search, Switch, Input, Tooltip, Alert } from '@opentiny/vue'
+import {
+  Button,
+  DialogBox,
+  Search,
+  Switch,
+  Input,
+  Tooltip,
+  Alert,
+  Tabs as TinyTabs,
+  TabItem as TinyTabItem
+} from '@opentiny/vue'
 import { useHttp } from '@opentiny/tiny-engine-http'
 import { getSchema, getGlobalState, setState, getNode, getCurrent } from '@opentiny/tiny-engine-canvas'
-import { useCanvas, useResource, useLayout, useApp, useProperties, useData } from '@opentiny/tiny-engine-controller'
+import { useCanvas, useResource, useLayout, useApp, useProperties, useData, useWorkflow, useWorkflowVariable } from '@opentiny/tiny-engine-controller'
 import { theme } from '@opentiny/tiny-engine-controller/adapter'
 import { constants } from '@opentiny/tiny-engine-utils'
 import SvgButton from './SvgButton.vue'
+import ComfyuiIcon from './ComfyuiIcon.vue'
 import { parse, traverse, generate } from '@opentiny/tiny-engine-controller/js/ast'
-import { DEFAULT_LOOP_NAME } from '@opentiny/tiny-engine-controller/js/constants'
+import { DEFAULT_LOOP_NAME, WORKFLOW_STATE_KEY } from '@opentiny/tiny-engine-controller/js/constants'
 import MonacoEditor from './VueMonaco.vue'
 import { formatString } from '@opentiny/tiny-engine-controller/js/ast'
+
 
 const { EXPRESSION_TYPE } = constants
 
@@ -171,6 +274,9 @@ export default {
     TinyInput: Input,
     TinyTooltip: Tooltip,
     SvgButton,
+    TinyTabs,
+    TinyTabItem,
+    ComfyuiIcon,
     TinyAlert: Alert
   },
   inheritAttrs: false,
@@ -189,6 +295,17 @@ export default {
     }
   },
   setup(props, { emit }) {
+    const { workflowState, findWorkflows } = useWorkflow()
+    const {
+      workflowVariableState,
+      setWorkflow,
+      setWorkflowCategory,
+      setWorkflowVariable,
+      resetWorkflowVariableState,
+      getWorkflowVariableContent,
+      setWorkflowVariableStateByBindKey
+    } = useWorkflowVariable()
+    const bindType = ref('normal')
     const editor = ref(null)
     const http = useHttp()
     let oldValue = ''
@@ -396,6 +513,108 @@ export default {
     }
 
     const confirm = () => {
+      if (bindType.value === 'workflow') {
+        const pageSchema = getSchema()
+        const pageSchemaString = JSON.stringify(pageSchema)
+        const stateName = WORKFLOW_STATE_KEY
+        const workflowInUse = workflowState.workflows.filter((item) => {
+          return pageSchemaString.includes(item.key)
+        })
+
+        const genWorkflowState = () => {
+          /**
+           * workflow 在state中的数据结构
+           {
+              __workflow__: {
+                workflow1: {
+                  prompt: {
+                    id1: {
+                      inputs: {
+                        text: ''
+                      }
+                    },
+                  },
+                  outputs: {
+                    id2: null
+                  },
+                  state: {
+                    loading: false,
+                    queue: 0
+                  }
+                }
+              }
+            }
+           */
+          const staticData = {}
+          for (const index in workflowInUse) {
+            const workflow = workflowInUse[index]
+            staticData[workflow.key] = {}
+            const extraVariables = workflowVariableState.category
+              .map((item) => item.variables)
+              .flat(1)
+              .filter((item) => !['input', 'output'].includes(item.category))
+            for (const index in extraVariables) {
+              const { category, key, value } = extraVariables[index]
+              if (!staticData[workflow.key][category]) {
+                staticData[workflow.key][category] = {}
+              }
+              staticData[workflow.key][category][key] = value
+            }
+            for (const key in workflow.paramsNodes) {
+              const { selectedWidget, category, id } = workflow.paramsNodes[key]
+
+              if (['input'].includes(category)) {
+                if (!staticData[workflow.key]['prompt']) {
+                  staticData[workflow.key]['prompt'] = {}
+                }
+                if (!staticData[workflow.key]['prompt'][id]) {
+                  staticData[workflow.key]['prompt'][id] = { inputs: {} }
+                }
+                staticData[workflow.key]['prompt'][id]['inputs'][selectedWidget.name] = selectedWidget.value
+              } else if (['output'].includes(category)) {
+                if (!staticData[workflow.key]['outputs']) {
+                  staticData[workflow.key]['outputs'] = {}
+                }
+                staticData[workflow.key]['outputs'][selectedWidget.id] = null
+              }
+            }
+          }
+          pageSchema.state[stateName] = staticData
+
+          // 设置画布上下文环境，让画布触发更新渲染
+          setState({ [stateName]: staticData })
+        }
+
+        if (workflowVariableState.selectedVariable) {
+          let variableContent = getWorkflowVariableContent()
+
+          // 如果新旧值不一样就显示未保存状态
+          if (oldValue !== variableContent) {
+            const { setSaved } = useCanvas()
+
+            setSaved(false)
+            variableContent = formatString(variableContent, 'javascript')
+          }
+
+          if (!workflowInUse.some((item) => item.key === workflowVariableState.selectedWorkflow.key)) {
+            workflowInUse.push(workflowVariableState.selectedWorkflow)
+          }
+          genWorkflowState()
+
+          emit('update:modelValue', {
+            type: 'JSExpression',
+            value: variableContent
+          })
+        } else {
+          genWorkflowState()
+
+          emit('update:modelValue', '')
+        }
+
+        cancel()
+        return
+      }
+
       let variableContent = state.isEditorEditMode ? editor.value?.getEditor().getValue() : state.variable
 
       // 如果新旧值不一样就显示未保存状态
@@ -448,8 +667,19 @@ export default {
     }
 
     const dialogShouldInitialize = ref(!props.lazyLoad)
-    const open = () => {
+    const open = async () => {
       dialogShouldInitialize.value = true
+
+      resetWorkflowVariableState()
+      if (bindKey.value.startsWith(WORKFLOW_STATE_KEY)) {
+        await findWorkflows()
+        state.isVisible = true
+        bindType.value = 'workflow'
+        setWorkflowVariableStateByBindKey(bindKey.value, workflowState.workflows)
+        return
+      }
+      findWorkflows()
+
       state.isVisible = true
       state.variableName = bindKey.value
       state.variable = getInitVariable()
@@ -538,6 +768,13 @@ export default {
       open,
       selectItem,
       state,
+      WORKFLOW_STATE_KEY,
+      workflowState,
+      bindType,
+      workflowVariableState,
+      setWorkflow,
+      setWorkflowCategory,
+      setWorkflowVariable,
       editor,
       isDataSource
     }
@@ -563,6 +800,23 @@ export default {
     .content-left {
       margin-right: 12px;
       width: 38%;
+      &.workflow,
+      &.category,
+      &.variable {
+        .item-content {
+          width: 100%;
+        }
+      }
+      &.workflow {
+        width: 33%;
+      }
+      &.category {
+        width: 160px;
+      }
+      &.variable {
+        width: 100%;
+        flex: 1;
+      }
 
       .content-left__title {
         color: var(--ti-lowcode-meta-bind-variable-content-left-title-color);
@@ -593,7 +847,8 @@ export default {
       }
 
       .item-selected {
-        background-color: var(--ti-lowcode-meta-bind-variable-item-selected-bg-color);
+        // background-color: var(--ti-lowcode-meta-bind-variable-item-selected-bg-color);
+        background-color: var(--ti-base-color-brand-2);
       }
 
       .item-text {
@@ -615,8 +870,22 @@ export default {
         width: calc(100% - 140px);
 
         .item-content-list {
-          height: calc(100% - 42px);
+          margin-top: 10px;
+          height: calc(100% - 32px);
           overflow-y: auto;
+          li {
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          .item-wrap {
+            display: flex;
+            align-items: center;
+            .item-alias {
+              margin-left: 10px;
+              opacity: 0.5;
+            }
+          }
         }
       }
     }

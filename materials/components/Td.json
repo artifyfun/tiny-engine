@@ -1,0 +1,116 @@
+{
+  "icon": "td",
+  "name": {
+    "zh_CN": "表格单元格"
+  },
+  "component": "td",
+  "container": false,
+  "screenshot": "",
+  "tags": "",
+  "keywords": "",
+  "devMode": "proCode",
+  "npm": {},
+  "group": "component",
+  "category": "html",
+  "priority": 90,
+  "schema": {
+    "properties": [
+      {
+        "label": {
+          "zh_CN": "基础信息"
+        },
+        "description": {
+          "zh_CN": "基础信息"
+        },
+        "collapse": {
+          "number": 6,
+          "text": {
+            "zh_CN": "显示更多"
+          }
+        },
+        "content": [
+          {
+            "property": "colspan",
+            "label": {
+              "text": {
+                "zh_CN": "单元格可横跨的列数"
+              }
+            },
+            "required": true,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "description": {
+              "zh_CN": ""
+            }
+          },
+          {
+            "property": "rowspan",
+            "label": {
+              "text": {
+                "zh_CN": "单元格可横跨的行数"
+              }
+            },
+            "required": true,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "description": {
+              "zh_CN": ""
+            }
+          },
+          {
+            "property": "attributes3",
+            "label": {
+              "text": {
+                "zh_CN": "原生属性"
+              }
+            },
+            "required": true,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "widget": {
+              "component": "MetaHtmlAttributes",
+              "props": {}
+            },
+            "description": {
+              "zh_CN": ""
+            },
+            "labelPosition": "none"
+          }
+        ]
+      }
+    ],
+    "events": {
+      "onClick": {
+        "label": {
+          "zh_CN": "点击时触发"
+        },
+        "description": {
+          "zh_CN": "点击时触发"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
+    "shortcuts": {
+      "properties": []
+    },
+    "contentMenu": {
+      "actions": []
+    }
+  }
+}
