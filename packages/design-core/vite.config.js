@@ -43,6 +43,10 @@ const config = {
         target: origin,
         changeOrigin: true
       },
+      '/assets/lib': {
+        target: origin,
+        changeOrigin: true
+      },
       '/comfyui': {
         target: 'http://localhost:8188',
         changeOrigin: true,
