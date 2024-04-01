@@ -2026,7 +2026,9 @@
                             },
                             "widget": {
                               "component": "MetaCodeEditor",
-                              "props": {}
+                              "props": {
+                                "dataType": "JSFunction"
+                              }
                             }
                           },
                           {
