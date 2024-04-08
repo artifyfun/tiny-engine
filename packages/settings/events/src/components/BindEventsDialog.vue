@@ -285,7 +285,7 @@ export default {
 
       if (props.eventBinding?.ref?.startsWith(WORKFLOW_STATE_KEY)) {
         const workflowKey = props.eventBinding.params[0]
-        const workflow = workflowState.workflows.find((item) => item.key === workflowKey)
+        const workflow = workflowState.workflows.find((item) => item.key === workflowKey.replaceAll(`'`, ''))
         if (workflow) {
           setWorkflow(workflow)
         }
@@ -474,7 +474,7 @@ export default {
         bindWorkflowMethod({
           ...state.bindMethodInfo,
           params: workflowMethodState.selectedWorkflow.key,
-          extra: [workflowMethodState.selectedWorkflow.key]
+          extra: [`'${workflowMethodState.selectedWorkflow.key}'`]
         })
 
         // 需要在bindMethod之后
