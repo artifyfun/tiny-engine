@@ -2,7 +2,7 @@ import { reactive } from 'vue'
 
 function workflowSpaceQueueSync(eventArgs, workflowKey) {
   this.state.workflowSpace[workflowKey].state.loading = true
-  return fetch('/app-center/api/workflows/queue', {
+  return fetch('/workflows/api/queue', {
     method: 'post',
     headers: {
       'content-type': 'application/json'

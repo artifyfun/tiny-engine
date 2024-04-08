@@ -43,6 +43,10 @@ const config = {
         target: origin,
         changeOrigin: true
       },
+      '/workflows/api': {
+        target: origin,
+        changeOrigin: true
+      },
       '/assets/lib': {
         target: origin,
         changeOrigin: true

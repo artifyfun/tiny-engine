@@ -13,7 +13,7 @@ const setWorkflows = (workflows = []) => {
   workflowState.workflows = workflows
 }
 
-const workflowsApi = '/app-center/api/workflows'
+const workflowsApi = '/workflows/api/'
 
 const findWorkflows = (params) => {
   const appId = useApp().appInfoState.selectedId
