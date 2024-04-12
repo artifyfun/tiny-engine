@@ -9,7 +9,7 @@ function workflowSpaceQueueSync(eventArgs, workflowKey) {
     },
     body: JSON.stringify({
       key: workflowKey.toString(),
-      sync: true,
+      clientId: this.state.clientId,
       prompt: this.state.workflowSpace[workflowKey].prompt
     })
   })
