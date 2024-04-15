@@ -23,13 +23,40 @@ function workflowSpaceQueueSync(eventArgs, workflowKey) {
     })
 }
 
+function deleteQueue(eventArgs, workflowKey) {
+  return fetch('/workflows/api/deleteQueue', {
+    method: 'post',
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify({
+      clientId: this.state.clientId,
+      promptId: this.state.workflowSpace[workflowKey].promptId
+    })
+  })
+    .then((response) => response.json())
+    .then(() => {
+      Object.assign(this.state.workflowSpace[workflowKey].state, {
+        loading: false,
+        executing: false,
+        progress: 0
+      })
+    })
+}
+
 const methodsMap = {
   comfyui: [
     {
       key: workflowSpaceQueueSync.name,
       name: '同步执行',
-      description: '将执行指令推送到任务队列',
+      description: '同步执行工作流',
       content: workflowSpaceQueueSync.toString()
+    },
+    {
+      key: deleteQueue.name,
+      name: '中断',
+      description: '中断执行本次任务',
+      content: deleteQueue.toString()
     }
   ]
 }

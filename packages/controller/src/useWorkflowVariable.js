@@ -25,8 +25,22 @@ const category = [
       },
       {
         category: 'state',
-        key: 'queue',
+        key: 'pending',
         name: '排队任务数',
+        description: '',
+        value: 0
+      },
+      {
+        category: 'state',
+        key: 'executing',
+        name: '正在执行',
+        description: '',
+        value: false
+      },
+      {
+        category: 'state',
+        key: 'progress',
+        name: '任务进度',
         description: '',
         value: 0
       }
@@ -88,7 +102,9 @@ const setWorkflow = (workflow) => {
         },
         state: {
           loading: false,
-          queue: 0
+          pending: 0,
+          executing: false,
+          progress: 0
         }
       }
     }
