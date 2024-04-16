@@ -1,6 +1,11 @@
 import { reactive } from 'vue'
+import { WORKFLOW_STATE_KEY } from '../js/constants'
 
-function workflowSpaceQueueSync(eventArgs, workflowKey) {
+function toUpperCamelCase(str) {
+  return str.replace(str[0], str[0].toUpperCase())
+}
+
+function queueSync(eventArgs, workflowKey) {
   this.state.workflowSpace[workflowKey].state.loading = true
   return fetch('/workflows/api/queue', {
     method: 'post',
@@ -47,13 +52,13 @@ function deleteQueue(eventArgs, workflowKey) {
 const methodsMap = {
   comfyui: [
     {
-      key: workflowSpaceQueueSync.name,
+      key: `${WORKFLOW_STATE_KEY}${toUpperCamelCase(queueSync.name)}`,
       name: '同步执行',
       description: '同步执行工作流',
-      content: workflowSpaceQueueSync.toString()
+      content: queueSync.toString()
     },
     {
-      key: deleteQueue.name,
+      key: `${WORKFLOW_STATE_KEY}${toUpperCamelCase(deleteQueue.name)}`,
       name: '中断',
       description: '中断执行本次任务',
       content: deleteQueue.toString()

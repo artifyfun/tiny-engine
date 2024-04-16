@@ -226,7 +226,16 @@ import {
 } from '@opentiny/vue'
 import { useHttp } from '@opentiny/tiny-engine-http'
 import { getSchema, getGlobalState, setState, getNode, getCurrent } from '@opentiny/tiny-engine-canvas'
-import { useCanvas, useResource, useLayout, useApp, useProperties, useData, useWorkflow, useWorkflowVariable } from '@opentiny/tiny-engine-controller'
+import {
+  useCanvas,
+  useResource,
+  useLayout,
+  useApp,
+  useProperties,
+  useData,
+  useWorkflow,
+  useWorkflowVariable
+} from '@opentiny/tiny-engine-controller'
 import { theme } from '@opentiny/tiny-engine-controller/adapter'
 import { constants } from '@opentiny/tiny-engine-utils'
 import SvgButton from './SvgButton.vue'
@@ -235,7 +244,6 @@ import { parse, traverse, generate } from '@opentiny/tiny-engine-controller/js/a
 import { DEFAULT_LOOP_NAME, WORKFLOW_STATE_KEY } from '@opentiny/tiny-engine-controller/js/constants'
 import MonacoEditor from './VueMonaco.vue'
 import { formatString } from '@opentiny/tiny-engine-controller/js/ast'
-
 
 const { EXPRESSION_TYPE } = constants
 
@@ -539,7 +547,9 @@ export default {
                   },
                   state: {
                     loading: false,
-                    queue: 0
+                    pending: 0,
+                    executing: false,
+                    progress: 0
                   }
                 }
               }

@@ -33,7 +33,7 @@ const formatScript = (string) => {
   const options = {
     parser: 'babel',
     plugins: [parserBabel],
-    printWidth: 120,
+    printWidth: 240,
     singleQuote: true,
     semi: false,
     trailingComma: 'none'
