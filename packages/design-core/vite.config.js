@@ -107,9 +107,6 @@ const config = {
       ]
     }
   },
-  define: {
-    'process.env': {}
-  },
   build: {
     commonjsOptions: {
       transformMixedEsModules: true,
