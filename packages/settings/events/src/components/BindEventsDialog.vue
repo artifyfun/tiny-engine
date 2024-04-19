@@ -164,7 +164,7 @@ import {
   Tabs as TinyTabs,
   TabItem as TinyTabItem
 } from '@opentiny/vue'
-import { WORKFLOW_STATE_KEY } from '@opentiny/tiny-engine-controller/js/constants'
+import { WORKSPACE_KEY } from '@opentiny/tiny-engine-controller/js/constants'
 import { useCanvas, useHistory, useLayout, useWorkflow, useWorkflowMethod } from '@opentiny/tiny-engine-controller'
 import { theme } from '@opentiny/tiny-engine-controller/adapter'
 import { string2Ast, ast2String } from '@opentiny/tiny-engine-controller/js/ast'
@@ -283,7 +283,7 @@ export default {
         state.bindMethodInfo = newMethod
       }
 
-      if (props.eventBinding?.ref?.startsWith(WORKFLOW_STATE_KEY)) {
+      if (props.eventBinding?.ref?.startsWith(WORKSPACE_KEY)) {
         const workflowKey = props.eventBinding.params[0]
         const workflow = workflowState.workflows.find((item) => item.key === workflowKey.replaceAll(`'`, ''))
         if (workflow) {
@@ -305,7 +305,7 @@ export default {
           .filter((item) => item.indexOf(state.searchValue) > -1)
           .map((name) => ({ name })) || []
 
-      state.filterMethodList = [newMethod, ...methodList].filter((item) => !item.name.startsWith(WORKFLOW_STATE_KEY))
+      state.filterMethodList = [newMethod, ...methodList].filter((item) => !item.name.startsWith(WORKSPACE_KEY))
     })
 
     const selectMethod = (data) => {

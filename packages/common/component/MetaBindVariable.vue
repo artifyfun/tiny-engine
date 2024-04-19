@@ -45,7 +45,7 @@
                     <ul>
                       <li
                         v-for="(item, key) in state.variables"
-                        v-show="key.includes(state.value) && ![WORKFLOW_STATE_KEY].includes(key)"
+                        v-show="key.includes(state.value) && ![WORKSPACE_KEY].includes(key)"
                         :key="key"
                         :class="{ 'item-selected': state.variableName === key }"
                         @click="variableClick(key, item)"
@@ -241,7 +241,7 @@ import { constants } from '@opentiny/tiny-engine-utils'
 import SvgButton from './SvgButton.vue'
 import ComfyuiIcon from './ComfyuiIcon.vue'
 import { parse, traverse, generate } from '@opentiny/tiny-engine-controller/js/ast'
-import { DEFAULT_LOOP_NAME, WORKFLOW_STATE_KEY } from '@opentiny/tiny-engine-controller/js/constants'
+import { DEFAULT_LOOP_NAME, WORKSPACE_KEY } from '@opentiny/tiny-engine-controller/js/constants'
 import MonacoEditor from './VueMonaco.vue'
 import { formatString } from '@opentiny/tiny-engine-controller/js/ast'
 
@@ -524,7 +524,7 @@ export default {
       if (bindType.value === 'workflow') {
         const pageSchema = getSchema()
         const pageSchemaString = JSON.stringify(pageSchema)
-        const stateName = WORKFLOW_STATE_KEY
+        const stateName = WORKSPACE_KEY
         const workflowInUse = workflowState.workflows.filter((item) => {
           return pageSchemaString.includes(item.key)
         })
@@ -681,7 +681,7 @@ export default {
       dialogShouldInitialize.value = true
 
       resetWorkflowVariableState()
-      if (bindKey.value.startsWith(WORKFLOW_STATE_KEY)) {
+      if (bindKey.value.startsWith(WORKSPACE_KEY)) {
         await findWorkflows()
         state.isVisible = true
         bindType.value = 'workflow'
@@ -778,7 +778,7 @@ export default {
       open,
       selectItem,
       state,
-      WORKFLOW_STATE_KEY,
+      WORKSPACE_KEY,
       workflowState,
       bindType,
       workflowVariableState,

@@ -66,7 +66,7 @@ export const DEFAULT_LOOP_NAME = {
   ITEM: 'item'
 }
 
-export const WORKFLOW_STATE_KEY = 'workflowSpace'
+export const WORKSPACE_KEY = 'workspace'
 
 export const HOST_TYPE = {
   App: 'app',

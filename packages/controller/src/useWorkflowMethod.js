@@ -1,12 +1,16 @@
 import { reactive } from 'vue'
-import { WORKFLOW_STATE_KEY } from '../js/constants'
+import { WORKSPACE_KEY } from '../js/constants'
 
 function toUpperCamelCase(str) {
   return str.replace(str[0], str[0].toUpperCase())
 }
 
+function getMethodKey(method) {
+  return `${WORKSPACE_KEY}${toUpperCamelCase(method.name)}`
+}
+
 function queueSync(eventArgs, workflowKey) {
-  this.state.workflowSpace[workflowKey].state.loading = true
+  this.state.workspace[workflowKey].state.loading = true
   return fetch('/workflows/api/queue', {
     method: 'post',
     headers: {
@@ -15,16 +19,16 @@ function queueSync(eventArgs, workflowKey) {
     body: JSON.stringify({
       key: workflowKey.toString(),
       clientId: this.state.clientId,
-      prompt: this.state.workflowSpace[workflowKey].prompt
+      prompt: this.state.workspace[workflowKey].prompt
     })
   })
     .then((response) => response.json())
     .then(({ data }) => {
-      Object.assign(this.state.workflowSpace[workflowKey].outputs, data)
-      this.state.workflowSpace[workflowKey].state.loading = false
+      Object.assign(this.state.workspace[workflowKey].outputs, data)
+      this.state.workspace[workflowKey].state.loading = false
     })
     .catch(() => {
-      this.state.workflowSpace[workflowKey].state.loading = false
+      this.state.workspace[workflowKey].state.loading = false
     })
 }
 
@@ -36,12 +40,12 @@ function deleteQueue(eventArgs, workflowKey) {
     },
     body: JSON.stringify({
       clientId: this.state.clientId,
-      promptId: this.state.workflowSpace[workflowKey].promptId
+      promptId: this.state.workspace[workflowKey].promptId
     })
   })
     .then((response) => response.json())
     .then(() => {
-      Object.assign(this.state.workflowSpace[workflowKey].state, {
+      Object.assign(this.state.workspace[workflowKey].state, {
         loading: false,
         executing: false,
         progress: 0
@@ -52,13 +56,13 @@ function deleteQueue(eventArgs, workflowKey) {
 const methodsMap = {
   comfyui: [
     {
-      key: `${WORKFLOW_STATE_KEY}${toUpperCamelCase(queueSync.name)}`,
+      key: getMethodKey(queueSync),
       name: '同步执行',
       description: '同步执行工作流',
       content: queueSync.toString()
     },
     {
-      key: `${WORKFLOW_STATE_KEY}${toUpperCamelCase(deleteQueue.name)}`,
+      key: getMethodKey(deleteQueue),
       name: '中断',
       description: '中断执行本次任务',
       content: deleteQueue.toString()

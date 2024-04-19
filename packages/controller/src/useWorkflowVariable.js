@@ -1,5 +1,5 @@
 import { reactive } from 'vue'
-import { WORKFLOW_STATE_KEY } from '../js/constants'
+import { WORKSPACE_KEY } from '../js/constants'
 
 const category = [
   {
@@ -120,13 +120,13 @@ const getWorkflowVariableContent = () => {
     state: `['${category}']['${key}']`
   }
   const subPath = valueKeyMap[category]
-  const variableContent = `this.state.${WORKFLOW_STATE_KEY}['${workflowKey}']` + subPath
+  const variableContent = `this.state.${WORKSPACE_KEY}['${workflowKey}']` + subPath
   return variableContent
 }
 
 const setWorkflowVariableStateByBindKey = (bindKey, workflows) => {
   const [workflowKey, ...res] = bindKey
-    .replace(WORKFLOW_STATE_KEY, '')
+    .replace(WORKSPACE_KEY, '')
     .replaceAll('[', '')
     .replaceAll("'", '')
     .split(']')
