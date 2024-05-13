@@ -1,5 +1,6 @@
 <template>
   <div class="top-panel-logo">
+    <LogoIcon class="logo-icon" @click.stop="handleLogoIconClick" />
     <h1 class="logo-wrap" @click.stop="handleTitleClick">
       <div class="menu-icon-wrapper">
         <svg-icon name="menu"></svg-icon>
@@ -111,13 +112,16 @@ import {
   Tooltip as TinyTooltip
 } from '@opentiny/vue'
 import { iconHelpCircle } from '@opentiny/vue-icon'
-import { useLayout, useApp, getGlobalConfig, useModal } from '@opentiny/tiny-engine-controller'
+import { LogoIcon } from '@opentiny/tiny-engine-common'
+import { useLayout, useApp, getGlobalConfig, useModal, usePage } from '@opentiny/tiny-engine-controller'
 import { useHttp } from '@opentiny/tiny-engine-http'
 import { isDevelopEnv } from '@opentiny/tiny-engine-controller/js/environments'
 
 const http = useHttp()
 
 const { activePlugin } = useLayout()
+
+const { isChangePageData } = usePage()
 
 const IconHelp = iconHelpCircle()
 
@@ -303,6 +307,27 @@ const handleTitleClick = () => {
   }
 }
 
+const goHome = () => {
+  // const origin = window.location.origin
+  const origin = 'http://localhost:7011'
+  window.location.href = `${origin}/artifyfun/apps`
+}
+
+const handleLogoIconClick = () => {
+  if (isChangePageData()) {
+    useModal().confirm({
+      title: '提示',
+      message: `当前页面尚未保存，是否要离开?`,
+      exec: () => {
+        goHome()
+      }
+    })
+    return
+  }
+
+  goHome()
+}
+
 onUnmounted(() => {
   window.removeEventListener('click', handleCloseMenu)
 })
@@ -316,6 +341,12 @@ onUnmounted(() => {
   height: var(--base-top-panel-height);
   display: flex;
   align-items: center;
+  & > .logo-icon {
+    margin-left: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
   .logo-wrap {
     margin: 0 0 0 10px;
     cursor: pointer;

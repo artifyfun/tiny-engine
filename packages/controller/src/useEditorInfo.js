@@ -33,16 +33,23 @@ const _getWebData = () => {
 
 let userInfo = {}
 const getUserInfo = () => {
-  // 获取登录用户信息
   useHttp()
-    .get('/platform-center/api/user/me')
-    .then((data) => {
-      if (data) {
-        userInfo = data
-      }
-    })
-    .catch((error) => {
-      useModal().message({ message: error.message, status: 'error' })
+    .post('/platform-center/api/user/login', {
+      identifier: 'urichen9606@gmail.com',
+      password: '123456',
+    }).then((data) => {
+      console.log(data)
+      // 获取登录用户信息
+      useHttp()
+        .get('/platform-center/api/user/me')
+        .then((data) => {
+          if (data) {
+            userInfo = data
+          }
+        })
+        .catch((error) => {
+          useModal().message({ message: error.message, status: 'error' })
+        })
     })
 }
 

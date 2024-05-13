@@ -79,6 +79,7 @@ import BlockDeployDialog from './component/BlockDeployDialog.vue'
 import ProgressBar from './component/ProgressBar.vue'
 import MetaButtonGroup from './component/MetaButtonGroup.vue'
 import ComfyuiIcon from './component/ComfyuiIcon.vue'
+import LogoIcon from './component/LogoIcon.vue'
 import MetaTableColumns from './component/MetaTableColumns.vue'
 import SearchEmpty from './component/SearchEmpty.vue'
 
@@ -210,6 +211,7 @@ export {
   BlockDeployDialog,
   ProgressBar,
   ComfyuiIcon,
+  LogoIcon,
   MetaTableColumns,
   SearchEmpty
 }
