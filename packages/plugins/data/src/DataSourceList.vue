@@ -117,7 +117,7 @@ export default {
 <style lang="less" scoped>
 .data-source-list {
   margin: 12px 0 0 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   .data-source-list-blank {
     font-size: 12px;
   }

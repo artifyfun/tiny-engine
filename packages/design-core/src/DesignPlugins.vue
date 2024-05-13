@@ -251,6 +251,24 @@ export default {
     :deep(.tiny-tabs__nav.is-show-active-bar) .tiny-tabs__item {
       margin-right: 0;
     }
+
+    :deep(.tiny-tabs__content) {
+      flex: 1;
+      overflow-y: hidden;
+      padding: 0;
+      & > div {
+        height: 100%;
+      }
+    }
+
+    :deep(.tiny-collapse) {
+      flex: 1;
+      overflow-y: hidden;
+
+      .tiny-collapse-item .tiny-collapse-item__header {
+        border: none;
+      }
+    }
   }
 }
 

@@ -126,7 +126,7 @@ export default {
 <style lang="less" scoped>
 .video-container {
   height: calc(100% - 76px);
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .video-item {
   .video-item-content {

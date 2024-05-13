@@ -102,15 +102,19 @@ export default {
 
 :deep(.tiny-tabs__content) {
   flex: 1;
-  overflow-y: scroll;
+  overflow-y: hidden;
   padding: 0;
   & > div {
     height: 100%;
   }
 }
 
-.tiny-collapse {
+:deep(.tiny-collapse) {
   flex: 1;
-  overflow-y: scroll;
+  overflow-y: auto !important;
+
+  .tiny-collapse-item .tiny-collapse-item__header {
+    border: none;
+  }
 }
 </style>

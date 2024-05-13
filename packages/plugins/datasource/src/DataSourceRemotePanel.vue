@@ -274,7 +274,7 @@ export default {
   .tabBox {
     height: 500px;
     box-sizing: border-box;
-    overflow-y: scroll;
+    overflow-y: auto;
     :deep(.is-active) {
       border-bottom: 2px solid var(--ti-lowcode-datasource-tabs-bottom-border-color) !important;
       .tiny-tabs__item__title {

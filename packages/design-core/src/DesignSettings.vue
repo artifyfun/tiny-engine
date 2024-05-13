@@ -67,7 +67,7 @@ export default {
     }
     .tiny-tabs__content {
       flex: 1;
-      overflow-y: scroll;
+      overflow-y: auto;
       padding: 0;
       margin-top: 0;
     }
@@ -79,6 +79,12 @@ export default {
       &.is-active {
         color: var(--ti-lowcode-setting-panel-tabs-item-title-active-color);
       }
+    }
+  }
+
+  :deep(.tiny-collapse) {
+    .tiny-collapse-item .tiny-collapse-item__header {
+      border: none;
     }
   }
 

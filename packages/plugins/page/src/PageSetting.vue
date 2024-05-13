@@ -401,6 +401,7 @@ export default {
 }
 
 .page-setting-collapse {
+  overflow-y: hidden !important;
   :deep(.tiny-collapse-item__header) {
     &,
     &.is-active {

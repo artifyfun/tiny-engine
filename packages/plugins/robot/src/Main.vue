@@ -386,10 +386,14 @@ export default {
   font-size: 14px;
   margin-bottom: 20px;
   color: var(--ti-lowcode-chat-model-title);
+
+  .tiny-dropdown .tiny-dropdown__trigger:not(.tiny-button) .tiny-svg {
+    vertical-align: middle;
+  }
 }
 .chat-window {
   max-height: 400px;
-  overflow: scroll;
+  overflow: auto;
   .chat-avatar-wrap {
     width: 46px;
     .chat-avatar {

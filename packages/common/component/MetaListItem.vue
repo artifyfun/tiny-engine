@@ -309,7 +309,7 @@ export default {
   }
 }
 .add-options {
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 100%;
   &::-webkit-scrollbar-track-piece {
     background: var(--ti-lowcode-toolbar-bg);

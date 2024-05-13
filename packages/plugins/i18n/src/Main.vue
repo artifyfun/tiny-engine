@@ -553,7 +553,7 @@ export default {
   height: calc(100% - 48px);
   flex: 1;
   padding: 0 16px;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   .operation-column {
     display: flex;

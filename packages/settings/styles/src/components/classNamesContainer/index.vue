@@ -628,7 +628,7 @@ const handleDeleteCurSelector = () => {
     border-radius: 6px;
     z-index: 1;
     flex-direction: column;
-    overflow: scroll;
+    overflow: auto;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.15);
 
     .selector-dropdown-list-tips {

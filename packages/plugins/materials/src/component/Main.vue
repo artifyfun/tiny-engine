@@ -178,7 +178,7 @@ export default {
 
   .tiny-collapse {
     flex: 1;
-    overflow-y: scroll;
+    overflow-y: auto;
     .tiny-collapse-item.is-active + .tiny-collapse-item {
       margin-top: 0;
     }
