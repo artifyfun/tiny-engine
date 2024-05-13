@@ -225,7 +225,6 @@ import {
   TabItem as TinyTabItem
 } from '@opentiny/vue'
 import { useHttp } from '@opentiny/tiny-engine-http'
-import { getSchema, getGlobalState, setState, getNode, getCurrent } from '@opentiny/tiny-engine-canvas'
 import {
   useCanvas,
   useResource,
@@ -261,6 +260,12 @@ const CONSTANTS = {
 }
 
 const getJsSlot = () => {
+  const { getNode, getCurrent } = useCanvas().canvasApi.value || {}
+
+  if (!getNode || !getCurrent) {
+    return [false, {}]
+  }
+
   const jsSlot = getNode(getCurrent()?.parent?.id, true)?.parent
 
   return [jsSlot?.type === 'JSSlot', jsSlot]
@@ -522,7 +527,7 @@ export default {
 
     const confirm = () => {
       if (bindType.value === 'workflow') {
-        const pageSchema = getSchema()
+        const pageSchema = canvasApi.value.getSchema()
         const pageSchemaString = JSON.stringify(pageSchema)
         const stateName = WORKSPACE_KEY
         const workflowInUse = workflowState.workflows.filter((item) => {
@@ -592,7 +597,7 @@ export default {
           pageSchema.state[stateName] = staticData
 
           // 设置画布上下文环境，让画布触发更新渲染
-          setState({ [stateName]: staticData })
+          canvasApi.value.setState({ [stateName]: staticData })
         }
 
         if (workflowVariableState.selectedVariable) {
@@ -627,10 +632,9 @@ export default {
 
       let variableContent = state.isEditorEditMode ? editor.value?.getEditor().getValue() : state.variable
 
+      const { setSaved, canvasApi } = useCanvas()
       // 如果新旧值不一样就显示未保存状态
       if (oldValue !== variableContent) {
-        const { setSaved } = useCanvas()
-
         setSaved(false)
         variableContent = formatString(variableContent, 'javascript')
       }
@@ -640,14 +644,14 @@ export default {
 
       if (variableContent) {
         if (state.bindPrefix === CONSTANTS.DATASOUCEPREFIX) {
-          const pageSchema = getSchema()
+          const pageSchema = canvasApi.value.getSchema()
           const stateName = state.variable.replace(`${CONSTANTS.STATE}`, '')
           const staticData = state.variableContent.map(({ _id, ...other }) => other)
 
           pageSchema.state[stateName] = staticData
 
           // 设置画布上下文环境，让画布触发更新渲染
-          setState({ [stateName]: staticData })
+          canvasApi.value.setState({ [stateName]: staticData })
 
           // 这里在setup生命周期函数内部处理用户真实环境中的数据源请求
           genRemoteMethodToLifeSetup(stateName, state.dataSouce, pageSchema)
@@ -693,7 +697,7 @@ export default {
       state.isVisible = true
       state.variableName = bindKey.value
       state.variable = getInitVariable()
-      state.variables = getSchema()?.state || {}
+      state.variables = useCanvas().canvasApi.value.getSchema()?.state || {}
       state.bindPrefix = CONSTANTS.STATE
       state.variableContent = state.variables[bindKey.value]
       nextTick(() => window.dispatchEvent(new Event('resize')))
@@ -701,6 +705,8 @@ export default {
 
     const selectItem = (item) => {
       state.active = item.id
+      const { canvasApi } = useCanvas()
+
       if (item.id === 'function') {
         state.bindPrefix = CONSTANTS.THIS
         const { PLUGIN_NAME, getPluginApi } = useLayout()
@@ -716,7 +722,7 @@ export default {
         state.variables = bridge
       } else if (item.id === 'props') {
         state.bindPrefix = CONSTANTS.PROPS
-        const properties = getSchema()?.schema?.properties
+        const properties = canvasApi.value.getSchema()?.schema?.properties
         const bindProperties = {}
         properties?.forEach(({ content }) => {
           content.forEach(({ property }) => {
@@ -742,7 +748,7 @@ export default {
         state.bindPrefix = CONSTANTS.STORE
         state.variables = {}
 
-        const stores = getGlobalState()
+        const stores = canvasApi.value.getGlobalState()
         stores.forEach(({ id, state: storeState = {}, getters = {} }) => {
           const loadProp = (prop) => {
             const propBinding = `${id}.${prop}`
@@ -763,7 +769,7 @@ export default {
         state.variables = params.reduce((variables, param) => ({ ...variables, [param]: param }), {})
       } else {
         state.bindPrefix = CONSTANTS.STATE
-        state.variables = getSchema()?.[item.id]
+        state.variables = canvasApi.value.getSchema()?.[item.id]
       }
     }
 
