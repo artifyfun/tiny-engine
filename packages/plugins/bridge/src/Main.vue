@@ -88,7 +88,7 @@ export default {
 
 <style lang="less" scoped>
 .tabs {
-  height: calc(100% - 46px);
+  height: calc(100% - 80px);
 }
 
 :deep(.tiny-tabs__header) {
