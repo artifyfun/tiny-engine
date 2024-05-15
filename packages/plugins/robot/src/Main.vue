@@ -132,7 +132,7 @@ export default {
     const ROOT_ID = pageSettingState.ROOT_ID
     const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
     watchEffect(() => {
-      avatarUrl.value = 'img/defaultAvator.png'
+      avatarUrl.value = 'design/img/defaultAvator.png'
     })
 
     const setContextSession = () => {

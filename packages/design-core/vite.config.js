@@ -17,7 +17,7 @@ import { getBaseUrlFromCli, copyBundleDeps, copyPreviewImportMap, copyLocalImpor
 const origin = 'http://localhost:7011/'
 
 const config = {
-  base: './',
+  base: '/design/',
   publicDir: path.resolve(__dirname, './public'),
   resolve: {
     extensions: ['.js', '.jsx', '.vue'],

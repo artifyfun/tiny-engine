@@ -12,6 +12,8 @@
 
 import * as utils from '../utils'
 
+export const TOKEN_KEY = "x-artifyfun-token";
+
 export const MATERIAL_TYPE = {
   Component: 'component',
   Block: 'block'

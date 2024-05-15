@@ -59,13 +59,13 @@ export default {
     })
 
     watchEffect(() => {
-      state.url = 'img/defaultAvator.png'
+      state.url = 'design/img/defaultAvator.png'
       state.userLists = [
         {
           pageName: '当前页',
           users: [
             {
-              userHead: 'img/defaultAvator.png',
+              userHead: 'design/img/defaultAvator.png',
               userName: layoutState.pageStatus.data?.username,
               status: '编辑'
             }

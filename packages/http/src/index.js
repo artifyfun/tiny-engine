@@ -19,7 +19,7 @@ import { getConfig } from './config'
 import mockData from './mock'
 import { constants } from '@opentiny/tiny-engine-utils'
 
-const { BROADCAST_CHANNEL } = constants
+const { BROADCAST_CHANNEL, TOKEN_KEY } = constants
 
 const { post: globalNotify } = useBroadcastChannel({ name: BROADCAST_CHANNEL.Notify })
 
@@ -84,6 +84,11 @@ export const createHttp = (options) => {
       config.baseURL = ''
     }
 
+    const token = localStorage.getItem(TOKEN_KEY);
+    if (token) {
+      config.headers[TOKEN_KEY] = token;
+    }
+
     return config
   }
 
@@ -91,6 +96,11 @@ export const createHttp = (options) => {
   http.interceptors.request.use(preRequest)
 
   const preResponse = (res) => {
+    if (res.status && res.status !== 200) {
+      return Promise.reject({
+        response: res
+      });
+    }
     if (res.data?.error) {
       showError(res.config?.url, res?.data?.error?.message)
 
@@ -100,10 +110,11 @@ export const createHttp = (options) => {
     return res.data?.data
   }
 
-  const openLogin = () => {
+  const openLogin = (response) => {
     return new Promise((resolve, reject) => {
       if (!procession.promiseLogin) {
-        procession.promiseLogin = loginVM.openLogin(procession, '/api/rebuildSession')
+        const origin = window.location.origin
+        procession.promiseLogin = loginVM.openLogin(procession, `${origin}/artifyfun/login`)
         procession.promiseLogin.then(() => {
           http.request(response.config).then(resolve, reject)
         })
@@ -115,15 +126,12 @@ export const createHttp = (options) => {
     // 用户信息失效时，弹窗提示登录
     const { response } = error
     if (response?.status === LOGIN_EXPIRED_CODE) {
+      localStorage.removeItem(TOKEN_KEY);
       // vscode 插件环境弹出输入框提示登录
       if (window.vscodeBridge) {
         return Promise.resolve(true)
       }
-
-      // 浏览器环境弹出小窗登录
-      if (response?.headers['x-login-url']) {
-        return openLogin()
-      }
+      return openLogin(response)
     }
 
     showError(error.config?.url, error?.message)

@@ -308,8 +308,8 @@ const handleTitleClick = () => {
 }
 
 const goHome = () => {
-  // const origin = window.location.origin
-  const origin = 'http://localhost:7011'
+  const origin = window.location.origin
+  // const origin = 'http://localhost:7011'
   window.location.href = `${origin}/artifyfun/apps`
 }
 

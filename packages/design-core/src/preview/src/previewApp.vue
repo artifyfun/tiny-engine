@@ -82,7 +82,7 @@ export default {
           progressStatus.value = 'success'
           percentage.value = 100
 
-          let openUrl = `${VITE_ORIGIN}/app-center/entry/${appId}/`
+          let openUrl = `${VITE_ORIGIN}/app-center/design/${appId}/`
 
           const { appInfoState, updateApp } = useApp()
 
