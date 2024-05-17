@@ -157,9 +157,9 @@ const menus = ref(
         { name: '保存历史版本', code: 'saveAppHistory', icon: 'save' },
         { name: '页面管理', code: 'pageManagement', icon: 'page' },
         { name: '区块管理', code: 'blockManagement', icon: 'block' },
-        { name: '平台中心', code: 'gotoPlatformCenter', icon: 'platform' },
-        { name: '素材中心', code: 'gotoMaterialCenter', icon: 'material' },
-        { name: '退出登录', code: 'logout', icon: 'logout' }
+        // { name: '平台中心', code: 'gotoPlatformCenter', icon: 'platform' },
+        // { name: '素材中心', code: 'gotoMaterialCenter', icon: 'material' },
+        // { name: '退出登录', code: 'logout', icon: 'logout' }
       ]
 )
 
