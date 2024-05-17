@@ -21,7 +21,6 @@
     "exportName": "ElTable"
   },
   "group": "数据展示",
-  "category": "element-plus",
   "configure": {
     "loop": true,
     "condition": true,
@@ -1301,5 +1300,6 @@
         }
       }
     }
-  ]
+  ],
+  "category": "element-plus"
 }

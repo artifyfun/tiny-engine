@@ -17,7 +17,6 @@
     "destructuring": true
   },
   "group": "component",
-  "category": "content",
   "priority": 2,
   "schema": {
     "properties": [
@@ -377,5 +376,6 @@
         ]
       }
     }
-  ]
+  ],
+  "category": "content"
 }

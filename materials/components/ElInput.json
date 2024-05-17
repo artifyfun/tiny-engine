@@ -21,7 +21,6 @@
     "exportName": "ElInput"
   },
   "group": "表单组件",
-  "category": "element-plus",
   "configure": {
     "loop": true,
     "condition": true,
@@ -299,5 +298,6 @@
       "snippetName": "ElInput",
       "schema": {}
     }
-  ]
+  ],
+  "category": "element-plus"
 }

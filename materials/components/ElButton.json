@@ -21,7 +21,6 @@
     "exportName": "ElButton"
   },
   "group": "基础组件",
-  "category": "element-plus",
   "configure": {
     "loop": true,
     "condition": true,
@@ -349,5 +348,6 @@
         ]
       }
     }
-  ]
+  ],
+  "category": "element-plus"
 }

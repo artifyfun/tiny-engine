@@ -21,7 +21,6 @@
     "exportName": "ElForm"
   },
   "group": "表单组件",
-  "category": "element-plus",
   "configure": {
     "loop": true,
     "condition": true,
@@ -549,5 +548,6 @@
         ]
       }
     }
-  ]
+  ],
+  "category": "element-plus"
 }

@@ -17,7 +17,6 @@
     "destructuring": true
   },
   "group": "component",
-  "category": "容器组件",
   "priority": 2,
   "schema": {
     "properties": [

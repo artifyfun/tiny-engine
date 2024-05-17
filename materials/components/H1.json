@@ -19,7 +19,6 @@
   "devMode": "proCode",
   "npm": {},
   "group": "component",
-  "category": "html",
   "priority": 20,
   "schema": {
     "properties": [
@@ -129,5 +128,6 @@
         "children": "Heading"
       }
     }
-  ]
+  ],
+  "category": "html"
 }
