@@ -123,6 +123,9 @@
       "actions": []
     }
   },
+  "configure": {
+    "isContainer": true
+  },
   "snippets": [
     {
       "name": {
