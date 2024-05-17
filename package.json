@@ -10,6 +10,8 @@
     "build:plugin": "pnpm --filter @opentiny/tiny-engine-* build",
     "build:alpha": "pnpm --filter @opentiny/tiny-engine build:alpha",
     "build:prod": "pnpm --filter @opentiny/tiny-engine build:prod",
+    "deploy": "pnpm --filter @opentiny/tiny-engine-* build && pnpm --filter @opentiny/tiny-engine build:prod && node ./scripts/deploy.js",
+    "dp": "node ./scripts/deploy.js",
     "buildComponentSchemas": "node scripts/buildComponentSchemas.js",
     "preview": "pnpm --filter @opentiny/tiny-engine preview",
     "lint": "eslint . --ext .js,.vue,.jsx --fix",
