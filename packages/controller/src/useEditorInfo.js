@@ -12,6 +12,9 @@
 
 import { useHttp } from '@opentiny/tiny-engine-http'
 import useModal from './useModal'
+import { constants } from '@opentiny/tiny-engine-utils'
+
+const { TOKEN_KEY } = constants
 
 // web版获取配置信息: 从url中获取
 const _getWebData = () => {
@@ -32,7 +35,18 @@ const _getWebData = () => {
 }
 
 let userInfo = {}
-const getUserInfo = () => {
+const getUserInfo = async () => {
+  if (process.env.NODE_ENV === 'development') {
+    // for develop
+    await useHttp()
+      .post('/platform-center/api/user/login', {
+        identifier: 'artifyfun',
+        password: '123456'
+      })
+      .then((data) => {
+        localStorage.setItem(TOKEN_KEY, data.jwt)
+      })
+  }
   // 获取登录用户信息
   useHttp()
     .get('/platform-center/api/user/me')
