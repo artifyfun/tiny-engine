@@ -1,6 +1,6 @@
 import { reactive } from 'vue'
 import { useHttp } from '@opentiny/tiny-engine-http'
-import { useApp } from './'
+import { useApp } from './index'
 
 const workflowState = reactive({
   workflows: [],

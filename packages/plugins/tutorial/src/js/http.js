@@ -15,6 +15,6 @@ import { useHttp } from '@opentiny/tiny-engine-http'
 const http = useHttp()
 
 // 获取课程列表
-export const fetchTutorialList = (params) => http.get('platform-center/api/courses', { params })
+export const fetchTutorialList = (params) => http.get('/platform-center/api/courses', { params })
 // 获取课程详情
-export const fetchTutorialDetail = (courseId) => http.get(`platform-center/api/courses/${courseId}`)
+export const fetchTutorialDetail = (courseId) => http.get(`/platform-center/api/courses/${courseId}`)

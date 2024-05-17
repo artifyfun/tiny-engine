@@ -1,7 +1,12 @@
 <template>
   <div class="data-source-list">
     <ul>
-      <li v-for="key in filteredKey" :key="key" :class="['data-source-list-item', { selected: key === selectedKey }]">
+      <li
+        v-for="key in filteredKey"
+        :key="key"
+        :class="['data-source-list-item', { selected: key === selectedKey }]"
+        v-show="![WORKSPACE_KEY].includes(key)"
+      >
         <div class="item-head">
           <div class="item-head-left">
             <span class="protocal"> {{ stateScope === STATE.CURRENT_STATE ? 'state.' : 'stores.' }}</span>
@@ -27,6 +32,7 @@ import { findExpressionInAppSchema } from '@opentiny/tiny-engine-controller/js/a
 import { constants } from '@opentiny/tiny-engine-utils'
 import { SvgButton, SearchEmpty } from '@opentiny/tiny-engine-common'
 import { STATE, OPTION_TYPE } from './js/constants'
+import { WORKSPACE_KEY } from '@opentiny/tiny-engine-controller/js/constants'
 
 const { COMPONENT_NAME } = constants
 
@@ -107,6 +113,7 @@ export default {
       filteredKey,
       confirmClick,
       openPanel,
+      WORKSPACE_KEY,
       STATE,
       OPTION_TYPE
     }

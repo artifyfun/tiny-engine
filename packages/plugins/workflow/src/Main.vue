@@ -128,7 +128,7 @@
 import { computed, ref, watchEffect, onMounted, onActivated } from 'vue'
 import { Grid, GridColumn, Input, Button, FileUpload, Tooltip, Select, Modal as TinyModal } from '@opentiny/vue'
 import { PluginPanel, LinkButton, CloseIcon, ComfyuiIcon } from '@opentiny/tiny-engine-common'
-import { useModal, useWorkflow } from '@opentiny/tiny-engine-controller'
+import { useModal, useWorkflow, useApp } from '@opentiny/tiny-engine-controller'
 import { utils } from '@opentiny/tiny-engine-utils'
 import { BASE_URL } from '@opentiny/tiny-engine-controller/js/environments'
 
@@ -276,8 +276,9 @@ export default {
           message: `无法提取工作流信息`
         })
       } else {
+        const appId = useApp().appInfoState.selectedId
         const newItem = {
-          key: utils.guid(),
+          key: `workflow_${appId}_${utils.guid()}`,
           name: file.name,
           workflow,
           paramsNodes: []

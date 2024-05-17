@@ -15,4 +15,4 @@ import { useHttp } from '@opentiny/tiny-engine-http'
 const http = useHttp()
 
 // 锁定页面
-export const requestBlockPage = (params) => http.get(`app-center/api/apps/canvas/lock?${params}`)
+export const requestBlockPage = (params) => http.get(`/app-center/api/apps/canvas/lock?${params}`)

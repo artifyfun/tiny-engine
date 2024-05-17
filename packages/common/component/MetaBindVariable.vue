@@ -526,6 +526,7 @@ export default {
     }
 
     const confirm = () => {
+      const { setSaved, canvasApi } = useCanvas()
       if (bindType.value === 'workflow') {
         const pageSchema = canvasApi.value.getSchema()
         const pageSchemaString = JSON.stringify(pageSchema)
@@ -576,22 +577,19 @@ export default {
               staticData[workflow.key][category][key] = value
             }
             for (const key in workflow.paramsNodes) {
-              const { selectedWidget, category, id } = workflow.paramsNodes[key]
+              const { selectedWidget, id } = workflow.paramsNodes[key]
 
-              if (['input'].includes(category)) {
-                if (!staticData[workflow.key]['prompt']) {
-                  staticData[workflow.key]['prompt'] = {}
-                }
-                if (!staticData[workflow.key]['prompt'][id]) {
-                  staticData[workflow.key]['prompt'][id] = { inputs: {} }
-                }
-                staticData[workflow.key]['prompt'][id]['inputs'][selectedWidget.name] = selectedWidget.value
-              } else if (['output'].includes(category)) {
-                if (!staticData[workflow.key]['outputs']) {
-                  staticData[workflow.key]['outputs'] = {}
-                }
-                staticData[workflow.key]['outputs'][selectedWidget.id] = null
+              if (!staticData[workflow.key]['prompt']) {
+                staticData[workflow.key]['prompt'] = {}
               }
+              if (!staticData[workflow.key]['prompt'][id]) {
+                staticData[workflow.key]['prompt'][id] = { inputs: {} }
+              }
+              staticData[workflow.key]['prompt'][id]['inputs'][selectedWidget.name] = selectedWidget.value
+              if (!staticData[workflow.key]['outputs']) {
+                staticData[workflow.key]['outputs'] = {}
+              }
+              staticData[workflow.key]['outputs'][selectedWidget.id] = null
             }
           }
           pageSchema.state[stateName] = staticData
@@ -632,7 +630,6 @@ export default {
 
       let variableContent = state.isEditorEditMode ? editor.value?.getEditor().getValue() : state.variable
 
-      const { setSaved, canvasApi } = useCanvas()
       // 如果新旧值不一样就显示未保存状态
       if (oldValue !== variableContent) {
         setSaved(false)
