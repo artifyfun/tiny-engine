@@ -317,7 +317,7 @@ export default {
       resetWorkflowVariableState,
       getWorkflowVariableContent,
       setWorkflowVariableStateByBindKey,
-      getWorkflowLifecycle,
+      getWorkflowLifecycle
     } = useWorkflowVariable()
     const bindType = ref('normal')
     const editor = ref(null)
@@ -526,18 +526,12 @@ export default {
       cancel()
     }
 
-    const genMethodToLifeCycle = ({
-      pageSchema,
-      lifeCycleKey,
-      initialLifeCycleValue,
-      method,
-      comments
-    }) => {
+    const genMethodToLifeCycle = ({ pageSchema, lifeCycleKey, initialLifeCycleValue, method, comments }) => {
       const fn = pageSchema.lifeCycles?.[lifeCycleKey]?.value
 
       const fetchBody = `
       /** ${comments.start} */
-      ${method};
+      ${method.body};
       /** ${comments.end} */`
 
       if (!fn) {
@@ -547,33 +541,21 @@ export default {
           value: initialLifeCycleValue.replace(/\}$/, fetchBody + '}')
         }
       } else {
-        if (!fn.includes(method)) {
+        if (!fn.includes(method.name)) {
           pageSchema.lifeCycles[lifeCycleKey].value = fn.trim().replace(/\}$/, fetchBody + '}')
-        } else {
-          const ast = parse(fn)
-          // traverse(ast, {
-          //   ExpressionStatement(path) {
-          //     if (path.toString().includes(sourceRef.name)) {
-          //       path.replaceWithSourceString(fetchBodyFn)
-          //       path.stop()
-          //     }
-          //   }
-          // })
-
-          pageSchema.lifeCycles[lifeCycleKey].value = generate(ast).code
         }
       }
     }
 
     const genWorkflowMethodToLifeCycle = (pageSchema) => {
       const workflowLifecycles = getWorkflowLifecycle()
-      Object.keys(workflowLifecycles).forEach(key => {
-        const { value, initialLifeCycleValue, comments } = getWorkflowLifecycle()[key]
+      Object.keys(workflowLifecycles).forEach((key) => {
+        const { method, initialLifeCycleValue, comments } = getWorkflowLifecycle()[key]
         genMethodToLifeCycle({
           pageSchema,
           lifeCycleKey: key,
           initialLifeCycleValue,
-          method: value,
+          method,
           comments
         })
       })
