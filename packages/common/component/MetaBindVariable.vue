@@ -316,7 +316,8 @@ export default {
       setWorkflowVariable,
       resetWorkflowVariableState,
       getWorkflowVariableContent,
-      setWorkflowVariableStateByBindKey
+      setWorkflowVariableStateByBindKey,
+      getWorkflowLifecycle,
     } = useWorkflowVariable()
     const bindType = ref('normal')
     const editor = ref(null)
@@ -525,6 +526,59 @@ export default {
       cancel()
     }
 
+    const genMethodToLifeCycle = ({
+      pageSchema,
+      lifeCycleKey,
+      initialLifeCycleValue,
+      method,
+      comments
+    }) => {
+      const fn = pageSchema.lifeCycles?.[lifeCycleKey]?.value
+
+      const fetchBody = `
+      /** ${comments.start} */
+      ${method};
+      /** ${comments.end} */`
+
+      if (!fn) {
+        pageSchema.lifeCycles = pageSchema.lifeCycles || {}
+        pageSchema.lifeCycles[lifeCycleKey] = {
+          type: 'JSFunction',
+          value: initialLifeCycleValue.replace(/\}$/, fetchBody + '}')
+        }
+      } else {
+        if (!fn.includes(method)) {
+          pageSchema.lifeCycles[lifeCycleKey].value = fn.trim().replace(/\}$/, fetchBody + '}')
+        } else {
+          const ast = parse(fn)
+          // traverse(ast, {
+          //   ExpressionStatement(path) {
+          //     if (path.toString().includes(sourceRef.name)) {
+          //       path.replaceWithSourceString(fetchBodyFn)
+          //       path.stop()
+          //     }
+          //   }
+          // })
+
+          pageSchema.lifeCycles[lifeCycleKey].value = generate(ast).code
+        }
+      }
+    }
+
+    const genWorkflowMethodToLifeCycle = (pageSchema) => {
+      const workflowLifecycles = getWorkflowLifecycle()
+      Object.keys(workflowLifecycles).forEach(key => {
+        const { value, initialLifeCycleValue, comments } = getWorkflowLifecycle()[key]
+        genMethodToLifeCycle({
+          pageSchema,
+          lifeCycleKey: key,
+          initialLifeCycleValue,
+          method: value,
+          comments
+        })
+      })
+    }
+
     const confirm = () => {
       const { setSaved, canvasApi } = useCanvas()
       if (bindType.value === 'workflow') {
@@ -555,6 +609,7 @@ export default {
                     loading: false,
                     pending: 0,
                     executing: false,
+                    done: false,
                     progress: 0
                   }
                 }
@@ -613,6 +668,7 @@ export default {
             workflowInUse.push(workflowVariableState.selectedWorkflow)
           }
           genWorkflowState()
+          genWorkflowMethodToLifeCycle(pageSchema)
 
           emit('update:modelValue', {
             type: 'JSExpression',
@@ -620,6 +676,7 @@ export default {
           })
         } else {
           genWorkflowState()
+          genWorkflowMethodToLifeCycle(pageSchema)
 
           emit('update:modelValue', '')
         }

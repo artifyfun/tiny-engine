@@ -19,16 +19,9 @@ const category = [
       {
         category: 'state',
         key: 'loading',
-        name: '等待',
+        name: '正在加载',
         description: '',
         value: false
-      },
-      {
-        category: 'state',
-        key: 'pending',
-        name: '排队任务数',
-        description: '',
-        value: 0
       },
       {
         category: 'state',
@@ -39,11 +32,25 @@ const category = [
       },
       {
         category: 'state',
+        key: 'done',
+        name: '任务完成',
+        description: '',
+        value: false
+      },
+      {
+        category: 'state',
         key: 'progress',
         name: '任务进度',
         description: '',
         value: 0
-      }
+      },
+      {
+        category: 'state',
+        key: 'pending',
+        name: '排队人数',
+        description: '',
+        value: 0
+      },
     ]
   }
 ]
@@ -104,6 +111,7 @@ const setWorkflow = (workflow) => {
           loading: false,
           pending: 0,
           executing: false,
+          done: false,
           progress: 0
         }
       }
@@ -187,6 +195,127 @@ const setWorkflowVariable = (variable) => {
   workflowVariableState.selectedVariable = variable
 }
 
+function initWebSocket() {
+  const WORKSPACE_KEY = 'workspace'
+  const workspace = this.state[WORKSPACE_KEY]
+
+  const options = {
+    url: "ws://127.0.0.1:7011/workflows",
+    protocols: this.state.clientId
+  }
+
+  const socket = new this.utils.ReconnectWebSocket(options);
+
+  socket.onmessage = (e) => {
+    this.state.isConnecting = false
+    try {
+      const data = JSON.parse(e.data)
+      console.log(JSON.parse(JSON.stringify(data)))
+      switch (data.type) {
+        case 'connect': {
+          break
+        }
+        case 'state': {
+          const { workflowKey, pending } = data.data
+          const workflow = workspace[workflowKey]
+          if (workflow) {
+            workflow.state.pending = pending
+            workflow.state.done = false
+          }
+          break
+        }
+        case 'progress': {
+          const { workflowKey, promptId, value } = data.data
+          const workflow = workspace[workflowKey]
+          if (workflow) {
+            workflow.promptId = promptId
+            workflow.state.executing = true
+            workflow.state.progress = value
+            workflow.state.done = false
+          }
+          break
+        }
+        case 'done': {
+          const { workflowKey, prompt, outputs } = data.data
+          const workflow = workspace[workflowKey]
+          if (workflow) {
+            if (Object.keys(outputs).length) {
+              workflow.prompt = prompt
+              workflow.outputs = outputs
+              workflow.state.progress = 100
+            } else {
+              workflow.state.progress = 0
+            }
+            workflow.state.executing = false
+            workflow.state.loading = false
+            workflow.state.done = true
+          }
+          break
+        }
+        case 'error': {
+          const { workflowKey, message } = data.data
+          const workflow = workspace[workflowKey]
+          if (workflow) {
+            workflow.state.executing = false
+            workflow.state.loading = false
+            workflow.state.progress = 0
+            workflow.state.done = false
+            console.log(message)
+          }
+          break
+        }
+        case 'history': {
+          if (data.data) {
+            Object.entries(data.data).forEach(([key, value]) => {
+              const workflow = workspace[key]
+              if (workflow) {
+                workflow.prompt = value.prompt
+                workflow.outputs = value.outputs
+              }
+            })
+          }
+          break
+        }
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  socket.onreconnect = () => {
+    this.state.isConnecting = true
+  }
+}
+
+function initClientId() {
+  const CLIENT_ID_KEY = 'workflow_clientId';
+  this.state.clientId = sessionStorage.getItem(CLIENT_ID_KEY) || this.utils.uuidv4();
+  sessionStorage.setItem(CLIENT_ID_KEY, this.state.clientId);
+} 
+
+const getWorkflowLifecycle = () => {
+  return {
+    onMounted: {
+      type: "JSFunction",
+      value: `${initWebSocket.toString()}\ninitWebSocket.call(this)`,
+      initialLifecycleValue: `function setup({ props, state, watch, onMounted }) {}`,
+      comments: {
+        start: '初始化WebSocket连接 start',
+        end: '初始化WebSocket连接 end'
+      }
+    },
+    setup: {
+      type: "JSFunction",
+      value: `${initClientId.toString()}\ninitClientId.call(this)`,
+      initialLifecycleValue: `function onMounted() {}`,
+      comments: {
+        start: '初始化ClientId start',
+        end: '初始化ClientId end'
+      }
+    }
+  }
+}
+
 export default () => {
   return {
     workflowVariableState,
@@ -195,6 +324,7 @@ export default () => {
     setWorkflowVariable,
     resetWorkflowVariableState,
     getWorkflowVariableContent,
-    setWorkflowVariableStateByBindKey
+    setWorkflowVariableStateByBindKey,
+    getWorkflowLifecycle,
   }
 }
