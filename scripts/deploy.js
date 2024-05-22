@@ -19,6 +19,7 @@ const files = [
   'index.html',
   'preview.html',
   'previewApp.html',
+  'downloadApp.html',
 ]
 
 files.forEach(file => {

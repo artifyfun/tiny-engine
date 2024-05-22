@@ -153,10 +153,11 @@ const menus = ref(
     ? []
     : [
         { name: '应用发布', code: 'publishApp', icon: 'news' },
-        { name: '应用预览', code: 'previewApp', icon: 'preview' },
+        // { name: '应用预览', code: 'previewApp', icon: 'preview' },
+        { name: '应用下载', code: 'downloadApp', icon: 'generate-code' },
         { name: '保存历史版本', code: 'saveAppHistory', icon: 'save' },
         { name: '页面管理', code: 'pageManagement', icon: 'page' },
-        { name: '区块管理', code: 'blockManagement', icon: 'block' },
+        { name: '区块管理', code: 'blockManagement', icon: 'block' }
         // { name: '平台中心', code: 'gotoPlatformCenter', icon: 'platform' },
         // { name: '素材中心', code: 'gotoMaterialCenter', icon: 'material' },
         // { name: '退出登录', code: 'logout', icon: 'logout' }
@@ -211,6 +212,17 @@ const actions = {
     const openUrl = isDevelopEnv
       ? `./previewApp.html?appid=${appId}&tenant=${tenantId}`
       : `${href}/previewApp?appid=${appId}&tenant=${tenantId}`
+    window.open(openUrl)
+  },
+  downloadApp() {
+    const appId = useApp().appInfoState.selectedId
+    // 获取租户 id
+    const getTenant = () => new URLSearchParams(location.search).get('tenant')
+    const tenantId = getTenant() || ''
+    const href = window.location.href.split('?')[0] || './'
+    const openUrl = isDevelopEnv
+      ? `./downloadApp.html?appid=${appId}&tenant=${tenantId}`
+      : `${href}/downloadApp?appid=${appId}&tenant=${tenantId}`
     window.open(openUrl)
   }
 }

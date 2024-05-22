@@ -123,7 +123,8 @@ const config = {
         index: path.resolve(__dirname, './index.html'),
         canvas: path.resolve(__dirname, './canvas.html'),
         preview: path.resolve(__dirname, './preview.html'),
-        previewApp: path.resolve(__dirname, './previewApp.html')
+        previewApp: path.resolve(__dirname, './previewApp.html'),
+        downloadApp: path.resolve(__dirname, './downloadApp.html')
       },
       output: {
         manualChunks: (id) => {
