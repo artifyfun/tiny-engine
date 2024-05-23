@@ -148,7 +148,8 @@ const config = {
 const importMapVersions = {
   prettier: '2.7.1',
   vue: '3.4.23',
-  tinyVue: '~3.14'
+  tinyVue: '~3.14',
+  'ant-design-vue': '4.1.2'
 }
 
 const devAlias = {
@@ -295,7 +296,8 @@ export default defineConfig(({ command, mode }) => {
       '@opentiny/vue-locale': `${VITE_CDN_DOMAIN}/@opentiny/vue@${importMapVersions.tinyVue}/runtime/tiny-vue-locale.mjs`,
       '@opentiny/vue-design-smb': `${VITE_CDN_DOMAIN}/@opentiny/vue-design-smb@${importMapVersions.tinyVue}/index.js`,
       '@opentiny/vue-theme/theme-tool': `${VITE_CDN_DOMAIN}/@opentiny/vue-theme@${importMapVersions.tinyVue}/theme-tool.js`,
-      '@opentiny/vue-theme/theme': `${VITE_CDN_DOMAIN}/@opentiny/vue-theme@${importMapVersions.tinyVue}/theme/index.js`
+      '@opentiny/vue-theme/theme': `${VITE_CDN_DOMAIN}/@opentiny/vue-theme@${importMapVersions.tinyVue}/theme/index.js`,
+      'ant-design-vue': `${VITE_CDN_DOMAIN}/ant-design-vue@${importMapVersions['ant-design-vue']}/dist/antd.esm.min.js`,
     }
   }
 

@@ -195,8 +195,9 @@ function workspaceInitWebSocket() {
   const WORKSPACE_KEY = 'workspace'
   const workspace = this.state[WORKSPACE_KEY]
 
+  const host = window.location.host
   const options = {
-    url: 'ws://127.0.0.1:7011/workflows',
+    url: `ws://${host}/workflows`,
     protocols: this.state.clientId
   }
 
