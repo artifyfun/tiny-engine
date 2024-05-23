@@ -17,7 +17,11 @@
     "version": "0.1.0",
     "script": "/lib/artifyfun-vue-components@0.1.0/dist/index.js",
     "css": "/lib/artifyfun-vue-components@0.1.0/dist/style.css",
-    "dependencies": null,
+    "dependencies": [
+      {
+        "package": "ant-design-vue"
+      }
+    ],
     "exportName": "ImageUploader",
     "destructuring": true
   },
