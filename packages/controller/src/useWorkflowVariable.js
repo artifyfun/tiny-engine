@@ -191,13 +191,128 @@ const setWorkflowVariable = (variable) => {
   workflowVariableState.selectedVariable = variable
 }
 
-function workspaceInitWebSocket() {
+// const workspaceInitWebSocket = () => {
+//   const WORKSPACE_KEY = 'workspace'
+//   const workspace = this.state[WORKSPACE_KEY]
+
+//   const host = window.location.host
+//   const options = {
+//     url: `ws://${host}/workflows`,
+//     protocols: this.state.clientId
+//   }
+
+//   const socket = new this.utils.ReconnectWebSocket(options)
+
+//   socket.onmessage = (e) => {
+//     this.state.isConnecting = false
+//     const data = JSON.parse(e.data)
+//     switch (data.type) {
+//       case 'connect': {
+//         break
+//       }
+//       case 'state': {
+//         const { workflowKey, pending } = data.data
+//         const workflow = workspace[workflowKey]
+//         if (workflow) {
+//           workflow.state.pending = pending
+//           workflow.state.done = false
+//         }
+//         break
+//       }
+//       case 'progress': {
+//         const { workflowKey, promptId, value } = data.data
+//         const workflow = workspace[workflowKey]
+//         if (workflow) {
+//           workflow.promptId = promptId
+//           workflow.state.executing = true
+//           workflow.state.progress = value
+//           workflow.state.done = false
+//         }
+//         break
+//       }
+//       case 'done': {
+//         const { workflowKey, prompt, outputs } = data.data
+//         const workflow = workspace[workflowKey]
+//         if (workflow) {
+//           if (Object.keys(outputs).length) {
+//             workflow.prompt = prompt
+//             workflow.outputs = outputs
+//             workflow.state.progress = 100
+//           } else {
+//             workflow.state.progress = 0
+//           }
+//           workflow.state.executing = false
+//           workflow.state.loading = false
+//           workflow.state.done = true
+//         }
+//         break
+//       }
+//       case 'error': {
+//         const { workflowKey } = data.data
+//         const workflow = workspace[workflowKey]
+//         if (workflow) {
+//           workflow.state.executing = false
+//           workflow.state.loading = false
+//           workflow.state.progress = 0
+//           workflow.state.done = false
+//         }
+//         break
+//       }
+//       case 'history': {
+//         if (data.data) {
+//           Object.entries(data.data).forEach(([key, value]) => {
+//             const workflow = workspace[key]
+//             if (workflow) {
+//               workflow.prompt = value.prompt
+//               workflow.outputs = value.outputs
+//             }
+//           })
+//         }
+//         break
+//       }
+//     }
+//   }
+
+//   socket.onreconnect = () => {
+//     this.state.isConnecting = true
+//   }
+// }
+
+// const workspaceInitClientId = () => {
+//   const CLIENT_ID_KEY = 'workflow_clientId'
+//   this.state.clientId = sessionStorage.getItem(CLIENT_ID_KEY) || this.utils.uuidv4()
+//   sessionStorage.setItem(CLIENT_ID_KEY, this.state.clientId)
+// }
+
+const getWorkflowLifecycle = () => {
+  return {
+    setup: {
+      method: {
+        name: 'workspaceInitClientId',
+        body: `const workspaceInitClientId = () => {
+  const CLIENT_ID_KEY = 'workflow_clientId'
+  this.state.clientId = sessionStorage.getItem(CLIENT_ID_KEY) || this.utils.uuidv4()
+  sessionStorage.setItem(CLIENT_ID_KEY, this.state.clientId)
+}
+
+workspaceInitClientId()`
+      },
+      initialLifeCycleValue: `function setup({ props, state, watch, onMounted }) {}`,
+      comments: {
+        start: '初始化ClientId start',
+        end: '初始化ClientId end'
+      }
+    },
+    onMounted: {
+      method: {
+        name: 'workspaceInitWebSocket',
+        body: `const workspaceInitWebSocket = () => {
   const WORKSPACE_KEY = 'workspace'
   const workspace = this.state[WORKSPACE_KEY]
 
   const host = window.location.host
   const options = {
-    url: `ws://${host}/workflows`,
+    url: \`ws://\${host}/workflows\`,
     protocols: this.state.clientId
   }
 
@@ -278,29 +393,7 @@ function workspaceInitWebSocket() {
   }
 }
 
-function workspaceInitClientId() {
-  const CLIENT_ID_KEY = 'workflow_clientId'
-  this.state.clientId = sessionStorage.getItem(CLIENT_ID_KEY) || this.utils.uuidv4()
-  sessionStorage.setItem(CLIENT_ID_KEY, this.state.clientId)
-}
-
-const getWorkflowLifecycle = () => {
-  return {
-    setup: {
-      method: {
-        name: workspaceInitClientId.name,
-        body: `${workspaceInitClientId.toString()}\nworkspaceInitClientId.call(this)`
-      },
-      initialLifeCycleValue: `function setup({ props, state, watch, onMounted }) {}`,
-      comments: {
-        start: '初始化ClientId start',
-        end: '初始化ClientId end'
-      }
-    },
-    onMounted: {
-      method: {
-        name: workspaceInitWebSocket.name,
-        body: `${workspaceInitWebSocket.toString()}\nworkspaceInitWebSocket.call(this)`
+workspaceInitWebSocket()`
       },
       initialLifeCycleValue: `function onMounted() {}`,
       comments: {

@@ -5,11 +5,61 @@ function toUpperCamelCase(str) {
   return str.replace(str[0], str[0].toUpperCase())
 }
 
-function getMethodKey(method) {
-  return `${WORKSPACE_KEY}${toUpperCamelCase(method.name)}`
+function getMethodKey(name) {
+  return `${WORKSPACE_KEY}${toUpperCamelCase(name)}`
 }
 
-function queueSync(eventArgs, workflowKey) {
+// function queueSync(eventArgs, workflowKey) {
+//   this.state.workspace[workflowKey].state.loading = true
+//   return fetch('/workflows/api/queue', {
+//     method: 'post',
+//     headers: {
+//       'content-type': 'application/json'
+//     },
+//     body: JSON.stringify({
+//       key: workflowKey.toString(),
+//       clientId: this.state.clientId,
+//       prompt: this.state.workspace[workflowKey].prompt
+//     })
+//   })
+//     .then((response) => response.json())
+//     .then(({ data }) => {
+//       Object.assign(this.state.workspace[workflowKey].outputs, data)
+//       this.state.workspace[workflowKey].state.loading = false
+//     })
+//     .catch(() => {
+//       this.state.workspace[workflowKey].state.loading = false
+//     })
+// }
+
+// function deleteQueue(eventArgs, workflowKey) {
+//   return fetch('/workflows/api/deleteQueue', {
+//     method: 'post',
+//     headers: {
+//       'content-type': 'application/json'
+//     },
+//     body: JSON.stringify({
+//       clientId: this.state.clientId,
+//       promptId: this.state.workspace[workflowKey].promptId
+//     })
+//   })
+//     .then((response) => response.json())
+//     .then(() => {
+//       Object.assign(this.state.workspace[workflowKey].state, {
+//         loading: false,
+//         executing: false,
+//         progress: 0
+//       })
+//     })
+// }
+
+const methodsMap = {
+  comfyui: [
+    {
+      key: getMethodKey('queueSync'),
+      name: '同步执行',
+      description: '同步执行工作流',
+      content: `function queueSync(eventArgs, workflowKey) {
   this.state.workspace[workflowKey].state.loading = true
   return fetch('/workflows/api/queue', {
     method: 'post',
@@ -30,9 +80,13 @@ function queueSync(eventArgs, workflowKey) {
     .catch(() => {
       this.state.workspace[workflowKey].state.loading = false
     })
-}
-
-function deleteQueue(eventArgs, workflowKey) {
+}`
+    },
+    {
+      key: getMethodKey('deleteQueue'),
+      name: '中断',
+      description: '中断执行本次任务',
+      content: `function deleteQueue(eventArgs, workflowKey) {
   return fetch('/workflows/api/deleteQueue', {
     method: 'post',
     headers: {
@@ -51,21 +105,7 @@ function deleteQueue(eventArgs, workflowKey) {
         progress: 0
       })
     })
-}
-
-const methodsMap = {
-  comfyui: [
-    {
-      key: getMethodKey(queueSync),
-      name: '同步执行',
-      description: '同步执行工作流',
-      content: queueSync.toString()
-    },
-    {
-      key: getMethodKey(deleteQueue),
-      name: '中断',
-      description: '中断执行本次任务',
-      content: deleteQueue.toString()
+}`
     }
   ]
 }
