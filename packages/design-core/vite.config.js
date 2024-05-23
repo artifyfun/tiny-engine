@@ -227,7 +227,7 @@ export default defineConfig(({ command, mode }) => {
   })
   const htmlPlugin = (mode) => {
     const upgradeHttpsMetaTags = []
-    const includeHtmls = ['index.html', 'preview.html', 'previewApp.html']
+    const includeHtmls = ['index.html', 'preview.html', 'previewApp.html', 'downloadApp.html']
 
     if (mode === 'alpha' || mode === 'prod') {
       upgradeHttpsMetaTags.push({

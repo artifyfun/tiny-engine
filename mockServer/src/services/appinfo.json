@@ -17213,9 +17213,9 @@
         "component": "ImageUploader",
         "npm": {
           "package": "artifyfun-vue-components",
-          "version": "0.0.1",
-          "script": "/lib/artifyfun-vue-components@0.0.1/dist/index.js",
-          "css": "/lib/artifyfun-vue-components@0.0.1/dist/style.css",
+          "version": "0.1.0",
+          "script": "/lib/artifyfun-vue-components@0.1.0/dist/index.js",
+          "css": "/lib/artifyfun-vue-components@0.1.0/dist/style.css",
           "dependencies": null,
           "exportName": "ImageUploader",
           "destructuring": true
@@ -17241,9 +17241,9 @@
         "component": "PokemonCard",
         "npm": {
           "package": "artifyfun-vue-components",
-          "version": "0.0.1",
-          "script": "/lib/artifyfun-vue-components@0.0.1/dist/index.js",
-          "css": "/lib/artifyfun-vue-components@0.0.1/dist/style.css",
+          "version": "0.1.0",
+          "script": "/lib/artifyfun-vue-components@0.1.0/dist/index.js",
+          "css": "/lib/artifyfun-vue-components@0.1.0/dist/style.css",
           "dependencies": null,
           "exportName": "PokemonCard",
           "destructuring": true

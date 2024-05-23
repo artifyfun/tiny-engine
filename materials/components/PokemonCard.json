@@ -1,6 +1,6 @@
 {
   "id": 1,
-  "version": "0.0.1",
+  "version": "0.1.0",
   "name": {
     "zh_CN": "卡片"
   },
@@ -14,9 +14,9 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "artifyfun-vue-components",
-    "version": "0.0.1",
-    "script": "/lib/artifyfun-vue-components@0.0.1/dist/index.js",
-    "css": "/lib/artifyfun-vue-components@0.0.1/dist/style.css",
+    "version": "0.1.0",
+    "script": "/lib/artifyfun-vue-components@0.1.0/dist/index.js",
+    "css": "/lib/artifyfun-vue-components@0.1.0/dist/style.css",
     "dependencies": null,
     "exportName": "PokemonCard",
     "destructuring": true
@@ -39,10 +39,7 @@
     "isLayout": false,
     "rootSelector": "",
     "shortcuts": {
-      "properties": [
-        "type",
-        "size"
-      ]
+      "properties": []
     },
     "contextMenu": {
       "actions": [
