@@ -1,20 +1,31 @@
-/**
- * Copyright (c) 2023 - present TinyEngine Authors.
- * Copyright (c) 2023 - present Huawei Cloud Computing Technologies Co., Ltd.
- *
- * Use of this source code is governed by an MIT-style license.
- *
- * THE OPEN SOURCE SOFTWARE IN THIS PRODUCT IS DISTRIBUTED IN THE HOPE THAT IT WILL BE USEFUL,
- * BUT WITHOUT ANY WARRANTY, WITHOUT EVEN THE IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR
- * A PARTICULAR PURPOSE. SEE THE APPLICABLE LICENSES FOR MORE DETAILS.
- *
- */
-
 import axios from 'axios'
 import MockAdapter from 'axios-mock-adapter'
+import { AxiosLoading } from "./loading";
+
+const axiosLoading = new AxiosLoading();
 
 export default (config) => {
-  const instance = axios.create(config)
+  const service = axios.create(config)
+  const instance = (options) => {
+    return new Promise((resolve, reject) => {
+      const { loading } = config;
+      if (loading) {
+        axiosLoading.addLoading();
+      }
+      service(options)
+        .then((res) => {
+          resolve(res);
+        })
+        .catch((error) => {
+          reject(error);
+        })
+        .finally(() => {
+          if (options.loading) {
+            axiosLoading.closeLoading();
+          }
+        });
+    });
+  }
   const defaults = {}
   let mock
 

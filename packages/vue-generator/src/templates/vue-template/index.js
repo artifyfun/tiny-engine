@@ -11,7 +11,13 @@ import lowcodeJSFile from './templateFiles/src/lowcodeConfig/lowcode.js?raw'
 import lowcodeStoreFile from './templateFiles/src/lowcodeConfig/store.js?raw'
 import axiosFile from './templateFiles/src/http/axios.js?raw'
 import axiosConfigFile from './templateFiles/src/http/config.js?raw'
+import axiosLoadingFile from './templateFiles/src/http/loading.js?raw'
 import httpEntryFile from './templateFiles/src/http/index.js?raw'
+import mainCssFile from './templateFiles/src/assets/main.css?raw'
+import normalizeCssFile from './templateFiles/src/assets/normalize.css?raw'
+import loadingVueFile from './templateFiles/src/components/Loading/index.vue?raw'
+import loadingHooksFile from './templateFiles/src/hooks/useLoading.js?raw'
+
 
 /**
  * 模板写入动态内容
@@ -117,9 +123,39 @@ export function generateTemplate(schema) {
     },
     {
       fileType: 'js',
+      fileName: 'loading.js',
+      path: './src/http',
+      fileContent: axiosLoadingFile
+    },
+    {
+      fileType: 'js',
       fileName: 'index.js',
       path: './src/http',
       fileContent: httpEntryFile
+    },
+    {
+      fileType: 'css',
+      fileName: 'main.css',
+      path: './src/assets',
+      fileContent: mainCssFile
+    },
+    {
+      fileType: 'css',
+      fileName: 'normalize.css',
+      path: './src/assets',
+      fileContent: normalizeCssFile
+    },
+    {
+      fileType: 'vue',
+      fileName: 'index.vue',
+      path: './src/components/Loading',
+      fileContent: loadingVueFile
+    },
+    {
+      fileType: 'js',
+      fileName: 'useLoading.js',
+      path: './src/hooks',
+      fileContent: loadingHooksFile
     }
   ]
 }
