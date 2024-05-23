@@ -285,6 +285,7 @@ const setWorkflowVariable = (variable) => {
 // }
 
 const getWorkflowLifecycle = () => {
+  const host = window.location.host
   return {
     setup: {
       method: {
@@ -310,9 +311,8 @@ workspaceInitClientId()`
   const WORKSPACE_KEY = 'workspace'
   const workspace = this.state[WORKSPACE_KEY]
 
-  const host = window.location.host
   const options = {
-    url: \`ws://\${host}/workflows\`,
+    url: \`ws://${host}/workflows\`,
     protocols: this.state.clientId
   }
 
