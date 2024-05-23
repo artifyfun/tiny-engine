@@ -18,6 +18,7 @@
     "@opentiny/vue-icon": "${VITE_CDN_DOMAIN}/@opentiny/vue@${opentinyVueVersion}/runtime/tiny-vue-icon.mjs",
     "@opentiny/vue-common": "${VITE_CDN_DOMAIN}/@opentiny/vue@${opentinyVueVersion}/runtime/tiny-vue-common.mjs",
     "@opentiny/vue-locale": "${VITE_CDN_DOMAIN}/@opentiny/vue@${opentinyVueVersion}/runtime/tiny-vue-locale.mjs",
-    "@opentiny/vue-renderless/": "${VITE_CDN_DOMAIN}/@opentiny/vue-renderless@${opentinyVueVersion}/"
+    "@opentiny/vue-renderless/": "${VITE_CDN_DOMAIN}/@opentiny/vue-renderless@${opentinyVueVersion}/",
+    "ant-design-vue": "${VITE_CDN_DOMAIN}/ant-design-vue@4.1.2/dist/antd.esm.min.js"
   }
 }
