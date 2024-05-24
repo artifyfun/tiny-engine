@@ -1,15 +1,24 @@
 <template>
   <div class="comfyui-playground">
-    <iframe ref="iframe" style="width: 100%; height: 100%" src="/comfyui/" frameborder="0"></iframe>
+    <iframe ref="iframe" style="width: 100%; height: 100%" :src="src" frameborder="0"></iframe>
   </div>
 </template>
 
 <script setup>
 import { onMounted, onUnmounted, ref, defineEmits, defineExpose } from 'vue'
+import { useApp } from '@opentiny/tiny-engine-controller'
 
 import { uuidv4, getRandomColor, stringify, loadCssCode } from '../../utils'
 
 const emit = defineEmits(['onload', 'updateParamsNodes'])
+
+const { appInfoState } = useApp()
+
+const defaultComfyuiUrl = 'http://127.0.0.1:8188'
+
+const comfyui_url = encodeURIComponent(appInfoState.selectedApp.comfyui_url || defaultComfyuiUrl)
+
+const src = `/comfyui?comfyui_url=${comfyui_url}`
 
 const iframe = ref(null)
 
