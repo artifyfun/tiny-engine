@@ -3,6 +3,19 @@ import { WORKSPACE_KEY } from '../js/constants'
 
 const category = [
   {
+    name: '配置',
+    key: 'config',
+    variables: [
+      {
+        category: 'config',
+        key: 'uploadApi',
+        name: '上传接口',
+        description: '',
+        value: '/workflows/api/upload/image'
+      }
+    ]
+  },
+  {
     name: '输入',
     key: 'input',
     variables: []
@@ -69,7 +82,7 @@ const workflowVariableState = reactive(JSON.parse(JSON.stringify(initialState)))
 const setVariables = () => {
   const category = workflowVariableState.selectedCategory
   if (workflowVariableState.selectedWorkflow) {
-    if (['state'].includes(category.key)) {
+    if (['state', 'config'].includes(category.key)) {
       workflowVariableState.variables = category.variables
     } else {
       workflowVariableState.variables = workflowVariableState.selectedWorkflow.paramsNodes.filter((node) =>
@@ -97,6 +110,9 @@ const setWorkflow = (workflow) => {
  {
     __workflow__: {
       workflow1: {
+        config: {
+          uploadApi: '/workflows/api/upload/image?key=workflow1'
+        },
         prompt: {
           id1: {
             inputs: {
@@ -123,6 +139,7 @@ const getWorkflowVariableContent = () => {
   const { selectedWidget, category, key, id } = workflowVariableState.selectedVariable
   const workflowKey = workflowVariableState.selectedWorkflow.key
   const valueKeyMap = {
+    config: `['config']['${key}']`,
     input: `['prompt']['${id}']['inputs']['${selectedWidget?.name}']`,
     output: `['outputs']['${id}']`,
     state: `['${category}']['${key}']`
@@ -157,6 +174,10 @@ const setWorkflowVariableStateByBindKey = (bindKey, workflows) => {
     state: (() => {
       const [category, key] = res
       return { category, key }
+    })(),
+    config: (() => {
+      const [category, key] = res
+      return { category, key }
     })()
   }
 
@@ -172,6 +193,9 @@ const setWorkflowVariableStateByBindKey = (bindKey, workflows) => {
       .find((item) => item.key === workflowKey)
       ?.paramsNodes.find((item) => item.selectedWidget['id']?.toString() === data.id),
     state: workflowVariableState.category
+      .find((item) => item.key === category)
+      ?.variables.find((item) => item.key === data.key),
+    config: workflowVariableState.category
       .find((item) => item.key === category)
       ?.variables.find((item) => item.key === data.key)
   }
@@ -310,9 +334,10 @@ workspaceInitClientId()`
         body: `const workspaceInitWebSocket = () => {
   const WORKSPACE_KEY = 'workspace'
   const workspace = this.state[WORKSPACE_KEY]
+  const key = Object.keys(workspace)[0]
 
   const options = {
-    url: \`ws://${host}/workflows\`,
+    url: \`ws://${host}/workflows?key=\${key}\`,
     protocols: this.state.clientId
   }
 

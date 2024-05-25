@@ -93,6 +93,7 @@ const methodsMap = {
       'content-type': 'application/json'
     },
     body: JSON.stringify({
+      key: workflowKey.toString(),
       clientId: this.state.clientId,
       promptId: this.state.workspace[workflowKey].promptId
     })

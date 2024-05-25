@@ -145,18 +145,20 @@
                 <div class="item-content">
                   <div class="item-content-list lowcode-scrollbar-thin">
                     <ul>
-                      <li
-                        v-for="item in workflowVariableState.category"
-                        :key="item.key"
-                        :class="{ 'item-selected': workflowVariableState.selectedCategory === item }"
-                        @click="setWorkflowCategory(item)"
-                      >
-                        <tiny-tooltip effect="dark" placement="top" :content="item.name" :open-delay="500">
-                          <div class="item-wrap">
-                            <div class="item-text">{{ item.name }}</div>
-                          </div>
-                        </tiny-tooltip>
-                      </li>
+                      <template v-if="workflowVariableState.selectedWorkflow">
+                        <li
+                          v-for="item in workflowVariableState.category"
+                          :key="item.key"
+                          :class="{ 'item-selected': workflowVariableState.selectedCategory === item }"
+                          @click="setWorkflowCategory(item)"
+                        >
+                          <tiny-tooltip effect="dark" placement="top" :content="item.name" :open-delay="500">
+                            <div class="item-wrap">
+                              <div class="item-text">{{ item.name }}</div>
+                            </div>
+                          </tiny-tooltip>
+                        </li>
+                      </template>
                     </ul>
                   </div>
                 </div>
@@ -577,6 +579,9 @@ export default {
            {
               __workflow__: {
                 workflow1: {
+                  config: {
+                    uploadApi: '/workflows/api/upload/image?key=workflow1'
+                  },
                   prompt: {
                     id1: {
                       inputs: {
@@ -612,9 +617,14 @@ export default {
                 staticData[workflow.key][category] = {}
               }
               staticData[workflow.key][category][key] = value
+              if (category === 'config') {
+                if (key === 'uploadApi') {
+                  staticData[workflow.key][category][key] = `/workflows/api/upload/image?key=${workflow.key}`
+                }
+              }
             }
             for (const key in workflow.paramsNodes) {
-              const { selectedWidget, id } = workflow.paramsNodes[key]
+              const { selectedWidget, category, id } = workflow.paramsNodes[key]
 
               if (!staticData[workflow.key]['prompt']) {
                 staticData[workflow.key]['prompt'] = {}
@@ -622,11 +632,16 @@ export default {
               if (!staticData[workflow.key]['prompt'][id]) {
                 staticData[workflow.key]['prompt'][id] = { inputs: {} }
               }
-              staticData[workflow.key]['prompt'][id]['inputs'][selectedWidget.name] = selectedWidget.value
               if (!staticData[workflow.key]['outputs']) {
                 staticData[workflow.key]['outputs'] = {}
               }
-              staticData[workflow.key]['outputs'][selectedWidget.id] = null
+
+              if (category === 'input') {
+                staticData[workflow.key]['prompt'][id]['inputs'][selectedWidget.name] = selectedWidget.value
+              }
+              if (category === 'output') {
+                staticData[workflow.key]['outputs'][selectedWidget.id] = null
+              }
             }
           }
           pageSchema.state[stateName] = staticData
