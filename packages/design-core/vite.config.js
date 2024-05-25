@@ -75,7 +75,8 @@ const config = {
       reactivityTransform: path.resolve(__dirname, 'src'),
       template: {
         compilerOptions: {
-          isCustomElement: (tag) => tag.startsWith('tiny-i18n-host') || tag.startsWith('ng')
+          isCustomElement: (tag) =>
+            tag.startsWith('tiny-i18n-host') || tag.startsWith('ng') || tag.startsWith('canvas-')
         }
       }
     }),
@@ -297,7 +298,7 @@ export default defineConfig(({ command, mode }) => {
       '@opentiny/vue-design-smb': `${VITE_CDN_DOMAIN}/@opentiny/vue-design-smb@${importMapVersions.tinyVue}/index.js`,
       '@opentiny/vue-theme/theme-tool': `${VITE_CDN_DOMAIN}/@opentiny/vue-theme@${importMapVersions.tinyVue}/theme-tool.js`,
       '@opentiny/vue-theme/theme': `${VITE_CDN_DOMAIN}/@opentiny/vue-theme@${importMapVersions.tinyVue}/theme/index.js`,
-      'ant-design-vue': `${VITE_CDN_DOMAIN}/ant-design-vue@${importMapVersions['ant-design-vue']}/dist/antd.esm.min.js`,
+      'ant-design-vue': `${VITE_CDN_DOMAIN}/ant-design-vue@${importMapVersions['ant-design-vue']}/dist/antd.esm.min.js`
     }
   }
 
