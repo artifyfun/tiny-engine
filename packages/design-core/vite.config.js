@@ -75,8 +75,7 @@ const config = {
       reactivityTransform: path.resolve(__dirname, 'src'),
       template: {
         compilerOptions: {
-          isCustomElement: (tag) =>
-            tag.startsWith('tiny-i18n-host') || tag.startsWith('ng') || tag.startsWith('canvas-')
+          isCustomElement: (tag) => tag.startsWith('tiny-i18n-host') || tag.startsWith('ng')
         }
       }
     }),
