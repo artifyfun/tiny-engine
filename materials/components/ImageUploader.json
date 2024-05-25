@@ -74,11 +74,32 @@
             "property": "modelValue",
             "label": {
               "text": {
-                "zh_CN": "modelValue"
+                "zh_CN": "绑定值"
               }
             },
             "description": {
               "zh_CN": "绑定值"
+            },
+            "required": true,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            }
+          },
+          {
+            "property": "action",
+            "label": {
+              "text": {
+                "zh_CN": "上传接口"
+              }
+            },
+            "description": {
+              "zh_CN": "上传接口"
             },
             "required": true,
             "readOnly": false,
