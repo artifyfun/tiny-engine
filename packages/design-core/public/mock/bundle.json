@@ -3172,7 +3172,7 @@
         },
         {
           "id": 1,
-          "version": "0.1.0",
+          "version": "0.1.1",
           "name": {
             "zh_CN": "图片上传"
           },
@@ -3186,9 +3186,9 @@
           "dev_mode": "proCode",
           "npm": {
             "package": "artifyfun-vue-components",
-            "version": "0.1.0",
-            "script": "/lib/artifyfun-vue-components@0.1.0/dist/index.js",
-            "css": "/lib/artifyfun-vue-components@0.1.0/dist/style.css",
+            "version": "0.1.1",
+            "script": "/lib/artifyfun-vue-components@0.1.1/dist/index.js",
+            "css": "/lib/artifyfun-vue-components@0.1.1/dist/style.css",
             "dependencies": [
               {
                 "package": "ant-design-vue"
@@ -3304,6 +3304,14 @@
               }
             ],
             "events": {
+              "onUpdate:modelValue": {
+                "label": {
+                  "zh_CN": "双向绑定值改变时触发"
+                },
+                "description": {
+                  "zh_CN": "双向绑定值改变时触发"
+                }
+              },
               "onUploadDone": {
                 "label": {
                   "zh_CN": "上传成功"
@@ -3847,7 +3855,7 @@
         },
         {
           "id": 1,
-          "version": "0.1.0",
+          "version": "0.1.1",
           "name": {
             "zh_CN": "卡片"
           },
@@ -3861,9 +3869,9 @@
           "dev_mode": "proCode",
           "npm": {
             "package": "artifyfun-vue-components",
-            "version": "0.1.0",
-            "script": "/lib/artifyfun-vue-components@0.1.0/dist/index.js",
-            "css": "/lib/artifyfun-vue-components@0.1.0/dist/style.css",
+            "version": "0.1.1",
+            "script": "/lib/artifyfun-vue-components@0.1.1/dist/index.js",
+            "css": "/lib/artifyfun-vue-components@0.1.1/dist/style.css",
             "dependencies": [
               {
                 "package": "ant-design-vue"
