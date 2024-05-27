@@ -219,9 +219,9 @@ const setWorkflowVariable = (variable) => {
 //   const WORKSPACE_KEY = 'workspace'
 //   const workspace = this.state[WORKSPACE_KEY]
 
-//   const host = window.location.host
+//   const { origin } = window.location
 //   const options = {
-//     url: `ws://${host}/workflows`,
+//     url: `${origin.replace('http', 'ws')}/workflows`,
 //     protocols: this.state.clientId
 //   }
 
@@ -334,10 +334,10 @@ workspaceInitClientId()`
         body: `const workspaceInitWebSocket = () => {
   const WORKSPACE_KEY = 'workspace'
   const workspace = this.state[WORKSPACE_KEY]
-  const key = Object.keys(workspace)[0]
 
+  const { origin } = window.location
   const options = {
-    url: \`ws://${host}/workflows?key=\${key}\`,
+      url: \`\${ origin.replace('http', 'ws') } /workflows\`,
     protocols: this.state.clientId
   }
 
