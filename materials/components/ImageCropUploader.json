@@ -2,11 +2,11 @@
   "id": 1,
   "version": "0.2.0",
   "name": {
-    "zh_CN": "图片上传"
+    "zh_CN": "图片裁剪上传"
   },
-  "component": "ImageUploader",
+  "component": "ImageCropUploader",
   "icon": "Image",
-  "description": "图片上传",
+  "description": "图片裁剪上传",
   "doc_url": "",
   "screenshot": "",
   "tags": "",
@@ -22,7 +22,7 @@
         "package": "ant-design-vue"
       }
     ],
-    "exportName": "ImageUploader",
+    "exportName": "ImageCropUploader",
     "destructuring": true
   },
   "group": "Artify",
@@ -113,6 +113,50 @@
             }
           },
           {
+            "property": "width",
+            "label": {
+              "text": {
+                "zh_CN": "裁剪宽度"
+              }
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {
+                "allowEmpty": true
+              }
+            },
+            "description": {
+              "zh_CN": "裁剪宽度"
+            },
+            "labelPosition": "left"
+          },
+          {
+            "property": "height",
+            "label": {
+              "text": {
+                "zh_CN": "裁剪高度"
+              }
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {
+                "allowEmpty": true
+              }
+            },
+            "description": {
+              "zh_CN": "裁剪高度"
+            },
+            "labelPosition": "left"
+          },
+          {
             "property": "disabled",
             "label": {
               "text": {
@@ -162,11 +206,11 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "图片上传"
+        "zh_CN": "图片裁剪上传"
       },
       "icon": "Image",
       "screenshot": "",
-      "snippetName": "ImageUploader",
+      "snippetName": "ImageCropUploader",
       "schema": {}
     }
   ],

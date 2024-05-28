@@ -17210,12 +17210,28 @@
         "npm": {}
       },
       {
+        "component": "ImageCropUploader",
+        "npm": {
+          "package": "artifyfun-vue-components",
+          "version": "0.2.0",
+          "script": "/lib/artifyfun-vue-components@0.2.0/dist/index.js",
+          "css": "/lib/artifyfun-vue-components@0.2.0/dist/style.css",
+          "dependencies": [
+            {
+              "package": "ant-design-vue"
+            }
+          ],
+          "exportName": "ImageCropUploader",
+          "destructuring": true
+        }
+      },
+      {
         "component": "ImageUploader",
         "npm": {
           "package": "artifyfun-vue-components",
-          "version": "0.1.1",
-          "script": "/lib/artifyfun-vue-components@0.1.1/dist/index.js",
-          "css": "/lib/artifyfun-vue-components@0.1.1/dist/style.css",
+          "version": "0.2.0",
+          "script": "/lib/artifyfun-vue-components@0.2.0/dist/index.js",
+          "css": "/lib/artifyfun-vue-components@0.2.0/dist/style.css",
           "dependencies": [
             {
               "package": "ant-design-vue"
@@ -17245,9 +17261,9 @@
         "component": "PokemonCard",
         "npm": {
           "package": "artifyfun-vue-components",
-          "version": "0.1.1",
-          "script": "/lib/artifyfun-vue-components@0.1.1/dist/index.js",
-          "css": "/lib/artifyfun-vue-components@0.1.1/dist/style.css",
+          "version": "0.2.0",
+          "script": "/lib/artifyfun-vue-components@0.2.0/dist/index.js",
+          "css": "/lib/artifyfun-vue-components@0.2.0/dist/style.css",
           "dependencies": [
             {
               "package": "ant-design-vue"
