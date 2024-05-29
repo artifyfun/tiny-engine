@@ -126,7 +126,41 @@ export default {
       return res
     }
 
-    const instance = generateApp()
+    const templateMap = {
+      electron: {
+        pluginConfig: {
+          block: {
+            blockBasePath: './src/renderer/src/components',
+          },
+          page: {
+            pageBasePath: './src/renderer/src/views',
+          },
+          dataSource: {
+            path: './src/renderer/src/lowcodeConfig',
+          },
+          globalState: {
+            path: './src/renderer/src/stores',
+          },
+          i18n: {
+            path: './src/renderer/src/i18n',
+          },
+          router: {
+            path: './src/renderer/src/router',
+          },
+          utils: {
+            path: './src/renderer/src',
+          },
+        },
+        customContext: {
+          template: 'electron',
+        }
+      },
+      default: {}
+    }
+
+    const instance = generateApp({
+      ...templateMap['electron'],
+    })
 
     const getAllPageDetails = async (pageList) => {
       const detailPromise = pageList.map(({ id }) => useLayout().getPluginApi('AppManage').getPageById(id))

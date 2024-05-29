@@ -1,0 +1,16 @@
+node_modules
+dist
+out
+.DS_Store
+*.log*
+
+# local env files
+.env.local
+.env.*.local
+
+# Editor directories and files
+.vscode
+.idea
+
+yarn.lock
+package-lock.json
