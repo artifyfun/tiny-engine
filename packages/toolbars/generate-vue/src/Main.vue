@@ -1,35 +1,26 @@
 <template>
-  <tiny-popover
-    trigger="hover"
-    :open-delay="1000"
-    popper-class="toolbar-right-popover"
-    append-to-body
-    content="生成当前应用代码到本地文件"
-  >
-    <template #reference>
-      <span class="menu-icon-wrapper icon" @click.stop="handleShowMenu">
-        <svg-icon :name="icon"></svg-icon>
-        <div v-if="state.showMenu" class="main-menu">
-          <ul>
-            <li v-for="(item, index) in menus" :key="index" @click="handleClick(item)">
-              <span class="menu-item">{{ item.name }}</span>
-            </li>
-          </ul>
-        </div>
-      </span>
-    </template>
-  </tiny-popover>
-  <generate-file-selector
-    :visible="state.showDialogbox"
-    :data="state.saveFilesInfo"
-    @confirm="confirm"
-    @cancel="cancel"
-  ></generate-file-selector>
+  <div class="generate-code">
+    <span class="menu-icon-wrapper icon" @click.stop="handleShowMenu">
+      <svg-icon :name="icon"></svg-icon>
+      <div v-if="state.showMenu" class="main-menu">
+        <ul>
+          <li v-for="(item, index) in menus" :key="index" @click="handleClick(item)">
+            <span class="menu-item">{{ item.name }}</span>
+          </li>
+        </ul>
+      </div>
+    </span>
+    <generate-file-selector
+      :visible="state.showDialogbox"
+      :data="state.saveFilesInfo"
+      @confirm="confirm"
+      @cancel="cancel"
+    ></generate-file-selector>
+  </div>
 </template>
 
 <script>
 import { reactive, onUnmounted } from 'vue'
-import { Popover } from '@opentiny/vue'
 import {
   getGlobalConfig,
   useBlock,
@@ -46,7 +37,6 @@ import FileSelector from './FileSelector.vue'
 
 export default {
   components: {
-    TinyPopover: Popover,
     GenerateFileSelector: FileSelector
   },
   props: {
@@ -390,52 +380,54 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
-.menu-icon-wrapper {
-  position: relative;
-}
+<style lang="less">
+.generate-code {
+  .menu-icon-wrapper {
+    position: relative;
 
-.main-menu {
-  position: absolute;
-  top: calc(var(--base-top-panel-height) - 8px);
-  color: var(--ti-lowcode-toolbar-icon-color);
-  ul {
-    min-width: 130px;
-    border: 1px solid transparent;
-    border-radius: 6px;
-    background-color: var(--ti-lowcode-main-menu-bg);
-    box-shadow: 0 1px 15px 0 rgb(0 0 0 / 20%);
-    padding: 8px 0;
-    display: flex;
-    flex-direction: column;
-    li {
-      font-size: 14px;
-      color: var(--ti-lowcode-toolbar-title-color);
-      cursor: pointer;
-      height: 32px;
-      width: 100%;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      white-space: nowrap;
-      .tiny-svg {
-        margin: 0 9px;
-        font-size: 16px;
-      }
-      &:hover {
-        background: var(--ti-lowcode-toolbar-hover-color);
-      }
+    .main-menu {
+      position: absolute;
+      top: calc(var(--base-top-panel-height) - 8px);
+      color: var(--ti-lowcode-toolbar-icon-color);
+      ul {
+        min-width: 130px;
+        border: 1px solid transparent;
+        border-radius: 6px;
+        background-color: var(--ti-lowcode-main-menu-bg);
+        box-shadow: 0 1px 15px 0 rgb(0 0 0 / 20%);
+        padding: 8px 0;
+        display: flex;
+        flex-direction: column;
+        li {
+          font-size: 14px;
+          color: var(--ti-lowcode-toolbar-title-color);
+          cursor: pointer;
+          height: 32px;
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          white-space: nowrap;
+          .tiny-svg {
+            margin: 0 9px;
+            font-size: 16px;
+          }
+          &:hover {
+            background: var(--ti-lowcode-toolbar-hover-color);
+          }
 
-      &:first-child {
-        border-radius: 2px 2px 0 0;
-      }
+          &:first-child {
+            border-radius: 2px 2px 0 0;
+          }
 
-      &:last-child {
-        border-radius: 0 0 2px 2px;
-      }
-      .menu-item {
-        margin: 0 16px;
-        line-height: 20px;
+          &:last-child {
+            border-radius: 0 0 2px 2px;
+          }
+          .menu-item {
+            margin: 0 16px;
+            line-height: 20px;
+          }
+        }
       }
     }
   }
