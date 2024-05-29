@@ -358,7 +358,7 @@ export const handleTinyIconPropsHook = (schemaData, globalHooks, config) => {
         componentName: exportName,
         exportName: exportName,
         package: '@opentiny/vue-icon',
-        version: '^3.10.0',
+        version: '^3.14.0',
         destructuring: true
       })
 

@@ -7,8 +7,15 @@
     content="生成当前应用代码到本地文件"
   >
     <template #reference>
-      <span class="icon" @click="generate">
+      <span class="menu-icon-wrapper icon" @click.stop="handleShowMenu">
         <svg-icon :name="icon"></svg-icon>
+        <div v-if="state.showMenu" class="main-menu">
+          <ul>
+            <li v-for="(item, index) in menus" :key="index" @click="handleClick(item)">
+              <span class="menu-item">{{ item.name }}</span>
+            </li>
+          </ul>
+        </div>
       </span>
     </template>
   </tiny-popover>
@@ -21,7 +28,7 @@
 </template>
 
 <script>
-import { reactive } from 'vue'
+import { reactive, onUnmounted } from 'vue'
 import { Popover } from '@opentiny/vue'
 import {
   getGlobalConfig,
@@ -53,6 +60,7 @@ export default {
     const { getCurrentBlock } = useBlock()
 
     const state = reactive({
+      showMenu: false,
       dirHandle: null,
       generating: false,
       showDialogbox: false,
@@ -130,37 +138,33 @@ export default {
       electron: {
         pluginConfig: {
           block: {
-            blockBasePath: './src/renderer/src/components',
+            blockBasePath: './src/renderer/src/components'
           },
           page: {
-            pageBasePath: './src/renderer/src/views',
+            pageBasePath: './src/renderer/src/views'
           },
           dataSource: {
-            path: './src/renderer/src/lowcodeConfig',
+            path: './src/renderer/src/lowcodeConfig'
           },
           globalState: {
-            path: './src/renderer/src/stores',
+            path: './src/renderer/src/stores'
           },
           i18n: {
-            path: './src/renderer/src/i18n',
+            path: './src/renderer/src/i18n'
           },
           router: {
-            path: './src/renderer/src/router',
+            path: './src/renderer/src/router'
           },
           utils: {
-            path: './src/renderer/src',
-          },
+            path: './src/renderer/src'
+          }
         },
         customContext: {
-          template: 'electron',
+          template: 'electron'
         }
       },
       default: {}
     }
-
-    const instance = generateApp({
-      ...templateMap['electron'],
-    })
 
     const getAllPageDetails = async (pageList) => {
       const detailPromise = pageList.map(({ id }) => useLayout().getPluginApi('AppManage').getPageById(id))
@@ -175,7 +179,11 @@ export default {
         .filter((item) => Boolean(item))
     }
 
-    const getPreGenerateInfo = async () => {
+    const getPreGenerateInfo = async (template) => {
+      const instance = generateApp({
+        ...templateMap[template]
+      })
+
       const params = getParams()
       const { id } = useEditorInfo().useInfo()
       const promises = [
@@ -259,7 +267,7 @@ export default {
       }
     }
 
-    const generate = async () => {
+    const generate = async (template) => {
       const { isEmptyPage } = useLayout()
 
       if (isEmptyPage()) {
@@ -278,7 +286,7 @@ export default {
 
       try {
         // 保存代码前置任务：调用接口生成代码并获取用户本地文件夹授权
-        const [dirHandle, fileRes] = await getPreGenerateInfo()
+        const [dirHandle, fileRes] = await getPreGenerateInfo(template)
 
         // 暂存待生成代码文件信息
         state.saveFilesInfo = fileRes
@@ -294,6 +302,52 @@ export default {
         useNotify({ type: 'error', title: '代码生成失败', message: error?.message || error })
         state.generating = false
       }
+    }
+
+    const menus = [
+      {
+        name: '生成WEB应用代码',
+        code: 'default'
+      },
+      // {
+      //   name: '生成小程序代码',
+      //   code: 'miniProgram'
+      // },
+      {
+        name: '生成桌面应用代码',
+        code: 'electron'
+      }
+    ]
+
+    const actions = {
+      default() {
+        generate('default')
+      },
+      miniProgram() {
+        generate('miniProgram')
+      },
+      electron() {
+        generate('electron')
+      }
+    }
+
+    const handleCloseMenu = () => {
+      state.showMenu = false
+      window.removeEventListener('click', handleCloseMenu)
+    }
+
+    const handleShowMenu = () => {
+      state.showMenu = !state.showMenu
+
+      if (state.showMenu) {
+        window.addEventListener('click', handleCloseMenu)
+      } else {
+        window.removeEventListener('click', handleCloseMenu)
+      }
+    }
+
+    const handleClick = ({ code }) => {
+      actions[code]?.()
     }
 
     const confirm = async (saveData) => {
@@ -320,8 +374,15 @@ export default {
       state.saveFilesInfo = []
     }
 
+    onUnmounted(() => {
+      window.removeEventListener('click', handleCloseMenu)
+    })
+
     return {
       state,
+      handleShowMenu,
+      handleClick,
+      menus,
       generate,
       confirm,
       cancel
@@ -329,4 +390,54 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.menu-icon-wrapper {
+  position: relative;
+}
+
+.main-menu {
+  position: absolute;
+  top: calc(var(--base-top-panel-height) - 8px);
+  color: var(--ti-lowcode-toolbar-icon-color);
+  ul {
+    min-width: 130px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background-color: var(--ti-lowcode-main-menu-bg);
+    box-shadow: 0 1px 15px 0 rgb(0 0 0 / 20%);
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    li {
+      font-size: 14px;
+      color: var(--ti-lowcode-toolbar-title-color);
+      cursor: pointer;
+      height: 32px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      white-space: nowrap;
+      .tiny-svg {
+        margin: 0 9px;
+        font-size: 16px;
+      }
+      &:hover {
+        background: var(--ti-lowcode-toolbar-hover-color);
+      }
+
+      &:first-child {
+        border-radius: 2px 2px 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 2px 2px;
+      }
+      .menu-item {
+        margin: 0 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+</style>
