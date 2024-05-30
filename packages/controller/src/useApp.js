@@ -32,6 +32,7 @@ const defaultState = {
     state: null,
     published: false,
     tenant: null,
+    config: null,
     editor_url: ''
   },
   // 当前选中的appId

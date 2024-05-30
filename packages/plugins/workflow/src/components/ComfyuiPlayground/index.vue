@@ -16,7 +16,7 @@ const { appInfoState } = useApp()
 
 const defaultComfyuiUrl = 'http://127.0.0.1:8188'
 
-const comfyui_url = encodeURIComponent(appInfoState.selectedApp.comfyui_url || defaultComfyuiUrl)
+const comfyui_url = encodeURIComponent(appInfoState.selectedApp.config?.comfyui_url || defaultComfyuiUrl)
 
 const src = `/comfyui?comfyui_url=${comfyui_url}`
 
