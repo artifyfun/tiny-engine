@@ -86,7 +86,7 @@ export default {
           styleComponent: 'ImageSetting',
           iconName: 'background-image',
           value: {
-            imageUrl: 'design/img/bgcModal.png',
+            imageUrl: '/design/img/bgcModal.png',
             position: '0px 0px',
             size: 'auto'
           }

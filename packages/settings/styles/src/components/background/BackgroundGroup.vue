@@ -278,7 +278,7 @@ export default {
     const openBackgroundImageModal = (event, { isAdd, index }) => {
       if (isAdd) {
         const styleObj = {
-          [BACKGROUND_PROPERTY.BackgroundImage]: 'url(design/img/bgcModal.png)',
+          [BACKGROUND_PROPERTY.BackgroundImage]: 'url(/design/img/bgcModal.png)',
           [BACKGROUND_PROPERTY.BackgroundPosition]: '0px 0px',
           [BACKGROUND_PROPERTY.BackgroundSize]: 'auto'
         }
