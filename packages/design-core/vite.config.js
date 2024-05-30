@@ -53,6 +53,10 @@ const config = {
         target: origin,
         changeOrigin: true
       },
+      '/resource/api': {
+        target: origin,
+        changeOrigin: true
+      },
       '/comfyui': {
         target: 'http://127.0.0.1:8188',
         changeOrigin: true,

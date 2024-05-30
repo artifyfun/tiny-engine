@@ -27,6 +27,7 @@
       <component
         :is="state.styleComponent"
         :style="style"
+        :action="`/resource/api/upload/${appId}`"
         :effect="effect"
         :placement="placement"
         @updateStyle="updateStyle"
@@ -47,6 +48,7 @@ import RadialGradient from './RadialGradient.vue'
 import ColorOverlay from './ColorOverlay.vue'
 import BackgroundImageGradient from './BackgroundImageGradient.vue'
 import { BACKGROUND_PROPERTY } from '../../js/styleProperty'
+import { useApp } from '@opentiny/tiny-engine-controller'
 
 export default {
   components: {
@@ -77,6 +79,7 @@ export default {
   },
   emits: ['update:modelValue'],
   setup(props, { emit }) {
+    const appId = useApp().appInfoState.selectedId
     const state = reactive({
       style: {},
       styleComponent: 'ImageSetting',
@@ -144,6 +147,7 @@ export default {
     })
 
     return {
+      appId,
       state,
       BACKGROUND_PROPERTY,
       selectType,

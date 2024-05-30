@@ -3,7 +3,10 @@
     <label class="image-label top">背景图</label>
     <div class="image-content">
       <div class="image-wrap">
-        <div class="image-inner" :style="{ backgroundImage: style.styleObj[BACKGROUND_PROPERTY.BackgroundImage]}"></div>
+        <div
+          class="image-inner"
+          :style="{ backgroundImage: style.styleObj[BACKGROUND_PROPERTY.BackgroundImage] }"
+        ></div>
       </div>
       <div class="text-wrap">
         <span>支持：jpg/png/svg</span>
@@ -19,9 +22,9 @@
           :action="action"
           accept="image/*"
           :show-file-list="false"
-          :auto-upload="false"
+          :auto-upload="true"
           :before-upload="beforeUpload"
-          @change="handleUploadChange"
+          @success="handleUploadSuccess"
         >
           <template #trigger>
             <span class="uploader-trigger">选择图片</span>
@@ -174,6 +177,17 @@ const isNum = (num) => {
   return reg.test(num)
 }
 
+const setBackgroundSize = () => {
+  const isAutoWidth = state.width.toLocaleLowerCase() === 'auto'
+  const isAutoHeight = state.height.toLocaleLowerCase() === 'auto'
+  const width = isAutoWidth ? state.width.toLocaleLowerCase() : `${state.width.toLocaleLowerCase() + state.widthSuffix}`
+  const height = isAutoHeight
+    ? state.height.toLocaleLowerCase()
+    : `${state.height.toLocaleLowerCase() + state.heightSuffix}`
+
+  updateStyle({ [BACKGROUND_PROPERTY.BackgroundSize]: `${width} ${height}` })
+}
+
 const sizeWidthChange = (val) => {
   state.width = val
   if (state.widthSuffix === 'auto') {
@@ -206,17 +220,6 @@ const suffixHeightChange = (val) => {
   setBackgroundSize()
 }
 
-const setBackgroundSize = () => {
-  const isAutoWidth = state.width.toLocaleLowerCase() === 'auto'
-  const isAutoHeight = state.height.toLocaleLowerCase() === 'auto'
-  const width = isAutoWidth ? state.width.toLocaleLowerCase() : `${state.width.toLocaleLowerCase() + state.widthSuffix}`
-  const height = isAutoHeight
-    ? state.height.toLocaleLowerCase()
-    : `${state.height.toLocaleLowerCase() + state.heightSuffix}`
-
-  updateStyle({ [BACKGROUND_PROPERTY.BackgroundSize]: `${width} ${height}` })
-}
-
 const selectRepeat = (item) => {
   state.repeat = item.value
   updateStyle({ [BACKGROUND_PROPERTY.BackgroundRepeat]: item.value })
@@ -245,14 +248,8 @@ const beforeUpload = (file) => {
   })
 }
 
-const handleUploadChange = (file) => {
-  if (file.status === "ready") {
-    const reader = new FileReader()
-    reader.onload = (e) => {
-      updateStyle({ [BACKGROUND_PROPERTY.BackgroundImage]: `url(${e.target.result})` })
-    }
-    reader.readAsDataURL(file.raw)
-  }
+const handleUploadSuccess = (file) => {
+  updateStyle({ [BACKGROUND_PROPERTY.BackgroundImage]: `url(${file.url})` })
 }
 
 onMounted(() => {
