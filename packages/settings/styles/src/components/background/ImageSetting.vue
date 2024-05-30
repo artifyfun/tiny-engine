@@ -3,18 +3,30 @@
     <label class="image-label top">背景图</label>
     <div class="image-content">
       <div class="image-wrap">
-        <div class="image-inner"></div>
+        <div class="image-inner" :style="{ backgroundImage: style.styleObj[BACKGROUND_PROPERTY.BackgroundImage]}"></div>
       </div>
       <div class="text-wrap">
-        <span>background-image.svg</span>
-        <span class="size">250 * 250</span>
-        <span class="size">3.4 KB</span>
-        <span>
+        <span>支持：jpg/png/svg</span>
+        <span class="size">大小：不超过2mb</span>
+        <!-- <span class="size">3.4 KB</span> -->
+        <!-- <span>
           <tiny-checkbox v-model="state.checked" @change="imageSizeChange">@2x</tiny-checkbox>
-        </span>
+        </span> -->
       </div>
       <div class="choose-image">
-        <span>选择图片</span>
+        <tiny-file-upload
+          class="uploader"
+          :action="action"
+          accept="image/*"
+          :show-file-list="false"
+          :auto-upload="false"
+          :before-upload="beforeUpload"
+          @change="handleUploadChange"
+        >
+          <template #trigger>
+            <span class="uploader-trigger">选择图片</span>
+          </template>
+        </tiny-file-upload>
       </div>
     </div>
   </div>
@@ -88,7 +100,7 @@
 
 <script setup>
 import { reactive, defineProps, defineEmits, onMounted } from 'vue'
-import { Tooltip as TinyTooltip, Checkbox as TinyCheckbox } from '@opentiny/vue'
+import { Tooltip as TinyTooltip, FileUpload as TinyFileUpload, Modal } from '@opentiny/vue'
 import PositionOrigin from './PositionOrigin.vue'
 import InputSelect from '../inputs/InputSelect.vue'
 import {
@@ -111,6 +123,10 @@ const props = defineProps({
   placement: {
     type: String,
     default: 'top'
+  },
+  action: {
+    type: String,
+    default: '/'
   }
 })
 
@@ -131,15 +147,15 @@ const updateStyle = (property) => {
   emit('updateStyle', property)
 }
 
-const imageSizeChange = (val) => {
-  state.width = val ? '125' : 'Auto'
-  state.widthSuffix = val ? 'px' : 'auto'
-  state.height = 'Auto'
-  state.heightSuffix = 'auto'
-  val
-    ? updateStyle({ [BACKGROUND_PROPERTY.BackgroundSize]: '125px' })
-    : updateStyle({ [BACKGROUND_PROPERTY.BackgroundSize]: null })
-}
+// const imageSizeChange = (val) => {
+//   state.width = val ? '125' : 'Auto'
+//   state.widthSuffix = val ? 'px' : 'auto'
+//   state.height = 'Auto'
+//   state.heightSuffix = 'auto'
+//   val
+//     ? updateStyle({ [BACKGROUND_PROPERTY.BackgroundSize]: '125px' })
+//     : updateStyle({ [BACKGROUND_PROPERTY.BackgroundSize]: null })
+// }
 
 const selectSize = (item) => {
   if (item.value !== 'auto') {
@@ -209,6 +225,34 @@ const selectRepeat = (item) => {
 const selectFixed = (item) => {
   state.fixedSelected = item.value
   updateStyle({ [BACKGROUND_PROPERTY.BackgroundAttachment]: item.value })
+}
+
+const beforeUpload = (file) => {
+  return new Promise((resolve, reject) => {
+    const isPic = file.type.includes('image') && /\.(jpg|jpeg|png|svg)$/.test(file.name)
+    const isLt2M = file.size / 1024 / 1024 < 2
+    if (!isPic) {
+      Modal.message({ message: '只能上传图片格式', status: 'error' })
+      reject(new Error('只能上传图片格式'))
+      return
+    }
+    if (!isLt2M) {
+      Modal.message({ message: '图片大小不能超过2MB', status: 'error' })
+      reject(new Error('图片大小不能超过2MB'))
+      return
+    }
+    resolve()
+  })
+}
+
+const handleUploadChange = (file) => {
+  if (file.status === "ready") {
+    const reader = new FileReader()
+    reader.onload = (e) => {
+      updateStyle({ [BACKGROUND_PROPERTY.BackgroundImage]: `url(${e.target.result})` })
+    }
+    reader.readAsDataURL(file.raw)
+  }
 }
 
 onMounted(() => {
@@ -315,11 +359,21 @@ onMounted(() => {
   border-width: 1px;
   border-style: solid;
   align-self: center;
-  span {
-    display: inline-block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  display: flex;
+  :deep(.uploader) {
+    flex: 1;
+    .tiny-upload--text {
+      width: 100%;
+      .uploader-trigger {
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        vertical-align: middle;
+        text-align: center;
+        width: 100%;
+      }
+    }
   }
 }
 .image-size-item {
