@@ -22,8 +22,9 @@ import lowcode from './lowcode.js'
 import messages from './locales.js'
 import Main from './Main.vue'
 import locale from '@opentiny/vue-locale'
+
+import { theme, ConfigProvider as AConfigProvider, App as AApp } from 'ant-design-vue'
 import { useDark, useToggle } from '@vueuse/core'
-import { theme } from 'ant-design-vue'
 
 const isDark = useDark({
   selector: 'html',
