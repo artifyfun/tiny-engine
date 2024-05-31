@@ -109,10 +109,7 @@
           <tiny-select v-model="state.configformData.theme" :options="themeOptions"> </tiny-select>
         </tiny-form-item>
         <tiny-form-item prop="comfyui_url" label="工作流URL">
-          <tiny-input
-            v-model="state.configformData.comfyui_url"
-            placeholder="http://127.0.0.1:8188"
-          ></tiny-input>
+          <tiny-input v-model="state.configformData.comfyui_url" placeholder="http://127.0.0.1:8188"></tiny-input>
         </tiny-form-item>
       </tiny-form>
       <template #footer>
@@ -137,6 +134,7 @@ import {
   Form as TinyForm,
   FormItem as TinyFormItem,
   Loading,
+  Notify,
   Switch as TinySwitch,
   Tooltip as TinyTooltip,
   Select as TinySelect
@@ -188,7 +186,7 @@ const state = reactive({
   showConfig: false,
   configformData: {
     theme: 'default',
-    comfyui_url: '',
+    comfyui_url: ''
   }
 })
 
@@ -201,7 +199,7 @@ const menus = ref(
     ? []
     : [
         { name: '应用发布', code: 'publishApp', icon: 'news' },
-        { name: '应用配置', code: 'showConfig', icon: 'config' },
+        { name: '应用配置', code: 'showConfig', icon: 'config' }
         // { name: '应用预览', code: 'previewApp', icon: 'preview' },
         // { name: '应用下载', code: 'downloadApp', icon: 'generate-code' },
         // { name: '保存历史版本', code: 'saveAppHistory', icon: 'save' },
@@ -300,8 +298,10 @@ const confirm = () => {
           state.show = false
           loading.close()
           if (data) {
-            useModal().message({
-              message: '保存成功'
+            Notify({
+              type: 'success',
+              message: '保存成功',
+              position: 'top-right'
             })
           } else {
             useModal().message({
@@ -378,8 +378,10 @@ const configConfirm = () => {
         state.showConfig = false
         loading.close()
         if (!data.error) {
-          useModal().message({
-            message: '配置保存成功'
+          Notify({
+            type: 'success',
+            message: '配置保存成功',
+            position: 'top-right'
           })
           updateApp(appInfoState.selectedId)
         } else {
@@ -395,8 +397,7 @@ const handleClick = ({ code }) => {
   actions[code]?.()
 }
 
-const configRules = {
-}
+const configRules = {}
 
 const rules = {
   account: [{ required: true, message: '必填', trigger: 'change' }],

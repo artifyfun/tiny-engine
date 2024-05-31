@@ -15,7 +15,14 @@ import { I18nInjectionKey } from 'vue-i18n'
 import { useBroadcastChannel } from '@vueuse/core'
 import { constants } from '@opentiny/tiny-engine-utils'
 import { generateFunction } from '@opentiny/tiny-engine-controller/utils'
-import renderer, { parseData, setConfigure, setController, globalNotify, isStateAccessor, getController } from './render'
+import renderer, {
+  parseData,
+  setConfigure,
+  setController,
+  globalNotify,
+  isStateAccessor,
+  getController
+} from './render'
 import { getNode as getNodeById, clearNodes, getRoot, setContext, getContext, setCondition, context } from './context'
 import CanvasEmpty from './CanvasEmpty.vue'
 import { theme, ConfigProvider as AConfigProvider, App as AApp } from 'ant-design-vue'
@@ -406,14 +413,17 @@ export default {
         ref: 'page',
         className: 'design-page'
       },
-      h(AConfigProvider, {
-        theme: {
-          algorithm: isDark ? theme.darkAlgorithm : theme.defaultAlgorithm
-        }
-      },
-        () => h(AApp, {},
-          () => schema.children?.length ? h(renderer, { schema: rootChildrenSchema, parent: schema }) : [h(CanvasEmpty)]
-        )
+      h(
+        AConfigProvider,
+        {
+          theme: {
+            algorithm: isDark ? theme.darkAlgorithm : theme.defaultAlgorithm
+          }
+        },
+        () =>
+          h(AApp, {}, () =>
+            schema.children?.length ? h(renderer, { schema: rootChildrenSchema, parent: schema }) : [h(CanvasEmpty)]
+          )
       )
     )
   }

@@ -1,5 +1,13 @@
 <template>
-  <Main />
+  <a-config-provider
+    :theme="{
+      algorithm: isDark ? theme.darkAlgorithm : theme.defaultAlgorithm
+    }"
+  >
+    <a-app class="ant-app">
+      <Main />
+    </a-app>
+  </a-config-provider>
 </template>
 
 <script setup>
@@ -14,6 +22,21 @@ import lowcode from './lowcode.js'
 import messages from './locales.js'
 import Main from './Main.vue'
 import locale from '@opentiny/vue-locale'
+import { useDark, useToggle } from '@vueuse/core'
+import { theme } from 'ant-design-vue'
+
+const isDark = useDark({
+  selector: 'html',
+  attribute: 'color-scheme',
+  valueDark: 'dark',
+  valueLight: 'light'
+})
+
+const toggleDark = useToggle(isDark)
+
+const appTheme = '$$TinyEngine{theme}END$'
+
+toggleDark(appTheme === 'dark')
 
 const customCreateI18n = ({ locale, messages }) => {
   const newMessages = {}
@@ -65,5 +88,15 @@ window.__app__.use(createPinia())
 <style>
 body {
   margin: 0;
+}
+
+html[color-scheme='dark'] {
+  background-color: rgb(0, 0, 0);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+html[color-scheme='light'] {
+  background-color: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.85);
 }
 </style>

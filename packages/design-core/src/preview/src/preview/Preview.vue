@@ -35,6 +35,25 @@ const EmptyEditor = defineComponent({
   }
 })
 
+/**
+ * 模板写入动态内容
+ * @param {*} context
+ * @param {*} str
+ * @returns
+ */
+const getTemplate = (schema, str) => {
+  return str.replace(/(\$\$TinyEngine{(.*)}END\$)/g, function (match, p1, p2) {
+    if (!p2) {
+      return ''
+    }
+
+    const keyArr = p2.split('.')
+    const value = keyArr.reduce((preVal, key) => preVal?.[key] ?? '', schema)
+
+    return value
+  })
+}
+
 export default {
   components: {
     Repl
@@ -53,6 +72,8 @@ export default {
 
     // 相比store.setFiles，只要少了state.activeFile = state.files[filename]，因为改变activeFile会触发多余的文件解析
     const setFiles = async (newFiles, mainFileName) => {
+      const queryParams = getSearchParams()
+      newFiles['App.vue'] = getTemplate(queryParams.appConfig, newFiles['App.vue'])
       await store.setFiles(newFiles, mainFileName)
       // 强制更新 codeSandbox
       store.state.resetFlip = !store.state.resetFlip

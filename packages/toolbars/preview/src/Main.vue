@@ -17,7 +17,7 @@
 <script>
 import { Popover } from '@opentiny/vue'
 import { previewPage, previewBlock } from '@opentiny/tiny-engine-controller/js/preview'
-import { getGlobalConfig, useBlock, useCanvas, useLayout, useNotify } from '@opentiny/tiny-engine-controller'
+import { getGlobalConfig, useBlock, useCanvas, useLayout, useNotify, useApp } from '@opentiny/tiny-engine-controller'
 
 export default {
   components: {
@@ -48,7 +48,8 @@ export default {
         platform: getGlobalConfig()?.platformId,
         pageInfo: {
           schema: canvasApi.value?.getSchema?.()
-        }
+        },
+        appConfig: useApp().appInfoState.selectedApp.config
       }
 
       if (isBlock()) {

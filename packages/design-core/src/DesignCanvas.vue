@@ -2,6 +2,7 @@
   <div id="canvas-wrap" ref="canvasRef">
     <div ref="siteCanvas" class="site-canvas" :style="siteCanvasStyle">
       <canvas-container
+        :key="appConfig?.theme"
         :controller="controller"
         :materials-panel="materialsPanel"
         :canvas-src="canvasUrl"
@@ -52,6 +53,7 @@ export default {
     const footData = ref([])
     const showMask = ref(true)
     const canvasRef = ref(null)
+    const appConfig = ref(useApp().appInfoState.selectedApp.config)
     let showModal = false // 弹窗标识
 
     const removeNode = (node) => {
@@ -68,6 +70,15 @@ export default {
         transform: `scale(${scale})`
       }
     })
+
+    watch(
+      () => useApp().appInfoState.selectedApp.config,
+      (config) => {
+        if (config) {
+          appConfig.value = config
+        }
+      }
+    )
 
     watch(
       [() => useCanvas().isSaved(), () => useLayout().layoutState.pageStatus, () => useCanvas().getPageSchema()],
@@ -181,9 +192,10 @@ export default {
       footData,
       materialsPanel: materials.component,
       showMask,
+      appConfig,
       controller: {
         // 需要在canvas/render或内置组件里使用的方法
-        getAppConfig: () => useApp().appInfoState.selectedApp.config,
+        getAppConfig: () => appConfig.value,
         getMaterial: useResource().getMaterial,
         addHistory: useHistory().addHistory,
         registerBlock: useResource().registerBlock,
