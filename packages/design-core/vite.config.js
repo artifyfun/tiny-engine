@@ -53,6 +53,10 @@ const config = {
         target: origin,
         changeOrigin: true
       },
+      '/assets/apps': {
+        target: origin,
+        changeOrigin: true
+      },
       '/resource/api': {
         target: origin,
         changeOrigin: true
