@@ -161,6 +161,7 @@ import {
   Search,
   Popover,
   Switch,
+  Tooltip,
   Tabs as TinyTabs,
   TabItem as TinyTabItem
 } from '@opentiny/vue'
@@ -199,6 +200,7 @@ export default {
     TinySearch: Search,
     TinyPopover: Popover,
     TinyDialogBox: DialogBox,
+    TinyTooltip: Tooltip,
     TinyTabs,
     TinyTabItem,
     ComfyuiIcon,
