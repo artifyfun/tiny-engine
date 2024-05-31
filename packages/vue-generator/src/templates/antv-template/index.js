@@ -5,13 +5,8 @@ import gitIgnoreFile from './templateFiles/.gitignore?raw'
 import entryHTMLFile from './templateFiles/index.html?raw'
 import mainJSFile from './templateFiles/src/main.js?raw'
 import appVueFile from './templateFiles/src/App.vue?raw'
-import bridgeFile from './templateFiles/src/lowcodeConfig/bridge.js?raw'
-import dataSourceFile from './templateFiles/src/lowcodeConfig/dataSource.js?raw'
-import lowcodeJSFile from './templateFiles/src/lowcodeConfig/lowcode.js?raw'
-import lowcodeStoreFile from './templateFiles/src/lowcodeConfig/store.js?raw'
-import axiosFile from './templateFiles/src/http/axios.js?raw'
-import axiosConfigFile from './templateFiles/src/http/config.js?raw'
-import httpEntryFile from './templateFiles/src/http/index.js?raw'
+
+const importFiles = import.meta.glob('./templateFiles/**/*', { eager: true, as: 'raw' })
 
 /**
  * 模板写入动态内容
@@ -37,7 +32,7 @@ const getTemplate = (schema, str) => {
  * @returns
  */
 export function generateTemplate(schema) {
-  return [
+  const modifyFiles = [
     {
       fileType: 'md',
       fileName: 'README.md',
@@ -78,48 +73,27 @@ export function generateTemplate(schema) {
       fileName: 'App.vue',
       path: './src',
       fileContent: getTemplate(schema, appVueFile)
-    },
-    {
-      fileType: 'js',
-      fileName: 'bridge.js',
-      path: './src/lowcodeConfig',
-      fileContent: bridgeFile
-    },
-    {
-      fileType: 'js',
-      fileName: 'dataSource.js',
-      path: './src/lowcodeConfig',
-      fileContent: dataSourceFile
-    },
-    {
-      fileType: 'js',
-      fileName: 'lowcode.js',
-      path: './src/lowcodeConfig',
-      fileContent: lowcodeJSFile
-    },
-    {
-      fileType: 'js',
-      fileName: 'store.js',
-      path: './src/lowcodeConfig',
-      fileContent: lowcodeStoreFile
-    },
-    {
-      fileType: 'js',
-      fileName: 'axios.js',
-      path: './src/http',
-      fileContent: axiosFile
-    },
-    {
-      fileType: 'js',
-      fileName: 'config.js',
-      path: './src/http',
-      fileContent: axiosConfigFile
-    },
-    {
-      fileType: 'js',
-      fileName: 'index.js',
-      path: './src/http',
-      fileContent: httpEntryFile
     }
   ]
+
+  const ignoreFiles = ['packageJson.js', 'genViteConfig.js']
+
+  const staticFiles = Object.keys(importFiles)
+    .map((key) => {
+      const path = key.split('/').slice(2, -1).join('/')
+      return {
+        fileType: key.split('.').pop(),
+        fileName: key.split('/').pop(),
+        path: path ? `./${path}` : '.',
+        fileContent: importFiles[key]
+      }
+    })
+    .filter((file) => {
+      return (
+        !ignoreFiles.includes(file.fileName) &&
+        !modifyFiles.some((modifyFile) => modifyFile.fileName === file.fileName && modifyFile.path === file.path)
+      )
+    })
+
+  return [...modifyFiles, ...staticFiles]
 }

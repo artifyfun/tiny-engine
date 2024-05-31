@@ -125,6 +125,12 @@ export default {
     }
 
     const templateMap = {
+      default: {},
+      antv: {
+        customContext: {
+          template: 'antv'
+        }
+      },
       electron: {
         pluginConfig: {
           block: {
@@ -152,8 +158,7 @@ export default {
         customContext: {
           template: 'electron'
         }
-      },
-      default: {}
+      }
     }
 
     const getAllPageDetails = async (pageList) => {
@@ -297,7 +302,7 @@ export default {
     const menus = [
       {
         name: '生成WEB应用代码',
-        code: 'default'
+        code: 'antv'
       },
       // {
       //   name: '生成小程序代码',
@@ -310,8 +315,8 @@ export default {
     ]
 
     const actions = {
-      default() {
-        generate('default')
+      antv() {
+        generate('antv')
       },
       miniProgram() {
         generate('miniProgram')
