@@ -27,7 +27,7 @@ dayjs.locale('zh-cn');
 provide(I18nInjectionKey, i18n)
 
 const isDark = useDark({
-  selector: 'body',
+  selector: 'html',
   attribute: 'color-scheme',
   valueDark: 'dark',
   valueLight: 'light'

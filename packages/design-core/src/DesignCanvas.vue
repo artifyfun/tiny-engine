@@ -18,6 +18,7 @@ import { ref, watch, computed, onUnmounted } from 'vue'
 import { CanvasContainer, CanvasFooter } from '@opentiny/tiny-engine-canvas'
 import {
   useProperties,
+  useApp,
   useCanvas,
   useLayout,
   useResource,
@@ -182,6 +183,7 @@ export default {
       showMask,
       controller: {
         // 需要在canvas/render或内置组件里使用的方法
+        getAppConfig: () => useApp().appInfoState.selectedApp.config,
         getMaterial: useResource().getMaterial,
         addHistory: useHistory().addHistory,
         registerBlock: useResource().registerBlock,

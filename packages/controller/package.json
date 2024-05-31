@@ -41,6 +41,7 @@
     "@vue/shared": "^3.3.4",
     "css-tree": "^2.3.1",
     "eslint-linter-browserify": "8.57.0",
+    "@vueuse/core": "^9.6.0",
     "prettier": "2.7.1"
   },
   "devDependencies": {

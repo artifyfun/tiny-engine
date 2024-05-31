@@ -15,9 +15,11 @@ import { I18nInjectionKey } from 'vue-i18n'
 import { useBroadcastChannel } from '@vueuse/core'
 import { constants } from '@opentiny/tiny-engine-utils'
 import { generateFunction } from '@opentiny/tiny-engine-controller/utils'
-import renderer, { parseData, setConfigure, setController, globalNotify, isStateAccessor } from './render'
+import renderer, { parseData, setConfigure, setController, globalNotify, isStateAccessor, getController } from './render'
 import { getNode as getNodeById, clearNodes, getRoot, setContext, getContext, setCondition, context } from './context'
 import CanvasEmpty from './CanvasEmpty.vue'
+import { theme, ConfigProvider as AConfigProvider, App as AApp } from 'ant-design-vue'
+import { useDark, useToggle } from '@vueuse/core'
 
 const { BROADCAST_CHANNEL } = constants
 
@@ -345,6 +347,15 @@ const setSchema = async (data) => {
 
 const getNode = (id, parent) => (id ? getNodeById(id, parent) : schema)
 
+const isDark = useDark({
+  selector: 'html',
+  attribute: 'color-scheme',
+  valueDark: 'dark',
+  valueLight: 'light'
+})
+
+const toggleDark = useToggle(isDark)
+
 export default {
   setup() {
     provide('rootSchema', schema)
@@ -352,6 +363,10 @@ export default {
     const { locale } = inject(I18nInjectionKey).global
     const { data } = useBroadcastChannel({ name: BROADCAST_CHANNEL.CanvasLang })
     const { post } = useBroadcastChannel({ name: BROADCAST_CHANNEL.SchemaLength })
+
+    const { getAppConfig } = getController()
+    const appTheme = getAppConfig().theme
+    toggleDark(appTheme === 'dark')
 
     watch(data, () => {
       locale.value = data.value
@@ -391,7 +406,15 @@ export default {
         ref: 'page',
         className: 'design-page'
       },
-      schema.children?.length ? h(renderer, { schema: rootChildrenSchema, parent: schema }) : [h(CanvasEmpty)]
+      h(AConfigProvider, {
+        theme: {
+          algorithm: isDark ? theme.darkAlgorithm : theme.defaultAlgorithm
+        }
+      },
+        () => h(AApp, {},
+          () => schema.children?.length ? h(renderer, { schema: rootChildrenSchema, parent: schema }) : [h(CanvasEmpty)]
+        )
+      )
     )
   }
 }

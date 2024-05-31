@@ -12,6 +12,7 @@
 
 import { reactive, watch } from 'vue'
 import { useHttp } from '@opentiny/tiny-engine-http'
+import { useDark, useToggle } from '@vueuse/core'
 
 const http = useHttp()
 
@@ -62,6 +63,16 @@ const updateApp = async (id) => {
   const appInfo = await fetchAppInfo(id)
   appInfoState.selectedApp = appInfo
   appInfoState.selectedId = appInfo.id
+
+  const isDark = useDark({
+    selector: 'html',
+    attribute: 'color-scheme',
+    valueDark: 'dark',
+    valueLight: 'light'
+  })
+
+  const toggleDark = useToggle(isDark)
+  toggleDark(appInfo.config?.theme === 'dark')
 }
 
 export default () => {

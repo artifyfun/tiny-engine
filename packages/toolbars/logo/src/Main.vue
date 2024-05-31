@@ -275,6 +275,11 @@ const actions = {
     window.open(openUrl)
   },
   showConfig() {
+    const { appInfoState } = useApp()
+    state.configformData = {
+      theme: appInfoState.selectedApp.config.theme || 'default',
+      comfyui_url: appInfoState.selectedApp.config.comfyui_url
+    }
     state.showConfig = true
   }
 }
