@@ -220,6 +220,7 @@ const prodAlias = {
 }
 
 const commonAlias = {
+  "source-map-js": "source-map",
   '@opentiny/tiny-engine-app-addons': path.resolve(__dirname, './config/addons.js')
 }
 
