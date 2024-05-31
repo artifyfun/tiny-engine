@@ -92,6 +92,35 @@
       </template>
     </tiny-dialog-box>
 
+    <tiny-dialog-box v-model:visible="state.showConfig" title="应用配置" width="400px" :append-to-body="true">
+      <tiny-form
+        ref="configform"
+        class="publish-app-form"
+        :model="state.configformData"
+        :rules="configRules"
+        validate-position="bottom-start"
+        :inline-message="true"
+        validate-type="text"
+        label-position="left"
+        :label-align="true"
+        label-width="110px"
+      >
+        <tiny-form-item prop="theme" label="应用主题">
+          <tiny-select v-model="state.configformData.theme" :options="themeOptions"> </tiny-select>
+        </tiny-form-item>
+        <tiny-form-item prop="comfyui_url" label="工作流URL">
+          <tiny-input
+            v-model="state.configformData.comfyui_url"
+            placeholder="http://127.0.0.1:8188"
+          ></tiny-input>
+        </tiny-form-item>
+      </tiny-form>
+      <template #footer>
+        <tiny-button type="primary" @click="configConfirm">确定</tiny-button>
+        <tiny-button @click="state.showConfig = false">取消</tiny-button>
+      </template>
+    </tiny-dialog-box>
+
     <tiny-dialog-box v-model:visible="tipBoxVisibility" title="消息" width="30%" :modal="false">
       <span>{{ tipText }}</span>
       <template #footer> </template>
@@ -109,7 +138,8 @@ import {
   FormItem as TinyFormItem,
   Loading,
   Switch as TinySwitch,
-  Tooltip as TinyTooltip
+  Tooltip as TinyTooltip,
+  Select as TinySelect
 } from '@opentiny/vue'
 import { iconHelpCircle } from '@opentiny/vue-icon'
 import { LogoIcon } from '@opentiny/tiny-engine-common'
@@ -124,6 +154,17 @@ const { activePlugin } = useLayout()
 const { isChangePageData } = usePage()
 
 const IconHelp = iconHelpCircle()
+
+const themeOptions = [
+  {
+    label: '默认',
+    value: 'default'
+  },
+  {
+    label: '深色',
+    value: 'dark'
+  }
+]
 
 const state = reactive({
   hoverState: false,
@@ -142,17 +183,25 @@ const state = reactive({
   title: computed(() => (state.showPreview ? '发布应用' : '保存历史版本')),
   appName: computed(() => useApp().appInfoState.selectedApp.name),
   leaveTimeoutId: null,
-  overTimeoutId: null
+  overTimeoutId: null,
+
+  showConfig: false,
+  configformData: {
+    theme: 'default',
+    comfyui_url: '',
+  }
 })
 
 const tipBoxVisibility = ref(false)
 let tipText = ref('发布成功')
 const form = ref(null)
+const configform = ref(null)
 const menus = ref(
   getGlobalConfig()?.dslMode === 'Angular'
     ? []
     : [
         { name: '应用发布', code: 'publishApp', icon: 'news' },
+        { name: '应用配置', code: 'showConfig', icon: 'config' },
         // { name: '应用预览', code: 'previewApp', icon: 'preview' },
         // { name: '应用下载', code: 'downloadApp', icon: 'generate-code' },
         // { name: '保存历史版本', code: 'saveAppHistory', icon: 'save' },
@@ -224,6 +273,9 @@ const actions = {
       ? `./downloadApp.html?appid=${appId}&tenant=${tenantId}`
       : `${href}/downloadApp?appid=${appId}&tenant=${tenantId}`
     window.open(openUrl)
+  },
+  showConfig() {
+    state.showConfig = true
   }
 }
 
@@ -300,8 +352,45 @@ const confirm = () => {
   })
 }
 
+const configConfirm = () => {
+  const { appInfoState, updateApp } = useApp()
+  configform.value.validate((valid) => {
+    if (!valid) {
+      return
+    }
+    const loading = Loading.service({
+      text: '正在保存配置，请稍后...',
+      customClass: 'new-loading',
+      target: document.getElementById('tiny-loading'),
+      background: 'rgba(0, 0, 0, 0.8)'
+    })
+    http
+      .post(`/app-center/api/apps/update/${appInfoState.selectedId}`, {
+        ...appInfoState.selectedApp,
+        config: state.configformData
+      })
+      .then((data) => {
+        state.showConfig = false
+        loading.close()
+        if (!data.error) {
+          useModal().message({
+            message: '配置保存成功'
+          })
+          updateApp(appInfoState.selectedId)
+        } else {
+          useModal().message({
+            message: `配置保存失败：${data.error.message}`
+          })
+        }
+      })
+  })
+}
+
 const handleClick = ({ code }) => {
   actions[code]?.()
+}
+
+const configRules = {
 }
 
 const rules = {
