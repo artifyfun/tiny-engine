@@ -27,6 +27,7 @@ import { getNode as getNodeById, clearNodes, getRoot, setContext, getContext, se
 import CanvasEmpty from './CanvasEmpty.vue'
 import { theme } from 'ant-design-vue'
 import { useDark, useToggle } from '@vueuse/core'
+import { ConfigProvider as AConfigProvider, App as AApp } from 'ant-design-vue'
 
 const { BROADCAST_CHANNEL } = constants
 
@@ -423,7 +424,18 @@ export default {
         ref: 'page',
         className: 'design-page'
       },
-      schema.children?.length ? h(renderer, { schema: rootChildrenSchema, parent: schema }) : [h(CanvasEmpty)]
+      h(
+        AConfigProvider,
+        {
+          theme: {
+            algorithm: isDark.value ? theme.darkAlgorithm : theme.defaultAlgorithm
+          }
+        },
+        () =>
+          h(AApp, {}, () =>
+            schema.children?.length ? h(renderer, { schema: rootChildrenSchema, parent: schema }) : [h(CanvasEmpty)]
+          )
+      )
     )
   }
 }

@@ -33,7 +33,10 @@ import { NODE_UID as DESIGN_UIDKEY, NODE_TAG as DESIGN_TAGKEY, NODE_LOOP as DESI
 
 const { BROADCAST_CHANNEL } = constants
 const { hyphenateRE } = utils
-const customElements = {}
+const customElements = {
+  AConfigProvider,
+  AApp
+}
 
 const transformJSX = (code) => {
   const res = transformSync(code, {
@@ -58,8 +61,6 @@ const transformJSX = (code) => {
 export const blockSlotDataMap = reactive({})
 
 const Mapper = {
-  AConfigProvider,
-  AApp,
   Icon: CanvasIcon,
   Text: CanvasText,
   Collection: CanvasCollection,
