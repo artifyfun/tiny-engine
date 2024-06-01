@@ -23,3 +23,5 @@ export {
 } from './generator'
 
 export { parseRequiredBlocks } from './utils/parseRequiredBlocks'
+
+export { BUILTIN_COMPONENTS_MAP } from './constant'

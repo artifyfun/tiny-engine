@@ -18,7 +18,7 @@ import { defineComponent, computed, defineAsyncComponent } from 'vue'
 import { Repl, ReplStore } from '@vue/repl'
 import vueJsx from '@vue/babel-plugin-jsx'
 import { transformSync } from '@babel/core'
-import { genSFCWithDefaultPlugin, parseRequiredBlocks } from '@opentiny/tiny-engine-dsl-vue'
+import { genSFCWithDefaultPlugin, parseRequiredBlocks, BUILTIN_COMPONENTS_MAP } from '@opentiny/tiny-engine-dsl-vue'
 import importMap from './importMap'
 import srcFiles from './srcFiles'
 import generateMetaFiles, { processAppJsCode } from './generate'
@@ -143,13 +143,15 @@ export default {
 
       const blocks = await getBlocksSchema(queryParams.pageInfo?.schema)
 
+      const componentsMap = [...(appData?.componentsMap || []), ...BUILTIN_COMPONENTS_MAP]
+
       // TODO: 需要验证级联生成 block schema
       // TODO: 物料内置 block 需要如何处理？
       const pageCode = [
         {
           panelName: 'Main.vue',
           panelValue:
-            genSFCWithDefaultPlugin(queryParams.pageInfo?.schema, appData?.componentsMap || [], {
+            genSFCWithDefaultPlugin(queryParams.pageInfo?.schema, componentsMap, {
               blockRelativePath: './'
             }) || '',
           panelType: 'vue',
@@ -158,8 +160,7 @@ export default {
         ...(blocks || []).map((blockSchema) => {
           return {
             panelName: blockSchema.fileName,
-            panelValue:
-              genSFCWithDefaultPlugin(blockSchema, appData?.componentsMap || [], { blockRelativePath: './' }) || '',
+            panelValue: genSFCWithDefaultPlugin(blockSchema, componentsMap, { blockRelativePath: './' }) || '',
             panelType: 'vue',
             index: true
           }
