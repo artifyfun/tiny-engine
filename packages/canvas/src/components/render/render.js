@@ -28,6 +28,7 @@ import {
   CanvasImg,
   CanvasPlaceholder
 } from '../builtin'
+import { ConfigProvider as AConfigProvider, App as AApp } from 'ant-design-vue'
 import { NODE_UID as DESIGN_UIDKEY, NODE_TAG as DESIGN_TAGKEY, NODE_LOOP as DESIGN_LOOPID } from '../common'
 
 const { BROADCAST_CHANNEL } = constants
@@ -57,6 +58,8 @@ const transformJSX = (code) => {
 export const blockSlotDataMap = reactive({})
 
 const Mapper = {
+  AConfigProvider,
+  AApp,
   Icon: CanvasIcon,
   Text: CanvasText,
   Collection: CanvasCollection,

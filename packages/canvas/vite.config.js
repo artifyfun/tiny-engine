@@ -63,7 +63,7 @@ export default defineConfig({
       formats: ['es']
     },
     rollupOptions: {
-      external: ['vue', '@vueuse/core', 'vue-i18n', /@opentiny\/tiny-engine.*/, /@opentiny\/vue.*/]
+      external: ['vue', '@vueuse/core', 'vue-i18n', 'ant-design-vue', /@opentiny\/tiny-engine.*/, /@opentiny\/vue.*/]
     },
     minify: true
   }
