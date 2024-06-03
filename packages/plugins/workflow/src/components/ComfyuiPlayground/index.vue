@@ -34,9 +34,9 @@ const loadGraphData = (graphData) => {
   postMessage(message)
 }
 
-const graphToPrompt = () => {
+const updatePrompt = () => {
   const message = JSON.stringify({
-    eventType: 'graphToPrompt'
+    eventType: 'updatePrompt'
   })
   postMessage(message)
 }
@@ -61,8 +61,8 @@ const handleMessage = (event) => {
     })
     emit('updateParamsNodes', paramsNodes)
   }
-  if (eventType === 'graphToPrompt') {
-    emit('graphToPrompt', data)
+  if (eventType === 'updatePrompt') {
+    emit('updatePrompt', data)
   }
 }
 
@@ -430,11 +430,11 @@ function handleComfyuiContext(window) {
         app.canvas.centerOnNode(node)
       })
     }
-    if (eventType === 'graphToPrompt') {
+    if (eventType === 'updatePrompt') {
       const res = await app.graphToPrompt()
       eventBus.send(
         stringify({
-          eventType: 'graphToPrompt',
+          eventType: 'updatePrompt',
           data: res
         })
       )
@@ -506,7 +506,7 @@ onUnmounted(() => {
 defineExpose({
   postMessage,
   loadGraphData,
-  graphToPrompt,
+  updatePrompt,
   updateParamsNodes
 })
 </script>

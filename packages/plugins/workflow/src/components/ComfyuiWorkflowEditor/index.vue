@@ -9,7 +9,7 @@
     <ComfyuiPlayground
       ref="playground"
       @onload="onload"
-      @graphToPrompt="graphToPrompt"
+      @updatePrompt="updatePrompt"
       @updateParamsNodes="updateParamsNodes"
     />
 
@@ -40,7 +40,7 @@ const postMessage = (message) => {
   playground.value.postMessage(message)
 }
 
-const graphToPrompt = (prompt) => {
+const updatePrompt = (prompt) => {
   editorState.prompt = prompt
 }
 
@@ -52,7 +52,7 @@ const onload = () => {
   editorState.loading = false
   playground.value.updateParamsNodes(props.workflow.paramsNodes)
   playground.value.loadGraphData(props.workflow.workflow)
-  playground.value.graphToPrompt()
+  playground.value.updatePrompt()
   emit('onload', editorState)
 }
 

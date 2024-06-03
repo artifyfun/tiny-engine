@@ -62,10 +62,9 @@ const config = {
         changeOrigin: true
       },
       '/comfyui': {
-        target: 'http://127.0.0.1:8188',
+        target: origin,
         changeOrigin: true,
         ws: true,
-        rewrite: (path) => path.replace(/^\/comfyui/, '')
       }
     }
   },
