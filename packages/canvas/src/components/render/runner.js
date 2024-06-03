@@ -17,6 +17,7 @@ import TinyI18nHost, { I18nInjectionKey } from '@opentiny/tiny-engine-controller
 import * as TinyWebcomponentCore from '@opentiny/tiny-engine-webcomponent-core'
 import TinyVue from '@opentiny/vue'
 import * as TinyVueIcon from '@opentiny/vue-icon'
+import * as AntDesign from 'ant-design-vue'
 import Main, { api } from './RenderMain'
 import { getComponent, blockSlotDataMap } from './render'
 import lowcode from '../../lowcode'
@@ -88,6 +89,13 @@ const initRenderContext = () => {
   window.TinyComponentLibs = {}
 
   Object.entries(TinyVue).forEach(([_key, component]) => {
+    const { name } = component
+    if (name) {
+      window.TinyLowcodeComponent[name] = component
+    }
+  })
+
+  Object.entries(AntDesign).forEach(([_key, component]) => {
     const { name } = component
     if (name) {
       window.TinyLowcodeComponent[name] = component

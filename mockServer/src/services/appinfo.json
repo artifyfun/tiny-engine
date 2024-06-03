@@ -17128,9 +17128,7 @@
         "component": "AAffix",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17149,9 +17147,7 @@
         "component": "AAlert",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17170,9 +17166,7 @@
         "component": "AAnchor",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17191,9 +17185,7 @@
         "component": "AAutoComplete",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17212,9 +17204,7 @@
         "component": "AAvatar",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17233,9 +17223,7 @@
         "component": "AButton",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17254,9 +17242,7 @@
         "component": "ACalendar",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17275,9 +17261,7 @@
         "component": "ACard",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17296,9 +17280,7 @@
         "component": "ACarousel",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17317,9 +17299,7 @@
         "component": "ACascader",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17338,9 +17318,7 @@
         "component": "ACheckbox",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17359,9 +17337,7 @@
         "component": "ACollapse",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17380,9 +17356,7 @@
         "component": "AComment",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17401,9 +17375,7 @@
         "component": "AConfigProvider",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17422,9 +17394,7 @@
         "component": "ADatePicker",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17443,9 +17413,7 @@
         "component": "ADescriptions",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17464,9 +17432,7 @@
         "component": "ADivider",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17485,9 +17451,7 @@
         "component": "ADrawer",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17506,9 +17470,7 @@
         "component": "ADropdown",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17527,9 +17489,7 @@
         "component": "AEmpty",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17548,9 +17508,7 @@
         "component": "AFloatButton",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17569,9 +17527,7 @@
         "component": "AImage",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17590,9 +17546,7 @@
         "component": "AInput",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17611,9 +17565,7 @@
         "component": "AInputNumber",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17632,9 +17584,7 @@
         "component": "AList",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17653,9 +17603,7 @@
         "component": "AMentions",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17671,33 +17619,10 @@
         }
       },
       {
-        "component": "AMenu",
-        "npm": {
-          "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
-          "dependencies": [
-            "https://unpkg.com/dayjs/dayjs.min.js",
-            "https://unpkg.com/dayjs/plugin/customParseFormat.js",
-            "https://unpkg.com/dayjs/plugin/weekday.js",
-            "https://unpkg.com/dayjs/plugin/localeData.js",
-            "https://unpkg.com/dayjs/plugin/weekOfYear.js",
-            "https://unpkg.com/dayjs/plugin/weekYear.js",
-            "https://unpkg.com/dayjs/plugin/advancedFormat.js",
-            "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
-          ],
-          "exportName": "Menu",
-          "destructuring": true
-        }
-      },
-      {
         "component": "AMessage",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17716,9 +17641,7 @@
         "component": "AModal",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17737,9 +17660,7 @@
         "component": "ANotification",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17758,9 +17679,7 @@
         "component": "APageHeader",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17779,9 +17698,7 @@
         "component": "APagination",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17800,9 +17717,7 @@
         "component": "APopconfirm",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17821,9 +17736,7 @@
         "component": "APopover",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17842,9 +17755,7 @@
         "component": "AProgress",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17863,9 +17774,7 @@
         "component": "ARadio",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17884,9 +17793,7 @@
         "component": "ARate",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17905,9 +17812,7 @@
         "component": "AResult",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17926,9 +17831,7 @@
         "component": "ASegmented",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17947,9 +17850,7 @@
         "component": "ASelect",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17968,9 +17869,7 @@
         "component": "ASkeleton",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -17989,9 +17888,7 @@
         "component": "ASlider",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -18010,9 +17907,7 @@
         "component": "ASpin",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -18031,9 +17926,7 @@
         "component": "AStatistic",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -18052,9 +17945,7 @@
         "component": "ASteps",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -18073,9 +17964,7 @@
         "component": "ASwitch",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -18094,9 +17983,7 @@
         "component": "ATable",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -18115,9 +18002,7 @@
         "component": "ATabs",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -18136,9 +18021,7 @@
         "component": "ATag",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -18154,33 +18037,10 @@
         }
       },
       {
-        "component": "ATimeline",
-        "npm": {
-          "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
-          "dependencies": [
-            "https://unpkg.com/dayjs/dayjs.min.js",
-            "https://unpkg.com/dayjs/plugin/customParseFormat.js",
-            "https://unpkg.com/dayjs/plugin/weekday.js",
-            "https://unpkg.com/dayjs/plugin/localeData.js",
-            "https://unpkg.com/dayjs/plugin/weekOfYear.js",
-            "https://unpkg.com/dayjs/plugin/weekYear.js",
-            "https://unpkg.com/dayjs/plugin/advancedFormat.js",
-            "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
-          ],
-          "exportName": "Timeline",
-          "destructuring": true
-        }
-      },
-      {
         "component": "ATimePicker",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -18196,12 +18056,29 @@
         }
       },
       {
+        "component": "ATimeline",
+        "npm": {
+          "package": "ant-design-vue",
+          "version": "",
+          "dependencies": [
+            "https://unpkg.com/dayjs/dayjs.min.js",
+            "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+            "https://unpkg.com/dayjs/plugin/weekday.js",
+            "https://unpkg.com/dayjs/plugin/localeData.js",
+            "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+            "https://unpkg.com/dayjs/plugin/weekYear.js",
+            "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+            "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+          ],
+          "exportName": "Timeline",
+          "destructuring": true
+        }
+      },
+      {
         "component": "ATooltip",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -18220,9 +18097,7 @@
         "component": "ATour",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -18241,9 +18116,7 @@
         "component": "ATransfer",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -18262,9 +18135,7 @@
         "component": "ATree",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -18283,9 +18154,7 @@
         "component": "ATreeSelect",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -18304,9 +18173,7 @@
         "component": "ATypography",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -18325,9 +18192,7 @@
         "component": "AUpload",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",
@@ -18346,9 +18211,7 @@
         "component": "AWatermark",
         "npm": {
           "package": "ant-design-vue",
-          "version": "4.1.2",
-          "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-          "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+          "version": "",
           "dependencies": [
             "https://unpkg.com/dayjs/dayjs.min.js",
             "https://unpkg.com/dayjs/plugin/customParseFormat.js",

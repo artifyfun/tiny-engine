@@ -28,15 +28,11 @@ import {
   CanvasImg,
   CanvasPlaceholder
 } from '../builtin'
-import { ConfigProvider as AConfigProvider, App as AApp } from 'ant-design-vue'
 import { NODE_UID as DESIGN_UIDKEY, NODE_TAG as DESIGN_TAGKEY, NODE_LOOP as DESIGN_LOOPID } from '../common'
 
 const { BROADCAST_CHANNEL } = constants
 const { hyphenateRE } = utils
-const customElements = {
-  AConfigProvider,
-  AApp
-}
+const customElements = {}
 
 const transformJSX = (code) => {
   const res = transformSync(code, {
