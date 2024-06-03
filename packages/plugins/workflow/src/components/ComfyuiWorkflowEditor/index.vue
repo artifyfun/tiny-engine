@@ -50,7 +50,7 @@ const updateParamsNodes = (nodes) => {
 
 const onload = async () => {
   playground.value.updateParamsNodes(props.workflow.paramsNodes)
-  playground.value.loadGraphData(props.workflow.workflow)
+  await playground.value.loadGraphData(props.workflow.workflow)
   await playground.value.updatePrompt()
   emit('onload')
   editorState.loading = false

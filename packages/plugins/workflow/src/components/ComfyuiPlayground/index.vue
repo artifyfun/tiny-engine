@@ -32,6 +32,16 @@ const loadGraphData = (graphData) => {
     data: graphData
   })
   postMessage(message)
+  return new Promise((resolve) => {
+    const handler = (event) => {
+      const { eventType } = JSON.parse(event.data)
+      if (eventType === 'loadGraphData') {
+        resolve()
+        window.removeEventListener('message', handler)
+      }
+    }
+    window.addEventListener('message', handler)
+  })
 }
 
 const updatePrompt = () => {
@@ -434,10 +444,15 @@ function handleComfyuiContext(window) {
       app.canvas.centerOnNode(node)
     }
     if (eventType === 'loadGraphData') {
-      app.loadGraphData(data)
+      await app.loadGraphData(data)
       setTimeout(() => {
         const node = app.graph.getNodeById(data.nodes[0].id)
         app.canvas.centerOnNode(node)
+        eventBus.send(
+          stringify({
+            eventType: 'loadGraphData'
+          })
+        )
       })
     }
     if (eventType === 'updatePrompt') {
