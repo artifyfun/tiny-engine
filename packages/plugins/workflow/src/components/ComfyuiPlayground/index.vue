@@ -39,6 +39,16 @@ const updatePrompt = () => {
     eventType: 'updatePrompt'
   })
   postMessage(message)
+  return new Promise((resolve) => {
+    const handler = (event) => {
+      const { eventType, data } = JSON.parse(event.data)
+      if (eventType === 'updatePrompt') {
+        resolve(data)
+        window.removeEventListener('message', handler)
+      }
+    }
+    window.addEventListener('message', handler)
+  })
 }
 
 const updateParamsNodes = (paramsNodes) => {

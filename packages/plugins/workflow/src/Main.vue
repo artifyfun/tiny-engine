@@ -287,13 +287,14 @@ export default {
       }
     }
 
-    const editConfirm = () => {
+    const editConfirm = async () => {
       editorLoading.value = true
-      const { prompt = {}, paramsNodes = [] } = editor.value.editorState
+      const { prompt = {}, paramsNodes = [], workflow } = await editor.value.getData()
       if (!currentWorkflow.value.id) {
         const newItem = {
           ...currentWorkflow.value,
           workflowType: 'comfyui',
+          workflow,
           prompt,
           paramsNodes
         }
@@ -308,6 +309,7 @@ export default {
       } else {
         updateWorkflow({
           ...currentWorkflow.value,
+          workflow,
           prompt,
           paramsNodes
         })

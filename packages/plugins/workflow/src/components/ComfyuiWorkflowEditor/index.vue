@@ -48,12 +48,21 @@ const updateParamsNodes = (nodes) => {
   editorState.paramsNodes = nodes
 }
 
-const onload = () => {
-  editorState.loading = false
+const onload = async () => {
   playground.value.updateParamsNodes(props.workflow.paramsNodes)
   playground.value.loadGraphData(props.workflow.workflow)
-  playground.value.updatePrompt()
-  emit('onload', editorState)
+  await playground.value.updatePrompt()
+  emit('onload')
+  editorState.loading = false
+}
+
+const getData = async () => {
+  await playground.value.updatePrompt()
+  return {
+    prompt: editorState.prompt,
+    paramsNodes: editorState.paramsNodes,
+    workflow: editorState.prompt.workflow
+  }
 }
 
 onMounted(() => {
@@ -61,7 +70,8 @@ onMounted(() => {
 })
 
 defineExpose({
-  editorState
+  editorState,
+  getData
 })
 </script>
 
