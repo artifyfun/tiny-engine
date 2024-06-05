@@ -1,5 +1,6 @@
 import { reactive } from 'vue'
 import { WORKSPACE_KEY } from '../js/constants'
+import { useLayout } from '@opentiny/tiny-engine-controller'
 
 function toUpperCamelCase(str) {
   return str.replace(str[0], str[0].toUpperCase())
@@ -133,11 +134,22 @@ const setWorkflowMethod = (method) => {
   workflowMethodState.selectedMethod = method
 }
 
+const genWorkflowMethod = ({ key, content }) => {
+  const { PLUGIN_NAME, getPluginApi } = useLayout()
+  const { saveMethod } = getPluginApi(PLUGIN_NAME.PageController)
+
+  saveMethod?.({
+    name: key,
+    content
+  })
+}
+
 export default () => {
   return {
     workflowMethodState,
     setWorkflow,
     setWorkflowMethod,
-    resetWorkflowMethodState
+    resetWorkflowMethodState,
+    genWorkflowMethod
   }
 }

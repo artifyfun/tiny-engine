@@ -1,5 +1,6 @@
 import { reactive } from 'vue'
 import { WORKSPACE_KEY } from '../js/constants'
+import { useCanvas } from '@opentiny/tiny-engine-controller'
 
 const category = [
   {
@@ -104,36 +105,6 @@ const setWorkflow = (workflow) => {
   workflowVariableState.selectedCategory = workflowVariableState.category[0]
   setWorkflowCategory(workflowVariableState.selectedCategory)
 }
-
-/**
- * workflow 在state中的数据结构
- {
-    __workflow__: {
-      workflow1: {
-        config: {
-          uploadApi: '/workflows/api/upload/image?key=workflow1'
-        },
-        prompt: {
-          id1: {
-            inputs: {
-              text: ''
-            }
-          },
-        },
-        outputs: {
-          id2: null
-        },
-        state: {
-          loading: false,
-          pending: 0,
-          executing: false,
-          done: false,
-          progress: 0
-        }
-      }
-    }
-  }
-  */
 
 const getWorkflowVariableContent = () => {
   const { selectedWidget, category, key, id } = workflowVariableState.selectedVariable
@@ -432,6 +403,129 @@ workspaceInitWebSocket()`
   }
 }
 
+const genWorkflowState = (workflows) => {
+  /**
+   * workflow 在state中的数据结构
+   {
+      __workflow__: {
+        workflow1: {
+          config: {
+            uploadApi: '/workflows/api/upload/image?key=workflow1'
+          },
+          prompt: {
+            id1: {
+              inputs: {
+                text: ''
+              }
+            },
+          },
+          outputs: {
+            id2: null
+          },
+          state: {
+            loading: false,
+            pending: 0,
+            executing: false,
+            done: false,
+            progress: 0
+          }
+        }
+      }
+    }
+   */
+  const { canvasApi } = useCanvas()
+  const { getSchema, setState } = canvasApi.value
+  const pageSchema = getSchema()
+  const stateName = WORKSPACE_KEY
+  const staticData = {}
+  for (const index in workflows) {
+    const workflow = workflows[index]
+    staticData[workflow.key] = {}
+    const extraVariables = workflowVariableState.category
+      .map((item) => item.variables)
+      .flat(1)
+      .filter((item) => !['input', 'output'].includes(item.category))
+    for (const index in extraVariables) {
+      const { category, key, value } = extraVariables[index]
+      if (!staticData[workflow.key][category]) {
+        staticData[workflow.key][category] = {}
+      }
+      staticData[workflow.key][category][key] = value
+      if (category === 'config') {
+        if (key === 'uploadApi') {
+          staticData[workflow.key][category][key] = `/workflows/api/upload/image?key=${workflow.key}`
+        }
+      }
+    }
+    for (const key in workflow.paramsNodes) {
+      const { selectedWidget, category, id } = workflow.paramsNodes[key]
+
+      if (!staticData[workflow.key]['prompt']) {
+        staticData[workflow.key]['prompt'] = {}
+      }
+      if (!staticData[workflow.key]['prompt'][id]) {
+        staticData[workflow.key]['prompt'][id] = { inputs: {} }
+      }
+      if (!staticData[workflow.key]['outputs']) {
+        staticData[workflow.key]['outputs'] = {}
+      }
+
+      if (category === 'input') {
+        staticData[workflow.key]['prompt'][id]['inputs'][selectedWidget.name] = selectedWidget.value
+      }
+      if (category === 'output') {
+        staticData[workflow.key]['outputs'][selectedWidget.id] = null
+      }
+    }
+  }
+  const workflowState = {
+    ...pageSchema.state[stateName],
+    ...staticData
+  }
+  pageSchema.state[stateName] = workflowState
+
+  // 设置画布上下文环境，让画布触发更新渲染
+  setState({ [stateName]: workflowState })
+}
+
+const genMethodToLifeCycle = ({ pageSchema, lifeCycleKey, initialLifeCycleValue, method, comments }) => {
+  const fn = pageSchema.lifeCycles?.[lifeCycleKey]?.value
+
+  const fetchBody = `
+  /** ${comments.start} */
+  ${method.body};
+  /** ${comments.end} */`
+
+  if (!fn) {
+    pageSchema.lifeCycles = pageSchema.lifeCycles || {}
+    pageSchema.lifeCycles[lifeCycleKey] = {
+      type: 'JSFunction',
+      value: initialLifeCycleValue.replace(/\}$/, fetchBody + '}')
+    }
+  } else {
+    if (!fn.includes(method.name)) {
+      pageSchema.lifeCycles[lifeCycleKey].value = fn.trim().replace(/\}$/, fetchBody + '}')
+    }
+  }
+}
+
+const genWorkflowMethodToLifeCycle = () => {
+  const { canvasApi } = useCanvas()
+  const { getSchema } = canvasApi.value
+  const pageSchema = getSchema()
+  const workflowLifecycles = getWorkflowLifecycle()
+  Object.keys(workflowLifecycles).forEach((key) => {
+    const { method, initialLifeCycleValue, comments } = getWorkflowLifecycle()[key]
+    genMethodToLifeCycle({
+      pageSchema,
+      lifeCycleKey: key,
+      initialLifeCycleValue,
+      method,
+      comments
+    })
+  })
+}
+
 export default () => {
   return {
     workflowVariableState,
@@ -441,6 +535,8 @@ export default () => {
     resetWorkflowVariableState,
     getWorkflowVariableContent,
     setWorkflowVariableStateByBindKey,
-    getWorkflowLifecycle
+    getWorkflowLifecycle,
+    genWorkflowState,
+    genWorkflowMethodToLifeCycle
   }
 }

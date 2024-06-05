@@ -76,6 +76,17 @@
             <tiny-grid-column width="80" field="operation" title="操作">
               <template v-slot="data">
                 <div v-if="editingRow !== data.row" class="cell-opera">
+                  <tiny-tooltip
+                    class="item"
+                    effect="dark"
+                    placement="bottom"
+                    content="一键生成应用界面"
+                    :open-delay="500"
+                  >
+                    <span class="icon">
+                      <svg-icon name="display-grid" @click.stop="openGenPagePopover(data.row)"></svg-icon>
+                    </span>
+                  </tiny-tooltip>
                   <tiny-tooltip class="item" effect="dark" placement="bottom" content="编辑" :open-delay="500">
                     <span class="icon">
                       <svg-icon name="edit" @click.stop="openEditor($event, data.row)"></svg-icon>
@@ -128,7 +139,15 @@
 import { computed, ref, watchEffect, onMounted, onActivated } from 'vue'
 import { Grid, GridColumn, Input, Button, FileUpload, Tooltip, Select, Modal as TinyModal } from '@opentiny/vue'
 import { PluginPanel, LinkButton, CloseIcon, ComfyuiIcon } from '@opentiny/tiny-engine-common'
-import { useModal, useWorkflow, useApp } from '@opentiny/tiny-engine-controller'
+import {
+  useModal,
+  useWorkflow,
+  useWorkflowVariable,
+  useWorkflowMethod,
+  useApp,
+  useCanvas,
+  useHistory
+} from '@opentiny/tiny-engine-controller'
 import { utils } from '@opentiny/tiny-engine-utils'
 import { BASE_URL } from '@opentiny/tiny-engine-controller/js/environments'
 
@@ -154,6 +173,10 @@ export default {
   },
   setup() {
     const { workflowState, getWorkflows, findWorkflows, createWorkflow, deleteWorkflow, updateWorkflow } = useWorkflow()
+    const { genWorkflowState, genWorkflowMethodToLifeCycle } = useWorkflowVariable()
+    const { genWorkflowMethod, setWorkflow, workflowMethodState } = useWorkflowMethod()
+
+    const { setSaved } = useCanvas()
 
     const fullWorkflows = computed(() => {
       const workflows = getWorkflows()
@@ -333,6 +356,39 @@ export default {
       }
     }
 
+    // const genBlockByWorkflow = (workflow) => {
+    //   console.log(workflow.paramsNodes)
+    // }
+
+    const genPageByWorkflow = (workflow) => {
+      // 生成页面state
+      genWorkflowState([workflow])
+      // 生成页面生命周期
+      genWorkflowMethodToLifeCycle()
+      // 生成页面方法
+      setWorkflow(workflow)
+      workflowMethodState.methods.forEach((method) => {
+        genWorkflowMethod(method)
+      })
+      // 生成页面区块
+      // genBlockByWorkflow(workflow)
+
+      useHistory().addHistory()
+      setSaved(false)
+    }
+
+    const openGenPagePopover = (workflow) => {
+      const { confirm } = useModal()
+
+      confirm({
+        title: '生成应用界面',
+        message: `根据当前选择的工作流配置生成页面内容, 是否继续？`,
+        exec: () => {
+          genPageByWorkflow(workflow)
+        }
+      })
+    }
+
     return {
       workflowState,
       sortTypeChanges,
@@ -359,7 +415,8 @@ export default {
       editConfirm,
       editCancel,
       currentWorkflow,
-      showEditor
+      showEditor,
+      openGenPagePopover
     }
   }
 }

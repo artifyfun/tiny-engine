@@ -166,7 +166,14 @@ import {
   TabItem as TinyTabItem
 } from '@opentiny/vue'
 import { WORKSPACE_KEY } from '@opentiny/tiny-engine-controller/js/constants'
-import { useCanvas, useHistory, useLayout, useWorkflow, useWorkflowMethod } from '@opentiny/tiny-engine-controller'
+import {
+  useCanvas,
+  useHistory,
+  useLayout,
+  useWorkflow,
+  useWorkflowMethod,
+  useWorkflowVariable
+} from '@opentiny/tiny-engine-controller'
 import { theme } from '@opentiny/tiny-engine-controller/adapter'
 import { string2Ast, ast2String } from '@opentiny/tiny-engine-controller/js/ast'
 import { iconYes, iconHelpQuery } from '@opentiny/vue-icon'
@@ -222,7 +229,9 @@ export default {
     const { getMethodNameList, getMethods, saveMethod, highlightMethod } = getPluginApi(PLUGIN_NAME.PageController)
 
     const { workflowState, findWorkflows } = useWorkflow()
-    const { workflowMethodState, setWorkflow, setWorkflowMethod, resetWorkflowMethodState } = useWorkflowMethod()
+    const { genWorkflowState, genWorkflowMethodToLifeCycle } = useWorkflowVariable()
+    const { workflowMethodState, setWorkflow, setWorkflowMethod, resetWorkflowMethodState, genWorkflowMethod } =
+      useWorkflowMethod()
     const editor = ref(null)
 
     const state = reactive({
@@ -473,6 +482,10 @@ export default {
         if (!workflowMethodState.selectedMethod) {
           return
         }
+
+        genWorkflowState([workflowMethodState.selectedWorkflow])
+        genWorkflowMethodToLifeCycle()
+
         bindWorkflowMethod({
           ...state.bindMethodInfo,
           params: workflowMethodState.selectedWorkflow.key,
@@ -487,12 +500,12 @@ export default {
             ? workflowMethodState.selectedMethod.content
             : `function (eventArgs,workflowKey) ${functionBody}`
 
-        saveMethod?.({
-          name: workflowMethodState.selectedMethod.key,
+        genWorkflowMethod({
+          key: workflowMethodState.selectedMethod.key,
           content
         })
 
-        activePagePlugin()
+        // activePagePlugin()
         close()
         return
       }
