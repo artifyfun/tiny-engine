@@ -20752,6 +20752,142 @@
         },
         {
           "id": 1,
+          "version": "0.2.2",
+          "name": {
+            "zh_CN": "Deadline"
+          },
+          "component": "Deadline",
+          "icon": "Image",
+          "description": "Deadline",
+          "doc_url": "",
+          "screenshot": "",
+          "tags": "",
+          "keywords": "",
+          "dev_mode": "proCode",
+          "npm": {
+            "package": "artifyfun-vue-components",
+            "version": "0.2.2",
+            "script": "/assets/lib/artifyfun-vue-components@0.2.2/dist/index.js",
+            "css": "/assets/lib/artifyfun-vue-components@0.2.2/dist/style.css",
+            "dependencies": [
+              "https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js",
+              {
+                "package": "ant-design-vue"
+              }
+            ],
+            "exportName": "Deadline",
+            "destructuring": true
+          },
+          "group": "Artify",
+          "configure": {
+            "loop": true,
+            "condition": true,
+            "styles": true,
+            "isContainer": false,
+            "isModal": false,
+            "isPopper": false,
+            "nestingRule": {
+              "childWhitelist": "",
+              "parentWhitelist": "",
+              "descendantBlacklist": "",
+              "ancestorWhitelist": ""
+            },
+            "isNullNode": false,
+            "isLayout": false,
+            "rootSelector": "",
+            "shortcuts": {
+              "properties": []
+            },
+            "contextMenu": {
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+              "disable": []
+            },
+            "invalidity": [""],
+            "clickCapture": true,
+            "framework": "Vue"
+          },
+          "schema": {
+            "properties": [
+              {
+                "name": "0",
+                "label": {
+                  "zh_CN": "基础属性"
+                },
+                "content": [
+                  {
+                    "property": "percent",
+                    "label": {
+                      "text": {
+                        "zh_CN": "百分比"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "百分比"
+                    },
+                    "required": true,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "widget": {
+                      "component": "MetaNumber",
+                      "props": {}
+                    }
+                  },
+                  {
+                    "property": "LoadingText",
+                    "label": {
+                      "text": {
+                        "zh_CN": "Loading文字"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "Loading文字"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "defaultValue": "正在执行...",
+                    "type": "string",
+                    "widget": {
+                      "component": "MetaInput",
+                      "props": {}
+                    }
+                  },
+                  {
+                    "property": "showLoadingText",
+                    "label": {
+                      "text": {
+                        "zh_CN": "显示Loading文字"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "是否显示Loading文字"
+                    },
+                    "required": true,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "defaultValue": false,
+                    "type": "boolean",
+                    "widget": {
+                      "component": "MetaSwitch",
+                      "props": {}
+                    }
+                  }
+                ],
+                "description": {
+                  "zh_CN": ""
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": 1,
           "version": "2.4.2",
           "name": {
             "zh_CN": "按钮"
@@ -23690,7 +23826,7 @@
         },
         {
           "id": 1,
-          "version": "0.2.1",
+          "version": "0.2.2",
           "name": {
             "zh_CN": "图片裁剪上传"
           },
@@ -23704,9 +23840,9 @@
           "dev_mode": "proCode",
           "npm": {
             "package": "artifyfun-vue-components",
-            "version": "0.2.1",
-            "script": "/assets/lib/artifyfun-vue-components@0.2.1/dist/index.js",
-            "css": "/assets/lib/artifyfun-vue-components@0.2.1/dist/style.css",
+            "version": "0.2.2",
+            "script": "/assets/lib/artifyfun-vue-components@0.2.2/dist/index.js",
+            "css": "/assets/lib/artifyfun-vue-components@0.2.2/dist/style.css",
             "dependencies": [
               {
                 "package": "ant-design-vue"
@@ -23887,7 +24023,7 @@
         },
         {
           "id": 1,
-          "version": "0.2.1",
+          "version": "0.2.2",
           "name": {
             "zh_CN": "图片上传"
           },
@@ -23901,9 +24037,9 @@
           "dev_mode": "proCode",
           "npm": {
             "package": "artifyfun-vue-components",
-            "version": "0.2.1",
-            "script": "/assets/lib/artifyfun-vue-components@0.2.1/dist/index.js",
-            "css": "/assets/lib/artifyfun-vue-components@0.2.1/dist/style.css",
+            "version": "0.2.2",
+            "script": "/assets/lib/artifyfun-vue-components@0.2.2/dist/index.js",
+            "css": "/assets/lib/artifyfun-vue-components@0.2.2/dist/style.css",
             "dependencies": [
               {
                 "package": "ant-design-vue"
@@ -24570,7 +24706,7 @@
         },
         {
           "id": 1,
-          "version": "0.2.1",
+          "version": "0.2.2",
           "name": {
             "zh_CN": "卡片"
           },
@@ -24584,9 +24720,9 @@
           "dev_mode": "proCode",
           "npm": {
             "package": "artifyfun-vue-components",
-            "version": "0.2.1",
-            "script": "/assets/lib/artifyfun-vue-components@0.2.1/dist/index.js",
-            "css": "/assets/lib/artifyfun-vue-components@0.2.1/dist/style.css",
+            "version": "0.2.2",
+            "script": "/assets/lib/artifyfun-vue-components@0.2.2/dist/index.js",
+            "css": "/assets/lib/artifyfun-vue-components@0.2.2/dist/style.css",
             "dependencies": [
               {
                 "package": "ant-design-vue"
@@ -35022,6 +35158,47 @@
           ]
         },
         {
+          "group": "Artify",
+          "children": [
+            {
+              "name": {
+                "zh_CN": "Deadline"
+              },
+              "icon": "progress",
+              "screenshot": "",
+              "snippetName": "Deadline",
+              "schema": {}
+            },
+            {
+              "name": {
+                "zh_CN": "图片裁剪上传"
+              },
+              "icon": "Image",
+              "screenshot": "",
+              "snippetName": "ImageCropUploader",
+              "schema": {}
+            },
+            {
+              "name": {
+                "zh_CN": "图片上传"
+              },
+              "icon": "Image",
+              "screenshot": "",
+              "snippetName": "ImageUploader",
+              "schema": {}
+            },
+            {
+              "name": {
+                "zh_CN": "卡片"
+              },
+              "icon": "table",
+              "screenshot": "",
+              "snippetName": "PokemonCard",
+              "schema": {}
+            }
+          ]
+        },
+        {
           "group": "element-plus",
           "children": [
             {
@@ -35181,38 +35358,6 @@
                   ]
                 }
               }
-            }
-          ]
-        },
-        {
-          "group": "Artify",
-          "children": [
-            {
-              "name": {
-                "zh_CN": "图片裁剪上传"
-              },
-              "icon": "Image",
-              "screenshot": "",
-              "snippetName": "ImageCropUploader",
-              "schema": {}
-            },
-            {
-              "name": {
-                "zh_CN": "图片上传"
-              },
-              "icon": "Image",
-              "screenshot": "",
-              "snippetName": "ImageUploader",
-              "schema": {}
-            },
-            {
-              "name": {
-                "zh_CN": "卡片"
-              },
-              "icon": "table",
-              "screenshot": "",
-              "snippetName": "PokemonCard",
-              "schema": {}
             }
           ]
         },

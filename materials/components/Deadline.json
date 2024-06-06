@@ -2,11 +2,11 @@
   "id": 1,
   "version": "0.2.2",
   "name": {
-    "zh_CN": "卡片"
+    "zh_CN": "Deadline"
   },
-  "component": "PokemonCard",
-  "icon": "table",
-  "description": "卡片组件",
+  "component": "Deadline",
+  "icon": "Image",
+  "description": "Deadline",
   "doc_url": "",
   "screenshot": "",
   "tags": "",
@@ -18,11 +18,12 @@
     "script": "/assets/lib/artifyfun-vue-components@0.2.2/dist/index.js",
     "css": "/assets/lib/artifyfun-vue-components@0.2.2/dist/style.css",
     "dependencies": [
+      "https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js",
       {
         "package": "ant-design-vue"
       }
     ],
-    "exportName": "PokemonCard",
+    "exportName": "Deadline",
     "destructuring": true
   },
   "group": "Artify",
@@ -71,20 +72,41 @@
         },
         "content": [
           {
-            "property": "img",
+            "property": "percent",
             "label": {
               "text": {
-                "zh_CN": "正面图片"
+                "zh_CN": "百分比"
               }
             },
             "description": {
-              "zh_CN": "卡片正面图片地址"
+              "zh_CN": "百分比"
             },
             "required": true,
             "readOnly": false,
             "disabled": false,
             "cols": 12,
             "labelPosition": "top",
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            }
+          },
+          {
+            "property": "LoadingText",
+            "label": {
+              "text": {
+                "zh_CN": "Loading文字"
+              }
+            },
+            "description": {
+              "zh_CN": "Loading文字"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "defaultValue": "正在执行...",
             "type": "string",
             "widget": {
               "component": "MetaInput",
@@ -92,35 +114,14 @@
             }
           },
           {
-            "property": "backimg",
+            "property": "showLoadingText",
             "label": {
               "text": {
-                "zh_CN": "背面图片"
+                "zh_CN": "显示Loading文字"
               }
             },
             "description": {
-              "zh_CN": "卡片背面图片地址"
-            },
-            "required": true,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "string",
-            "widget": {
-              "component": "MetaInput",
-              "props": {}
-            }
-          },
-          {
-            "property": "active",
-            "label": {
-              "text": {
-                "zh_CN": "激活状态"
-              }
-            },
-            "description": {
-              "zh_CN": "激活状态"
+              "zh_CN": "是否显示Loading文字"
             },
             "required": true,
             "readOnly": false,
@@ -133,55 +134,22 @@
               "component": "MetaSwitch",
               "props": {}
             }
-          },
-          {
-            "property": "cardLoading",
-            "label": {
-              "text": {
-                "zh_CN": "loading"
-              }
-            },
-            "description": {
-              "zh_CN": "加载中"
-            },
-            "required": true,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "defaultValue": false,
-            "type": "boolean",
-            "widget": {
-              "component": "MetaSwitch",
-              "props": {}
-            },
-            "device": []
           }
         ],
         "description": {
           "zh_CN": ""
         }
       }
-    ],
-    "events": {
-      "onCardLoaded": {
-        "label": {
-          "zh_CN": "加载完成"
-        },
-        "description": {
-          "zh_CN": "加载完成"
-        }
-      }
-    }
+    ]
   },
   "snippets": [
     {
       "name": {
-        "zh_CN": "卡片"
+        "zh_CN": "Deadline"
       },
-      "icon": "table",
+      "icon": "progress",
       "screenshot": "",
-      "snippetName": "PokemonCard",
+      "snippetName": "Deadline",
       "schema": {}
     }
   ],

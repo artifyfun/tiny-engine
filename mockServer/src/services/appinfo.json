@@ -18231,6 +18231,23 @@
         "npm": {}
       },
       {
+        "component": "Deadline",
+        "npm": {
+          "package": "artifyfun-vue-components",
+          "version": "0.2.2",
+          "script": "/assets/lib/artifyfun-vue-components@0.2.2/dist/index.js",
+          "css": "/assets/lib/artifyfun-vue-components@0.2.2/dist/style.css",
+          "dependencies": [
+            "https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js",
+            {
+              "package": "ant-design-vue"
+            }
+          ],
+          "exportName": "Deadline",
+          "destructuring": true
+        }
+      },
+      {
         "component": "ElButton",
         "npm": {
           "package": "element-plus",
@@ -18315,9 +18332,9 @@
         "component": "ImageCropUploader",
         "npm": {
           "package": "artifyfun-vue-components",
-          "version": "0.2.1",
-          "script": "/assets/lib/artifyfun-vue-components@0.2.1/dist/index.js",
-          "css": "/assets/lib/artifyfun-vue-components@0.2.1/dist/style.css",
+          "version": "0.2.2",
+          "script": "/assets/lib/artifyfun-vue-components@0.2.2/dist/index.js",
+          "css": "/assets/lib/artifyfun-vue-components@0.2.2/dist/style.css",
           "dependencies": [
             {
               "package": "ant-design-vue"
@@ -18331,9 +18348,9 @@
         "component": "ImageUploader",
         "npm": {
           "package": "artifyfun-vue-components",
-          "version": "0.2.1",
-          "script": "/assets/lib/artifyfun-vue-components@0.2.1/dist/index.js",
-          "css": "/assets/lib/artifyfun-vue-components@0.2.1/dist/style.css",
+          "version": "0.2.2",
+          "script": "/assets/lib/artifyfun-vue-components@0.2.2/dist/index.js",
+          "css": "/assets/lib/artifyfun-vue-components@0.2.2/dist/style.css",
           "dependencies": [
             {
               "package": "ant-design-vue"
@@ -18363,9 +18380,9 @@
         "component": "PokemonCard",
         "npm": {
           "package": "artifyfun-vue-components",
-          "version": "0.2.1",
-          "script": "/assets/lib/artifyfun-vue-components@0.2.1/dist/index.js",
-          "css": "/assets/lib/artifyfun-vue-components@0.2.1/dist/style.css",
+          "version": "0.2.2",
+          "script": "/assets/lib/artifyfun-vue-components@0.2.2/dist/index.js",
+          "css": "/assets/lib/artifyfun-vue-components@0.2.2/dist/style.css",
           "dependencies": [
             {
               "package": "ant-design-vue"
