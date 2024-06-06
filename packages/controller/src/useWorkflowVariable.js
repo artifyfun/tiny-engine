@@ -33,7 +33,7 @@ const category = [
       {
         category: 'state',
         key: 'loading',
-        name: '正在加载',
+        name: 'Loading',
         description: '',
         value: false
       },

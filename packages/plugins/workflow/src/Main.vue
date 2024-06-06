@@ -176,7 +176,7 @@ export default {
     const { genWorkflowState, genWorkflowMethodToLifeCycle } = useWorkflowVariable()
     const { genWorkflowMethod, setWorkflow, workflowMethodState } = useWorkflowMethod()
 
-    const { setSaved } = useCanvas()
+    const { setSaved, canvasApi } = useCanvas()
 
     const fullWorkflows = computed(() => {
       const workflows = getWorkflows()
@@ -356,9 +356,234 @@ export default {
       }
     }
 
-    // const genBlockByWorkflow = (workflow) => {
-    //   console.log(workflow.paramsNodes)
-    // }
+    const genBlockByWorkflow = (workflow) => {
+      console.log(workflow)
+      const getWrapperNode = (nodes) => {
+        return {
+          id: utils.guid(),
+          "componentName": "CanvasRow",
+          "props": {
+            "rowGap": "20px",
+            "colGap": "20px",
+            "className": "canvasrow-wluhr"
+          },
+          "children": [
+            {
+              id: utils.guid(),
+              "componentName": "CanvasCol",
+              "props": {
+                "rowGap": "20px",
+                "colGap": "20px",
+                "grow": true,
+                "shrink": true,
+                "widthType": "auto"
+              },
+              children: nodes
+            }
+          ]
+        }
+      }
+      const nodes = []
+      for (const node of workflow.paramsNodes) {
+        const { category, selectedWidget } = node
+
+        switch (category) {
+          case 'input': {
+            switch (selectedWidget.type) {
+              case "customtext":
+              case "string":
+              case "text": {
+                nodes.push(getWrapperNode([{
+                  id: utils.guid(),
+                  "componentName": "AInput",
+                  "props": {
+                    "type": "textarea",
+                    "value": {
+                      "type": "JSExpression",
+                      "value": `this.state.workspace['${workflow.key}']['prompt']['${node.id}']['inputs']['${selectedWidget.name}']`
+                    }
+                  },
+                }]))
+                break
+              }
+              case "toggle": {
+                break
+              }
+              case "slider": {
+                break
+              }
+              case "number": {
+                nodes.push(getWrapperNode([{
+                  id: utils.guid(),
+                  "componentName": "AInputNumber",
+                  "props": {
+                    "type": "textarea",
+                    "value": {
+                      "type": "JSExpression",
+                      "value": `this.state.workspace['${workflow.key}']['prompt']['${node.id}']['inputs']['${selectedWidget.name}']`
+                    }
+                  },
+                }]))
+                break
+              }
+              case "combo": {
+                nodes.push(getWrapperNode([{
+                  id: utils.guid(),
+                  "componentName": "ASelect",
+                  "props": {
+                    "value": {
+                      "type": "JSExpression",
+                      "value": `this.state.workspace['${workflow.key}']['prompt']['${node.id}']['inputs']['${selectedWidget.name}']`
+                    },
+                    options: selectedWidget.options.values.map(item => {
+                      return {
+                        label: item,
+                        value: item
+                      }
+                    }),
+                    fieldNames: {
+                      label: 'label',
+                      value: 'value'
+                    }
+                  },
+                }]))
+                break
+              }
+              default: {
+                // 未知控件
+                break
+              }
+            }
+            break
+          }
+          case 'output': {
+            switch(selectedWidget.type) {
+              case "SaveImage": {
+                nodes.push(getWrapperNode([{
+                  id: utils.guid(),
+                  "componentName": "Img",
+                  "props": {
+                    "src": {
+                      "type": "JSExpression",
+                      "value": `this.state.workspace['${workflow.key}']['outputs']['${node.id}']`
+                    }
+                  },
+                }]))
+                break
+              }
+              default: {
+                // 未知控件
+                break
+              }
+            }
+            break
+          }
+        }
+      }
+
+      const controller = {
+        id: utils.guid(),
+        "componentName": "CanvasRow",
+        "props": {
+          "rowGap": "20px",
+          "colGap": "20px"
+        },
+        "children": [
+          {
+            id: utils.guid(),
+            "componentName": "CanvasCol",
+            "props": {
+              "rowGap": "20px",
+              "colGap": "20px",
+              "grow": true,
+              "shrink": true,
+              "widthType": "auto"
+            },
+            "children": [
+              {
+                id: utils.guid(),
+                "componentName": "AButton",
+                "props": {
+                  "type": "primary",
+                  "onClick": {
+                    "type": "JSExpression",
+                    "value": "this.workspaceQueueSync",
+                    "params": [
+                      `'${workflow.key}'`
+                    ]
+                  },
+                  "loading": {
+                    "type": "JSExpression",
+                    "value": `this.state.workspace['${workflow.key}']['state']['loading']`
+                  }
+                },
+                "children": [
+                  {
+                    id: utils.guid(),
+                    "componentName": "Text",
+                    "props": {
+                      "text": "生成"
+                    },
+                  }
+                ],
+              }
+            ],
+          },
+          {
+            id: utils.guid(),
+            "componentName": "CanvasCol",
+            "props": {
+              "rowGap": "20px",
+              "colGap": "20px",
+              "grow": true,
+              "shrink": true,
+              "widthType": "auto"
+            },
+            "children": [
+              {
+                id: utils.guid(),
+                "componentName": "AButton",
+                "props": {
+                  "type": "primary",
+                  "danger": true,
+                  "onClick": {
+                    "type": "JSExpression",
+                    "value": "this.workspaceDeleteQueue",
+                    "params": [
+                      `'${workflow.key}'`
+                    ]
+                  }
+                },
+                "children": [
+                  {
+                    id: utils.guid(),
+                    "componentName": "Text",
+                    "props": {
+                      "text": "中断"
+                    },
+                  }
+                ],
+              }
+            ],
+          }
+        ],
+      }
+
+      nodes.push(controller)
+
+      return {
+        data: {
+          id: utils.guid(),
+          "componentName": "CanvasRowColContainer",
+          "props": {
+            "rowGap": "20px"
+          },
+          "children": [
+            getWrapperNode(nodes)
+          ]
+        }
+      }
+    }
 
     const genPageByWorkflow = (workflow) => {
       // 生成页面state
@@ -371,7 +596,9 @@ export default {
         genWorkflowMethod(method)
       })
       // 生成页面区块
-      // genBlockByWorkflow(workflow)
+      const block = genBlockByWorkflow(workflow)
+
+      canvasApi.value.insertNode(block)
 
       useHistory().addHistory()
       setSaved(false)
