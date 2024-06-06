@@ -20829,6 +20829,7 @@
                     "disabled": false,
                     "cols": 12,
                     "labelPosition": "top",
+                    "defaultValue": 0,
                     "widget": {
                       "component": "MetaNumber",
                       "props": {}
@@ -20871,7 +20872,7 @@
                     "disabled": false,
                     "cols": 12,
                     "labelPosition": "top",
-                    "defaultValue": false,
+                    "defaultValue": true,
                     "type": "boolean",
                     "widget": {
                       "component": "MetaSwitch",
