@@ -1,6 +1,6 @@
 import { reactive } from 'vue'
 import { WORKSPACE_KEY } from '../js/constants'
-import { useLayout } from '@opentiny/tiny-engine-controller'
+import { useLayout } from './index'
 
 function toUpperCamelCase(str) {
   return str.replace(str[0], str[0].toUpperCase())

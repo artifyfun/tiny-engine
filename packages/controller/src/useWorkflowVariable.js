@@ -1,6 +1,6 @@
 import { reactive } from 'vue'
 import { WORKSPACE_KEY } from '../js/constants'
-import { useCanvas } from '@opentiny/tiny-engine-controller'
+import { useCanvas } from './index'
 
 const category = [
   {
