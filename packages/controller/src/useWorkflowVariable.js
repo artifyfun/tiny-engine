@@ -194,7 +194,7 @@ const setWorkflowVariable = (variable) => {
 //   const { origin } = window.top.location
 
 //   const options = {
-//     url: `${origin.replace('http', 'ws')}/workflows?key=${key}`,
+//     url: `${origin.replace('http', 'ws')}/workflows/ws?key=${key}`,
 //     protocols: this.state.clientId
 //   }
 
@@ -311,7 +311,7 @@ workspaceInitClientId()`
   const { origin } = window.top.location
 
   const options = {
-    url: \`\${origin.replace('http', 'ws')}/workflows?key=\${key}\`,
+    url: \`\${origin.replace('http', 'ws')}/workflows/ws?key=\${key}\`,
     protocols: this.state.clientId
   }
 

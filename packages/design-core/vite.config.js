@@ -49,6 +49,11 @@ const config = {
         target: origin,
         changeOrigin: true
       },
+      '/workflows/ws': {
+        target: origin,
+        changeOrigin: true,
+        ws: true
+      },
       '/assets/lib': {
         target: origin,
         changeOrigin: true
@@ -64,7 +69,7 @@ const config = {
       '/comfyui': {
         target: origin,
         changeOrigin: true,
-        ws: true,
+        ws: true
       }
     }
   },
@@ -219,7 +224,7 @@ const prodAlias = {
 }
 
 const commonAlias = {
-  "source-map-js": "source-map",
+  'source-map-js': 'source-map',
   '@opentiny/tiny-engine-app-addons': path.resolve(__dirname, './config/addons.js')
 }
 
