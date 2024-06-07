@@ -18037,25 +18037,6 @@
         }
       },
       {
-        "component": "ATimeline",
-        "npm": {
-          "package": "ant-design-vue",
-          "version": "",
-          "dependencies": [
-            "https://unpkg.com/dayjs/dayjs.min.js",
-            "https://unpkg.com/dayjs/plugin/customParseFormat.js",
-            "https://unpkg.com/dayjs/plugin/weekday.js",
-            "https://unpkg.com/dayjs/plugin/localeData.js",
-            "https://unpkg.com/dayjs/plugin/weekOfYear.js",
-            "https://unpkg.com/dayjs/plugin/weekYear.js",
-            "https://unpkg.com/dayjs/plugin/advancedFormat.js",
-            "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
-          ],
-          "exportName": "Timeline",
-          "destructuring": true
-        }
-      },
-      {
         "component": "ATimePicker",
         "npm": {
           "package": "ant-design-vue",
@@ -18071,6 +18052,25 @@
             "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
           ],
           "exportName": "TimePicker",
+          "destructuring": true
+        }
+      },
+      {
+        "component": "ATimeline",
+        "npm": {
+          "package": "ant-design-vue",
+          "version": "",
+          "dependencies": [
+            "https://unpkg.com/dayjs/dayjs.min.js",
+            "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+            "https://unpkg.com/dayjs/plugin/weekday.js",
+            "https://unpkg.com/dayjs/plugin/localeData.js",
+            "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+            "https://unpkg.com/dayjs/plugin/weekYear.js",
+            "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+            "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+          ],
+          "exportName": "Timeline",
           "destructuring": true
         }
       },
@@ -18238,7 +18238,6 @@
           "script": "/assets/lib/artifyfun-vue-components@0.2.2/dist/index.js",
           "css": "/assets/lib/artifyfun-vue-components@0.2.2/dist/style.css",
           "dependencies": [
-            "https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js",
             {
               "package": "ant-design-vue"
             }
