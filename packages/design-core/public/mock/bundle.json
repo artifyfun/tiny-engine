@@ -36097,7 +36097,7 @@
               "name": {
                 "zh_CN": "Deadline"
               },
-              "icon": "progress",
+              "icon": "deadline",
               "screenshot": "",
               "snippetName": "Deadline",
               "schema": {}
@@ -36106,7 +36106,7 @@
               "name": {
                 "zh_CN": "图片裁剪上传"
               },
-              "icon": "Image",
+              "icon": "image-crop",
               "screenshot": "",
               "snippetName": "ImageCropUploader",
               "schema": {}
@@ -36115,7 +36115,7 @@
               "name": {
                 "zh_CN": "图片上传"
               },
-              "icon": "Image",
+              "icon": "image-upload",
               "screenshot": "",
               "snippetName": "ImageUploader",
               "schema": {}
@@ -36124,7 +36124,7 @@
               "name": {
                 "zh_CN": "卡片"
               },
-              "icon": "table",
+              "icon": "card",
               "screenshot": "",
               "snippetName": "PokemonCard",
               "schema": {}

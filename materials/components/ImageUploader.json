@@ -164,7 +164,7 @@
       "name": {
         "zh_CN": "图片上传"
       },
-      "icon": "Image",
+      "icon": "image-upload",
       "screenshot": "",
       "snippetName": "ImageUploader",
       "schema": {}

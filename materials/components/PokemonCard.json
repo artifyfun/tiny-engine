@@ -179,7 +179,7 @@
       "name": {
         "zh_CN": "卡片"
       },
-      "icon": "table",
+      "icon": "card",
       "screenshot": "",
       "snippetName": "PokemonCard",
       "schema": {}

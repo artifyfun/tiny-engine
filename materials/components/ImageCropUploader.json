@@ -208,7 +208,7 @@
       "name": {
         "zh_CN": "图片裁剪上传"
       },
-      "icon": "Image",
+      "icon": "image-crop",
       "screenshot": "",
       "snippetName": "ImageCropUploader",
       "schema": {}
