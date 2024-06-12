@@ -187,7 +187,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -294,7 +294,16 @@
                 "defaultValue": ""
               }
             },
-            "slots": {}
+            "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              }
+            }
           }
         },
         {
@@ -2326,7 +2335,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -2557,6 +2566,14 @@
             ],
             "events": {},
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "count": {
                 "label": {
                   "zh_CN": "count"
@@ -2603,7 +2620,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -2744,6 +2761,14 @@
             ],
             "events": {},
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "text": {
                 "label": {
                   "zh_CN": "text"
@@ -3133,7 +3158,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -3504,6 +3529,14 @@
               }
             },
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "icon": {
                 "label": {
                   "zh_CN": "icon"
@@ -3789,7 +3822,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -4136,6 +4169,14 @@
               }
             },
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "卡片内容"
+                }
+              },
               "extra": {
                 "label": {
                   "zh_CN": "extra"
@@ -5991,7 +6032,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -6207,6 +6248,14 @@
             ],
             "events": {},
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "extra": {
                 "label": {
                   "zh_CN": "extra"
@@ -8057,9 +8106,8 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
-            "isModal": false,
-            "isPopper": false,
+            "isContainer": true,
+            "isModal": true,
             "nestingRule": {
               "childWhitelist": "",
               "parentWhitelist": "",
@@ -8070,24 +8118,20 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": []
+              "properties": [
+                "visible",
+                "width"
+              ]
             },
             "contextMenu": {
               "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
+                "create symbol"
               ],
-              "disable": []
-            },
-            "invalidity": [
-              ""
-            ],
-            "clickCapture": true,
-            "framework": "Vue"
+              "disable": [
+                "copy",
+                "remove"
+              ]
+            }
           },
           "schema": {
             "properties": [
@@ -8577,6 +8621,14 @@
             ],
             "events": {},
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "closeIcon": {
                 "label": {
                   "zh_CN": "closeIcon"
@@ -8647,7 +8699,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -8942,7 +8994,16 @@
                 "defaultValue": ""
               }
             },
-            "slots": {}
+            "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              }
+            }
           }
         },
         {
@@ -8980,7 +9041,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -9220,6 +9281,14 @@
               }
             },
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "icon": {
                 "label": {
                   "zh_CN": "icon"
@@ -9266,7 +9335,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -9359,6 +9428,14 @@
             ],
             "events": {},
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "description": {
                 "label": {
                   "zh_CN": "description"
@@ -9716,7 +9793,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -10089,7 +10166,16 @@
               }
             ],
             "events": {},
-            "slots": {}
+            "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              }
+            }
           }
         },
         {
@@ -10127,7 +10213,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -10553,6 +10639,14 @@
             ],
             "events": {},
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "extra": {
                 "label": {
                   "zh_CN": "extra"
@@ -12480,7 +12574,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -13004,6 +13098,14 @@
             ],
             "events": {},
             "slots": {
+              "renderItem": {
+                "label": {
+                  "zh_CN": "renderItem"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "footer": {
                 "label": {
                   "zh_CN": "footer"
@@ -13066,7 +13168,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -13147,6 +13249,14 @@
             ],
             "events": {},
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "actions": {
                 "label": {
                   "zh_CN": "actions"
@@ -14572,9 +14682,8 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
-            "isModal": false,
-            "isPopper": false,
+            "isContainer": true,
+            "isModal": true,
             "nestingRule": {
               "childWhitelist": "",
               "parentWhitelist": "",
@@ -14585,24 +14694,20 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": []
+              "properties": [
+                "visible",
+                "width"
+              ]
             },
             "contextMenu": {
               "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
+                "create symbol"
               ],
-              "disable": []
-            },
-            "invalidity": [
-              ""
-            ],
-            "clickCapture": true,
-            "framework": "Vue"
+              "disable": [
+                "copy",
+                "remove"
+              ]
+            }
           },
           "schema": {
             "properties": [
@@ -15163,6 +15268,14 @@
               }
             },
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "cancelText": {
                 "label": {
                   "zh_CN": "cancelText"
@@ -16373,7 +16486,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -16711,6 +16824,14 @@
               }
             },
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "cancelButton": {
                 "label": {
                   "zh_CN": "cancelButton"
@@ -16805,7 +16926,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -16927,6 +17048,14 @@
             ],
             "events": {},
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "content": {
                 "label": {
                   "zh_CN": "content"
@@ -17753,7 +17882,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -17869,7 +17998,16 @@
               }
             ],
             "events": {},
-            "slots": {}
+            "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              }
+            }
           }
         },
         {
@@ -17907,7 +18045,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -18151,7 +18289,16 @@
               }
             ],
             "events": {},
-            "slots": {}
+            "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              }
+            }
           }
         },
         {
@@ -22729,7 +22876,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -22855,6 +23002,14 @@
             ],
             "events": {},
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "tab": {
                 "label": {
                   "zh_CN": "tab"
@@ -23783,7 +23938,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -24123,7 +24278,16 @@
               }
             ],
             "events": {},
-            "slots": {}
+            "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              }
+            }
           }
         },
         {
@@ -24161,7 +24325,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -24277,6 +24441,14 @@
             ],
             "events": {},
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "closeIcon": {
                 "label": {
                   "zh_CN": "closeIcon"
@@ -25507,7 +25679,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -25673,6 +25845,14 @@
             ],
             "events": {},
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "pending": {
                 "label": {
                   "zh_CN": "pending"
@@ -25727,7 +25907,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -25897,6 +26077,14 @@
             ],
             "events": {},
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "dot": {
                 "label": {
                   "zh_CN": "dot"
@@ -25951,7 +26139,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -26347,6 +26535,14 @@
               }
             },
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "title": {
                 "label": {
                   "zh_CN": "title"
@@ -29254,7 +29450,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -29774,6 +29970,14 @@
               }
             },
             "slots": {
+              "default": {
+                "label": {
+                  "zh_CN": "default"
+                },
+                "description": {
+                  "zh_CN": "自定义内容"
+                }
+              },
               "downloadIcon": {
                 "label": {
                   "zh_CN": "downloadIcon"
@@ -44465,6 +44669,7 @@
               "screenshot": "",
               "snippetName": "AAvatar",
               "schema": {
+                "componentName": "AAvatar",
                 "children": [
                   {
                     "componentName": "Text",
@@ -44492,12 +44697,13 @@
               "screenshot": "",
               "snippetName": "ABadge",
               "schema": {
+                "componentName": "ABadge",
                 "props": {
                   "count": "5"
                 },
                 "children": [
                   {
-                    "componentName": "Avatar",
+                    "componentName": "AAvatar",
                     "children": [
                       {
                         "componentName": "Text",
@@ -44527,6 +44733,7 @@
               "screenshot": "",
               "snippetName": "ABreadcrumb",
               "schema": {
+                "componentName": "ABreadcrumb",
                 "children": [
                   {
                     "componentName": "ABreadcrumbItem",
@@ -44569,6 +44776,7 @@
               "screenshot": "",
               "snippetName": "AButton",
               "schema": {
+                "componentName": "AButton",
                 "children": [
                   {
                     "componentName": "Text",
@@ -44596,6 +44804,7 @@
               "screenshot": "",
               "snippetName": "ACard",
               "schema": {
+                "componentName": "ACard",
                 "children": [
                   {
                     "componentName": "Template",
@@ -44642,6 +44851,7 @@
               "screenshot": "",
               "snippetName": "ACarousel",
               "schema": {
+                "componentName": "ACarousel",
                 "children": [
                   {
                     "componentName": "div",
@@ -44676,6 +44886,7 @@
               "screenshot": "",
               "snippetName": "ACascader",
               "schema": {
+                "componentName": "ACascader",
                 "props": {
                   "options": [
                     {
@@ -44722,6 +44933,7 @@
               "screenshot": "",
               "snippetName": "ACheckbox",
               "schema": {
+                "componentName": "ACheckbox",
                 "children": [
                   {
                     "componentName": "Text",
@@ -44739,7 +44951,43 @@
               "icon": "collapse",
               "screenshot": "",
               "snippetName": "ACollapse",
-              "schema": {}
+              "schema": {
+                "componentName": "ACollapse",
+                "children": [
+                  {
+                    "componentName": "ACollapsePanel",
+                    "children": [
+                      {
+                        "componentName": "div",
+                        "children": [
+                          {
+                            "componentName": "Text",
+                            "props": {
+                              "text": "1"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "componentName": "ACollapsePanel",
+                    "children": [
+                      {
+                        "componentName": "div",
+                        "children": [
+                          {
+                            "componentName": "Text",
+                            "props": {
+                              "text": "2"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -44784,7 +45032,42 @@
               "icon": "descriptions",
               "screenshot": "",
               "snippetName": "ADescriptions",
-              "schema": {}
+              "schema": {
+                "componentName": "ADescriptions",
+                "props": {
+                  "title": "UserInfo"
+                },
+                "children": [
+                  {
+                    "componentName": "ADescriptionsItem",
+                    "props": {
+                      "label": "UserName"
+                    },
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "Artifyfun"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "componentName": "ADescriptionsItem",
+                    "props": {
+                      "label": "Telephone"
+                    },
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "133xxxxxxxxx"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -44821,6 +45104,7 @@
               "screenshot": "",
               "snippetName": "ADropdown",
               "schema": {
+                "componentName": "ADropdown",
                 "children": [
                   {
                     "componentName": "AButton",
@@ -44878,7 +45162,52 @@
               "icon": "dropdown-button",
               "screenshot": "",
               "snippetName": "ADropdownButton",
-              "schema": {}
+              "schema": {
+                "componentName": "ADropdownButton",
+                "children": [
+                  {
+                    "componentName": "Text",
+                    "props": {
+                      "text": "下拉菜单"
+                    }
+                  },
+                  {
+                    "componentName": "Template",
+                    "props": {
+                      "slot": "overlay"
+                    },
+                    "children": [
+                      {
+                        "componentName": "AMenu",
+                        "children": [
+                          {
+                            "componentName": "AMenuItem",
+                            "children": [
+                              {
+                                "componentName": "Text",
+                                "props": {
+                                  "text": "选项一"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "componentName": "AMenuItem",
+                            "children": [
+                              {
+                                "componentName": "Text",
+                                "props": {
+                                  "text": "选项二"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -44906,6 +45235,7 @@
               "screenshot": "",
               "snippetName": "AForm",
               "schema": {
+                "componentName": "AForm",
                 "children": [
                   {
                     "componentName": "AFormItem",
@@ -44988,7 +45318,40 @@
               "icon": "list",
               "screenshot": "",
               "snippetName": "AList",
-              "schema": {}
+              "schema": {
+                "componentName": "AList",
+                "props": {
+                  "dataSource": [
+                    {
+                      "title": "Ant Design List Title 1"
+                    },
+                    {
+                      "title": "Ant Design List Title 2"
+                    }
+                  ]
+                },
+                "children": [
+                  {
+                    "componentName": "Template",
+                    "props": {
+                      "slot": "renderItem"
+                    },
+                    "children": [
+                      {
+                        "componentName": "AListItem",
+                        "children": [
+                          {
+                            "componentName": "Text",
+                            "props": {
+                              "text": "item"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -45016,6 +45379,7 @@
               "screenshot": "",
               "snippetName": "AMenu",
               "schema": {
+                "componentName": "AMenu",
                 "props": {
                   "items": [
                     {
@@ -45075,7 +45439,18 @@
               "icon": "modal",
               "screenshot": "",
               "snippetName": "AModal",
-              "schema": {}
+              "schema": {
+                "componentName": "AModal",
+                "props": {
+                  "open": true,
+                  "title": "Modal title"
+                },
+                "children": [
+                  {
+                    "componentName": "div"
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -45148,6 +45523,7 @@
               "screenshot": "",
               "snippetName": "ARadio",
               "schema": {
+                "componentName": "ARadio",
                 "children": [
                   {
                     "componentName": "Text",
@@ -45211,6 +45587,7 @@
               "screenshot": "",
               "snippetName": "ASelect",
               "schema": {
+                "componentName": "ASelect",
                 "children": [
                   {
                     "componentName": "ASelectOption",
@@ -45299,6 +45676,7 @@
               "screenshot": "",
               "snippetName": "ASteps",
               "schema": {
+                "componentName": "ASteps",
                 "props": {
                   "items": [
                     {
@@ -45361,7 +45739,41 @@
               "icon": "tabs",
               "screenshot": "",
               "snippetName": "ATabs",
-              "schema": {}
+              "schema": {
+                "componentName": "ATabs",
+                "children": [
+                  {
+                    "componentName": "ATabPane",
+                    "props": {
+                      "tab": "tab 1",
+                      "key": "1"
+                    },
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "tab 1"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "componentName": "ATabPane",
+                    "props": {
+                      "tab": "tab 2",
+                      "key": "2"
+                    },
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "tab 2"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -45370,7 +45782,17 @@
               "icon": "tag",
               "screenshot": "",
               "snippetName": "ATag",
-              "schema": {}
+              "schema": {
+                "componentName": "ATag",
+                "children": [
+                  {
+                    "componentName": "Text",
+                    "props": {
+                      "text": "文本"
+                    }
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -45397,7 +45819,33 @@
               "icon": "timeline",
               "screenshot": "",
               "snippetName": "ATimeline",
-              "schema": {}
+              "schema": {
+                "componentName": "ATimeline",
+                "children": [
+                  {
+                    "componentName": "ATimelineItem",
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "timeline 1"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "componentName": "ATimelineItem",
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "timeline 2"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -45415,7 +45863,31 @@
               "icon": "tooltip",
               "screenshot": "",
               "snippetName": "ATooltip",
-              "schema": {}
+              "schema": {
+                "componentName": "ATooltip",
+                "children": [
+                  {
+                    "componentName": "Template",
+                    "props": {
+                      "slot": "title"
+                    },
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "title content"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "componentName": "Text",
+                    "props": {
+                      "text": "文本内容"
+                    }
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -45461,6 +45933,7 @@
               "screenshot": "",
               "snippetName": "ATreeSelect",
               "schema": {
+                "componentName": "ATreeSelect",
                 "props": {
                   "tree-data": [
                     {
@@ -45545,6 +46018,7 @@
               "screenshot": "",
               "snippetName": "AUpload",
               "schema": {
+                "componentName": "AUpload",
                 "children": [
                   {
                     "componentName": "AButton",
