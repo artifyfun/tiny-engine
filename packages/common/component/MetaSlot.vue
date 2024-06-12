@@ -2,7 +2,7 @@
   <div>
     <div v-for="(slot, index) in slotList" :key="slot.name" class="slot-list">
       <div class="slot-name">
-        <span>
+        <span class="slot-label" :title="slot.label">
           {{ slot.label }}
         </span>
         <tiny-popover v-if="slot.description" placement="top" trigger="hover" :content="slot.description">
@@ -138,12 +138,18 @@ export default {
   justify-content: center;
   align-items: center;
   .slot-name {
-    width: 30%;
+    min-width: 30%;
+    max-width: 75%;
     color: var(--ti-lowcode-dialog-font-color);
     font-size: 12px;
     display: flex;
     justify-content: space-between;
     margin-right: 5px;
+    .slot-label {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
   .slot-switch {
     flex: 1;

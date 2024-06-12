@@ -27,6 +27,7 @@ import { getNode as getNodeById, clearNodes, getRoot, setContext, getContext, se
 import CanvasEmpty from './CanvasEmpty.vue'
 import { theme } from 'ant-design-vue'
 import { useDark, useToggle } from '@vueuse/core'
+import { ConfigProvider as AConfigProvider, App as AApp } from 'ant-design-vue'
 
 const { BROADCAST_CHANNEL } = constants
 
@@ -400,19 +401,9 @@ export default {
   render() {
     // 渲染画布增加根节点，与出码和预览保持一致
     const rootChildrenSchema = {
-      componentName: 'AConfigProvider',
-      props: {
-        theme: {
-          algorithm: isDark.value ? theme.darkAlgorithm : theme.defaultAlgorithm
-        }
-      },
-      children: [
-        {
-          componentName: 'AApp',
-          props: null,
-          children: schema.children
-        }
-      ]
+      componentName: 'div',
+      props: schema.props,
+      children: schema.children
     }
 
     return h(
@@ -423,7 +414,18 @@ export default {
         ref: 'page',
         className: 'design-page'
       },
-        schema.children?.length ? h(renderer, { schema: rootChildrenSchema, parent: schema }) : [h(CanvasEmpty)]
+      h(
+        AConfigProvider,
+        {
+          theme: {
+            algorithm: isDark.value ? theme.darkAlgorithm : theme.defaultAlgorithm
+          }
+        },
+        () =>
+          h(AApp, {}, () =>
+            schema.children?.length ? h(renderer, { schema: rootChildrenSchema, parent: schema }) : [h(CanvasEmpty)]
+          )
+      )
     )
   }
 }
