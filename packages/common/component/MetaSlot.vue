@@ -35,8 +35,8 @@ export default {
   },
   props: {
     slots: {
-      type: Array,
-      default: () => []
+      type: Object,
+      default: () => ({})
     }
   },
   setup(props) {
