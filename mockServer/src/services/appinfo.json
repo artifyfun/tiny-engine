@@ -17182,7 +17182,7 @@
         }
       },
       {
-        "component": "AAnchorItem",
+        "component": "AAnchorLink",
         "npm": {
           "package": "ant-design-vue",
           "version": "",
@@ -17196,7 +17196,7 @@
             "https://unpkg.com/dayjs/plugin/advancedFormat.js",
             "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
           ],
-          "exportName": "AnchorItem",
+          "exportName": "AnchorLink",
           "destructuring": true
         }
       },
@@ -17615,6 +17615,25 @@
             "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
           ],
           "exportName": "Descriptions",
+          "destructuring": true
+        }
+      },
+      {
+        "component": "ADirectoryTree",
+        "npm": {
+          "package": "ant-design-vue",
+          "version": "",
+          "dependencies": [
+            "https://unpkg.com/dayjs/dayjs.min.js",
+            "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+            "https://unpkg.com/dayjs/plugin/weekday.js",
+            "https://unpkg.com/dayjs/plugin/localeData.js",
+            "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+            "https://unpkg.com/dayjs/plugin/weekYear.js",
+            "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+            "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+          ],
+          "exportName": "DirectoryTree",
           "destructuring": true
         }
       },
@@ -18208,6 +18227,25 @@
         }
       },
       {
+        "component": "ARadioButton",
+        "npm": {
+          "package": "ant-design-vue",
+          "version": "",
+          "dependencies": [
+            "https://unpkg.com/dayjs/dayjs.min.js",
+            "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+            "https://unpkg.com/dayjs/plugin/weekday.js",
+            "https://unpkg.com/dayjs/plugin/localeData.js",
+            "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+            "https://unpkg.com/dayjs/plugin/weekYear.js",
+            "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+            "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+          ],
+          "exportName": "RadioButton",
+          "destructuring": true
+        }
+      },
+      {
         "component": "ARadioGroup",
         "npm": {
           "package": "ant-design-vue",
@@ -18223,25 +18261,6 @@
             "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
           ],
           "exportName": "RadioGroup",
-          "destructuring": true
-        }
-      },
-      {
-        "component": "ARadioRadioButton",
-        "npm": {
-          "package": "ant-design-vue",
-          "version": "",
-          "dependencies": [
-            "https://unpkg.com/dayjs/dayjs.min.js",
-            "https://unpkg.com/dayjs/plugin/customParseFormat.js",
-            "https://unpkg.com/dayjs/plugin/weekday.js",
-            "https://unpkg.com/dayjs/plugin/localeData.js",
-            "https://unpkg.com/dayjs/plugin/weekOfYear.js",
-            "https://unpkg.com/dayjs/plugin/weekYear.js",
-            "https://unpkg.com/dayjs/plugin/advancedFormat.js",
-            "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
-          ],
-          "exportName": "RadioRadioButton",
           "destructuring": true
         }
       },
@@ -18417,6 +18436,25 @@
         }
       },
       {
+        "component": "AStep",
+        "npm": {
+          "package": "ant-design-vue",
+          "version": "",
+          "dependencies": [
+            "https://unpkg.com/dayjs/dayjs.min.js",
+            "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+            "https://unpkg.com/dayjs/plugin/weekday.js",
+            "https://unpkg.com/dayjs/plugin/localeData.js",
+            "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+            "https://unpkg.com/dayjs/plugin/weekYear.js",
+            "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+            "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+          ],
+          "exportName": "Step",
+          "destructuring": true
+        }
+      },
+      {
         "component": "ASteps",
         "npm": {
           "package": "ant-design-vue",
@@ -18436,7 +18474,7 @@
         }
       },
       {
-        "component": "AStepsStep",
+        "component": "ASubMenu",
         "npm": {
           "package": "ant-design-vue",
           "version": "",
@@ -18450,7 +18488,7 @@
             "https://unpkg.com/dayjs/plugin/advancedFormat.js",
             "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
           ],
-          "exportName": "StepsStep",
+          "exportName": "SubMenu",
           "destructuring": true
         }
       },
@@ -18470,6 +18508,25 @@
             "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
           ],
           "exportName": "Switch",
+          "destructuring": true
+        }
+      },
+      {
+        "component": "ATabPane",
+        "npm": {
+          "package": "ant-design-vue",
+          "version": "",
+          "dependencies": [
+            "https://unpkg.com/dayjs/dayjs.min.js",
+            "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+            "https://unpkg.com/dayjs/plugin/weekday.js",
+            "https://unpkg.com/dayjs/plugin/localeData.js",
+            "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+            "https://unpkg.com/dayjs/plugin/weekYear.js",
+            "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+            "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+          ],
+          "exportName": "TabPane",
           "destructuring": true
         }
       },
@@ -18512,25 +18569,6 @@
         }
       },
       {
-        "component": "ATabsTabPane",
-        "npm": {
-          "package": "ant-design-vue",
-          "version": "",
-          "dependencies": [
-            "https://unpkg.com/dayjs/dayjs.min.js",
-            "https://unpkg.com/dayjs/plugin/customParseFormat.js",
-            "https://unpkg.com/dayjs/plugin/weekday.js",
-            "https://unpkg.com/dayjs/plugin/localeData.js",
-            "https://unpkg.com/dayjs/plugin/weekOfYear.js",
-            "https://unpkg.com/dayjs/plugin/weekYear.js",
-            "https://unpkg.com/dayjs/plugin/advancedFormat.js",
-            "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
-          ],
-          "exportName": "TabsTabPane",
-          "destructuring": true
-        }
-      },
-      {
         "component": "ATag",
         "npm": {
           "package": "ant-design-vue",
@@ -18546,6 +18584,25 @@
             "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
           ],
           "exportName": "Tag",
+          "destructuring": true
+        }
+      },
+      {
+        "component": "ATextarea",
+        "npm": {
+          "package": "ant-design-vue",
+          "version": "",
+          "dependencies": [
+            "https://unpkg.com/dayjs/dayjs.min.js",
+            "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+            "https://unpkg.com/dayjs/plugin/weekday.js",
+            "https://unpkg.com/dayjs/plugin/localeData.js",
+            "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+            "https://unpkg.com/dayjs/plugin/weekYear.js",
+            "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+            "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+          ],
+          "exportName": "Textarea",
           "destructuring": true
         }
       },
@@ -18641,25 +18698,6 @@
             "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
           ],
           "exportName": "Tour",
-          "destructuring": true
-        }
-      },
-      {
-        "component": "ATourStep",
-        "npm": {
-          "package": "ant-design-vue",
-          "version": "",
-          "dependencies": [
-            "https://unpkg.com/dayjs/dayjs.min.js",
-            "https://unpkg.com/dayjs/plugin/customParseFormat.js",
-            "https://unpkg.com/dayjs/plugin/weekday.js",
-            "https://unpkg.com/dayjs/plugin/localeData.js",
-            "https://unpkg.com/dayjs/plugin/weekOfYear.js",
-            "https://unpkg.com/dayjs/plugin/weekYear.js",
-            "https://unpkg.com/dayjs/plugin/advancedFormat.js",
-            "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
-          ],
-          "exportName": "TourStep",
           "destructuring": true
         }
       },

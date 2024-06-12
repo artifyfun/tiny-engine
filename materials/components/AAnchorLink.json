@@ -4,8 +4,8 @@
   "name": {
     "zh_CN": "锚点"
   },
-  "component": "AAnchorItem",
-  "icon": "anchor-item",
+  "component": "AAnchorLink",
+  "icon": "anchor-link",
   "description": "用于跳转到页面指定位置。",
   "doc_url": "",
   "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*JGb3RIzyOCkAAAAAAAAAAAAADrJ8AQ/original",
@@ -25,7 +25,7 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "AnchorItem",
+    "exportName": "AnchorLink",
     "destructuring": true
   },
   "group": "导航",
@@ -50,19 +50,10 @@
       "properties": []
     },
     "contextMenu": {
-      "actions": [
-        "copy",
-        "remove",
-        "insert",
-        "updateAttr",
-        "bindEevent",
-        "createBlock"
-      ],
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
       "disable": []
     },
-    "invalidity": [
-      ""
-    ],
+    "invalidity": [""],
     "clickCapture": true,
     "framework": "Vue"
   },
@@ -165,9 +156,9 @@
       "name": {
         "zh_CN": "锚点"
       },
-      "icon": "anchor-item",
+      "icon": "anchor-link",
       "screenshot": "",
-      "snippetName": "AAnchorItem",
+      "snippetName": "AAnchorLink",
       "schema": {}
     }
   ]

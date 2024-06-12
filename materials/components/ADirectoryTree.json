@@ -2,13 +2,13 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "导航菜单"
+    "zh_CN": "树形控件"
   },
-  "component": "AMenuDivider",
-  "icon": "menu-divider",
-  "description": "为页面和功能提供导航的菜单列表。",
+  "component": "ADirectoryTree",
+  "icon": "directory-tree",
+  "description": "多层次的结构列表。",
   "doc_url": "",
-  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*Vn4XSqJFAxcAAAAAAAAAAAAADrJ8AQ/original",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*1GeUQJPTGUYAAAAAAAAAAAAADrJ8AQ/original",
   "tags": "",
   "keywords": "",
   "dev_mode": "proCode",
@@ -25,10 +25,10 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "MenuDivider",
+    "exportName": "DirectoryTree",
     "destructuring": true
   },
-  "group": "导航",
+  "group": "数据展示",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -66,24 +66,24 @@
         },
         "content": [
           {
-            "property": "dashed",
+            "property": "expandAction",
             "label": {
               "text": {
-                "zh_CN": "dashed"
+                "zh_CN": "expandAction"
               }
             },
             "description": {
-              "zh_CN": "是否虚线"
+              "zh_CN": "目录展开逻辑，可选 false click dblclick"
             },
             "required": false,
             "readOnly": false,
             "disabled": false,
             "cols": 12,
             "labelPosition": "top",
-            "type": "boolean",
-            "defaultValue": false,
+            "type": "string",
+            "defaultValue": "click",
             "widget": {
-              "component": "MetaSwitch",
+              "component": "MetaInput",
               "props": {}
             },
             "device": []
@@ -100,11 +100,11 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "导航菜单"
+        "zh_CN": "树形控件"
       },
-      "icon": "menu-divider",
+      "icon": "directory-tree",
       "screenshot": "",
-      "snippetName": "AMenuDivider",
+      "snippetName": "ADirectoryTree",
       "schema": {}
     }
   ]

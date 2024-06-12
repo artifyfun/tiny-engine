@@ -2,13 +2,13 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "单选框"
+    "zh_CN": "标签页"
   },
-  "component": "ARadioRadioButton",
-  "icon": "radio-radio-button",
-  "description": "单选框。",
+  "component": "ATabPane",
+  "icon": "tab-pane",
+  "description": "选项卡切换组件。",
   "doc_url": "",
-  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*a9roS6DHFIcAAAAAAAAAAAAADrJ8AQ/original",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*8HMoTZUoSGoAAAAAAAAAAAAADrJ8AQ/original",
   "tags": "",
   "keywords": "",
   "dev_mode": "proCode",
@@ -25,10 +25,10 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "RadioRadioButton",
+    "exportName": "TabPane",
     "destructuring": true
   },
-  "group": "数据录入",
+  "group": "数据展示",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -50,19 +50,10 @@
       "properties": []
     },
     "contextMenu": {
-      "actions": [
-        "copy",
-        "remove",
-        "insert",
-        "updateAttr",
-        "bindEevent",
-        "createBlock"
-      ],
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
       "disable": []
     },
-    "invalidity": [
-      ""
-    ],
+    "invalidity": [""],
     "clickCapture": true,
     "framework": "Vue"
   },
@@ -75,14 +66,14 @@
         },
         "content": [
           {
-            "property": "autofocus",
+            "property": "forceRender",
             "label": {
               "text": {
-                "zh_CN": "autofocus"
+                "zh_CN": "forceRender"
               }
             },
             "description": {
-              "zh_CN": "自动获取焦点"
+              "zh_CN": "被隐藏时是否渲染 DOM 结构"
             },
             "required": false,
             "readOnly": false,
@@ -98,48 +89,57 @@
             "device": []
           },
           {
-            "property": "checked",
+            "property": "key",
             "label": {
               "text": {
-                "zh_CN": "checked(v-model)"
+                "zh_CN": "key"
               }
             },
             "description": {
-              "zh_CN": "指定当前是否选中"
+              "zh_CN": "对应 activeKey"
             },
             "required": false,
             "readOnly": false,
             "disabled": false,
             "cols": 12,
             "labelPosition": "top",
-            "type": "boolean",
-            "defaultValue": false,
+            "type": "string",
             "widget": {
-              "component": "MetaSwitch",
+              "component": "MetaInput",
               "props": {}
             },
             "device": []
           },
           {
-            "property": "disabled",
+            "property": "tab",
             "label": {
               "text": {
-                "zh_CN": "disabled"
+                "zh_CN": "tab"
               }
             },
             "description": {
-              "zh_CN": "禁用 Radio"
+              "zh_CN": "选项卡头显示文字"
             },
             "required": false,
             "readOnly": false,
             "disabled": false,
             "cols": 12,
             "labelPosition": "top",
-            "type": "boolean",
-            "defaultValue": false,
+            "type": "string",
             "widget": {
-              "component": "MetaSwitch",
-              "props": {}
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
             },
             "device": []
           }
@@ -150,16 +150,25 @@
       }
     ],
     "events": {},
-    "slots": {}
+    "slots": {
+      "tab": {
+        "label": {
+          "zh_CN": "tab"
+        },
+        "description": {
+          "zh_CN": "选项卡头显示文字"
+        }
+      }
+    }
   },
   "snippets": [
     {
       "name": {
-        "zh_CN": "单选框"
+        "zh_CN": "标签页"
       },
-      "icon": "radio-radio-button",
+      "icon": "tab-pane",
       "screenshot": "",
-      "snippetName": "ARadioRadioButton",
+      "snippetName": "ATabPane",
       "schema": {}
     }
   ]

@@ -2,13 +2,13 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "抽屉"
+    "zh_CN": "输入框"
   },
-  "component": "ADrawer",
-  "icon": "drawer",
-  "description": "屏幕边缘滑出的浮层面板。",
+  "component": "ATextarea",
+  "icon": "input",
+  "description": "通过鼠标或键盘输入内容，是最基础的表单域的包装。",
   "doc_url": "",
-  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*4wzwRIBLuqEAAAAAAAAAAAAADrJ8AQ/original",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*sBqqTatJ-AkAAAAAAAAAAAAADrJ8AQ/original",
   "tags": "",
   "keywords": "",
   "dev_mode": "proCode",
@@ -25,10 +25,10 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "Drawer",
+    "exportName": "Textarea",
     "destructuring": true
   },
-  "group": "反馈",
+  "group": "数据录入",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -66,128 +66,14 @@
         },
         "content": [
           {
-            "property": "autofocus",
+            "property": "addonAfter",
             "label": {
               "text": {
-                "zh_CN": "autofocus"
+                "zh_CN": "addonAfter"
               }
             },
             "description": {
-              "zh_CN": "抽屉展开后是否将焦点切换至其 Dom 节点"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "boolean",
-            "defaultValue": true,
-            "widget": {
-              "component": "MetaSwitch",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "class",
-            "label": {
-              "text": {
-                "zh_CN": "class"
-              }
-            },
-            "description": {
-              "zh_CN": "Drawer 容器外层 className 设置，如果需要设置最外层，请使用 rootClassName"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "string",
-            "widget": {
-              "component": "MetaInput",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "closable",
-            "label": {
-              "text": {
-                "zh_CN": "closable"
-              }
-            },
-            "description": {
-              "zh_CN": "是否显示左上角的关闭按钮"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "boolean",
-            "defaultValue": true,
-            "widget": {
-              "component": "MetaSwitch",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "destroyOnClose",
-            "label": {
-              "text": {
-                "zh_CN": "destroyOnClose"
-              }
-            },
-            "description": {
-              "zh_CN": "关闭时销毁 Drawer 里的子元素"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "boolean",
-            "defaultValue": false,
-            "widget": {
-              "component": "MetaSwitch",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "forceRender",
-            "label": {
-              "text": {
-                "zh_CN": "forceRender"
-              }
-            },
-            "description": {
-              "zh_CN": "预渲染 Drawer 内元素"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "boolean",
-            "defaultValue": false,
-            "widget": {
-              "component": "MetaSwitch",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "getContainer",
-            "label": {
-              "text": {
-                "zh_CN": "getContainer"
-              }
-            },
-            "description": {
-              "zh_CN": "指定 Drawer 挂载的节点，**并在容器内展现** | () => HTMLElement | Selectors"
+              "zh_CN": "带标签的 input，设置后置标签"
             },
             "required": false,
             "readOnly": false,
@@ -196,251 +82,6 @@
             "labelPosition": "top",
             "type": "string",
             "defaultValue": "",
-            "widget": {
-              "component": "MetaInput",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "height",
-            "label": {
-              "text": {
-                "zh_CN": "height"
-              }
-            },
-            "description": {
-              "zh_CN": "高度, 在 placement 为 top 或 bottom 时使用"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "string",
-            "defaultValue": "378",
-            "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "string",
-                    "value": "string"
-                  },
-                  {
-                    "label": "number",
-                    "value": "number"
-                  }
-                ]
-              }
-            },
-            "device": []
-          },
-          {
-            "property": "keyboard",
-            "label": {
-              "text": {
-                "zh_CN": "keyboard"
-              }
-            },
-            "description": {
-              "zh_CN": "是否支持键盘 esc 关闭"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "boolean",
-            "defaultValue": true,
-            "widget": {
-              "component": "MetaSwitch",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "mask",
-            "label": {
-              "text": {
-                "zh_CN": "mask"
-              }
-            },
-            "description": {
-              "zh_CN": "是否展示遮罩"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "boolean",
-            "defaultValue": true,
-            "widget": {
-              "component": "MetaSwitch",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "maskClosable",
-            "label": {
-              "text": {
-                "zh_CN": "maskClosable"
-              }
-            },
-            "description": {
-              "zh_CN": "点击蒙层是否允许关闭"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "boolean",
-            "defaultValue": true,
-            "widget": {
-              "component": "MetaSwitch",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "placement",
-            "label": {
-              "text": {
-                "zh_CN": "placement"
-              }
-            },
-            "description": {
-              "zh_CN": "抽屉的方向"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "string",
-            "defaultValue": "right",
-            "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "top",
-                    "value": "top"
-                  },
-                  {
-                    "label": "right",
-                    "value": "right"
-                  },
-                  {
-                    "label": "bottom",
-                    "value": "bottom"
-                  },
-                  {
-                    "label": "left",
-                    "value": "left"
-                  }
-                ]
-              }
-            },
-            "device": []
-          },
-          {
-            "property": "push",
-            "label": {
-              "text": {
-                "zh_CN": "push"
-              }
-            },
-            "description": {
-              "zh_CN": "用于设置多层 Drawer 的推动行为"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "boolean",
-            "widget": {
-              "component": "MetaSwitch",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "rootClassName",
-            "label": {
-              "text": {
-                "zh_CN": "rootClassName"
-              }
-            },
-            "description": {
-              "zh_CN": "对话框外层容器的类名"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "string",
-            "widget": {
-              "component": "MetaInput",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "size",
-            "label": {
-              "text": {
-                "zh_CN": "size"
-              }
-            },
-            "description": {
-              "zh_CN": "预设抽屉宽度（或高度），default 378px 和 large 736px"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "string",
-            "defaultValue": "default",
-            "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "default",
-                    "value": "default"
-                  },
-                  {
-                    "label": "large",
-                    "value": "large"
-                  }
-                ]
-              }
-            },
-            "device": []
-          },
-          {
-            "property": "title",
-            "label": {
-              "text": {
-                "zh_CN": "title"
-              }
-            },
-            "description": {
-              "zh_CN": "标题"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "string",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -459,14 +100,48 @@
             "device": []
           },
           {
-            "property": "open",
+            "property": "addonBefore",
             "label": {
               "text": {
-                "zh_CN": "open(v-model)"
+                "zh_CN": "addonBefore"
               }
             },
             "description": {
-              "zh_CN": "Drawer 是否可见"
+              "zh_CN": "带标签的 input，设置前置标签"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "allowClear",
+            "label": {
+              "text": {
+                "zh_CN": "allowClear"
+              }
+            },
+            "description": {
+              "zh_CN": "可以点击清除图标删除内容"
             },
             "required": false,
             "readOnly": false,
@@ -481,14 +156,61 @@
             "device": []
           },
           {
-            "property": "width",
+            "property": "autoSize",
             "label": {
               "text": {
-                "zh_CN": "width"
+                "zh_CN": "autoSize"
               }
             },
             "description": {
-              "zh_CN": "宽度"
+              "zh_CN": "{ minRows: 2, maxRows: 5 } | boolean"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "bordered",
+            "label": {
+              "text": {
+                "zh_CN": "bordered"
+              }
+            },
+            "description": {
+              "zh_CN": "是否有边框"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "defaultValue",
+            "label": {
+              "text": {
+                "zh_CN": "defaultValue"
+              }
+            },
+            "description": {
+              "zh_CN": "输入框默认内容"
             },
             "required": false,
             "readOnly": false,
@@ -496,7 +218,98 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "378",
+            "defaultValue": "",
+            "widget": {
+              "component": "MetATextarea",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "disabled",
+            "label": {
+              "text": {
+                "zh_CN": "disabled"
+              }
+            },
+            "description": {
+              "zh_CN": "是否禁用状态，默认为 false"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "id",
+            "label": {
+              "text": {
+                "zh_CN": "id"
+              }
+            },
+            "description": {
+              "zh_CN": "输入框的 id"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "",
+            "widget": {
+              "component": "MetATextarea",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "maxlength",
+            "label": {
+              "text": {
+                "zh_CN": "maxlength"
+              }
+            },
+            "description": {
+              "zh_CN": "最大长度"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "prefix",
+            "label": {
+              "text": {
+                "zh_CN": "prefix"
+              }
+            },
+            "description": {
+              "zh_CN": "带有前缀图标的 input"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -506,8 +319,8 @@
                     "value": "string"
                   },
                   {
-                    "label": "number",
-                    "value": "number"
+                    "label": "slot",
+                    "value": "slot"
                   }
                 ]
               }
@@ -515,24 +328,205 @@
             "device": []
           },
           {
-            "property": "zIndex",
+            "property": "showCount",
             "label": {
               "text": {
-                "zh_CN": "zIndex"
+                "zh_CN": "showCount"
               }
             },
             "description": {
-              "zh_CN": "设置 Drawer 的 z-index"
+              "zh_CN": "是否展示字数"
             },
             "required": false,
             "readOnly": false,
             "disabled": false,
             "cols": 12,
             "labelPosition": "top",
-            "type": "number",
-            "defaultValue": 1000,
+            "type": "boolean",
+            "defaultValue": false,
             "widget": {
-              "component": "MetaNumber",
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "status",
+            "label": {
+              "text": {
+                "zh_CN": "status"
+              }
+            },
+            "description": {
+              "zh_CN": "设置校验状态"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "error",
+                    "value": "error"
+                  },
+                  {
+                    "label": "warning",
+                    "value": "warning"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "size",
+            "label": {
+              "text": {
+                "zh_CN": "size"
+              }
+            },
+            "description": {
+              "zh_CN": "控件大小。注：标准表单内的输入框大小限制为 middle。可选 large middle small"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetATextarea",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "suffix",
+            "label": {
+              "text": {
+                "zh_CN": "suffix"
+              }
+            },
+            "description": {
+              "zh_CN": "带有后缀图标的 input"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "type",
+            "label": {
+              "text": {
+                "zh_CN": "type"
+              }
+            },
+            "description": {
+              "zh_CN": "声明 input 类型，同原生 input 标签的 type 属性，见：[MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#属性)(请直接使用 <a-textarea /> 代替 type=textarea)。"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "text",
+            "widget": {
+              "component": "MetATextarea",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "value",
+            "label": {
+              "text": {
+                "zh_CN": "value(v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "输入框内容"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "",
+            "widget": {
+              "component": "MetATextarea",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "change",
+            "label": {
+              "text": {
+                "zh_CN": "change"
+              }
+            },
+            "description": {
+              "zh_CN": "输入框内容变化时的回调"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "defaultValue": "",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "pressEnter",
+            "label": {
+              "text": {
+                "zh_CN": "pressEnter"
+              }
+            },
+            "description": {
+              "zh_CN": "按下回车的回调"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "defaultValue": "",
+            "widget": {
+              "component": "MetaCodeEditor",
               "props": {}
             },
             "device": []
@@ -545,36 +539,44 @@
     ],
     "events": {},
     "slots": {
-      "closeIcon": {
+      "addonAfter": {
         "label": {
-          "zh_CN": "closeIcon"
+          "zh_CN": "addonAfter"
         },
         "description": {
-          "zh_CN": "自定义关闭图标"
+          "zh_CN": "带标签的 input，设置后置标签"
         }
       },
-      "extra": {
+      "addonBefore": {
         "label": {
-          "zh_CN": "extra"
+          "zh_CN": "addonBefore"
         },
         "description": {
-          "zh_CN": "抽屉右上角的操作区域"
+          "zh_CN": "带标签的 input，设置前置标签"
         }
       },
-      "footer": {
+      "clearIcon": {
         "label": {
-          "zh_CN": "footer"
+          "zh_CN": "clearIcon"
         },
         "description": {
-          "zh_CN": "抽屉的页脚"
+          "zh_CN": "自定义清除图标 （allowClear 为 true 时生效）"
         }
       },
-      "title": {
+      "prefix": {
         "label": {
-          "zh_CN": "title"
+          "zh_CN": "prefix"
         },
         "description": {
-          "zh_CN": "标题"
+          "zh_CN": "带有前缀图标的 input"
+        }
+      },
+      "suffix": {
+        "label": {
+          "zh_CN": "suffix"
+        },
+        "description": {
+          "zh_CN": "带有后缀图标的 input"
         }
       }
     }
@@ -582,11 +584,11 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "抽屉"
+        "zh_CN": "输入框"
       },
-      "icon": "drawer",
+      "icon": "textarea",
       "screenshot": "",
-      "snippetName": "ADrawer",
+      "snippetName": "ATextarea",
       "schema": {}
     }
   ]

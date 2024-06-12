@@ -4,8 +4,8 @@
   "name": {
     "zh_CN": "步骤条"
   },
-  "component": "AStepsStep",
-  "icon": "steps-step",
+  "component": "AStep",
+  "icon": "step",
   "description": "引导用户按照流程完成任务的导航条。",
   "doc_url": "",
   "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*cFsBQLA0b7UAAAAAAAAAAAAADrJ8AQ/original",
@@ -25,7 +25,7 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "StepsStep",
+    "exportName": "Step",
     "destructuring": true
   },
   "group": "导航",
@@ -50,19 +50,10 @@
       "properties": []
     },
     "contextMenu": {
-      "actions": [
-        "copy",
-        "remove",
-        "insert",
-        "updateAttr",
-        "bindEevent",
-        "createBlock"
-      ],
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
       "disable": []
     },
-    "invalidity": [
-      ""
-    ],
+    "invalidity": [""],
     "clickCapture": true,
     "framework": "Vue"
   },
@@ -299,9 +290,9 @@
       "name": {
         "zh_CN": "步骤条"
       },
-      "icon": "steps-step",
+      "icon": "step",
       "screenshot": "",
-      "snippetName": "AStepsStep",
+      "snippetName": "AStep",
       "schema": {}
     }
   ]

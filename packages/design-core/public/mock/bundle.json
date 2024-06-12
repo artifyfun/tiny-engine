@@ -952,8 +952,8 @@
           "name": {
             "zh_CN": "锚点"
           },
-          "component": "AAnchorItem",
-          "icon": "anchor-item",
+          "component": "AAnchorLink",
+          "icon": "anchor-link",
           "description": "用于跳转到页面指定位置。",
           "doc_url": "",
           "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*JGb3RIzyOCkAAAAAAAAAAAAADrJ8AQ/original",
@@ -973,7 +973,7 @@
               "https://unpkg.com/dayjs/plugin/advancedFormat.js",
               "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
             ],
-            "exportName": "AnchorItem",
+            "exportName": "AnchorLink",
             "destructuring": true
           },
           "group": "导航",
@@ -7676,6 +7676,114 @@
                 }
               }
             }
+          }
+        },
+        {
+          "id": 1,
+          "version": "4.1.2",
+          "name": {
+            "zh_CN": "树形控件"
+          },
+          "component": "ADirectoryTree",
+          "icon": "directory-tree",
+          "description": "多层次的结构列表。",
+          "doc_url": "",
+          "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*1GeUQJPTGUYAAAAAAAAAAAAADrJ8AQ/original",
+          "tags": "",
+          "keywords": "",
+          "dev_mode": "proCode",
+          "npm": {
+            "package": "ant-design-vue",
+            "version": "",
+            "dependencies": [
+              "https://unpkg.com/dayjs/dayjs.min.js",
+              "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+              "https://unpkg.com/dayjs/plugin/weekday.js",
+              "https://unpkg.com/dayjs/plugin/localeData.js",
+              "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+              "https://unpkg.com/dayjs/plugin/weekYear.js",
+              "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+              "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+            ],
+            "exportName": "DirectoryTree",
+            "destructuring": true
+          },
+          "group": "数据展示",
+          "configure": {
+            "loop": true,
+            "condition": true,
+            "styles": true,
+            "isContainer": false,
+            "isModal": false,
+            "isPopper": false,
+            "nestingRule": {
+              "childWhitelist": "",
+              "parentWhitelist": "",
+              "descendantBlacklist": "",
+              "ancestorWhitelist": ""
+            },
+            "isNullNode": false,
+            "isLayout": false,
+            "rootSelector": "",
+            "shortcuts": {
+              "properties": []
+            },
+            "contextMenu": {
+              "actions": [
+                "copy",
+                "remove",
+                "insert",
+                "updateAttr",
+                "bindEevent",
+                "createBlock"
+              ],
+              "disable": []
+            },
+            "invalidity": [
+              ""
+            ],
+            "clickCapture": true,
+            "framework": "Vue"
+          },
+          "schema": {
+            "properties": [
+              {
+                "name": "0",
+                "label": {
+                  "zh_CN": "基础属性"
+                },
+                "content": [
+                  {
+                    "property": "expandAction",
+                    "label": {
+                      "text": {
+                        "zh_CN": "expandAction"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "目录展开逻辑，可选 false click dblclick"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "defaultValue": "click",
+                    "widget": {
+                      "component": "MetaInput",
+                      "props": {}
+                    },
+                    "device": []
+                  }
+                ],
+                "description": {
+                  "zh_CN": ""
+                }
+              }
+            ],
+            "events": {},
+            "slots": {}
           }
         },
         {
@@ -17616,6 +17724,160 @@
           "name": {
             "zh_CN": "单选框"
           },
+          "component": "ARadioButton",
+          "icon": "radio-button",
+          "description": "单选框。",
+          "doc_url": "",
+          "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*a9roS6DHFIcAAAAAAAAAAAAADrJ8AQ/original",
+          "tags": "",
+          "keywords": "",
+          "dev_mode": "proCode",
+          "npm": {
+            "package": "ant-design-vue",
+            "version": "",
+            "dependencies": [
+              "https://unpkg.com/dayjs/dayjs.min.js",
+              "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+              "https://unpkg.com/dayjs/plugin/weekday.js",
+              "https://unpkg.com/dayjs/plugin/localeData.js",
+              "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+              "https://unpkg.com/dayjs/plugin/weekYear.js",
+              "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+              "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+            ],
+            "exportName": "RadioButton",
+            "destructuring": true
+          },
+          "group": "数据录入",
+          "configure": {
+            "loop": true,
+            "condition": true,
+            "styles": true,
+            "isContainer": false,
+            "isModal": false,
+            "isPopper": false,
+            "nestingRule": {
+              "childWhitelist": "",
+              "parentWhitelist": "",
+              "descendantBlacklist": "",
+              "ancestorWhitelist": ""
+            },
+            "isNullNode": false,
+            "isLayout": false,
+            "rootSelector": "",
+            "shortcuts": {
+              "properties": []
+            },
+            "contextMenu": {
+              "actions": [
+                "copy",
+                "remove",
+                "insert",
+                "updateAttr",
+                "bindEevent",
+                "createBlock"
+              ],
+              "disable": []
+            },
+            "invalidity": [
+              ""
+            ],
+            "clickCapture": true,
+            "framework": "Vue"
+          },
+          "schema": {
+            "properties": [
+              {
+                "name": "0",
+                "label": {
+                  "zh_CN": "基础属性"
+                },
+                "content": [
+                  {
+                    "property": "autofocus",
+                    "label": {
+                      "text": {
+                        "zh_CN": "autofocus"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "自动获取焦点"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "widget": {
+                      "component": "MetaSwitch",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "checked",
+                    "label": {
+                      "text": {
+                        "zh_CN": "checked(v-model)"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "指定当前是否选中"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "widget": {
+                      "component": "MetaSwitch",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "disabled",
+                    "label": {
+                      "text": {
+                        "zh_CN": "disabled"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "禁用 Radio"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "widget": {
+                      "component": "MetaSwitch",
+                      "props": {}
+                    },
+                    "device": []
+                  }
+                ],
+                "description": {
+                  "zh_CN": ""
+                }
+              }
+            ],
+            "events": {},
+            "slots": {}
+          }
+        },
+        {
+          "id": 1,
+          "version": "4.1.2",
+          "name": {
+            "zh_CN": "单选框"
+          },
           "component": "ARadioGroup",
           "icon": "radio-group",
           "description": "单选框。",
@@ -17878,160 +18140,6 @@
                     "type": "function",
                     "widget": {
                       "component": "MetaCodeEditor",
-                      "props": {}
-                    },
-                    "device": []
-                  }
-                ],
-                "description": {
-                  "zh_CN": ""
-                }
-              }
-            ],
-            "events": {},
-            "slots": {}
-          }
-        },
-        {
-          "id": 1,
-          "version": "4.1.2",
-          "name": {
-            "zh_CN": "单选框"
-          },
-          "component": "ARadioRadioButton",
-          "icon": "radio-radio-button",
-          "description": "单选框。",
-          "doc_url": "",
-          "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*a9roS6DHFIcAAAAAAAAAAAAADrJ8AQ/original",
-          "tags": "",
-          "keywords": "",
-          "dev_mode": "proCode",
-          "npm": {
-            "package": "ant-design-vue",
-            "version": "",
-            "dependencies": [
-              "https://unpkg.com/dayjs/dayjs.min.js",
-              "https://unpkg.com/dayjs/plugin/customParseFormat.js",
-              "https://unpkg.com/dayjs/plugin/weekday.js",
-              "https://unpkg.com/dayjs/plugin/localeData.js",
-              "https://unpkg.com/dayjs/plugin/weekOfYear.js",
-              "https://unpkg.com/dayjs/plugin/weekYear.js",
-              "https://unpkg.com/dayjs/plugin/advancedFormat.js",
-              "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
-            ],
-            "exportName": "RadioRadioButton",
-            "destructuring": true
-          },
-          "group": "数据录入",
-          "configure": {
-            "loop": true,
-            "condition": true,
-            "styles": true,
-            "isContainer": false,
-            "isModal": false,
-            "isPopper": false,
-            "nestingRule": {
-              "childWhitelist": "",
-              "parentWhitelist": "",
-              "descendantBlacklist": "",
-              "ancestorWhitelist": ""
-            },
-            "isNullNode": false,
-            "isLayout": false,
-            "rootSelector": "",
-            "shortcuts": {
-              "properties": []
-            },
-            "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
-              "disable": []
-            },
-            "invalidity": [
-              ""
-            ],
-            "clickCapture": true,
-            "framework": "Vue"
-          },
-          "schema": {
-            "properties": [
-              {
-                "name": "0",
-                "label": {
-                  "zh_CN": "基础属性"
-                },
-                "content": [
-                  {
-                    "property": "autofocus",
-                    "label": {
-                      "text": {
-                        "zh_CN": "autofocus"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "自动获取焦点"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "boolean",
-                    "defaultValue": false,
-                    "widget": {
-                      "component": "MetaSwitch",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "checked",
-                    "label": {
-                      "text": {
-                        "zh_CN": "checked(v-model)"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "指定当前是否选中"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "boolean",
-                    "defaultValue": false,
-                    "widget": {
-                      "component": "MetaSwitch",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "disabled",
-                    "label": {
-                      "text": {
-                        "zh_CN": "disabled"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "禁用 Radio"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "boolean",
-                    "defaultValue": false,
-                    "widget": {
-                      "component": "MetaSwitch",
                       "props": {}
                     },
                     "device": []
@@ -21419,6 +21527,302 @@
           "name": {
             "zh_CN": "步骤条"
           },
+          "component": "AStep",
+          "icon": "step",
+          "description": "引导用户按照流程完成任务的导航条。",
+          "doc_url": "",
+          "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*cFsBQLA0b7UAAAAAAAAAAAAADrJ8AQ/original",
+          "tags": "",
+          "keywords": "",
+          "dev_mode": "proCode",
+          "npm": {
+            "package": "ant-design-vue",
+            "version": "",
+            "dependencies": [
+              "https://unpkg.com/dayjs/dayjs.min.js",
+              "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+              "https://unpkg.com/dayjs/plugin/weekday.js",
+              "https://unpkg.com/dayjs/plugin/localeData.js",
+              "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+              "https://unpkg.com/dayjs/plugin/weekYear.js",
+              "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+              "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+            ],
+            "exportName": "Step",
+            "destructuring": true
+          },
+          "group": "导航",
+          "configure": {
+            "loop": true,
+            "condition": true,
+            "styles": true,
+            "isContainer": false,
+            "isModal": false,
+            "isPopper": false,
+            "nestingRule": {
+              "childWhitelist": "",
+              "parentWhitelist": "",
+              "descendantBlacklist": "",
+              "ancestorWhitelist": ""
+            },
+            "isNullNode": false,
+            "isLayout": false,
+            "rootSelector": "",
+            "shortcuts": {
+              "properties": []
+            },
+            "contextMenu": {
+              "actions": [
+                "copy",
+                "remove",
+                "insert",
+                "updateAttr",
+                "bindEevent",
+                "createBlock"
+              ],
+              "disable": []
+            },
+            "invalidity": [
+              ""
+            ],
+            "clickCapture": true,
+            "framework": "Vue"
+          },
+          "schema": {
+            "properties": [
+              {
+                "name": "0",
+                "label": {
+                  "zh_CN": "基础属性"
+                },
+                "content": [
+                  {
+                    "property": "description",
+                    "label": {
+                      "text": {
+                        "zh_CN": "description"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "步骤的详情描述，可选"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "widget": {
+                      "component": "MetaSelect",
+                      "props": {
+                        "options": [
+                          {
+                            "label": "string",
+                            "value": "string"
+                          },
+                          {
+                            "label": "slot",
+                            "value": "slot"
+                          }
+                        ]
+                      }
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "disabled",
+                    "label": {
+                      "text": {
+                        "zh_CN": "disabled"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "禁用点击"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "widget": {
+                      "component": "MetaSwitch",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "icon",
+                    "label": {
+                      "text": {
+                        "zh_CN": "icon"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "步骤图标的类型，可选"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "widget": {
+                      "component": "MetaSelect",
+                      "props": {
+                        "options": [
+                          {
+                            "label": "string",
+                            "value": "string"
+                          },
+                          {
+                            "label": "slot",
+                            "value": "slot"
+                          }
+                        ]
+                      }
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "status",
+                    "label": {
+                      "text": {
+                        "zh_CN": "status"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "指定状态。当不配置该属性时，会使用 Steps 的 current 来自动指定状态。可选：wait process finish error"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "defaultValue": "wait",
+                    "widget": {
+                      "component": "MetaInput",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "subTitle",
+                    "label": {
+                      "text": {
+                        "zh_CN": "subTitle"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "子标题"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "widget": {
+                      "component": "MetaSelect",
+                      "props": {
+                        "options": [
+                          {
+                            "label": "string",
+                            "value": "string"
+                          },
+                          {
+                            "label": "slot",
+                            "value": "slot"
+                          }
+                        ]
+                      }
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "title",
+                    "label": {
+                      "text": {
+                        "zh_CN": "title"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "标题"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "widget": {
+                      "component": "MetaSelect",
+                      "props": {
+                        "options": [
+                          {
+                            "label": "string",
+                            "value": "string"
+                          },
+                          {
+                            "label": "slot",
+                            "value": "slot"
+                          }
+                        ]
+                      }
+                    },
+                    "device": []
+                  }
+                ],
+                "description": {
+                  "zh_CN": ""
+                }
+              }
+            ],
+            "events": {},
+            "slots": {
+              "description": {
+                "label": {
+                  "zh_CN": "description"
+                },
+                "description": {
+                  "zh_CN": "步骤的详情描述，可选"
+                }
+              },
+              "icon": {
+                "label": {
+                  "zh_CN": "icon"
+                },
+                "description": {
+                  "zh_CN": "步骤图标的类型，可选"
+                }
+              },
+              "subTitle": {
+                "label": {
+                  "zh_CN": "subTitle"
+                },
+                "description": {
+                  "zh_CN": "子标题"
+                }
+              },
+              "title": {
+                "label": {
+                  "zh_CN": "title"
+                },
+                "description": {
+                  "zh_CN": "标题"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": 1,
+          "version": "4.1.2",
+          "name": {
+            "zh_CN": "步骤条"
+          },
           "component": "ASteps",
           "icon": "steps",
           "description": "引导用户按照流程完成任务的导航条。",
@@ -21740,13 +22144,13 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "步骤条"
+            "zh_CN": "导航菜单"
           },
-          "component": "AStepsStep",
-          "icon": "steps-step",
-          "description": "引导用户按照流程完成任务的导航条。",
+          "component": "ASubMenu",
+          "icon": "sub-menu",
+          "description": "为页面和功能提供导航的菜单列表。",
           "doc_url": "",
-          "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*cFsBQLA0b7UAAAAAAAAAAAAADrJ8AQ/original",
+          "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*Vn4XSqJFAxcAAAAAAAAAAAAADrJ8AQ/original",
           "tags": "",
           "keywords": "",
           "dev_mode": "proCode",
@@ -21763,7 +22167,7 @@
               "https://unpkg.com/dayjs/plugin/advancedFormat.js",
               "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
             ],
-            "exportName": "StepsStep",
+            "exportName": "SubMenu",
             "destructuring": true
           },
           "group": "导航",
@@ -21812,39 +22216,6 @@
                 },
                 "content": [
                   {
-                    "property": "description",
-                    "label": {
-                      "text": {
-                        "zh_CN": "description"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "步骤的详情描述，可选"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
-                    },
-                    "device": []
-                  },
-                  {
                     "property": "disabled",
                     "label": {
                       "text": {
@@ -21852,7 +22223,7 @@
                       }
                     },
                     "description": {
-                      "zh_CN": "禁用点击"
+                      "zh_CN": "是否禁用"
                     },
                     "required": false,
                     "readOnly": false,
@@ -21868,14 +22239,14 @@
                     "device": []
                   },
                   {
-                    "property": "icon",
+                    "property": "key",
                     "label": {
                       "text": {
-                        "zh_CN": "icon"
+                        "zh_CN": "key"
                       }
                     },
                     "description": {
-                      "zh_CN": "步骤图标的类型，可选"
+                      "zh_CN": "唯一标志, 必填"
                     },
                     "required": false,
                     "readOnly": false,
@@ -21883,6 +22254,7 @@
                     "cols": 12,
                     "labelPosition": "top",
                     "type": "string",
+                    "defaultValue": "",
                     "widget": {
                       "component": "MetaSelect",
                       "props": {
@@ -21892,8 +22264,8 @@
                             "value": "string"
                           },
                           {
-                            "label": "slot",
-                            "value": "slot"
+                            "label": "number",
+                            "value": "number"
                           }
                         ]
                       }
@@ -21901,14 +22273,14 @@
                     "device": []
                   },
                   {
-                    "property": "status",
+                    "property": "popupClassName",
                     "label": {
                       "text": {
-                        "zh_CN": "status"
+                        "zh_CN": "popupClassName"
                       }
                     },
                     "description": {
-                      "zh_CN": "指定状态。当不配置该属性时，会使用 Steps 的 current 来自动指定状态。可选：wait process finish error"
+                      "zh_CN": "子菜单样式"
                     },
                     "required": false,
                     "readOnly": false,
@@ -21916,43 +22288,10 @@
                     "cols": 12,
                     "labelPosition": "top",
                     "type": "string",
-                    "defaultValue": "wait",
+                    "defaultValue": "",
                     "widget": {
                       "component": "MetaInput",
                       "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "subTitle",
-                    "label": {
-                      "text": {
-                        "zh_CN": "subTitle"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "子标题"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
                     },
                     "device": []
                   },
@@ -21964,7 +22303,7 @@
                       }
                     },
                     "description": {
-                      "zh_CN": "标题"
+                      "zh_CN": "子菜单项值"
                     },
                     "required": false,
                     "readOnly": false,
@@ -21972,6 +22311,7 @@
                     "cols": 12,
                     "labelPosition": "top",
                     "type": "string",
+                    "defaultValue": "",
                     "widget": {
                       "component": "MetaSelect",
                       "props": {
@@ -21988,6 +22328,28 @@
                       }
                     },
                     "device": []
+                  },
+                  {
+                    "property": "titleClick",
+                    "label": {
+                      "text": {
+                        "zh_CN": "titleClick"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "callback executed when the sub menu title is clicked"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "function",
+                    "widget": {
+                      "component": "MetaCodeEditor",
+                      "props": {}
+                    },
+                    "device": []
                   }
                 ],
                 "description": {
@@ -21997,12 +22359,12 @@
             ],
             "events": {},
             "slots": {
-              "description": {
+              "expandIcon": {
                 "label": {
-                  "zh_CN": "description"
+                  "zh_CN": "expandIcon"
                 },
                 "description": {
-                  "zh_CN": "步骤的详情描述，可选"
+                  "zh_CN": "自定义 Menu 展开收起图标"
                 }
               },
               "icon": {
@@ -22010,15 +22372,7 @@
                   "zh_CN": "icon"
                 },
                 "description": {
-                  "zh_CN": "步骤图标的类型，可选"
-                }
-              },
-              "subTitle": {
-                "label": {
-                  "zh_CN": "subTitle"
-                },
-                "description": {
-                  "zh_CN": "子标题"
+                  "zh_CN": "菜单图标"
                 }
               },
               "title": {
@@ -22026,7 +22380,7 @@
                   "zh_CN": "title"
                 },
                 "description": {
-                  "zh_CN": "标题"
+                  "zh_CN": "子菜单项值"
                 }
               }
             }
@@ -22335,6 +22689,178 @@
                 },
                 "description": {
                   "zh_CN": "非选中时的内容"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": 1,
+          "version": "4.1.2",
+          "name": {
+            "zh_CN": "标签页"
+          },
+          "component": "ATabPane",
+          "icon": "tab-pane",
+          "description": "选项卡切换组件。",
+          "doc_url": "",
+          "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*8HMoTZUoSGoAAAAAAAAAAAAADrJ8AQ/original",
+          "tags": "",
+          "keywords": "",
+          "dev_mode": "proCode",
+          "npm": {
+            "package": "ant-design-vue",
+            "version": "",
+            "dependencies": [
+              "https://unpkg.com/dayjs/dayjs.min.js",
+              "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+              "https://unpkg.com/dayjs/plugin/weekday.js",
+              "https://unpkg.com/dayjs/plugin/localeData.js",
+              "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+              "https://unpkg.com/dayjs/plugin/weekYear.js",
+              "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+              "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+            ],
+            "exportName": "TabPane",
+            "destructuring": true
+          },
+          "group": "数据展示",
+          "configure": {
+            "loop": true,
+            "condition": true,
+            "styles": true,
+            "isContainer": false,
+            "isModal": false,
+            "isPopper": false,
+            "nestingRule": {
+              "childWhitelist": "",
+              "parentWhitelist": "",
+              "descendantBlacklist": "",
+              "ancestorWhitelist": ""
+            },
+            "isNullNode": false,
+            "isLayout": false,
+            "rootSelector": "",
+            "shortcuts": {
+              "properties": []
+            },
+            "contextMenu": {
+              "actions": [
+                "copy",
+                "remove",
+                "insert",
+                "updateAttr",
+                "bindEevent",
+                "createBlock"
+              ],
+              "disable": []
+            },
+            "invalidity": [
+              ""
+            ],
+            "clickCapture": true,
+            "framework": "Vue"
+          },
+          "schema": {
+            "properties": [
+              {
+                "name": "0",
+                "label": {
+                  "zh_CN": "基础属性"
+                },
+                "content": [
+                  {
+                    "property": "forceRender",
+                    "label": {
+                      "text": {
+                        "zh_CN": "forceRender"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "被隐藏时是否渲染 DOM 结构"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "widget": {
+                      "component": "MetaSwitch",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "key",
+                    "label": {
+                      "text": {
+                        "zh_CN": "key"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "对应 activeKey"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "widget": {
+                      "component": "MetaInput",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "tab",
+                    "label": {
+                      "text": {
+                        "zh_CN": "tab"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "选项卡头显示文字"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "widget": {
+                      "component": "MetaSelect",
+                      "props": {
+                        "options": [
+                          {
+                            "label": "string",
+                            "value": "string"
+                          },
+                          {
+                            "label": "slot",
+                            "value": "slot"
+                          }
+                        ]
+                      }
+                    },
+                    "device": []
+                  }
+                ],
+                "description": {
+                  "zh_CN": ""
+                }
+              }
+            ],
+            "events": {},
+            "slots": {
+              "tab": {
+                "label": {
+                  "zh_CN": "tab"
+                },
+                "description": {
+                  "zh_CN": "选项卡头显示文字"
                 }
               }
             }
@@ -23604,178 +24130,6 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "标签页"
-          },
-          "component": "ATabsTabPane",
-          "icon": "tabs-tab-pane",
-          "description": "选项卡切换组件。",
-          "doc_url": "",
-          "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*8HMoTZUoSGoAAAAAAAAAAAAADrJ8AQ/original",
-          "tags": "",
-          "keywords": "",
-          "dev_mode": "proCode",
-          "npm": {
-            "package": "ant-design-vue",
-            "version": "",
-            "dependencies": [
-              "https://unpkg.com/dayjs/dayjs.min.js",
-              "https://unpkg.com/dayjs/plugin/customParseFormat.js",
-              "https://unpkg.com/dayjs/plugin/weekday.js",
-              "https://unpkg.com/dayjs/plugin/localeData.js",
-              "https://unpkg.com/dayjs/plugin/weekOfYear.js",
-              "https://unpkg.com/dayjs/plugin/weekYear.js",
-              "https://unpkg.com/dayjs/plugin/advancedFormat.js",
-              "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
-            ],
-            "exportName": "TabsTabPane",
-            "destructuring": true
-          },
-          "group": "数据展示",
-          "configure": {
-            "loop": true,
-            "condition": true,
-            "styles": true,
-            "isContainer": false,
-            "isModal": false,
-            "isPopper": false,
-            "nestingRule": {
-              "childWhitelist": "",
-              "parentWhitelist": "",
-              "descendantBlacklist": "",
-              "ancestorWhitelist": ""
-            },
-            "isNullNode": false,
-            "isLayout": false,
-            "rootSelector": "",
-            "shortcuts": {
-              "properties": []
-            },
-            "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
-              "disable": []
-            },
-            "invalidity": [
-              ""
-            ],
-            "clickCapture": true,
-            "framework": "Vue"
-          },
-          "schema": {
-            "properties": [
-              {
-                "name": "0",
-                "label": {
-                  "zh_CN": "基础属性"
-                },
-                "content": [
-                  {
-                    "property": "forceRender",
-                    "label": {
-                      "text": {
-                        "zh_CN": "forceRender"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "被隐藏时是否渲染 DOM 结构"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "boolean",
-                    "defaultValue": false,
-                    "widget": {
-                      "component": "MetaSwitch",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "key",
-                    "label": {
-                      "text": {
-                        "zh_CN": "key"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "对应 activeKey"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "widget": {
-                      "component": "MetaInput",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "tab",
-                    "label": {
-                      "text": {
-                        "zh_CN": "tab"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "选项卡头显示文字"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
-                    },
-                    "device": []
-                  }
-                ],
-                "description": {
-                  "zh_CN": ""
-                }
-              }
-            ],
-            "events": {},
-            "slots": {
-              "tab": {
-                "label": {
-                  "zh_CN": "tab"
-                },
-                "description": {
-                  "zh_CN": "选项卡头显示文字"
-                }
-              }
-            }
-          }
-        },
-        {
-          "id": 1,
-          "version": "4.1.2",
-          "name": {
             "zh_CN": "标签"
           },
           "component": "ATag",
@@ -23937,6 +24291,598 @@
                 },
                 "description": {
                   "zh_CN": "设置图标"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": 1,
+          "version": "4.1.2",
+          "name": {
+            "zh_CN": "输入框"
+          },
+          "component": "ATextarea",
+          "icon": "input",
+          "description": "通过鼠标或键盘输入内容，是最基础的表单域的包装。",
+          "doc_url": "",
+          "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*sBqqTatJ-AkAAAAAAAAAAAAADrJ8AQ/original",
+          "tags": "",
+          "keywords": "",
+          "dev_mode": "proCode",
+          "npm": {
+            "package": "ant-design-vue",
+            "version": "",
+            "dependencies": [
+              "https://unpkg.com/dayjs/dayjs.min.js",
+              "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+              "https://unpkg.com/dayjs/plugin/weekday.js",
+              "https://unpkg.com/dayjs/plugin/localeData.js",
+              "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+              "https://unpkg.com/dayjs/plugin/weekYear.js",
+              "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+              "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+            ],
+            "exportName": "Textarea",
+            "destructuring": true
+          },
+          "group": "数据录入",
+          "configure": {
+            "loop": true,
+            "condition": true,
+            "styles": true,
+            "isContainer": false,
+            "isModal": false,
+            "isPopper": false,
+            "nestingRule": {
+              "childWhitelist": "",
+              "parentWhitelist": "",
+              "descendantBlacklist": "",
+              "ancestorWhitelist": ""
+            },
+            "isNullNode": false,
+            "isLayout": false,
+            "rootSelector": "",
+            "shortcuts": {
+              "properties": []
+            },
+            "contextMenu": {
+              "actions": [
+                "copy",
+                "remove",
+                "insert",
+                "updateAttr",
+                "bindEevent",
+                "createBlock"
+              ],
+              "disable": []
+            },
+            "invalidity": [
+              ""
+            ],
+            "clickCapture": true,
+            "framework": "Vue"
+          },
+          "schema": {
+            "properties": [
+              {
+                "name": "0",
+                "label": {
+                  "zh_CN": "基础属性"
+                },
+                "content": [
+                  {
+                    "property": "addonAfter",
+                    "label": {
+                      "text": {
+                        "zh_CN": "addonAfter"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "带标签的 input，设置后置标签"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "defaultValue": "",
+                    "widget": {
+                      "component": "MetaSelect",
+                      "props": {
+                        "options": [
+                          {
+                            "label": "string",
+                            "value": "string"
+                          },
+                          {
+                            "label": "slot",
+                            "value": "slot"
+                          }
+                        ]
+                      }
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "addonBefore",
+                    "label": {
+                      "text": {
+                        "zh_CN": "addonBefore"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "带标签的 input，设置前置标签"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "defaultValue": "",
+                    "widget": {
+                      "component": "MetaSelect",
+                      "props": {
+                        "options": [
+                          {
+                            "label": "string",
+                            "value": "string"
+                          },
+                          {
+                            "label": "slot",
+                            "value": "slot"
+                          }
+                        ]
+                      }
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "allowClear",
+                    "label": {
+                      "text": {
+                        "zh_CN": "allowClear"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "可以点击清除图标删除内容"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "boolean",
+                    "widget": {
+                      "component": "MetaSwitch",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "autoSize",
+                    "label": {
+                      "text": {
+                        "zh_CN": "autoSize"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "{ minRows: 2, maxRows: 5 } | boolean"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "object",
+                    "widget": {
+                      "component": "MetaCodeEditor",
+                      "props": {
+                        "language": "json"
+                      }
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "bordered",
+                    "label": {
+                      "text": {
+                        "zh_CN": "bordered"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "是否有边框"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "boolean",
+                    "defaultValue": true,
+                    "widget": {
+                      "component": "MetaSwitch",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "defaultValue",
+                    "label": {
+                      "text": {
+                        "zh_CN": "defaultValue"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "输入框默认内容"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "defaultValue": "",
+                    "widget": {
+                      "component": "MetATextarea",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "disabled",
+                    "label": {
+                      "text": {
+                        "zh_CN": "disabled"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "是否禁用状态，默认为 false"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "widget": {
+                      "component": "MetaSwitch",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "id",
+                    "label": {
+                      "text": {
+                        "zh_CN": "id"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "输入框的 id"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "defaultValue": "",
+                    "widget": {
+                      "component": "MetATextarea",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "maxlength",
+                    "label": {
+                      "text": {
+                        "zh_CN": "maxlength"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "最大长度"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "number",
+                    "widget": {
+                      "component": "MetaNumber",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "prefix",
+                    "label": {
+                      "text": {
+                        "zh_CN": "prefix"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "带有前缀图标的 input"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "defaultValue": "",
+                    "widget": {
+                      "component": "MetaSelect",
+                      "props": {
+                        "options": [
+                          {
+                            "label": "string",
+                            "value": "string"
+                          },
+                          {
+                            "label": "slot",
+                            "value": "slot"
+                          }
+                        ]
+                      }
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "showCount",
+                    "label": {
+                      "text": {
+                        "zh_CN": "showCount"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "是否展示字数"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "widget": {
+                      "component": "MetaSwitch",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "status",
+                    "label": {
+                      "text": {
+                        "zh_CN": "status"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "设置校验状态"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "widget": {
+                      "component": "MetaSelect",
+                      "props": {
+                        "options": [
+                          {
+                            "label": "error",
+                            "value": "error"
+                          },
+                          {
+                            "label": "warning",
+                            "value": "warning"
+                          }
+                        ]
+                      }
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "size",
+                    "label": {
+                      "text": {
+                        "zh_CN": "size"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "控件大小。注：标准表单内的输入框大小限制为 middle。可选 large middle small"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "widget": {
+                      "component": "MetATextarea",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "suffix",
+                    "label": {
+                      "text": {
+                        "zh_CN": "suffix"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "带有后缀图标的 input"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "defaultValue": "",
+                    "widget": {
+                      "component": "MetaSelect",
+                      "props": {
+                        "options": [
+                          {
+                            "label": "string",
+                            "value": "string"
+                          },
+                          {
+                            "label": "slot",
+                            "value": "slot"
+                          }
+                        ]
+                      }
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "type",
+                    "label": {
+                      "text": {
+                        "zh_CN": "type"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "声明 input 类型，同原生 input 标签的 type 属性，见：[MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#属性)(请直接使用 <a-textarea /> 代替 type=textarea)。"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "defaultValue": "text",
+                    "widget": {
+                      "component": "MetATextarea",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "value",
+                    "label": {
+                      "text": {
+                        "zh_CN": "value(v-model)"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "输入框内容"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "defaultValue": "",
+                    "widget": {
+                      "component": "MetATextarea",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "change",
+                    "label": {
+                      "text": {
+                        "zh_CN": "change"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "输入框内容变化时的回调"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "function",
+                    "defaultValue": "",
+                    "widget": {
+                      "component": "MetaCodeEditor",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "pressEnter",
+                    "label": {
+                      "text": {
+                        "zh_CN": "pressEnter"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "按下回车的回调"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "function",
+                    "defaultValue": "",
+                    "widget": {
+                      "component": "MetaCodeEditor",
+                      "props": {}
+                    },
+                    "device": []
+                  }
+                ],
+                "description": {
+                  "zh_CN": ""
+                }
+              }
+            ],
+            "events": {},
+            "slots": {
+              "addonAfter": {
+                "label": {
+                  "zh_CN": "addonAfter"
+                },
+                "description": {
+                  "zh_CN": "带标签的 input，设置后置标签"
+                }
+              },
+              "addonBefore": {
+                "label": {
+                  "zh_CN": "addonBefore"
+                },
+                "description": {
+                  "zh_CN": "带标签的 input，设置前置标签"
+                }
+              },
+              "clearIcon": {
+                "label": {
+                  "zh_CN": "clearIcon"
+                },
+                "description": {
+                  "zh_CN": "自定义清除图标 （allowClear 为 true 时生效）"
+                }
+              },
+              "prefix": {
+                "label": {
+                  "zh_CN": "prefix"
+                },
+                "description": {
+                  "zh_CN": "带有前缀图标的 input"
+                }
+              },
+              "suffix": {
+                "label": {
+                  "zh_CN": "suffix"
+                },
+                "description": {
+                  "zh_CN": "带有后缀图标的 input"
                 }
               }
             }
@@ -25728,330 +26674,6 @@
                 }
               }
             }
-          }
-        },
-        {
-          "id": 1,
-          "version": "4.1.2",
-          "name": {
-            "zh_CN": "漫游式引导"
-          },
-          "component": "ATourStep",
-          "icon": "tour-step",
-          "description": "用于分步引导用户了解产品功能的气泡组件。自 4.0.0 版本开始提供该组件。",
-          "doc_url": "",
-          "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*nF6hQpM0XtEAAAAAAAAAAAAADrJ8AQ/original",
-          "tags": "",
-          "keywords": "",
-          "dev_mode": "proCode",
-          "npm": {
-            "package": "ant-design-vue",
-            "version": "",
-            "dependencies": [
-              "https://unpkg.com/dayjs/dayjs.min.js",
-              "https://unpkg.com/dayjs/plugin/customParseFormat.js",
-              "https://unpkg.com/dayjs/plugin/weekday.js",
-              "https://unpkg.com/dayjs/plugin/localeData.js",
-              "https://unpkg.com/dayjs/plugin/weekOfYear.js",
-              "https://unpkg.com/dayjs/plugin/weekYear.js",
-              "https://unpkg.com/dayjs/plugin/advancedFormat.js",
-              "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
-            ],
-            "exportName": "TourStep",
-            "destructuring": true
-          },
-          "group": "数据展示",
-          "configure": {
-            "loop": true,
-            "condition": true,
-            "styles": true,
-            "isContainer": false,
-            "isModal": false,
-            "isPopper": false,
-            "nestingRule": {
-              "childWhitelist": "",
-              "parentWhitelist": "",
-              "descendantBlacklist": "",
-              "ancestorWhitelist": ""
-            },
-            "isNullNode": false,
-            "isLayout": false,
-            "rootSelector": "",
-            "shortcuts": {
-              "properties": []
-            },
-            "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
-              "disable": []
-            },
-            "invalidity": [
-              ""
-            ],
-            "clickCapture": true,
-            "framework": "Vue"
-          },
-          "schema": {
-            "properties": [
-              {
-                "name": "0",
-                "label": {
-                  "zh_CN": "基础属性"
-                },
-                "content": [
-                  {
-                    "property": "arrow",
-                    "label": {
-                      "text": {
-                        "zh_CN": "arrow"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "是否显示箭头，包含是否指向元素中心的配置"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "defaultValue": "true",
-                    "widget": {
-                      "component": "MetaInput",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "cover",
-                    "label": {
-                      "text": {
-                        "zh_CN": "cover"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "展示的图片或者视频"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "widget": {
-                      "component": "MetaInput",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "title",
-                    "label": {
-                      "text": {
-                        "zh_CN": "title"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "标题"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "widget": {
-                      "component": "MetaInput",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "description",
-                    "label": {
-                      "text": {
-                        "zh_CN": "description"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "主要描述部分"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "widget": {
-                      "component": "MetaInput",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "mask",
-                    "label": {
-                      "text": {
-                        "zh_CN": "mask"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "是否启用蒙层，也可传入配置改变蒙层样式和填充色，默认跟随 Tour 的 mask 属性"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "defaultValue": "true",
-                    "widget": {
-                      "component": "MetaInput",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "type",
-                    "label": {
-                      "text": {
-                        "zh_CN": "type"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "类型，影响底色与文字颜色"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "defaultValue": "default",
-                    "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "default",
-                            "value": "default"
-                          },
-                          {
-                            "label": "primary",
-                            "value": "primary"
-                          }
-                        ]
-                      }
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "nextButtonProps",
-                    "label": {
-                      "text": {
-                        "zh_CN": "nextButtonProps"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "下一步按钮的属性"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "function",
-                    "widget": {
-                      "component": "MetaCodeEditor",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "prevButtonProps",
-                    "label": {
-                      "text": {
-                        "zh_CN": "prevButtonProps"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "上一步按钮的属性"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "function",
-                    "widget": {
-                      "component": "MetaCodeEditor",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "scrollIntoViewOptions",
-                    "label": {
-                      "text": {
-                        "zh_CN": "scrollIntoViewOptions"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "是否支持当前元素滚动到视窗内，也可传入配置指定滚动视窗的相关参数，默认跟随 Tour 的 scrollIntoViewOptions 属性"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "defaultValue": "true",
-                    "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "boolean",
-                            "value": "boolean"
-                          },
-                          {
-                            "label": "ScrollIntoViewOptions",
-                            "value": "ScrollIntoViewOptions"
-                          }
-                        ]
-                      }
-                    },
-                    "device": []
-                  }
-                ],
-                "description": {
-                  "zh_CN": ""
-                }
-              }
-            ],
-            "events": {
-              "onClose": {
-                "label": {
-                  "zh_CN": "onClose"
-                },
-                "description": {
-                  "zh_CN": "关闭引导时的回调函数"
-                },
-                "type": "event",
-                "functionInfo": {
-                  "params": [],
-                  "returns": {}
-                },
-                "defaultValue": ""
-              }
-            },
-            "slots": {}
           }
         },
         {
@@ -43812,9 +44434,9 @@
               "name": {
                 "zh_CN": "锚点"
               },
-              "icon": "anchor-item",
+              "icon": "anchor-link",
               "screenshot": "",
-              "snippetName": "AAnchorItem",
+              "snippetName": "AAnchorLink",
               "schema": {}
             },
             {
@@ -44162,6 +44784,15 @@
               "icon": "descriptions",
               "screenshot": "",
               "snippetName": "ADescriptions",
+              "schema": {}
+            },
+            {
+              "name": {
+                "zh_CN": "树形控件"
+              },
+              "icon": "directory-tree",
+              "screenshot": "",
+              "snippetName": "ADirectoryTree",
               "schema": {}
             },
             {
@@ -44531,18 +45162,18 @@
               "name": {
                 "zh_CN": "单选框"
               },
-              "icon": "radio-group",
+              "icon": "radio-button",
               "screenshot": "",
-              "snippetName": "ARadioGroup",
+              "snippetName": "ARadioButton",
               "schema": {}
             },
             {
               "name": {
                 "zh_CN": "单选框"
               },
-              "icon": "radio-radio-button",
+              "icon": "radio-group",
               "screenshot": "",
-              "snippetName": "ARadioRadioButton",
+              "snippetName": "ARadioGroup",
               "schema": {}
             },
             {
@@ -44655,6 +45286,15 @@
               "name": {
                 "zh_CN": "步骤条"
               },
+              "icon": "step",
+              "screenshot": "",
+              "snippetName": "AStep",
+              "schema": {}
+            },
+            {
+              "name": {
+                "zh_CN": "步骤条"
+              },
               "icon": "steps",
               "screenshot": "",
               "snippetName": "ASteps",
@@ -44680,11 +45320,11 @@
             },
             {
               "name": {
-                "zh_CN": "步骤条"
+                "zh_CN": "导航菜单"
               },
-              "icon": "steps-step",
+              "icon": "sub-menu",
               "screenshot": "",
-              "snippetName": "AStepsStep",
+              "snippetName": "ASubMenu",
               "schema": {}
             },
             {
@@ -44694,6 +45334,15 @@
               "icon": "switch",
               "screenshot": "",
               "snippetName": "ASwitch",
+              "schema": {}
+            },
+            {
+              "name": {
+                "zh_CN": "标签页"
+              },
+              "icon": "tab-pane",
+              "screenshot": "",
+              "snippetName": "ATabPane",
               "schema": {}
             },
             {
@@ -44716,20 +45365,20 @@
             },
             {
               "name": {
-                "zh_CN": "标签页"
-              },
-              "icon": "tabs-tab-pane",
-              "screenshot": "",
-              "snippetName": "ATabsTabPane",
-              "schema": {}
-            },
-            {
-              "name": {
                 "zh_CN": "标签"
               },
               "icon": "tag",
               "screenshot": "",
               "snippetName": "ATag",
+              "schema": {}
+            },
+            {
+              "name": {
+                "zh_CN": "输入框"
+              },
+              "icon": "textarea",
+              "screenshot": "",
+              "snippetName": "ATextarea",
               "schema": {}
             },
             {
@@ -44775,15 +45424,6 @@
               "icon": "tour",
               "screenshot": "",
               "snippetName": "ATour",
-              "schema": {}
-            },
-            {
-              "name": {
-                "zh_CN": "漫游式引导"
-              },
-              "icon": "tour-step",
-              "screenshot": "",
-              "snippetName": "ATourStep",
               "schema": {}
             },
             {

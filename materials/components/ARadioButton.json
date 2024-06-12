@@ -2,13 +2,13 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "导航菜单"
+    "zh_CN": "单选框"
   },
-  "component": "AMenuDivider",
-  "icon": "menu-divider",
-  "description": "为页面和功能提供导航的菜单列表。",
+  "component": "ARadioButton",
+  "icon": "radio-button",
+  "description": "单选框。",
   "doc_url": "",
-  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*Vn4XSqJFAxcAAAAAAAAAAAAADrJ8AQ/original",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*a9roS6DHFIcAAAAAAAAAAAAADrJ8AQ/original",
   "tags": "",
   "keywords": "",
   "dev_mode": "proCode",
@@ -25,10 +25,10 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "MenuDivider",
+    "exportName": "RadioButton",
     "destructuring": true
   },
-  "group": "导航",
+  "group": "数据录入",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -66,14 +66,60 @@
         },
         "content": [
           {
-            "property": "dashed",
+            "property": "autofocus",
             "label": {
               "text": {
-                "zh_CN": "dashed"
+                "zh_CN": "autofocus"
               }
             },
             "description": {
-              "zh_CN": "是否虚线"
+              "zh_CN": "自动获取焦点"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "checked",
+            "label": {
+              "text": {
+                "zh_CN": "checked(v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "指定当前是否选中"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "disabled",
+            "label": {
+              "text": {
+                "zh_CN": "disabled"
+              }
+            },
+            "description": {
+              "zh_CN": "禁用 Radio"
             },
             "required": false,
             "readOnly": false,
@@ -100,11 +146,11 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "导航菜单"
+        "zh_CN": "单选框"
       },
-      "icon": "menu-divider",
+      "icon": "radio-button",
       "screenshot": "",
-      "snippetName": "AMenuDivider",
+      "snippetName": "ARadioButton",
       "schema": {}
     }
   ]
