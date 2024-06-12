@@ -28,7 +28,7 @@
     "exportName": "InputNumber",
     "destructuring": true
   },
-  "group": "Data Entry",
+  "group": "数据录入",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -181,7 +181,6 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "number",
-            "defaultValue": "",
             "widget": {
               "component": "MetaNumber",
               "props": {}
@@ -463,7 +462,6 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "number",
-            "defaultValue": "",
             "widget": {
               "component": "MetaNumber",
               "props": {}
@@ -507,10 +505,10 @@
       },
       "onStep": {
         "label": {
-          "zh_CN": "step"
+          "zh_CN": "onStep"
         },
         "description": {
-          "zh_CN": "每次改变步数，可以为小数"
+          "zh_CN": "The callback function that is triggered when click up or down buttons"
         },
         "type": "event",
         "functionInfo": {

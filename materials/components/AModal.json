@@ -28,7 +28,7 @@
     "exportName": "Modal",
     "destructuring": true
   },
-  "group": "Feedback",
+  "group": "反馈",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -137,7 +137,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "Cancel",
+            "defaultValue": "取消",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -217,7 +217,6 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "boolean",
-            "defaultValue": false,
             "widget": {
               "component": "MetaSwitch",
               "props": {}
@@ -263,7 +262,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "OK and Cancel buttons",
+            "defaultValue": "确定取消按钮",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -298,6 +297,29 @@
             "labelPosition": "top",
             "type": "boolean",
             "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "keyboard",
+            "label": {
+              "text": {
+                "zh_CN": "keyboard"
+              }
+            },
+            "description": {
+              "zh_CN": "是否支持键盘 esc 关闭"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
             "widget": {
               "component": "MetaSwitch",
               "props": {}
@@ -391,7 +413,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "OK",
+            "defaultValue": "确定",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -481,7 +503,6 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "boolean",
-            "defaultValue": false,
             "widget": {
               "component": "MetaSwitch",
               "props": {}

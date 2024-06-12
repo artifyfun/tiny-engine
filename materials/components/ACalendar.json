@@ -28,7 +28,7 @@
     "exportName": "Calendar",
     "destructuring": true
   },
-  "group": "Data Display",
+  "group": "数据展示",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -139,19 +139,8 @@
             "type": "string",
             "defaultValue": "month",
             "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "month",
-                    "value": "month"
-                  },
-                  {
-                    "label": "year",
-                    "value": "year"
-                  }
-                ]
-              }
+              "component": "MetaInput",
+              "props": {}
             },
             "device": []
           }

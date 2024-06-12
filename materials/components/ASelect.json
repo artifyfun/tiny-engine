@@ -28,7 +28,7 @@
     "exportName": "Select",
     "destructuring": true
   },
-  "group": "Data Entry",
+  "group": "数据录入",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -466,29 +466,6 @@
             "device": []
           },
           {
-            "property": "loading",
-            "label": {
-              "text": {
-                "zh_CN": "loading"
-              }
-            },
-            "description": {
-              "zh_CN": "indicate loading state"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "boolean",
-            "defaultValue": false,
-            "widget": {
-              "component": "MetaSwitch",
-              "props": {}
-            },
-            "device": []
-          },
-          {
             "property": "maxTagCount",
             "label": {
               "text": {
@@ -559,6 +536,10 @@
                   {
                     "label": "tags",
                     "value": "tags"
+                  },
+                  {
+                    "label": "combobox",
+                    "value": "combobox"
                   }
                 ]
               }
@@ -660,7 +641,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "children | label(when use options)",
+            "defaultValue": "children | label(设置 options 时)",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -887,6 +868,29 @@
             "labelPosition": "top",
             "type": "boolean",
             "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "loading",
+            "label": {
+              "text": {
+                "zh_CN": "loading"
+              }
+            },
+            "description": {
+              "zh_CN": "indicate loading state"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
             "widget": {
               "component": "MetaSwitch",
               "props": {}

@@ -28,7 +28,7 @@
     "exportName": "Affix",
     "destructuring": true
   },
-  "group": "Other",
+  "group": "其他",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,

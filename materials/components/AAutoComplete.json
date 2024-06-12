@@ -28,7 +28,7 @@
     "exportName": "AutoComplete",
     "destructuring": true
   },
-  "group": "Data Entry",
+  "group": "数据录入",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -365,8 +365,19 @@
             "labelPosition": "top",
             "type": "string",
             "widget": {
-              "component": "MetaInput",
-              "props": {}
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
             },
             "device": []
           },
@@ -540,9 +551,9 @@
           "zh_CN": "使用插槽自定义清除按钮"
         }
       },
-      "default (for customize input element)": {
+      "default": {
         "label": {
-          "zh_CN": "default (for customize input element)"
+          "zh_CN": "default"
         },
         "description": {
           "zh_CN": "customize input element"
@@ -554,6 +565,14 @@
         },
         "description": {
           "zh_CN": "通过 option 插槽，自定义节点"
+        }
+      },
+      "placeholder": {
+        "label": {
+          "zh_CN": "placeholder"
+        },
+        "description": {
+          "zh_CN": "输入框提示"
         }
       }
     }

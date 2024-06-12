@@ -28,7 +28,7 @@
     "exportName": "Popconfirm",
     "destructuring": true
   },
-  "group": "Feedback",
+  "group": "反馈",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -90,7 +90,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "Cancel",
+            "defaultValue": "取消",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -147,7 +147,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "Confirm",
+            "defaultValue": "确定",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -278,6 +278,28 @@
             "device": []
           },
           {
+            "property": "open",
+            "label": {
+              "text": {
+                "zh_CN": "open (v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "是否显示"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
             "property": "visible",
             "label": {
               "text": {
@@ -366,14 +388,6 @@
           "zh_CN": "取消按钮文字"
         }
       },
-      "icon": {
-        "label": {
-          "zh_CN": "icon"
-        },
-        "description": {
-          "zh_CN": "customize icon of confirmation"
-        }
-      },
       "okButton": {
         "label": {
           "zh_CN": "okButton"
@@ -404,6 +418,14 @@
         },
         "description": {
           "zh_CN": "确认内容的详细描述"
+        }
+      },
+      "icon": {
+        "label": {
+          "zh_CN": "icon"
+        },
+        "description": {
+          "zh_CN": "customize icon of confirmation"
         }
       }
     }

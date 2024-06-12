@@ -28,7 +28,7 @@
     "exportName": "Table",
     "destructuring": true
   },
-  "group": "Data Display",
+  "group": "数据展示",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -675,16 +675,16 @@
               "props": {
                 "options": [
                   {
+                    "label": "large",
+                    "value": "large"
+                  },
+                  {
                     "label": "middle",
                     "value": "middle"
                   },
                   {
                     "label": "small",
                     "value": "small"
-                  },
-                  {
-                    "label": "large",
-                    "value": "large"
                   }
                 ]
               }
