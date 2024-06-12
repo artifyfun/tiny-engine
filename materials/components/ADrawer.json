@@ -46,11 +46,19 @@
     "isLayout": false,
     "rootSelector": "",
     "shortcuts": {
-      "properties": ["visible", "width"]
+      "properties": [
+        "visible",
+        "width"
+      ]
     },
     "contextMenu": {
-      "actions": ["create symbol"],
-      "disable": ["copy", "remove"]
+      "actions": [
+        "create symbol"
+      ],
+      "disable": [
+        "copy",
+        "remove"
+      ]
     }
   },
   "schema": {
@@ -541,14 +549,6 @@
     ],
     "events": {},
     "slots": {
-      "default": {
-        "label": {
-          "zh_CN": "default"
-        },
-        "description": {
-          "zh_CN": "自定义内容"
-        }
-      },
       "closeIcon": {
         "label": {
           "zh_CN": "closeIcon"
