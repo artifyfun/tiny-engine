@@ -278,7 +278,14 @@
       "icon": "image",
       "screenshot": "",
       "snippetName": "AImage",
-      "schema": {}
+      "schema": {
+        "componentName": "AImage",
+        "props": {
+          "width": "300px",
+          "height": "300px",
+          "placeholder": true
+        }
+      }
     }
   ]
 }
