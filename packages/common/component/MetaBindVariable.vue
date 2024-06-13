@@ -45,9 +45,9 @@
                     <ul>
                       <li
                         v-for="(item, key) in state.variables"
-                        v-show="key.includes(state.value) && ![WORKSPACE_KEY].includes(key)"
+                        v-show="key.includes(state.value) && !key.startsWith(WORKSPACE_KEY)"
                         :key="key"
-                        :class="{ 'item-selected': state.variableName === key }"
+                        :class="{ 'content-left__list-item': true, active: state.variableName === key }"
                         @click="variableClick(key, item)"
                       >
                         <div class="item-text" :title="state.bindPrefix + key">{{ `${state.bindPrefix}${key}` }}</div>
@@ -119,7 +119,10 @@
                         v-for="item in workflowState.workflows"
                         v-show="!item.name || item.name.includes(workflowVariableState.keyword)"
                         :key="item.id"
-                        :class="{ 'item-selected': workflowVariableState.selectedWorkflow === item }"
+                        :class="{
+                          'content-left__list-item': true,
+                          active: workflowVariableState.selectedWorkflow === item
+                        }"
                         @click="setWorkflow(item)"
                       >
                         <tiny-tooltip
@@ -149,7 +152,10 @@
                         <li
                           v-for="item in workflowVariableState.category"
                           :key="item.key"
-                          :class="{ 'item-selected': workflowVariableState.selectedCategory === item }"
+                          :class="{
+                            'content-left__list-item': true,
+                            active: workflowVariableState.selectedCategory === item
+                          }"
                           @click="setWorkflowCategory(item)"
                         >
                           <div class="item-wrap">
@@ -171,7 +177,10 @@
                       <li
                         v-for="item in workflowVariableState.variables"
                         :key="item.key"
-                        :class="{ 'item-selected': workflowVariableState.selectedVariable === item }"
+                        :class="{
+                          'content-left__list-item': true,
+                          active: workflowVariableState.selectedVariable === item
+                        }"
                         @click="setWorkflowVariable(item)"
                       >
                         <div class="item-wrap">
@@ -783,13 +792,9 @@ export default {
         transition: background 0.3s;
         &.active,
         &:hover {
-          background: var(--ti-lowcode-meta-bind-variable-list-item-hover-bg-color);
+          // background: var(--ti-lowcode-meta-bind-variable-list-item-hover-bg-color);
+          background-color: var(--ti-base-color-brand-2);
         }
-      }
-
-      .item-selected {
-        // background-color: var(--ti-lowcode-meta-bind-variable-item-selected-bg-color);
-        background-color: var(--ti-base-color-brand-2);
       }
 
       .item-text {

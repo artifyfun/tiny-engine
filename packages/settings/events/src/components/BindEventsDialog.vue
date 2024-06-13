@@ -90,7 +90,10 @@
                       v-for="item in workflowState.workflows"
                       v-show="!item.name || item.name.includes(workflowMethodState.keyword)"
                       :key="item.id"
-                      :class="{ 'item-selected': workflowMethodState.selectedWorkflow === item }"
+                      :class="{
+                        'content-left__list-item': true,
+                        active: workflowMethodState.selectedWorkflow === item
+                      }"
                       @click="setWorkflow(item)"
                     >
                       <tiny-tooltip
@@ -119,20 +122,13 @@
                     <li
                       v-for="item in workflowMethodState.methods"
                       :key="item.key"
-                      :class="{ 'item-selected': workflowMethodState.selectedMethod === item }"
+                      :class="{ 'content-left__list-item': true, active: workflowMethodState.selectedMethod === item }"
                       @click="selectWorkflowMethod(item)"
                     >
-                      <tiny-tooltip
-                        effect="dark"
-                        placement="top"
-                        :content="`${item.name} - ${item.description}`"
-                        :open-delay="500"
-                      >
-                        <div class="item-wrap">
-                          <div class="item-text">{{ item.name }}</div>
-                          <div class="item-alias">{{ item.description }}</div>
-                        </div>
-                      </tiny-tooltip>
+                      <div class="item-wrap">
+                        <div class="item-text">{{ item.name }}</div>
+                        <div class="item-alias">{{ item.description }}</div>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -296,7 +292,7 @@ export default {
 
       if (props.eventBinding?.ref?.startsWith(WORKSPACE_KEY)) {
         const workflowKey = props.eventBinding.params[0]
-        const workflow = workflowState.workflows.find((item) => item.key === workflowKey)
+        const workflow = workflowState.workflows.find((item) => item.key === workflowKey.replaceAll(`'`, ''))
         if (workflow) {
           setWorkflow(workflow)
         }
@@ -489,7 +485,7 @@ export default {
         bindWorkflowMethod({
           ...state.bindMethodInfo,
           params: workflowMethodState.selectedWorkflow.key,
-          extra: [`${workflowMethodState.selectedWorkflow.key}`]
+          extra: [`'${workflowMethodState.selectedWorkflow.key}'`]
         })
 
         // 需要在bindMethod之后
@@ -629,13 +625,9 @@ export default {
         transition: background 0.3s;
         &.active,
         &:hover {
-          background: var(--ti-lowcode-meta-bind-variable-list-item-hover-bg-color);
+          // background: var(--ti-lowcode-meta-bind-variable-list-item-hover-bg-color);
+          background-color: var(--ti-base-color-brand-2);
         }
-      }
-
-      .item-selected {
-        // background-color: var(--ti-lowcode-meta-bind-variable-item-selected-bg-color);
-        background-color: var(--ti-base-color-brand-2);
       }
 
       .item-text {

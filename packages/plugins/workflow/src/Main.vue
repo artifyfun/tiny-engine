@@ -357,7 +357,7 @@ export default {
     }
 
     const genBlockByWorkflow = (workflow) => {
-      console.log(workflow)
+      // console.log(workflow)
       const getWrapperNode = (children) => {
         return {
           id: utils.guid(),
@@ -382,9 +382,11 @@ export default {
       }
       const nodes = []
       for (const node of workflow.paramsNodes) {
-        const { category, description, title, selectedWidget } = node
+        const { category, type, description, title, selectedWidget } = node
 
-        const label = description || `${title} - ${selectedWidget.name}`
+        const label = description || (selectedWidget.name ? `${title} - ${selectedWidget.name}` : title)
+
+        const inputValue = `this.state.workspace['${workflow.key}']['prompt']['${node.id}']['inputs']['${selectedWidget.name}']`
 
         switch (category) {
           case 'input': {
@@ -403,9 +405,11 @@ export default {
                       id: utils.guid(),
                       componentName: 'ATextarea',
                       props: {
+                        allowClear: true,
                         value: {
                           type: 'JSExpression',
-                          value: `this.state.workspace['${workflow.key}']['prompt']['${node.id}']['inputs']['${selectedWidget.name}']`
+                          value: inputValue,
+                          model: { prop: 'value' }
                         }
                       }
                     }
@@ -425,9 +429,10 @@ export default {
                       id: utils.guid(),
                       componentName: 'ASwitch',
                       props: {
-                        value: {
+                        checked: {
                           type: 'JSExpression',
-                          value: `this.state.workspace['${workflow.key}']['prompt']['${node.id}']['inputs']['${selectedWidget.name}']`
+                          value: inputValue,
+                          model: { prop: 'checked' }
                         }
                       }
                     }
@@ -449,7 +454,7 @@ export default {
                       props: {
                         value: {
                           type: 'JSExpression',
-                          value: `this.state.workspace['${workflow.key}']['prompt']['${node.id}']['inputs']['${selectedWidget.name}']`
+                          value: inputValue
                         }
                       }
                     }
@@ -474,9 +479,11 @@ export default {
                         max: selectedWidget.options?.max,
                         precision: selectedWidget.options?.precision,
                         step: selectedWidget.options?.step,
+                        allowClear: true,
                         value: {
                           type: 'JSExpression',
-                          value: `this.state.workspace['${workflow.key}']['prompt']['${node.id}']['inputs']['${selectedWidget.name}']`
+                          value: inputValue,
+                          model: { prop: 'value' }
                         }
                       }
                     }
@@ -485,35 +492,64 @@ export default {
                 break
               }
               case 'combo': {
-                nodes.push({
-                  id: utils.guid(),
-                  componentName: 'AFormItem',
-                  props: {
-                    label
-                  },
-                  children: [
-                    {
-                      id: utils.guid(),
-                      componentName: 'ASelect',
-                      props: {
-                        value: {
-                          type: 'JSExpression',
-                          value: `this.state.workspace['${workflow.key}']['prompt']['${node.id}']['inputs']['${selectedWidget.name}']`
-                        },
-                        options: selectedWidget.options.values.map((item) => {
-                          return {
-                            label: item,
-                            value: item
+                if (type === 'LoadImage' && selectedWidget.name === 'image') {
+                  nodes.push({
+                    id: utils.guid(),
+                    componentName: 'AFormItem',
+                    props: {
+                      label
+                    },
+                    children: [
+                      {
+                        id: utils.guid(),
+                        componentName: 'ImageUploader',
+                        props: {
+                          modelValue: {
+                            type: 'JSExpression',
+                            value: inputValue,
+                            model: true
+                          },
+                          action: {
+                            type: 'JSExpression',
+                            value: `this.state.workspace['${workflow.key}']['config']['uploadApi']`
                           }
-                        }),
-                        fieldNames: {
-                          label: 'label',
-                          value: 'value'
                         }
                       }
-                    }
-                  ]
-                })
+                    ]
+                  })
+                } else {
+                  nodes.push({
+                    id: utils.guid(),
+                    componentName: 'AFormItem',
+                    props: {
+                      label
+                    },
+                    children: [
+                      {
+                        id: utils.guid(),
+                        componentName: 'ASelect',
+                        props: {
+                          allowClear: true,
+                          value: {
+                            type: 'JSExpression',
+                            value: inputValue,
+                            model: { prop: 'value' }
+                          },
+                          options: selectedWidget.options.values.map((item) => {
+                            return {
+                              label: item,
+                              value: item
+                            }
+                          }),
+                          fieldNames: {
+                            label: 'label',
+                            value: 'value'
+                          }
+                        }
+                      }
+                    ]
+                  })
+                }
                 break
               }
               default: {
@@ -533,7 +569,8 @@ export default {
           }
           case 'output': {
             switch (selectedWidget.type) {
-              case 'SaveImage': {
+              case 'SaveImage':
+              case 'Save Images Mikey': {
                 nodes.unshift(
                   getWrapperNode([
                     {
@@ -595,7 +632,7 @@ export default {
                       onClick: {
                         type: 'JSExpression',
                         value: 'this.workspaceQueueSync',
-                        params: [`${workflow.key}`]
+                        params: [`'${workflow.key}'`]
                       },
                       loading: {
                         type: 'JSExpression',
@@ -628,7 +665,7 @@ export default {
                       onClick: {
                         type: 'JSExpression',
                         value: 'this.workspaceDeleteQueue',
-                        params: [`${workflow.key}`]
+                        params: [`'${workflow.key}'`]
                       }
                     },
                     children: [
