@@ -34,7 +34,7 @@
     "loop": true,
     "condition": true,
     "styles": true,
-    "isContainer": true,
+    "isContainer": false,
     "isModal": false,
     "isPopper": false,
     "nestingRule": {

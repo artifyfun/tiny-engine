@@ -434,19 +434,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -467,19 +456,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -500,19 +478,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -1038,19 +1005,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "number",
-                            "value": "number"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -1558,19 +1514,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -2716,23 +2661,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "VNode",
-                            "value": "VNode"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   }
@@ -2872,19 +2802,8 @@
                     "type": "string",
                     "defaultValue": "",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   }
@@ -3938,19 +3857,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -4075,19 +3983,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -4247,19 +4144,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -4280,19 +4166,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   }
@@ -4988,19 +4863,8 @@
                     "type": "string",
                     "defaultValue": "Not Found",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -5224,23 +5088,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "VNode",
-                            "value": "VNode"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -6104,19 +5953,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -6137,19 +5975,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "number",
-                            "value": "number"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -6341,19 +6168,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -6374,19 +6190,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -6407,19 +6212,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -6440,19 +6234,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   }
@@ -7522,23 +7305,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "VNode",
-                            "value": "VNode"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -7631,23 +7399,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "VNode",
-                            "value": "VNode"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   }
@@ -7939,19 +7692,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "number",
-                            "value": "number"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -8247,19 +7989,8 @@
                     "type": "string",
                     "defaultValue": "378",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "number",
-                            "value": "number"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -8469,19 +8200,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -8525,19 +8245,8 @@
                     "type": "string",
                     "defaultValue": "378",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "number",
-                            "value": "number"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -9261,7 +8970,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": true,
+            "isContainer": false,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -9465,19 +9174,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -9498,19 +9196,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -10226,19 +9913,8 @@
                     "type": "string",
                     "defaultValue": "",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -10283,19 +9959,8 @@
                     "type": "string",
                     "defaultValue": "",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -10340,19 +10005,8 @@
                     "type": "string",
                     "defaultValue": "",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -10455,19 +10109,8 @@
                     "type": "string",
                     "defaultValue": "",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -10719,19 +10362,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "number",
-                            "value": "number"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -10819,19 +10451,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "number",
-                            "value": "number"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   }
@@ -10970,19 +10591,8 @@
                     "type": "string",
                     "defaultValue": "",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -11004,19 +10614,8 @@
                     "type": "string",
                     "defaultValue": "",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -11174,19 +10773,8 @@
                     "type": "string",
                     "defaultValue": "",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -11286,19 +10874,8 @@
                     "type": "string",
                     "defaultValue": "",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -12555,19 +12132,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -12612,19 +12178,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -12690,19 +12245,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -13126,19 +12670,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   }
@@ -13308,19 +12841,8 @@
                     "type": "string",
                     "defaultValue": "Not Found",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -14183,19 +13705,8 @@
                     "type": "string",
                     "defaultValue": "",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "number",
-                            "value": "number"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -14217,19 +13728,8 @@
                     "type": "string",
                     "defaultValue": "",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   }
@@ -14353,19 +13853,8 @@
                     "type": "string",
                     "defaultValue": "",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   }
@@ -14675,19 +14164,8 @@
                     "type": "string",
                     "defaultValue": "取消",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -14800,19 +14278,8 @@
                     "type": "string",
                     "defaultValue": "确定取消按钮",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -14951,19 +14418,8 @@
                     "type": "string",
                     "defaultValue": "确定",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -15007,19 +14463,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -15063,19 +14508,8 @@
                     "type": "string",
                     "defaultValue": "520",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "number",
-                            "value": "number"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -15629,19 +15063,8 @@
                     "type": "string",
                     "defaultValue": "<ArrowLeft />",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -15662,19 +15085,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -15695,19 +15107,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -15751,19 +15152,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -15784,19 +15174,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   }
@@ -16429,19 +15808,8 @@
                     "type": "string",
                     "defaultValue": "取消",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -16486,19 +15854,8 @@
                     "type": "string",
                     "defaultValue": "确定",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -16565,19 +15922,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -16598,19 +15944,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -16860,23 +16195,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          },
-                          {
-                            "label": "VNode",
-                            "value": "VNode"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -16897,23 +16217,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          },
-                          {
-                            "label": "VNode",
-                            "value": "VNode"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   }
@@ -18314,19 +17619,8 @@
                     "type": "string",
                     "defaultValue": "<StarOutlined />",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -18627,23 +17921,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "VNode",
-                            "value": "VNode"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -18664,23 +17943,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "VNode",
-                            "value": "VNode"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   }
@@ -18927,19 +18191,8 @@
                     "type": "string",
                     "defaultValue": "",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "number",
-                            "value": "number"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   }
@@ -19330,29 +18583,6 @@
                     "device": []
                   },
                   {
-                    "property": "filterOption",
-                    "label": {
-                      "text": {
-                        "zh_CN": "filterOption"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "是否根据输入项进行筛选。当其为一个函数时，会接收 inputValue option 两个参数，当 option 符合筛选条件时，应返回 true，反之则返回 false。"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "defaultValue": "true",
-                    "widget": {
-                      "component": "MetaInput",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
                     "property": "firstActiveValue",
                     "label": {
                       "text": {
@@ -19542,19 +18772,8 @@
                     "type": "string",
                     "defaultValue": "Not Found",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -19643,19 +18862,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -20948,19 +20156,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -21239,19 +20436,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "number",
-                            "value": "number"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   }
@@ -21611,19 +20797,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -21667,19 +20842,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -21723,19 +20887,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -21756,19 +20909,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   }
@@ -22254,19 +21396,8 @@
                     "type": "string",
                     "defaultValue": "",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "number",
-                            "value": "number"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -22311,19 +21442,8 @@
                     "type": "string",
                     "defaultValue": "",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -22500,19 +21620,8 @@
                     "type": "string",
                     "defaultValue": "",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -22626,19 +21735,8 @@
                     "type": "string",
                     "defaultValue": "",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -22829,19 +21927,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   }
@@ -25624,19 +24711,8 @@
                     "type": "string",
                     "defaultValue": "<LoadingOutlined />",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -25805,19 +24881,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -25838,19 +24903,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -26006,19 +25060,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "slot",
-                            "value": "slot"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -26432,52 +25475,6 @@
                 },
                 "content": [
                   {
-                    "property": "arrow",
-                    "label": {
-                      "text": {
-                        "zh_CN": "arrow"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "是否显示箭头，包含是否指向元素中心的配置"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "defaultValue": "true",
-                    "widget": {
-                      "component": "MetaInput",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "mask",
-                    "label": {
-                      "text": {
-                        "zh_CN": "mask"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "是否启用蒙层，也可传入配置改变蒙层样式和填充色"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "defaultValue": "true",
-                    "widget": {
-                      "component": "MetaInput",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
                     "property": "type",
                     "label": {
                       "text": {
@@ -26508,107 +25505,6 @@
                           }
                         ]
                       }
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "open",
-                    "label": {
-                      "text": {
-                        "zh_CN": "open"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "打开引导"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "widget": {
-                      "component": "MetaInput",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "current",
-                    "label": {
-                      "text": {
-                        "zh_CN": "current(v-model)"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "当前处于哪一步"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "widget": {
-                      "component": "MetaInput",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "scrollIntoViewOptions",
-                    "label": {
-                      "text": {
-                        "zh_CN": "scrollIntoViewOptions"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "是否支持当前元素滚动到视窗内，也可传入配置指定滚动视窗的相关参数"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "defaultValue": "true",
-                    "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "boolean",
-                            "value": "boolean"
-                          },
-                          {
-                            "label": "ScrollIntoViewOptions",
-                            "value": "ScrollIntoViewOptions"
-                          }
-                        ]
-                      }
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "zIndex",
-                    "label": {
-                      "text": {
-                        "zh_CN": "zIndex"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "Tour 的层级"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "defaultValue": "1001",
-                    "widget": {
-                      "component": "MetaInput",
-                      "props": {}
                     },
                     "device": []
                   }
@@ -27870,19 +26766,8 @@
                     "type": "string",
                     "defaultValue": "内部计算出的节点位置",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "number",
-                            "value": "number"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
@@ -27926,19 +26811,8 @@
                     "labelPosition": "top",
                     "type": "string",
                     "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "string",
-                            "value": "string"
-                          },
-                          {
-                            "label": "object",
-                            "value": "object"
-                          }
-                        ]
-                      }
+                      "component": "MetaInput",
+                      "props": {}
                     },
                     "device": []
                   },
