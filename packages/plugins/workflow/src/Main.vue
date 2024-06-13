@@ -358,121 +358,209 @@ export default {
 
     const genBlockByWorkflow = (workflow) => {
       console.log(workflow)
-      const getWrapperNode = (nodes) => {
+      const getWrapperNode = (children) => {
         return {
           id: utils.guid(),
-          "componentName": "CanvasRow",
-          "props": {
-            "rowGap": "20px",
-            "colGap": "20px",
-            "className": "canvasrow-wluhr"
-          },
-          "children": [
+          componentName: 'CanvasRowColContainer',
+          props: {},
+          children: [
             {
               id: utils.guid(),
-              "componentName": "CanvasCol",
-              "props": {
-                "rowGap": "20px",
-                "colGap": "20px",
-                "grow": true,
-                "shrink": true,
-                "widthType": "auto"
-              },
-              children: nodes
+              componentName: 'CanvasRow',
+              props: {},
+              children: [
+                {
+                  id: utils.guid(),
+                  componentName: 'CanvasCol',
+                  props: {},
+                  children
+                }
+              ]
             }
           ]
         }
       }
       const nodes = []
       for (const node of workflow.paramsNodes) {
-        const { category, selectedWidget } = node
+        const { category, description, title, selectedWidget } = node
+
+        const label = description || `${title} - ${selectedWidget.name}`
 
         switch (category) {
           case 'input': {
             switch (selectedWidget.type) {
-              case "customtext":
-              case "string":
-              case "text": {
-                nodes.push(getWrapperNode([{
+              case 'customtext':
+              case 'string':
+              case 'text': {
+                nodes.push({
                   id: utils.guid(),
-                  "componentName": "AInput",
-                  "props": {
-                    "type": "textarea",
-                    "value": {
-                      "type": "JSExpression",
-                      "value": `this.state.workspace['${workflow.key}']['prompt']['${node.id}']['inputs']['${selectedWidget.name}']`
-                    }
+                  componentName: 'AFormItem',
+                  props: {
+                    label
                   },
-                }]))
-                break
-              }
-              case "toggle": {
-                break
-              }
-              case "slider": {
-                break
-              }
-              case "number": {
-                nodes.push(getWrapperNode([{
-                  id: utils.guid(),
-                  "componentName": "AInputNumber",
-                  "props": {
-                    "type": "textarea",
-                    "value": {
-                      "type": "JSExpression",
-                      "value": `this.state.workspace['${workflow.key}']['prompt']['${node.id}']['inputs']['${selectedWidget.name}']`
-                    }
-                  },
-                }]))
-                break
-              }
-              case "combo": {
-                nodes.push(getWrapperNode([{
-                  id: utils.guid(),
-                  "componentName": "ASelect",
-                  "props": {
-                    "value": {
-                      "type": "JSExpression",
-                      "value": `this.state.workspace['${workflow.key}']['prompt']['${node.id}']['inputs']['${selectedWidget.name}']`
-                    },
-                    options: selectedWidget.options.values.map(item => {
-                      return {
-                        label: item,
-                        value: item
+                  children: [
+                    {
+                      id: utils.guid(),
+                      componentName: 'ATextarea',
+                      props: {
+                        value: {
+                          type: 'JSExpression',
+                          value: `this.state.workspace['${workflow.key}']['prompt']['${node.id}']['inputs']['${selectedWidget.name}']`
+                        }
                       }
-                    }),
-                    fieldNames: {
-                      label: 'label',
-                      value: 'value'
                     }
+                  ]
+                })
+                break
+              }
+              case 'toggle': {
+                nodes.push({
+                  id: utils.guid(),
+                  componentName: 'AFormItem',
+                  props: {
+                    label
                   },
-                }]))
+                  children: [
+                    {
+                      id: utils.guid(),
+                      componentName: 'ASwitch',
+                      props: {
+                        value: {
+                          type: 'JSExpression',
+                          value: `this.state.workspace['${workflow.key}']['prompt']['${node.id}']['inputs']['${selectedWidget.name}']`
+                        }
+                      }
+                    }
+                  ]
+                })
+                break
+              }
+              case 'slider': {
+                nodes.push({
+                  id: utils.guid(),
+                  componentName: 'AFormItem',
+                  props: {
+                    label
+                  },
+                  children: [
+                    {
+                      id: utils.guid(),
+                      componentName: 'ASlider',
+                      props: {
+                        value: {
+                          type: 'JSExpression',
+                          value: `this.state.workspace['${workflow.key}']['prompt']['${node.id}']['inputs']['${selectedWidget.name}']`
+                        }
+                      }
+                    }
+                  ]
+                })
+                break
+              }
+              case 'number': {
+                nodes.push({
+                  id: utils.guid(),
+                  componentName: 'AFormItem',
+                  props: {
+                    label
+                  },
+                  children: [
+                    {
+                      id: utils.guid(),
+                      componentName: 'AInputNumber',
+                      props: {
+                        style: 'width: auto;',
+                        min: selectedWidget.options?.min,
+                        max: selectedWidget.options?.max,
+                        precision: selectedWidget.options?.precision,
+                        step: selectedWidget.options?.step,
+                        value: {
+                          type: 'JSExpression',
+                          value: `this.state.workspace['${workflow.key}']['prompt']['${node.id}']['inputs']['${selectedWidget.name}']`
+                        }
+                      }
+                    }
+                  ]
+                })
+                break
+              }
+              case 'combo': {
+                nodes.push({
+                  id: utils.guid(),
+                  componentName: 'AFormItem',
+                  props: {
+                    label
+                  },
+                  children: [
+                    {
+                      id: utils.guid(),
+                      componentName: 'ASelect',
+                      props: {
+                        value: {
+                          type: 'JSExpression',
+                          value: `this.state.workspace['${workflow.key}']['prompt']['${node.id}']['inputs']['${selectedWidget.name}']`
+                        },
+                        options: selectedWidget.options.values.map((item) => {
+                          return {
+                            label: item,
+                            value: item
+                          }
+                        }),
+                        fieldNames: {
+                          label: 'label',
+                          value: 'value'
+                        }
+                      }
+                    }
+                  ]
+                })
                 break
               }
               default: {
                 // 未知控件
+                nodes.push({
+                  id: utils.guid(),
+                  componentName: 'AFormItem',
+                  props: {
+                    label
+                  },
+                  children: []
+                })
                 break
               }
             }
             break
           }
           case 'output': {
-            switch(selectedWidget.type) {
-              case "SaveImage": {
-                nodes.push(getWrapperNode([{
-                  id: utils.guid(),
-                  "componentName": "Img",
-                  "props": {
-                    "src": {
-                      "type": "JSExpression",
-                      "value": `this.state.workspace['${workflow.key}']['outputs']['${node.id}']`
+            switch (selectedWidget.type) {
+              case 'SaveImage': {
+                nodes.unshift(
+                  getWrapperNode([
+                    {
+                      id: utils.guid(),
+                      componentName: 'Img',
+                      props: {
+                        src: {
+                          type: 'JSExpression',
+                          value: `this.state.workspace['${workflow.key}']['outputs']['${node.id}']`
+                        },
+                        style: 'width: 300px;height:300px;'
+                      }
                     }
-                  },
-                }]))
+                  ])
+                )
                 break
               }
               default: {
                 // 未知控件
+                nodes.unshift({
+                  id: utils.guid(),
+                  componentName: 'AFormItem',
+                  props: {
+                    label
+                  },
+                  children: []
+                })
                 break
               }
             }
@@ -483,90 +571,81 @@ export default {
 
       const controller = {
         id: utils.guid(),
-        "componentName": "CanvasRow",
-        "props": {
-          "rowGap": "20px",
-          "colGap": "20px"
-        },
-        "children": [
+        componentName: 'CanvasRowColContainer',
+        props: {},
+        children: [
           {
             id: utils.guid(),
-            "componentName": "CanvasCol",
-            "props": {
-              "rowGap": "20px",
-              "colGap": "20px",
-              "grow": true,
-              "shrink": true,
-              "widthType": "auto"
+            componentName: 'CanvasRow',
+            props: {
+              colGap: '10px',
+              rowGap: '10px'
             },
-            "children": [
+            children: [
               {
                 id: utils.guid(),
-                "componentName": "AButton",
-                "props": {
-                  "type": "primary",
-                  "onClick": {
-                    "type": "JSExpression",
-                    "value": "this.workspaceQueueSync",
-                    "params": [
-                      `'${workflow.key}'`
-                    ]
-                  },
-                  "loading": {
-                    "type": "JSExpression",
-                    "value": `this.state.workspace['${workflow.key}']['state']['loading']`
-                  }
-                },
-                "children": [
+                componentName: 'CanvasCol',
+                props: {},
+                children: [
                   {
                     id: utils.guid(),
-                    "componentName": "Text",
-                    "props": {
-                      "text": "生成"
+                    componentName: 'AButton',
+                    props: {
+                      type: 'primary',
+                      onClick: {
+                        type: 'JSExpression',
+                        value: 'this.workspaceQueueSync',
+                        params: [`${workflow.key}`]
+                      },
+                      loading: {
+                        type: 'JSExpression',
+                        value: `this.state.workspace['${workflow.key}']['state']['loading']`
+                      }
                     },
+                    children: [
+                      {
+                        id: utils.guid(),
+                        componentName: 'Text',
+                        props: {
+                          text: '生成'
+                        }
+                      }
+                    ]
                   }
-                ],
-              }
-            ],
-          },
-          {
-            id: utils.guid(),
-            "componentName": "CanvasCol",
-            "props": {
-              "rowGap": "20px",
-              "colGap": "20px",
-              "grow": true,
-              "shrink": true,
-              "widthType": "auto"
-            },
-            "children": [
+                ]
+              },
               {
                 id: utils.guid(),
-                "componentName": "AButton",
-                "props": {
-                  "type": "primary",
-                  "danger": true,
-                  "onClick": {
-                    "type": "JSExpression",
-                    "value": "this.workspaceDeleteQueue",
-                    "params": [
-                      `'${workflow.key}'`
-                    ]
-                  }
-                },
-                "children": [
+                componentName: 'CanvasCol',
+                props: {},
+                children: [
                   {
                     id: utils.guid(),
-                    "componentName": "Text",
-                    "props": {
-                      "text": "中断"
+                    componentName: 'AButton',
+                    props: {
+                      type: 'primary',
+                      danger: true,
+                      onClick: {
+                        type: 'JSExpression',
+                        value: 'this.workspaceDeleteQueue',
+                        params: [`${workflow.key}`]
+                      }
                     },
+                    children: [
+                      {
+                        id: utils.guid(),
+                        componentName: 'Text',
+                        props: {
+                          text: '中断'
+                        }
+                      }
+                    ]
                   }
-                ],
+                ]
               }
-            ],
+            ]
           }
-        ],
+        ]
       }
 
       nodes.push(controller)
@@ -574,13 +653,11 @@ export default {
       return {
         data: {
           id: utils.guid(),
-          "componentName": "CanvasRowColContainer",
-          "props": {
-            "rowGap": "20px"
+          componentName: 'AForm',
+          props: {
+            layout: 'vertical'
           },
-          "children": [
-            getWrapperNode(nodes)
-          ]
+          children: nodes
         }
       }
     }

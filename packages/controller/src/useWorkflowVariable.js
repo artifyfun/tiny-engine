@@ -186,6 +186,134 @@ const setWorkflowVariable = (variable) => {
   workflowVariableState.selectedVariable = variable
 }
 
+// workspaceInitWebSocket body:
+
+// class ReconnectWebSocket {
+//   options = {
+//     url: '',
+//     protocols: '',
+//     enableReconnect: true,
+//     pingTimeout: 15000,
+//     pongTimeout: 10000,
+//     reconnectTimeout: 2000,
+//     pingMsg: 'ping',
+//     closeMsg: 'close',
+//     repeatLimit: undefined,
+//     clientOptions: undefined
+//   }
+//   ws = null
+//   repeat
+//   lockReconnect = false
+//   forbidReconnect = false
+//   pingTimeoutId = 0
+//   pongTimeoutId = 0
+
+//   onclose = () => { }
+//   onerror = () => { }
+//   onopen = () => { }
+//   onmessage = () => { }
+//   onreconnect = () => { }
+
+//   constructor(opions) {
+//     Object.assign(this.options, opions);
+//     this.ws = null;
+//     this.repeat = 0;
+
+//     //override hook function
+//     this.onclose = () => { };
+//     this.onerror = () => { };
+//     this.onopen = () => { };
+//     this.onmessage = () => { };
+//     this.onreconnect = () => { };
+
+//     this.createWebSocket();
+//   }
+
+//   createWebSocket() {
+//     try {
+//       if (this.options.protocols) {
+//         this.ws = new WebSocket(this.options.url, this.options.protocols, this.options.clientOptions);
+//       }
+//       else {
+//         this.ws = new WebSocket(this.options.url, this.options.clientOptions);
+//       }
+//       this.initEventHandle();
+//     } catch (e) {
+//       this.reconnect();
+//       throw e;
+//     }
+//   }
+
+//   initEventHandle() {
+//     if (!this.ws) return;
+//     this.ws.onclose = (e) => {
+//       this.onclose(e);
+//       this.reconnect();
+//     };
+//     this.ws.onerror = (e) => {
+//       this.onerror(e);
+//       this.reconnect();
+//     };
+//     this.ws.onopen = (e) => {
+//       this.repeat = 0;
+//       this.onopen(e);
+//       this.heartCheck();
+//     };
+//     this.ws.onmessage = (event) => {
+//       this.onmessage(event);
+//       const closeMsg = typeof this.options.closeMsg === 'function' ? this.options.closeMsg() : this.options.closeMsg || 'close';
+//       if (event.data === closeMsg) {
+//         this.close();
+//       }
+//       this.heartCheck();
+//     };
+//   }
+
+//   reconnect() {
+//     if (!this.options.enableReconnect) return;
+//     if (this.options.repeatLimit !== undefined && this.options.repeatLimit <= this.repeat) return;//limit repeat the number
+//     if (this.lockReconnect || this.forbidReconnect) return;
+//     this.lockReconnect = true;
+//     this.repeat++;
+//     this.onreconnect();
+//     setTimeout(() => {
+//       this.createWebSocket();
+//       this.lockReconnect = false;
+//     }, this.options.reconnectTimeout);
+//   }
+
+//   send(msg) {
+//     this.ws?.send(msg);
+//   }
+
+//   heartCheck() {
+//     this.heartReset();
+//     this.heartStart();
+//   }
+
+//   heartStart() {
+//     if (!this.options.enableReconnect) return;
+//     if (this.forbidReconnect) return;
+//     this.pingTimeoutId = setTimeout(() => {
+//       this.ws?.send(typeof this.options.pingMsg === 'function' ? this.options.pingMsg() : this.options.pingMsg || 'ping');
+//       this.pongTimeoutId = setTimeout(() => {
+//         this.ws?.close();
+//       }, this.options.pongTimeout);
+//     }, this.options.pingTimeout);
+//   }
+
+//   heartReset() {
+//     clearTimeout(this.pingTimeoutId);
+//     clearTimeout(this.pongTimeoutId);
+//   }
+
+//   close() {
+//     this.forbidReconnect = true;
+//     this.heartReset();
+//     this.ws?.close();
+//   }
+// }
+
 // const workspaceInitWebSocket = () => {
 //   const WORKSPACE_KEY = 'workspace'
 //   const workspace = this.state[WORKSPACE_KEY]
@@ -198,7 +326,7 @@ const setWorkflowVariable = (variable) => {
 //     protocols: this.state.clientId
 //   }
 
-//   const socket = new this.utils.ReconnectWebSocket(options)
+//   const socket = new ReconnectWebSocket(options)
 
 //   socket.onmessage = (e) => {
 //     this.state.isConnecting = false
@@ -275,9 +403,18 @@ const setWorkflowVariable = (variable) => {
 //   }
 // }
 
+// workspaceInitClientId body:
+
+// function uuidv4() {
+//   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+//     var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+//     return v.toString(16);
+//   });
+// }
+
 // const workspaceInitClientId = () => {
 //   const CLIENT_ID_KEY = 'workflow_clientId'
-//   this.state.clientId = sessionStorage.getItem(CLIENT_ID_KEY) || this.utils.uuidv4()
+//   this.state.clientId = sessionStorage.getItem(CLIENT_ID_KEY) || uuidv4()
 //   sessionStorage.setItem(CLIENT_ID_KEY, this.state.clientId)
 // }
 
@@ -286,9 +423,16 @@ const getWorkflowLifecycle = () => {
     setup: {
       method: {
         name: 'workspaceInitClientId',
-        body: `const workspaceInitClientId = () => {
+        body: `function uuidv4() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+
+const workspaceInitClientId = () => {
   const CLIENT_ID_KEY = 'workflow_clientId'
-  this.state.clientId = sessionStorage.getItem(CLIENT_ID_KEY) || this.utils.uuidv4()
+  this.state.clientId = sessionStorage.getItem(CLIENT_ID_KEY) || uuidv4()
   sessionStorage.setItem(CLIENT_ID_KEY, this.state.clientId)
 }
 
@@ -303,7 +447,133 @@ workspaceInitClientId()`
     onMounted: {
       method: {
         name: 'workspaceInitWebSocket',
-        body: `const workspaceInitWebSocket = () => {
+        body: `class ReconnectWebSocket {
+  options = {
+    url: '',
+    protocols: '',
+    enableReconnect: true,
+    pingTimeout: 15000,
+    pongTimeout: 10000,
+    reconnectTimeout: 2000,
+    pingMsg: 'ping',
+    closeMsg: 'close',
+    repeatLimit: undefined,
+    clientOptions: undefined
+  }
+  ws = null
+  repeat
+  lockReconnect = false
+  forbidReconnect = false
+  pingTimeoutId = 0
+  pongTimeoutId = 0
+
+  onclose = () => { }
+  onerror = () => { }
+  onopen = () => { }
+  onmessage = () => { }
+  onreconnect = () => { }
+
+  constructor(opions) {
+    Object.assign(this.options, opions);
+    this.ws = null;
+    this.repeat = 0;
+
+    //override hook function
+    this.onclose = () => { };
+    this.onerror = () => { };
+    this.onopen = () => { };
+    this.onmessage = () => { };
+    this.onreconnect = () => { };
+
+    this.createWebSocket();
+  }
+
+  createWebSocket() {
+    try {
+      if (this.options.protocols) {
+        this.ws = new WebSocket(this.options.url, this.options.protocols, this.options.clientOptions);
+      }
+      else {
+        this.ws = new WebSocket(this.options.url, this.options.clientOptions);
+      }
+      this.initEventHandle();
+    } catch (e) {
+      this.reconnect();
+      throw e;
+    }
+  }
+
+  initEventHandle() {
+    if (!this.ws) return;
+    this.ws.onclose = (e) => {
+      this.onclose(e);
+      this.reconnect();
+    };
+    this.ws.onerror = (e) => {
+      this.onerror(e);
+      this.reconnect();
+    };
+    this.ws.onopen = (e) => {
+      this.repeat = 0;
+      this.onopen(e);
+      this.heartCheck();
+    };
+    this.ws.onmessage = (event) => {
+      this.onmessage(event);
+      const closeMsg = typeof this.options.closeMsg === 'function' ? this.options.closeMsg() : this.options.closeMsg || 'close';
+      if (event.data === closeMsg) {
+        this.close();
+      }
+      this.heartCheck();
+    };
+  }
+
+  reconnect() {
+    if (!this.options.enableReconnect) return;
+    if (this.options.repeatLimit !== undefined && this.options.repeatLimit <= this.repeat) return;//limit repeat the number
+    if (this.lockReconnect || this.forbidReconnect) return;
+    this.lockReconnect = true;
+    this.repeat++;
+    this.onreconnect();
+    setTimeout(() => {
+      this.createWebSocket();
+      this.lockReconnect = false;
+    }, this.options.reconnectTimeout);
+  }
+
+  send(msg) {
+    this.ws?.send(msg);
+  }
+
+  heartCheck() {
+    this.heartReset();
+    this.heartStart();
+  }
+
+  heartStart() {
+    if (!this.options.enableReconnect) return;
+    if (this.forbidReconnect) return;
+    this.pingTimeoutId = setTimeout(() => {
+      this.ws?.send(typeof this.options.pingMsg === 'function' ? this.options.pingMsg() : this.options.pingMsg || 'ping');
+      this.pongTimeoutId = setTimeout(() => {
+        this.ws?.close();
+      }, this.options.pongTimeout);
+    }, this.options.pingTimeout);
+  }
+
+  heartReset() {
+    clearTimeout(this.pingTimeoutId);
+    clearTimeout(this.pongTimeoutId);
+  }
+
+  close() {
+    this.forbidReconnect = true;
+    this.heartReset();
+    this.ws?.close();
+  }
+}
+
+const workspaceInitWebSocket = () => {
   const WORKSPACE_KEY = 'workspace'
   const workspace = this.state[WORKSPACE_KEY]
   const key = Object.keys(workspace)[0]
@@ -315,7 +585,7 @@ workspaceInitClientId()`
     protocols: this.state.clientId
   }
 
-  const socket = new this.utils.ReconnectWebSocket(options)
+  const socket = new ReconnectWebSocket(options)
 
   socket.onmessage = (e) => {
     this.state.isConnecting = false

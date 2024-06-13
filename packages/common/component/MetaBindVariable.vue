@@ -152,11 +152,9 @@
                           :class="{ 'item-selected': workflowVariableState.selectedCategory === item }"
                           @click="setWorkflowCategory(item)"
                         >
-                          <tiny-tooltip effect="dark" placement="top" :content="item.name" :open-delay="500">
-                            <div class="item-wrap">
-                              <div class="item-text">{{ item.name }}</div>
-                            </div>
-                          </tiny-tooltip>
+                          <div class="item-wrap">
+                            <div class="item-text">{{ item.name }}</div>
+                          </div>
                         </li>
                       </template>
                     </ul>
@@ -176,17 +174,10 @@
                         :class="{ 'item-selected': workflowVariableState.selectedVariable === item }"
                         @click="setWorkflowVariable(item)"
                       >
-                        <tiny-tooltip
-                          effect="dark"
-                          placement="top"
-                          :content="`${item.name} - ${item.description}`"
-                          :open-delay="500"
-                        >
-                          <div class="item-wrap">
-                            <div class="item-text">{{ item.name }}</div>
-                            <div class="item-alias">{{ item.description }}</div>
-                          </div>
-                        </tiny-tooltip>
+                        <div class="item-wrap">
+                          <div class="item-text">{{ item.description ? item.description : item.name }}</div>
+                          <div class="item-alias">{{ !item.description ? `${item.title || ''}` : '' }}</div>
+                        </div>
                       </li>
                     </ul>
                   </div>
