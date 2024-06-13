@@ -18512,25 +18512,6 @@
         }
       },
       {
-        "component": "ATable",
-        "npm": {
-          "package": "ant-design-vue",
-          "version": "",
-          "dependencies": [
-            "https://unpkg.com/dayjs/dayjs.min.js",
-            "https://unpkg.com/dayjs/plugin/customParseFormat.js",
-            "https://unpkg.com/dayjs/plugin/weekday.js",
-            "https://unpkg.com/dayjs/plugin/localeData.js",
-            "https://unpkg.com/dayjs/plugin/weekOfYear.js",
-            "https://unpkg.com/dayjs/plugin/weekYear.js",
-            "https://unpkg.com/dayjs/plugin/advancedFormat.js",
-            "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
-          ],
-          "exportName": "Table",
-          "destructuring": true
-        }
-      },
-      {
         "component": "ATabPane",
         "npm": {
           "package": "ant-design-vue",
@@ -18546,6 +18527,25 @@
             "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
           ],
           "exportName": "TabPane",
+          "destructuring": true
+        }
+      },
+      {
+        "component": "ATable",
+        "npm": {
+          "package": "ant-design-vue",
+          "version": "",
+          "dependencies": [
+            "https://unpkg.com/dayjs/dayjs.min.js",
+            "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+            "https://unpkg.com/dayjs/plugin/weekday.js",
+            "https://unpkg.com/dayjs/plugin/localeData.js",
+            "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+            "https://unpkg.com/dayjs/plugin/weekYear.js",
+            "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+            "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+          ],
+          "exportName": "Table",
           "destructuring": true
         }
       },
@@ -18607,6 +18607,25 @@
         }
       },
       {
+        "component": "ATimePicker",
+        "npm": {
+          "package": "ant-design-vue",
+          "version": "",
+          "dependencies": [
+            "https://unpkg.com/dayjs/dayjs.min.js",
+            "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+            "https://unpkg.com/dayjs/plugin/weekday.js",
+            "https://unpkg.com/dayjs/plugin/localeData.js",
+            "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+            "https://unpkg.com/dayjs/plugin/weekYear.js",
+            "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+            "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+          ],
+          "exportName": "TimePicker",
+          "destructuring": true
+        }
+      },
+      {
         "component": "ATimeline",
         "npm": {
           "package": "ant-design-vue",
@@ -18641,25 +18660,6 @@
             "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
           ],
           "exportName": "TimelineItem",
-          "destructuring": true
-        }
-      },
-      {
-        "component": "ATimePicker",
-        "npm": {
-          "package": "ant-design-vue",
-          "version": "",
-          "dependencies": [
-            "https://unpkg.com/dayjs/dayjs.min.js",
-            "https://unpkg.com/dayjs/plugin/customParseFormat.js",
-            "https://unpkg.com/dayjs/plugin/weekday.js",
-            "https://unpkg.com/dayjs/plugin/localeData.js",
-            "https://unpkg.com/dayjs/plugin/weekOfYear.js",
-            "https://unpkg.com/dayjs/plugin/weekYear.js",
-            "https://unpkg.com/dayjs/plugin/advancedFormat.js",
-            "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
-          ],
-          "exportName": "TimePicker",
           "destructuring": true
         }
       },
