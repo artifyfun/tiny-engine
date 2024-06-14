@@ -253,7 +253,7 @@
             },
             "children": [
               {
-                "componentName": "P",
+                "componentName": "p",
                 "children": [
                   {
                     "componentName": "Text",
@@ -272,7 +272,7 @@
             },
             "children": [
               {
-                "componentName": "A",
+                "componentName": "a",
                 "children": [
                   {
                     "componentName": "Text",

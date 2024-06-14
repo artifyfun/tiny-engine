@@ -25,11 +25,10 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "Descriptions",
+    "exportName": "DescriptionsItem",
     "destructuring": true
   },
   "group": "数据展示",
-  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,
@@ -50,19 +49,10 @@
       "properties": []
     },
     "contextMenu": {
-      "actions": [
-        "copy",
-        "remove",
-        "insert",
-        "updateAttr",
-        "bindEevent",
-        "createBlock"
-      ],
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
       "disable": []
     },
-    "invalidity": [
-      ""
-    ],
+    "invalidity": [""],
     "clickCapture": true,
     "framework": "Vue"
   },

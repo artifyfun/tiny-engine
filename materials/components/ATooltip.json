@@ -480,7 +480,7 @@
           {
             "componentName": "Text",
             "props": {
-              "text": "文本内容"
+              "text": "文字提示"
             }
           }
         ]

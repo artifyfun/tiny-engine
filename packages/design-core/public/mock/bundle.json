@@ -203,19 +203,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -348,19 +339,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -654,19 +636,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -964,19 +937,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -1115,19 +1079,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -1199,19 +1154,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -1790,19 +1736,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -2074,19 +2011,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -2310,19 +2238,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -2587,19 +2506,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -2759,19 +2669,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -2900,19 +2801,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -3007,19 +2899,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -3091,19 +2974,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -3508,19 +3382,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -3770,19 +3635,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -4149,19 +4005,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -4303,21 +4150,20 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
-            "framework": "Vue"
+            "framework": "Vue",
+            "renderConfig": {
+              "wrapElement": "div",
+              "wrapProps": {
+                "style": {
+                  "display": "inline-block"
+                }
+              }
+            }
           },
           "schema": {
             "properties": [
@@ -4581,19 +4427,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -5347,19 +5184,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -5653,19 +5481,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -5994,19 +5813,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -6241,19 +6051,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -6479,19 +6280,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -6803,19 +6595,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -7333,19 +7116,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -7596,7 +7370,7 @@
               "https://unpkg.com/dayjs/plugin/advancedFormat.js",
               "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
             ],
-            "exportName": "Descriptions",
+            "exportName": "DescriptionsItem",
             "destructuring": true
           },
           "group": "数据展示",
@@ -7620,19 +7394,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -7750,19 +7515,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -7858,19 +7614,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -8079,19 +7826,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "visible",
-                "width"
-              ]
+              "properties": ["visible", "width"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           },
           "schema": {
@@ -8659,19 +8398,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -9015,19 +8745,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -9324,19 +9045,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -9471,19 +9183,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -9752,19 +9455,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -10163,19 +9857,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -10615,19 +10300,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue",
             "renderConfig": {
@@ -10895,19 +10571,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -11443,19 +11110,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -11574,19 +11232,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -12160,19 +11809,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -12324,19 +11964,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -12485,19 +12116,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -13046,19 +12668,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -13170,19 +12783,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -13501,19 +13105,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -14020,19 +13615,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -14128,19 +13714,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -14299,19 +13876,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -14416,19 +13984,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -14564,19 +14123,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "visible",
-                "width"
-              ]
+              "properties": ["visible", "width"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           },
           "schema": {
@@ -15200,19 +14751,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -15532,19 +15074,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -15792,19 +15325,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -16323,19 +15847,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -16757,19 +16272,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -16903,19 +16409,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -17169,7 +16666,7 @@
           "name": {
             "zh_CN": "二维码"
           },
-          "component": "AQRCode",
+          "component": "AQrcode",
           "icon": "qr-code",
           "description": "二维码",
           "doc_url": "",
@@ -17190,7 +16687,7 @@
               "https://unpkg.com/dayjs/plugin/advancedFormat.js",
               "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
             ],
-            "exportName": "QRCode",
+            "exportName": "Qrcode",
             "destructuring": true
           },
           "group": "数据展示",
@@ -17214,19 +16711,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -17591,19 +17079,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -17675,19 +17154,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -17853,19 +17323,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -18159,19 +17620,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -18531,19 +17983,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -18716,19 +18159,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -18955,19 +18389,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -20077,19 +19502,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -20276,19 +19692,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -20789,19 +20196,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -20981,19 +20379,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -21255,19 +20644,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -21476,19 +20856,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -21728,19 +21099,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -22075,19 +21437,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -22299,19 +21652,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -22562,167 +21906,6 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "标签页子项"
-          },
-          "component": "ATabPane",
-          "icon": "tab-pane",
-          "description": "选项卡切换组件。",
-          "doc_url": "",
-          "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*8HMoTZUoSGoAAAAAAAAAAAAADrJ8AQ/original",
-          "tags": "",
-          "keywords": "",
-          "dev_mode": "proCode",
-          "npm": {
-            "package": "ant-design-vue",
-            "version": "",
-            "dependencies": [
-              "https://unpkg.com/dayjs/dayjs.min.js",
-              "https://unpkg.com/dayjs/plugin/customParseFormat.js",
-              "https://unpkg.com/dayjs/plugin/weekday.js",
-              "https://unpkg.com/dayjs/plugin/localeData.js",
-              "https://unpkg.com/dayjs/plugin/weekOfYear.js",
-              "https://unpkg.com/dayjs/plugin/weekYear.js",
-              "https://unpkg.com/dayjs/plugin/advancedFormat.js",
-              "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
-            ],
-            "exportName": "TabPane",
-            "destructuring": true
-          },
-          "group": "数据展示",
-          "configure": {
-            "loop": true,
-            "condition": true,
-            "styles": true,
-            "isContainer": true,
-            "isModal": false,
-            "isPopper": false,
-            "nestingRule": {
-              "childWhitelist": "",
-              "parentWhitelist": "",
-              "descendantBlacklist": "",
-              "ancestorWhitelist": ""
-            },
-            "isNullNode": false,
-            "isLayout": false,
-            "rootSelector": "",
-            "shortcuts": {
-              "properties": []
-            },
-            "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
-              "disable": []
-            },
-            "invalidity": [
-              ""
-            ],
-            "clickCapture": true,
-            "framework": "Vue"
-          },
-          "schema": {
-            "properties": [
-              {
-                "name": "0",
-                "label": {
-                  "zh_CN": "基础属性"
-                },
-                "content": [
-                  {
-                    "property": "forceRender",
-                    "label": {
-                      "text": {
-                        "zh_CN": "forceRender"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "被隐藏时是否渲染 DOM 结构"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "boolean",
-                    "defaultValue": false,
-                    "widget": {
-                      "component": "MetaSwitch",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "key",
-                    "label": {
-                      "text": {
-                        "zh_CN": "key"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "对应 activeKey"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "widget": {
-                      "component": "MetaInput",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "tab",
-                    "label": {
-                      "text": {
-                        "zh_CN": "tab"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "选项卡头显示文字"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "widget": {
-                      "component": "MetaInput",
-                      "props": {}
-                    },
-                    "device": []
-                  }
-                ],
-                "description": {
-                  "zh_CN": ""
-                }
-              }
-            ],
-            "events": {},
-            "slots": {
-              "tab": {
-                "label": {
-                  "zh_CN": "tab"
-                },
-                "description": {
-                  "zh_CN": "选项卡头显示文字"
-                }
-              }
-            }
-          }
-        },
-        {
-          "id": 1,
-          "version": "4.1.2",
-          "name": {
             "zh_CN": "表格"
           },
           "component": "ATable",
@@ -22770,19 +21953,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -23629,6 +22803,158 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
+            "zh_CN": "标签页子项"
+          },
+          "component": "ATabPane",
+          "icon": "tab-pane",
+          "description": "选项卡切换组件。",
+          "doc_url": "",
+          "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*8HMoTZUoSGoAAAAAAAAAAAAADrJ8AQ/original",
+          "tags": "",
+          "keywords": "",
+          "dev_mode": "proCode",
+          "npm": {
+            "package": "ant-design-vue",
+            "version": "",
+            "dependencies": [
+              "https://unpkg.com/dayjs/dayjs.min.js",
+              "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+              "https://unpkg.com/dayjs/plugin/weekday.js",
+              "https://unpkg.com/dayjs/plugin/localeData.js",
+              "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+              "https://unpkg.com/dayjs/plugin/weekYear.js",
+              "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+              "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+            ],
+            "exportName": "TabPane",
+            "destructuring": true
+          },
+          "group": "数据展示",
+          "configure": {
+            "loop": true,
+            "condition": true,
+            "styles": true,
+            "isContainer": true,
+            "isModal": false,
+            "isPopper": false,
+            "nestingRule": {
+              "childWhitelist": "",
+              "parentWhitelist": "",
+              "descendantBlacklist": "",
+              "ancestorWhitelist": ""
+            },
+            "isNullNode": false,
+            "isLayout": false,
+            "rootSelector": "",
+            "shortcuts": {
+              "properties": []
+            },
+            "contextMenu": {
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+              "disable": []
+            },
+            "invalidity": [""],
+            "clickCapture": true,
+            "framework": "Vue"
+          },
+          "schema": {
+            "properties": [
+              {
+                "name": "0",
+                "label": {
+                  "zh_CN": "基础属性"
+                },
+                "content": [
+                  {
+                    "property": "forceRender",
+                    "label": {
+                      "text": {
+                        "zh_CN": "forceRender"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "被隐藏时是否渲染 DOM 结构"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "widget": {
+                      "component": "MetaSwitch",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "key",
+                    "label": {
+                      "text": {
+                        "zh_CN": "key"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "对应 activeKey"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "widget": {
+                      "component": "MetaInput",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "tab",
+                    "label": {
+                      "text": {
+                        "zh_CN": "tab"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "选项卡头显示文字"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "widget": {
+                      "component": "MetaInput",
+                      "props": {}
+                    },
+                    "device": []
+                  }
+                ],
+                "description": {
+                  "zh_CN": ""
+                }
+              }
+            ],
+            "events": {},
+            "slots": {
+              "tab": {
+                "label": {
+                  "zh_CN": "tab"
+                },
+                "description": {
+                  "zh_CN": "选项卡头显示文字"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": 1,
+          "version": "4.1.2",
+          "name": {
             "zh_CN": "标签页"
           },
           "component": "ATabs",
@@ -23676,19 +23002,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -24078,19 +23395,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -24248,19 +23556,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -24793,6 +24092,399 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
+            "zh_CN": "时间轴"
+          },
+          "component": "ATimeline",
+          "icon": "timeline",
+          "description": "垂直展示的时间流信息。",
+          "doc_url": "",
+          "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*yIl9S4hAIBcAAAAAAAAAAAAADrJ8AQ/original",
+          "tags": "",
+          "keywords": "",
+          "dev_mode": "proCode",
+          "npm": {
+            "package": "ant-design-vue",
+            "version": "",
+            "dependencies": [
+              "https://unpkg.com/dayjs/dayjs.min.js",
+              "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+              "https://unpkg.com/dayjs/plugin/weekday.js",
+              "https://unpkg.com/dayjs/plugin/localeData.js",
+              "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+              "https://unpkg.com/dayjs/plugin/weekYear.js",
+              "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+              "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+            ],
+            "exportName": "Timeline",
+            "destructuring": true
+          },
+          "group": "数据展示",
+          "configure": {
+            "loop": true,
+            "condition": true,
+            "styles": true,
+            "isContainer": true,
+            "isModal": false,
+            "isPopper": false,
+            "nestingRule": {
+              "childWhitelist": "",
+              "parentWhitelist": "",
+              "descendantBlacklist": "",
+              "ancestorWhitelist": ""
+            },
+            "isNullNode": false,
+            "isLayout": false,
+            "rootSelector": "",
+            "shortcuts": {
+              "properties": []
+            },
+            "contextMenu": {
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+              "disable": []
+            },
+            "invalidity": [""],
+            "clickCapture": true,
+            "framework": "Vue"
+          },
+          "schema": {
+            "properties": [
+              {
+                "name": "0",
+                "label": {
+                  "zh_CN": "基础属性"
+                },
+                "content": [
+                  {
+                    "property": "mode",
+                    "label": {
+                      "text": {
+                        "zh_CN": "mode"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "通过设置 mode 可以改变时间轴和内容的相对位置"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "defaultValue": "",
+                    "widget": {
+                      "component": "MetaSelect",
+                      "props": {
+                        "options": [
+                          {
+                            "label": "left",
+                            "value": "left"
+                          },
+                          {
+                            "label": "alternate",
+                            "value": "alternate"
+                          },
+                          {
+                            "label": "right",
+                            "value": "right"
+                          }
+                        ]
+                      }
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "pending",
+                    "label": {
+                      "text": {
+                        "zh_CN": "pending"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "指定最后一个幽灵节点是否存在或内容"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "widget": {
+                      "component": "MetaSwitch",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "pendingDot",
+                    "label": {
+                      "text": {
+                        "zh_CN": "pendingDot"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "当最后一个幽灵节点存在時，指定其时间图点"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "defaultValue": "<LoadingOutlined />",
+                    "widget": {
+                      "component": "MetaInput",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "reverse",
+                    "label": {
+                      "text": {
+                        "zh_CN": "reverse"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "节点排序"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "widget": {
+                      "component": "MetaSwitch",
+                      "props": {}
+                    },
+                    "device": []
+                  }
+                ],
+                "description": {
+                  "zh_CN": ""
+                }
+              }
+            ],
+            "events": {},
+            "slots": {
+              "pending": {
+                "label": {
+                  "zh_CN": "pending"
+                },
+                "description": {
+                  "zh_CN": "指定最后一个幽灵节点是否存在或内容"
+                }
+              },
+              "pendingDot": {
+                "label": {
+                  "zh_CN": "pendingDot"
+                },
+                "description": {
+                  "zh_CN": "当最后一个幽灵节点存在時，指定其时间图点"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": 1,
+          "version": "4.1.2",
+          "name": {
+            "zh_CN": "时间线子项"
+          },
+          "component": "ATimelineItem",
+          "icon": "timeline-item",
+          "description": "垂直展示的时间流信息。",
+          "doc_url": "",
+          "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*yIl9S4hAIBcAAAAAAAAAAAAADrJ8AQ/original",
+          "tags": "",
+          "keywords": "",
+          "dev_mode": "proCode",
+          "npm": {
+            "package": "ant-design-vue",
+            "version": "",
+            "dependencies": [
+              "https://unpkg.com/dayjs/dayjs.min.js",
+              "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+              "https://unpkg.com/dayjs/plugin/weekday.js",
+              "https://unpkg.com/dayjs/plugin/localeData.js",
+              "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+              "https://unpkg.com/dayjs/plugin/weekYear.js",
+              "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+              "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+            ],
+            "exportName": "TimelineItem",
+            "destructuring": true
+          },
+          "group": "数据展示",
+          "configure": {
+            "loop": true,
+            "condition": true,
+            "styles": true,
+            "isContainer": true,
+            "isModal": false,
+            "isPopper": false,
+            "nestingRule": {
+              "childWhitelist": "",
+              "parentWhitelist": "",
+              "descendantBlacklist": "",
+              "ancestorWhitelist": ""
+            },
+            "isNullNode": false,
+            "isLayout": false,
+            "rootSelector": "",
+            "shortcuts": {
+              "properties": []
+            },
+            "contextMenu": {
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+              "disable": []
+            },
+            "invalidity": [""],
+            "clickCapture": true,
+            "framework": "Vue"
+          },
+          "schema": {
+            "properties": [
+              {
+                "name": "0",
+                "label": {
+                  "zh_CN": "基础属性"
+                },
+                "content": [
+                  {
+                    "property": "color",
+                    "label": {
+                      "text": {
+                        "zh_CN": "color"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "指定圆圈颜色 blue, red, green，或自定义的色值"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "defaultValue": "blue",
+                    "widget": {
+                      "component": "MetaInput",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "dot",
+                    "label": {
+                      "text": {
+                        "zh_CN": "dot"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "自定义时间轴点"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "widget": {
+                      "component": "MetaInput",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "label",
+                    "label": {
+                      "text": {
+                        "zh_CN": "label"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "设置标签"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "widget": {
+                      "component": "MetaInput",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "position",
+                    "label": {
+                      "text": {
+                        "zh_CN": "position"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "自定义节点位置"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "widget": {
+                      "component": "MetaSelect",
+                      "props": {
+                        "options": [
+                          {
+                            "label": "left",
+                            "value": "left"
+                          },
+                          {
+                            "label": "right",
+                            "value": "right"
+                          }
+                        ]
+                      }
+                    },
+                    "device": []
+                  }
+                ],
+                "description": {
+                  "zh_CN": ""
+                }
+              }
+            ],
+            "events": {},
+            "slots": {
+              "dot": {
+                "label": {
+                  "zh_CN": "dot"
+                },
+                "description": {
+                  "zh_CN": "自定义时间轴点"
+                }
+              },
+              "label": {
+                "label": {
+                  "zh_CN": "label"
+                },
+                "description": {
+                  "zh_CN": "设置标签"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": 1,
+          "version": "4.1.2",
+          "name": {
             "zh_CN": "时间选择框"
           },
           "component": "ATimePicker",
@@ -24840,19 +24532,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -25423,417 +25106,6 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "时间轴"
-          },
-          "component": "ATimeline",
-          "icon": "timeline",
-          "description": "垂直展示的时间流信息。",
-          "doc_url": "",
-          "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*yIl9S4hAIBcAAAAAAAAAAAAADrJ8AQ/original",
-          "tags": "",
-          "keywords": "",
-          "dev_mode": "proCode",
-          "npm": {
-            "package": "ant-design-vue",
-            "version": "",
-            "dependencies": [
-              "https://unpkg.com/dayjs/dayjs.min.js",
-              "https://unpkg.com/dayjs/plugin/customParseFormat.js",
-              "https://unpkg.com/dayjs/plugin/weekday.js",
-              "https://unpkg.com/dayjs/plugin/localeData.js",
-              "https://unpkg.com/dayjs/plugin/weekOfYear.js",
-              "https://unpkg.com/dayjs/plugin/weekYear.js",
-              "https://unpkg.com/dayjs/plugin/advancedFormat.js",
-              "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
-            ],
-            "exportName": "Timeline",
-            "destructuring": true
-          },
-          "group": "数据展示",
-          "configure": {
-            "loop": true,
-            "condition": true,
-            "styles": true,
-            "isContainer": true,
-            "isModal": false,
-            "isPopper": false,
-            "nestingRule": {
-              "childWhitelist": "",
-              "parentWhitelist": "",
-              "descendantBlacklist": "",
-              "ancestorWhitelist": ""
-            },
-            "isNullNode": false,
-            "isLayout": false,
-            "rootSelector": "",
-            "shortcuts": {
-              "properties": []
-            },
-            "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
-              "disable": []
-            },
-            "invalidity": [
-              ""
-            ],
-            "clickCapture": true,
-            "framework": "Vue"
-          },
-          "schema": {
-            "properties": [
-              {
-                "name": "0",
-                "label": {
-                  "zh_CN": "基础属性"
-                },
-                "content": [
-                  {
-                    "property": "mode",
-                    "label": {
-                      "text": {
-                        "zh_CN": "mode"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "通过设置 mode 可以改变时间轴和内容的相对位置"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "defaultValue": "",
-                    "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "left",
-                            "value": "left"
-                          },
-                          {
-                            "label": "alternate",
-                            "value": "alternate"
-                          },
-                          {
-                            "label": "right",
-                            "value": "right"
-                          }
-                        ]
-                      }
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "pending",
-                    "label": {
-                      "text": {
-                        "zh_CN": "pending"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "指定最后一个幽灵节点是否存在或内容"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "boolean",
-                    "defaultValue": false,
-                    "widget": {
-                      "component": "MetaSwitch",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "pendingDot",
-                    "label": {
-                      "text": {
-                        "zh_CN": "pendingDot"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "当最后一个幽灵节点存在時，指定其时间图点"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "defaultValue": "<LoadingOutlined />",
-                    "widget": {
-                      "component": "MetaInput",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "reverse",
-                    "label": {
-                      "text": {
-                        "zh_CN": "reverse"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "节点排序"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "boolean",
-                    "defaultValue": false,
-                    "widget": {
-                      "component": "MetaSwitch",
-                      "props": {}
-                    },
-                    "device": []
-                  }
-                ],
-                "description": {
-                  "zh_CN": ""
-                }
-              }
-            ],
-            "events": {},
-            "slots": {
-              "pending": {
-                "label": {
-                  "zh_CN": "pending"
-                },
-                "description": {
-                  "zh_CN": "指定最后一个幽灵节点是否存在或内容"
-                }
-              },
-              "pendingDot": {
-                "label": {
-                  "zh_CN": "pendingDot"
-                },
-                "description": {
-                  "zh_CN": "当最后一个幽灵节点存在時，指定其时间图点"
-                }
-              }
-            }
-          }
-        },
-        {
-          "id": 1,
-          "version": "4.1.2",
-          "name": {
-            "zh_CN": "时间线子项"
-          },
-          "component": "ATimelineItem",
-          "icon": "timeline-item",
-          "description": "垂直展示的时间流信息。",
-          "doc_url": "",
-          "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*yIl9S4hAIBcAAAAAAAAAAAAADrJ8AQ/original",
-          "tags": "",
-          "keywords": "",
-          "dev_mode": "proCode",
-          "npm": {
-            "package": "ant-design-vue",
-            "version": "",
-            "dependencies": [
-              "https://unpkg.com/dayjs/dayjs.min.js",
-              "https://unpkg.com/dayjs/plugin/customParseFormat.js",
-              "https://unpkg.com/dayjs/plugin/weekday.js",
-              "https://unpkg.com/dayjs/plugin/localeData.js",
-              "https://unpkg.com/dayjs/plugin/weekOfYear.js",
-              "https://unpkg.com/dayjs/plugin/weekYear.js",
-              "https://unpkg.com/dayjs/plugin/advancedFormat.js",
-              "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
-            ],
-            "exportName": "TimelineItem",
-            "destructuring": true
-          },
-          "group": "数据展示",
-          "configure": {
-            "loop": true,
-            "condition": true,
-            "styles": true,
-            "isContainer": true,
-            "isModal": false,
-            "isPopper": false,
-            "nestingRule": {
-              "childWhitelist": "",
-              "parentWhitelist": "",
-              "descendantBlacklist": "",
-              "ancestorWhitelist": ""
-            },
-            "isNullNode": false,
-            "isLayout": false,
-            "rootSelector": "",
-            "shortcuts": {
-              "properties": []
-            },
-            "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
-              "disable": []
-            },
-            "invalidity": [
-              ""
-            ],
-            "clickCapture": true,
-            "framework": "Vue"
-          },
-          "schema": {
-            "properties": [
-              {
-                "name": "0",
-                "label": {
-                  "zh_CN": "基础属性"
-                },
-                "content": [
-                  {
-                    "property": "color",
-                    "label": {
-                      "text": {
-                        "zh_CN": "color"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "指定圆圈颜色 blue, red, green，或自定义的色值"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "defaultValue": "blue",
-                    "widget": {
-                      "component": "MetaInput",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "dot",
-                    "label": {
-                      "text": {
-                        "zh_CN": "dot"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "自定义时间轴点"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "widget": {
-                      "component": "MetaInput",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "label",
-                    "label": {
-                      "text": {
-                        "zh_CN": "label"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "设置标签"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "widget": {
-                      "component": "MetaInput",
-                      "props": {}
-                    },
-                    "device": []
-                  },
-                  {
-                    "property": "position",
-                    "label": {
-                      "text": {
-                        "zh_CN": "position"
-                      }
-                    },
-                    "description": {
-                      "zh_CN": "自定义节点位置"
-                    },
-                    "required": false,
-                    "readOnly": false,
-                    "disabled": false,
-                    "cols": 12,
-                    "labelPosition": "top",
-                    "type": "string",
-                    "widget": {
-                      "component": "MetaSelect",
-                      "props": {
-                        "options": [
-                          {
-                            "label": "left",
-                            "value": "left"
-                          },
-                          {
-                            "label": "right",
-                            "value": "right"
-                          }
-                        ]
-                      }
-                    },
-                    "device": []
-                  }
-                ],
-                "description": {
-                  "zh_CN": ""
-                }
-              }
-            ],
-            "events": {},
-            "slots": {
-              "dot": {
-                "label": {
-                  "zh_CN": "dot"
-                },
-                "description": {
-                  "zh_CN": "自定义时间轴点"
-                }
-              },
-              "label": {
-                "label": {
-                  "zh_CN": "label"
-                },
-                "description": {
-                  "zh_CN": "设置标签"
-                }
-              }
-            }
-          }
-        },
-        {
-          "id": 1,
-          "version": "4.1.2",
-          "name": {
             "zh_CN": "文字提示"
           },
           "component": "ATooltip",
@@ -25881,19 +25153,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -26335,19 +25598,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -26529,19 +25783,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -27024,19 +26269,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -27635,19 +26871,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -27933,19 +27160,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -27970,7 +27188,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "排版容器"
+            "zh_CN": "排版"
           },
           "component": "ATypography",
           "icon": "typography",
@@ -28017,19 +27235,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -28101,19 +27310,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -28480,19 +27680,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -28882,19 +28073,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -29238,19 +28420,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -29836,19 +29009,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -30082,7 +29246,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -30098,19 +29262,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -30396,19 +29551,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -30533,25 +29679,13 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "type",
-                "size"
-              ]
+              "properties": ["type", "size"]
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -30856,9 +29990,7 @@
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
-              "childWhitelist": [
-                "ElFormItem"
-              ],
+              "childWhitelist": ["ElFormItem"],
               "parentWhitelist": "",
               "descendantBlacklist": "",
               "ancestorWhitelist": ""
@@ -30867,25 +29999,13 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "inline",
-                "label-width"
-              ]
+              "properties": ["inline", "label-width"]
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -31335,25 +30455,13 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "inline",
-                "label-width"
-              ]
+              "properties": ["inline", "label-width"]
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -31696,25 +30804,13 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "type",
-                "size"
-              ]
+              "properties": ["type", "size"]
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -31978,9 +31074,7 @@
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
-              "childWhitelist": [
-                "ElTableColumn"
-              ],
+              "childWhitelist": ["ElTableColumn"],
               "parentWhitelist": "",
               "descendantBlacklist": "",
               "ancestorWhitelist": ""
@@ -31989,25 +31083,13 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "inline",
-                "label-width"
-              ]
+              "properties": ["inline", "label-width"]
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -33238,25 +32320,13 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "inline",
-                "label-width"
-              ]
+              "properties": ["inline", "label-width"]
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -33409,14 +32479,7 @@
           "name": {
             "zh_CN": "标题"
           },
-          "component": [
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
-          ],
+          "component": ["h1", "h2", "h3", "h4", "h5", "h6"],
           "icon": "h16",
           "description": "标题",
           "docUrl": "",
@@ -33506,19 +32569,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "disabled",
-                "size"
-              ]
+              "properties": ["disabled", "size"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -33570,19 +32625,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -33776,19 +32822,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -33962,9 +32999,7 @@
             ],
             "events": {},
             "shortcuts": {
-              "properties": [
-                "src"
-              ]
+              "properties": ["src"]
             },
             "contentMenu": {
               "actions": []
@@ -34234,19 +33269,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "disabled",
-                "size"
-              ]
+              "properties": ["disabled", "size"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -34478,19 +33505,10 @@
               "properties": []
             },
             "contextMenu": {
-              "actions": [
-                "copy",
-                "remove",
-                "insert",
-                "updateAttr",
-                "bindEevent",
-                "createBlock"
-              ],
+              "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
               "disable": []
             },
-            "invalidity": [
-              ""
-            ],
+            "invalidity": [""],
             "clickCapture": true,
             "framework": "Vue"
           },
@@ -34958,9 +33976,7 @@
             "clickCapture": false,
             "isModal": false,
             "nestingRule": {
-              "childWhitelist": [
-                "TinyBreadcrumbItem"
-              ],
+              "childWhitelist": ["TinyBreadcrumbItem"],
               "parentWhitelist": [],
               "descendantBlacklist": [],
               "ancestorWhitelist": []
@@ -34969,18 +33985,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "separator"
-              ]
+              "properties": ["separator"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -35061,9 +34070,7 @@
             "isModal": false,
             "nestingRule": {
               "childWhitelist": "",
-              "parentWhitelist": [
-                "TinyBreadcrumb"
-              ],
+              "parentWhitelist": ["TinyBreadcrumb"],
               "descendantBlacklist": "",
               "ancestorWhitelist": ""
             },
@@ -35071,18 +34078,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "to"
-              ]
+              "properties": ["to"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -35418,19 +34418,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "text",
-                "size"
-              ]
+              "properties": ["text", "size"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -35584,19 +34576,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "disabled",
-                "size"
-              ]
+              "properties": ["disabled", "size"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -35913,9 +34897,7 @@
             "clickCapture": false,
             "isModal": false,
             "nestingRule": {
-              "childWhitelist": [
-                "TinyCarouselItem"
-              ],
+              "childWhitelist": ["TinyCarouselItem"],
               "parentWhitelist": "",
               "descendantBlacklist": "",
               "ancestorWhitelist": ""
@@ -35924,19 +34906,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "disabled",
-                "size"
-              ]
+              "properties": ["disabled", "size"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -36065,19 +35039,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "disabled",
-                "size"
-              ]
+              "properties": ["disabled", "size"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -36332,19 +35298,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "border",
-                "disabled"
-              ]
+              "properties": ["border", "disabled"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -36531,19 +35489,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "text",
-                "size"
-              ]
+              "properties": ["text", "size"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -36750,19 +35700,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "disabled",
-                "type"
-              ]
+              "properties": ["disabled", "type"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -37040,19 +35982,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "label",
-                "rules"
-              ]
+              "properties": ["label", "rules"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -37180,19 +36114,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "label-width",
-                "disabled"
-              ]
+              "properties": ["label-width", "disabled"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -37303,19 +36229,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "label-width",
-                "disabled"
-              ]
+              "properties": ["label-width", "disabled"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -37727,19 +36645,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "value",
-                "disabled"
-              ]
+              "properties": ["value", "disabled"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -38015,19 +36925,11 @@
             "isLayout": false,
             "rootSelector": ".tiny-dialog-box",
             "shortcuts": {
-              "properties": [
-                "visible",
-                "width"
-              ]
+              "properties": ["visible", "width"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -38376,19 +37278,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "label-width",
-                "disabled"
-              ]
+              "properties": ["label-width", "disabled"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -38511,9 +37405,7 @@
             "isModal": false,
             "nestingRule": {
               "childWhitelist": "",
-              "parentWhitelist": [
-                "TinyForm"
-              ],
+              "parentWhitelist": ["TinyForm"],
               "descendantBlacklist": "",
               "ancestorWhitelist": ""
             },
@@ -38521,19 +37413,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "label",
-                "rules"
-              ]
+              "properties": ["label", "rules"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -38750,10 +37634,7 @@
                             "widget": {
                               "component": "MetaJsSlot",
                               "props": {
-                                "slots": [
-                                  "header",
-                                  "default"
-                                ]
+                                "slots": ["header", "default"]
                               }
                             }
                           },
@@ -39431,15 +38312,10 @@
               }
             },
             "shortcuts": {
-              "properties": [
-                "sortable",
-                "columns"
-              ]
+              "properties": ["sortable", "columns"]
             },
             "contentMenu": {
-              "actions": [
-                "create symbol"
-              ]
+              "actions": ["create symbol"]
             },
             "onBeforeMount": "console.log('table on load'); this.pager = source.pager; this.fetchData = source.fetchData; this.data = source.data ;this.columns = source.columns"
           },
@@ -39459,19 +38335,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "sortable",
-                "columns"
-              ]
+              "properties": ["sortable", "columns"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -39882,19 +38750,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "value",
-                "disabled"
-              ]
+              "properties": ["value", "disabled"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -40335,19 +39195,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "value",
-                "disabled"
-              ]
+              "properties": ["value", "disabled"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -40580,19 +39432,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "currentPage",
-                "total"
-              ]
+              "properties": ["currentPage", "total"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -40954,19 +39798,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "modelValue",
-                "disabled"
-              ]
+              "properties": ["modelValue", "disabled"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -41448,19 +40284,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "visible",
-                "width"
-              ]
+              "properties": ["visible", "width"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -41695,19 +40523,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "visible",
-                "width"
-              ]
+              "properties": ["visible", "width"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -41853,19 +40673,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "label-width",
-                "disabled"
-              ]
+              "properties": ["label-width", "disabled"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -42140,19 +40952,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "clearable",
-                "mini"
-              ]
+              "properties": ["clearable", "mini"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -42556,19 +41360,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "multiple",
-                "options"
-              ]
+              "properties": ["multiple", "options"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -42766,19 +41562,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "disabled",
-                "mini"
-              ]
+              "properties": ["disabled", "mini"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -42879,9 +41667,7 @@
             "isModal": false,
             "nestingRule": {
               "childWhitelist": "",
-              "parentWhitelist": [
-                "TinyTab"
-              ],
+              "parentWhitelist": ["TinyTab"],
               "descendantBlacklist": "",
               "ancestorWhitelist": ""
             },
@@ -42889,19 +41675,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "name",
-                "title"
-              ]
+              "properties": ["name", "title"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -43173,9 +41951,7 @@
             "clickCapture": false,
             "isModal": false,
             "nestingRule": {
-              "childWhitelist": [
-                "TinyTabItem"
-              ],
+              "childWhitelist": ["TinyTabItem"],
               "parentWhitelist": [],
               "descendantBlacklist": [],
               "ancestorWhitelist": []
@@ -43184,19 +41960,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "size",
-                "tab-style"
-              ]
+              "properties": ["size", "tab-style"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -43401,19 +42169,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "active",
-                "data"
-              ]
+              "properties": ["active", "data"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -43631,19 +42391,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "disabled",
-                "content"
-              ]
+              "properties": ["disabled", "content"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -43977,19 +42729,11 @@
             "isLayout": false,
             "rootSelector": "",
             "shortcuts": {
-              "properties": [
-                "data",
-                "show-checkbox"
-              ]
+              "properties": ["data", "show-checkbox"]
             },
             "contextMenu": {
-              "actions": [
-                "create symbol"
-              ],
-              "disable": [
-                "copy",
-                "remove"
-              ]
+              "actions": ["create symbol"],
+              "disable": ["copy", "remove"]
             }
           }
         },
@@ -44715,16 +43459,16 @@
                     "componentName": "AImage",
                     "props": {
                       "placeholder": true,
-                      "width": "100%",
-                      "height": "140px"
+                      "width": "300px",
+                      "height": "300px"
                     }
                   },
                   {
                     "componentName": "AImage",
                     "props": {
                       "placeholder": true,
-                      "width": "100%",
-                      "height": "140px"
+                      "width": "300px",
+                      "height": "300px"
                     }
                   }
                 ]
@@ -44869,7 +43613,7 @@
                     },
                     "children": [
                       {
-                        "componentName": "P",
+                        "componentName": "p",
                         "children": [
                           {
                             "componentName": "Text",
@@ -44888,7 +43632,7 @@
                     },
                     "children": [
                       {
-                        "componentName": "A",
+                        "componentName": "a",
                         "children": [
                           {
                             "componentName": "Text",
@@ -44971,28 +43715,6 @@
                         }
                       }
                     ]
-                  }
-                ]
-              }
-            },
-            {
-              "name": {
-                "zh_CN": "描述列表子项"
-              },
-              "icon": "descriptions",
-              "screenshot": "",
-              "snippetName": "ADescriptionsItem",
-              "schema": {
-                "componentName": "ADescriptionsItem",
-                "props": {
-                  "label": "UserName"
-                },
-                "children": [
-                  {
-                    "componentName": "Text",
-                    "props": {
-                      "text": "Artifyfun"
-                    }
                   }
                 ]
               }
@@ -45158,9 +43880,23 @@
                 "children": [
                   {
                     "componentName": "AFormItem",
+                    "props": {
+                      "label": "Username"
+                    },
                     "children": [
                       {
                         "componentName": "AInput"
+                      }
+                    ]
+                  },
+                  {
+                    "componentName": "AFormItem",
+                    "props": {
+                      "label": "Password"
+                    },
+                    "children": [
+                      {
+                        "componentName": "AInputPassword"
                       }
                     ]
                   }
@@ -45199,7 +43935,23 @@
               "icon": "input-group",
               "screenshot": "",
               "snippetName": "AInputGroup",
-              "schema": {}
+              "schema": {
+                "componentName": "AInputGroup",
+                "children": [
+                  {
+                    "componentName": "AInput"
+                  },
+                  {
+                    "componentName": "AInputPassword"
+                  },
+                  {
+                    "componentName": "AInputSearch"
+                  },
+                  {
+                    "componentName": "ATextarea"
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -45306,50 +44058,18 @@
             },
             {
               "name": {
-                "zh_CN": "全局提示"
-              },
-              "icon": "message",
-              "screenshot": "",
-              "snippetName": "AMessage",
-              "schema": {}
-            },
-            {
-              "name": {
-                "zh_CN": "对话框"
-              },
-              "icon": "modal",
-              "screenshot": "",
-              "snippetName": "AModal",
-              "schema": {
-                "componentName": "AModal",
-                "props": {
-                  "open": true,
-                  "title": "Modal title"
-                },
-                "children": [
-                  {
-                    "componentName": "div"
-                  }
-                ]
-              }
-            },
-            {
-              "name": {
-                "zh_CN": "通知提醒框"
-              },
-              "icon": "notification",
-              "screenshot": "",
-              "snippetName": "ANotification",
-              "schema": {}
-            },
-            {
-              "name": {
                 "zh_CN": "页头"
               },
               "icon": "page-header",
               "screenshot": "",
               "snippetName": "APageHeader",
-              "schema": {}
+              "schema": {
+                "componentName": "APageHeader",
+                "props": {
+                  "title": "Page title",
+                  "subTitle": "Page subTitle"
+                }
+              }
             },
             {
               "name": {
@@ -45367,7 +44087,25 @@
               "icon": "popconfirm",
               "screenshot": "",
               "snippetName": "APopconfirm",
-              "schema": {}
+              "schema": {
+                "componentName": "APopconfirm",
+                "props": {
+                  "title": "Are you sure delete this task?"
+                },
+                "children": [
+                  {
+                    "componentName": "a",
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "Delete"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -45376,7 +44114,30 @@
               "icon": "popover",
               "screenshot": "",
               "snippetName": "APopover",
-              "schema": {}
+              "schema": {
+                "componentName": "APopover",
+                "children": [
+                  {
+                    "componentName": "Template",
+                    "props": {
+                      "slot": "content"
+                    },
+                    "children": [
+                      {
+                        "componentName": "p",
+                        "children": [
+                          {
+                            "componentName": "Text",
+                            "props": {
+                              "text": "We supply a series of design principles, practical patterns and high quality design\n        resources (Sketch and Axure), to help people create their product prototypes beautifully and\n        efficiently."
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -45393,8 +44154,15 @@
               },
               "icon": "qr-code",
               "screenshot": "",
-              "snippetName": "AQRCode",
-              "schema": {}
+              "snippetName": "AQrcode",
+              "schema": {
+                "componentName": "AQRCode",
+                "props": {
+                  "value": "http://www.antdv.com",
+                  "color": "#1677ff",
+                  "bgColor": "rgb(245, 245, 245)"
+                }
+              }
             },
             {
               "name": {
@@ -45417,21 +44185,44 @@
             },
             {
               "name": {
-                "zh_CN": "单选按钮"
-              },
-              "icon": "radio-button",
-              "screenshot": "",
-              "snippetName": "ARadioButton",
-              "schema": {}
-            },
-            {
-              "name": {
                 "zh_CN": "单选组"
               },
               "icon": "radio-group",
               "screenshot": "",
               "snippetName": "ARadioGroup",
-              "schema": {}
+              "schema": {
+                "componentName": "ARadioGroup",
+                "children": [
+                  {
+                    "componentName": "ARadioButton",
+                    "props": {
+                      "value": "a"
+                    },
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "Beijing"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "componentName": "ARadioButton",
+                    "props": {
+                      "value": "b"
+                    },
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "Shanghai"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -45458,7 +44249,13 @@
               "icon": "segmented",
               "screenshot": "",
               "snippetName": "ASegmented",
-              "schema": {}
+              "schema": {
+                "componentName": "ASegmented",
+                "props": {
+                  "value": "Daily",
+                  "options": ["Daily", "Weekly", "Monthly", "Quarterly", "Yearly"]
+                }
+              }
             },
             {
               "name": {
@@ -45469,30 +44266,28 @@
               "snippetName": "ASelect",
               "schema": {
                 "componentName": "ASelect",
-                "children": [
-                  {
-                    "componentName": "ASelectOption",
-                    "children": [
-                      {
-                        "componentName": "Text",
-                        "props": {
-                          "text": "选项一"
-                        }
-                      }
-                    ]
-                  },
-                  {
-                    "componentName": "ASelectOption",
-                    "children": [
-                      {
-                        "componentName": "Text",
-                        "props": {
-                          "text": "选项二"
-                        }
-                      }
-                    ]
-                  }
-                ]
+                "props": {
+                  "style": "width: 180px",
+                  "options": [
+                    {
+                      "value": "jack",
+                      "label": "Jack"
+                    },
+                    {
+                      "value": "lucy",
+                      "label": "Lucy"
+                    },
+                    {
+                      "value": "disabled",
+                      "label": "Disabled",
+                      "disabled": true
+                    },
+                    {
+                      "value": "yiminghe",
+                      "label": "Yiminghe"
+                    }
+                  ]
+                }
               }
             },
             {
@@ -45584,7 +44379,71 @@
               "icon": "table",
               "screenshot": "",
               "snippetName": "ATable",
-              "schema": {}
+              "schema": {
+                "componentName": "ATable",
+                "props": {
+                  "columns": [
+                    {
+                      "title": "Name",
+                      "dataIndex": "name",
+                      "key": "name"
+                    },
+                    {
+                      "title": "Age",
+                      "dataIndex": "age",
+                      "key": "age",
+                      "width": 80
+                    },
+                    {
+                      "title": "Address",
+                      "dataIndex": "address",
+                      "key": "address 1",
+                      "ellipsis": true
+                    },
+                    {
+                      "title": "Long Column Long Column Long Column",
+                      "dataIndex": "address",
+                      "key": "address 2",
+                      "ellipsis": true
+                    },
+                    {
+                      "title": "Long Column Long Column",
+                      "dataIndex": "address",
+                      "key": "address 3",
+                      "ellipsis": true
+                    },
+                    {
+                      "title": "Long Column",
+                      "dataIndex": "address",
+                      "key": "address 4",
+                      "ellipsis": true
+                    }
+                  ],
+                  "dataSource": [
+                    {
+                      "key": "1",
+                      "name": "John Brown",
+                      "age": 32,
+                      "address": "New York No. 1 Lake Park, New York No. 1 Lake Park",
+                      "tags": ["nice", "developer"]
+                    },
+                    {
+                      "key": "2",
+                      "name": "Jim Green",
+                      "age": 42,
+                      "address": "London No. 2 Lake Park, London No. 2 Lake Park",
+                      "tags": ["loser"]
+                    },
+                    {
+                      "key": "3",
+                      "name": "Joe Black",
+                      "age": 32,
+                      "address": "Sidney No. 1 Lake Park, Sidney No. 1 Lake Park",
+                      "tags": ["cool", "teacher"]
+                    }
+                  ]
+                }
+              }
             },
             {
               "name": {
@@ -45595,6 +44454,9 @@
               "snippetName": "ATabs",
               "schema": {
                 "componentName": "ATabs",
+                "props": {
+                  "activeKey": "1"
+                },
                 "children": [
                   {
                     "componentName": "ATabPane",
@@ -45659,15 +44521,6 @@
             },
             {
               "name": {
-                "zh_CN": "时间选择框"
-              },
-              "icon": "time-picker",
-              "screenshot": "",
-              "snippetName": "ATimePicker",
-              "schema": {}
-            },
-            {
-              "name": {
                 "zh_CN": "时间轴"
               },
               "icon": "timeline",
@@ -45703,6 +44556,15 @@
             },
             {
               "name": {
+                "zh_CN": "时间选择框"
+              },
+              "icon": "time-picker",
+              "screenshot": "",
+              "snippetName": "ATimePicker",
+              "schema": {}
+            },
+            {
+              "name": {
                 "zh_CN": "文字提示"
               },
               "icon": "tooltip",
@@ -45728,20 +44590,11 @@
                   {
                     "componentName": "Text",
                     "props": {
-                      "text": "文本内容"
+                      "text": "文字提示"
                     }
                   }
                 ]
               }
-            },
-            {
-              "name": {
-                "zh_CN": "漫游式引导"
-              },
-              "icon": "tour",
-              "screenshot": "",
-              "snippetName": "ATour",
-              "schema": {}
             },
             {
               "name": {
@@ -45750,7 +44603,136 @@
               "icon": "transfer",
               "screenshot": "",
               "snippetName": "ATransfer",
-              "schema": {}
+              "schema": {
+                "componentName": "ATransfer",
+                "props": {
+                  "dataSource": [
+                    {
+                      "key": "0",
+                      "title": "content1",
+                      "description": "description of content1",
+                      "disabled": true
+                    },
+                    {
+                      "key": "1",
+                      "title": "content2",
+                      "description": "description of content2",
+                      "disabled": false
+                    },
+                    {
+                      "key": "2",
+                      "title": "content3",
+                      "description": "description of content3",
+                      "disabled": false
+                    },
+                    {
+                      "key": "3",
+                      "title": "content4",
+                      "description": "description of content4",
+                      "disabled": true
+                    },
+                    {
+                      "key": "4",
+                      "title": "content5",
+                      "description": "description of content5",
+                      "disabled": false
+                    },
+                    {
+                      "key": "5",
+                      "title": "content6",
+                      "description": "description of content6",
+                      "disabled": false
+                    },
+                    {
+                      "key": "6",
+                      "title": "content7",
+                      "description": "description of content7",
+                      "disabled": true
+                    },
+                    {
+                      "key": "7",
+                      "title": "content8",
+                      "description": "description of content8",
+                      "disabled": false
+                    },
+                    {
+                      "key": "8",
+                      "title": "content9",
+                      "description": "description of content9",
+                      "disabled": false
+                    },
+                    {
+                      "key": "9",
+                      "title": "content10",
+                      "description": "description of content10",
+                      "disabled": true
+                    },
+                    {
+                      "key": "10",
+                      "title": "content11",
+                      "description": "description of content11",
+                      "disabled": false
+                    },
+                    {
+                      "key": "11",
+                      "title": "content12",
+                      "description": "description of content12",
+                      "disabled": false
+                    },
+                    {
+                      "key": "12",
+                      "title": "content13",
+                      "description": "description of content13",
+                      "disabled": true
+                    },
+                    {
+                      "key": "13",
+                      "title": "content14",
+                      "description": "description of content14",
+                      "disabled": false
+                    },
+                    {
+                      "key": "14",
+                      "title": "content15",
+                      "description": "description of content15",
+                      "disabled": false
+                    },
+                    {
+                      "key": "15",
+                      "title": "content16",
+                      "description": "description of content16",
+                      "disabled": true
+                    },
+                    {
+                      "key": "16",
+                      "title": "content17",
+                      "description": "description of content17",
+                      "disabled": false
+                    },
+                    {
+                      "key": "17",
+                      "title": "content18",
+                      "description": "description of content18",
+                      "disabled": false
+                    },
+                    {
+                      "key": "18",
+                      "title": "content19",
+                      "description": "description of content19",
+                      "disabled": true
+                    },
+                    {
+                      "key": "19",
+                      "title": "content20",
+                      "description": "description of content20",
+                      "disabled": false
+                    }
+                  ],
+                  "targetKeys": ["3", "4", "5"],
+                  "selectedKeys": ["1", "2", "6"],
+                  "titles": ["Source", "Target"]
+                }
+              }
             },
             {
               "name": {
@@ -45771,6 +44753,7 @@
               "schema": {
                 "componentName": "ATreeSelect",
                 "props": {
+                  "style": "width: 180px",
                   "tree-data": [
                     {
                       "label": "root 1",
@@ -45812,39 +44795,103 @@
             },
             {
               "name": {
-                "zh_CN": "排版容器"
+                "zh_CN": "排版"
               },
               "icon": "typography",
               "screenshot": "",
               "snippetName": "ATypography",
-              "schema": {}
-            },
-            {
-              "name": {
-                "zh_CN": "排版段落"
-              },
-              "icon": "typography-paragraph",
-              "screenshot": "",
-              "snippetName": "ATypographyParagraph",
-              "schema": {}
-            },
-            {
-              "name": {
-                "zh_CN": "排版文字"
-              },
-              "icon": "typography-text",
-              "screenshot": "",
-              "snippetName": "ATypographyText",
-              "schema": {}
-            },
-            {
-              "name": {
-                "zh_CN": "排版标题"
-              },
-              "icon": "typography-title",
-              "screenshot": "",
-              "snippetName": "ATypographyTitle",
-              "schema": {}
+              "schema": {
+                "componentName": "ATypography",
+                "children": [
+                  {
+                    "componentName": "ATypographyTitle",
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "Introduction"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "componentName": "ATypographyParagraph",
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "In the process of internal desktop applications development, many different design specs and\n                implementations would be involved, which might cause designers and developers difficulties and\n                duplication and reduce the efficiency of development."
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "componentName": "ATypographyTitle",
+                    "props": {
+                      "level": 2
+                    },
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "Guidelines and Resources"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "componentName": "ATypographyParagraph",
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "We supply a series of design principles, practical patterns and high quality design resources\n                ("
+                        }
+                      },
+                      {
+                        "componentName": "ATypographyText",
+                        "props": {
+                          "code": true
+                        },
+                        "children": [
+                          {
+                            "componentName": "Text",
+                            "props": {
+                              "text": "Sketch"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "and"
+                        }
+                      },
+                      {
+                        "componentName": "ATypographyText",
+                        "props": {
+                          "code": true
+                        },
+                        "children": [
+                          {
+                            "componentName": "Text",
+                            "props": {
+                              "text": "Axure"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "), to help people create their product prototypes beautifully and efficiently."
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -45872,21 +44919,25 @@
             },
             {
               "name": {
-                "zh_CN": "文件上传"
-              },
-              "icon": "upload-file",
-              "screenshot": "",
-              "snippetName": "AUploadFile",
-              "schema": {}
-            },
-            {
-              "name": {
                 "zh_CN": "水印"
               },
               "icon": "watermark",
               "screenshot": "",
               "snippetName": "AWatermark",
-              "schema": {}
+              "schema": {
+                "componentName": "AWatermark",
+                "props": {
+                  "content": "Artifyfun"
+                },
+                "children": [
+                  {
+                    "componentName": "div",
+                    "props": {
+                      "style": "height: 400px"
+                    }
+                  }
+                ]
+              }
             }
           ]
         },
@@ -46172,10 +45223,7 @@
               "schema": {
                 "componentName": "TinyCheckboxGroup",
                 "props": {
-                  "modelValue": [
-                    "name1",
-                    "name2"
-                  ],
+                  "modelValue": ["name1", "name2"],
                   "type": "checkbox",
                   "options": [
                     {
