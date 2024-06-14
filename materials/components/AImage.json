@@ -64,7 +64,15 @@
       ""
     ],
     "clickCapture": true,
-    "framework": "Vue"
+    "framework": "Vue",
+    "renderConfig": {
+      "wrapElement": "div",
+      "wrapProps": {
+        "style": {
+          "display": "inline-block"
+        }
+      }
+    }
   },
   "schema": {
     "properties": [

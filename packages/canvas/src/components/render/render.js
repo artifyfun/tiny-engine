@@ -717,7 +717,15 @@ export const renderer = {
       if (conditions[schema.id] === false || !parseCondition(condition, mergeScope)) {
         return null
       }
-
+      const material = getController().getMaterial(componentName)
+      if (material.configure.renderConfig) {
+        const { wrapElement, wrapProps } = material.configure.renderConfig
+        return h(
+          wrapElement,
+          { ...getBindProps(schema, mergeScope), ...wrapProps},
+          h(component, getBindProps(schema, mergeScope), getChildren(schema, mergeScope))
+        )
+      }
       return h(component, getBindProps(schema, mergeScope), getChildren(schema, mergeScope))
     }
 

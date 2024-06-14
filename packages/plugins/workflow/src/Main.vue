@@ -372,7 +372,9 @@ export default {
                 {
                   id: utils.guid(),
                   componentName: 'CanvasCol',
-                  props: {},
+                  props: {
+                    widthType: "fixed"
+                  },
                   children
                 }
               ]
@@ -575,13 +577,15 @@ export default {
                   getWrapperNode([
                     {
                       id: utils.guid(),
-                      componentName: 'Img',
+                      componentName: 'AImage',
                       props: {
+                        width: '300px',
+                        height: '300px',
+                        placeholder: true,
                         src: {
                           type: 'JSExpression',
                           value: `this.state.workspace['${workflow.key}']['outputs']['${node.id}']`
                         },
-                        style: 'width: 300px;height:300px;'
                       }
                     }
                   ])
