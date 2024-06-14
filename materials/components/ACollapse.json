@@ -349,9 +349,16 @@
       "snippetName": "ACollapse",
       "schema": {
         "componentName": "ACollapse",
+        "props": {
+          "activeKey": "1"
+        },
         "children": [
           {
             "componentName": "ACollapsePanel",
+            "props": {
+              "header": "panel header 1",
+              "key": "1"
+            },
             "children": [
               {
                 "componentName": "div",
@@ -359,7 +366,7 @@
                   {
                     "componentName": "Text",
                     "props": {
-                      "text": "1"
+                      "text": "panel content 1"
                     }
                   }
                 ]
@@ -368,6 +375,10 @@
           },
           {
             "componentName": "ACollapsePanel",
+            "props": {
+              "header": "panel header 2",
+              "key": "2"
+            },
             "children": [
               {
                 "componentName": "div",
@@ -375,7 +386,7 @@
                   {
                     "componentName": "Text",
                     "props": {
-                      "text": "2"
+                      "text": "panel content 2"
                     }
                   }
                 ]

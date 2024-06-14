@@ -917,7 +917,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "锚点"
+            "zh_CN": "锚点链接"
           },
           "component": "AAnchorLink",
           "icon": "anchor-link",
@@ -1099,7 +1099,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -2027,7 +2027,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "头像"
+            "zh_CN": "头像组"
           },
           "component": "AAvatarGroup",
           "icon": "avatar-group",
@@ -2540,7 +2540,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "徽标数"
+            "zh_CN": "徽标缎带"
           },
           "component": "ABadgeRibbon",
           "icon": "badge-ribbon",
@@ -2853,7 +2853,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "面包屑"
+            "zh_CN": "面包屑子项"
           },
           "component": "ABreadcrumbItem",
           "icon": "breadcrumb-item",
@@ -2960,7 +2960,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "面包屑"
+            "zh_CN": "面包屑分隔"
           },
           "component": "ABreadcrumbSeparator",
           "icon": "breadcrumb-separator",
@@ -4102,7 +4102,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "卡片"
+            "zh_CN": "卡片内容"
           },
           "component": "ACardMeta",
           "icon": "card-meta",
@@ -5947,7 +5947,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "折叠面板"
+            "zh_CN": "折叠面板子项"
           },
           "component": "ACollapsePanel",
           "icon": "collapse-panel",
@@ -6463,7 +6463,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -7317,7 +7317,7 @@
             "loop": true,
             "condition": true,
             "styles": true,
-            "isContainer": false,
+            "isContainer": true,
             "isModal": false,
             "isPopper": false,
             "nestingRule": {
@@ -7573,7 +7573,137 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "树形控件"
+            "zh_CN": "描述列表子项"
+          },
+          "component": "ADescriptionsItem",
+          "icon": "descriptions",
+          "description": "成组展示多个只读字段。",
+          "doc_url": "",
+          "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*d27AQJrowGAAAAAAAAAAAAAADrJ8AQ/original",
+          "tags": "",
+          "keywords": "",
+          "dev_mode": "proCode",
+          "npm": {
+            "package": "ant-design-vue",
+            "version": "",
+            "dependencies": [
+              "https://unpkg.com/dayjs/dayjs.min.js",
+              "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+              "https://unpkg.com/dayjs/plugin/weekday.js",
+              "https://unpkg.com/dayjs/plugin/localeData.js",
+              "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+              "https://unpkg.com/dayjs/plugin/weekYear.js",
+              "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+              "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+            ],
+            "exportName": "Descriptions",
+            "destructuring": true
+          },
+          "group": "数据展示",
+          "configure": {
+            "loop": true,
+            "condition": true,
+            "styles": true,
+            "isContainer": false,
+            "isModal": false,
+            "isPopper": false,
+            "nestingRule": {
+              "childWhitelist": "",
+              "parentWhitelist": "",
+              "descendantBlacklist": "",
+              "ancestorWhitelist": ""
+            },
+            "isNullNode": false,
+            "isLayout": false,
+            "rootSelector": "",
+            "shortcuts": {
+              "properties": []
+            },
+            "contextMenu": {
+              "actions": [
+                "copy",
+                "remove",
+                "insert",
+                "updateAttr",
+                "bindEevent",
+                "createBlock"
+              ],
+              "disable": []
+            },
+            "invalidity": [
+              ""
+            ],
+            "clickCapture": true,
+            "framework": "Vue"
+          },
+          "schema": {
+            "properties": [
+              {
+                "name": "0",
+                "label": {
+                  "zh_CN": "基础属性"
+                },
+                "content": [
+                  {
+                    "property": "span",
+                    "label": {
+                      "text": {
+                        "zh_CN": "span"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "包含列的数量"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "number",
+                    "defaultValue": 1,
+                    "widget": {
+                      "component": "MetaNumber",
+                      "props": {}
+                    },
+                    "device": []
+                  },
+                  {
+                    "property": "label",
+                    "label": {
+                      "text": {
+                        "zh_CN": "label"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "内容的描述"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "string",
+                    "widget": {
+                      "component": "MetaInput",
+                      "props": {}
+                    },
+                    "device": []
+                  }
+                ],
+                "description": {
+                  "zh_CN": ""
+                }
+              }
+            ],
+            "events": {},
+            "slots": {}
+          }
+        },
+        {
+          "id": 1,
+          "version": "4.1.2",
+          "name": {
+            "zh_CN": "目录树"
           },
           "component": "ADirectoryTree",
           "icon": "directory-tree",
@@ -8838,7 +8968,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "下拉菜单"
+            "zh_CN": "下拉按钮"
           },
           "component": "ADropdownButton",
           "icon": "dropdown-button",
@@ -9986,7 +10116,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "表单"
+            "zh_CN": "表单子项"
           },
           "component": "AFormItem",
           "icon": "form-item",
@@ -11266,7 +11396,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "输入框"
+            "zh_CN": "输入框组"
           },
           "component": "AInputGroup",
           "icon": "input-group",
@@ -11983,7 +12113,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "输入框"
+            "zh_CN": "密码输入框"
           },
           "component": "AInputPassword",
           "icon": "input-password",
@@ -12147,7 +12277,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "输入框"
+            "zh_CN": "搜索框"
           },
           "component": "AInputSearch",
           "icon": "input-search",
@@ -12869,7 +12999,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "列表"
+            "zh_CN": "列表子项"
           },
           "component": "AListItem",
           "icon": "list-item",
@@ -13843,7 +13973,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "导航菜单"
+            "zh_CN": "菜单分隔"
           },
           "component": "AMenuDivider",
           "icon": "menu-divider",
@@ -13951,7 +14081,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "导航菜单"
+            "zh_CN": "菜单子项"
           },
           "component": "AMenuItem",
           "icon": "menu-item",
@@ -14122,7 +14252,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "导航菜单"
+            "zh_CN": "菜单子项组"
           },
           "component": "AMenuItemGroup",
           "icon": "menu-item-group",
@@ -17498,7 +17628,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "单选框"
+            "zh_CN": "单选按钮"
           },
           "component": "ARadioButton",
           "icon": "radio-button",
@@ -17676,7 +17806,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "单选框"
+            "zh_CN": "单选组"
           },
           "component": "ARadioGroup",
           "icon": "radio-group",
@@ -21078,7 +21208,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "统计数值"
+            "zh_CN": "数字倒计时"
           },
           "component": "AStatisticCountdown",
           "icon": "statistic-countdown",
@@ -21299,7 +21429,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "步骤条"
+            "zh_CN": "步骤条子项"
           },
           "component": "AStep",
           "icon": "step",
@@ -21898,7 +22028,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "导航菜单"
+            "zh_CN": "子菜单"
           },
           "component": "ASubMenu",
           "icon": "sub-menu",
@@ -22432,7 +22562,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "标签页"
+            "zh_CN": "标签页子项"
           },
           "component": "ATabPane",
           "icon": "tab-pane",
@@ -24071,7 +24201,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "输入框"
+            "zh_CN": "多行输入框"
           },
           "component": "ATextarea",
           "icon": "input",
@@ -25502,7 +25632,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "时间轴"
+            "zh_CN": "时间线子项"
           },
           "component": "ATimelineItem",
           "icon": "timeline-item",
@@ -27840,7 +27970,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "排版"
+            "zh_CN": "排版容器"
           },
           "component": "ATypography",
           "icon": "typography",
@@ -27924,7 +28054,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "排版"
+            "zh_CN": "排版段落"
           },
           "component": "ATypographyParagraph",
           "icon": "typography-paragraph",
@@ -28303,7 +28433,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "排版"
+            "zh_CN": "排版文字"
           },
           "component": "ATypographyText",
           "icon": "typography-text",
@@ -28705,7 +28835,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "排版"
+            "zh_CN": "排版标题"
           },
           "component": "ATypographyTitle",
           "icon": "typography-title",
@@ -29659,7 +29789,7 @@
           "id": 1,
           "version": "4.1.2",
           "name": {
-            "zh_CN": "上传"
+            "zh_CN": "文件上传"
           },
           "component": "AUploadFile",
           "icon": "upload-file",
@@ -44248,7 +44378,22 @@
               "icon": "affix",
               "screenshot": "",
               "snippetName": "AAffix",
-              "schema": {}
+              "schema": {
+                "componentName": "AAffix",
+                "children": [
+                  {
+                    "componentName": "AButton",
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "固钉"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -44257,7 +44402,13 @@
               "icon": "alert",
               "screenshot": "",
               "snippetName": "AAlert",
-              "schema": {}
+              "schema": {
+                "componentName": "AAlert",
+                "props": {
+                  "message": "告警提示信息",
+                  "showIcon": true
+                }
+              }
             },
             {
               "name": {
@@ -44266,25 +44417,41 @@
               "icon": "anchor",
               "screenshot": "",
               "snippetName": "AAnchor",
-              "schema": {}
-            },
-            {
-              "name": {
-                "zh_CN": "锚点"
-              },
-              "icon": "anchor-link",
-              "screenshot": "",
-              "snippetName": "AAnchorLink",
-              "schema": {}
-            },
-            {
-              "name": {
-                "zh_CN": "包裹组件"
-              },
-              "icon": "app",
-              "screenshot": "",
-              "snippetName": "AApp",
-              "schema": {}
+              "schema": {
+                "componentName": "AAnchor",
+                "props": {
+                  "affix": false,
+                  "items": [
+                    {
+                      "key": "1",
+                      "href": "#components-anchor-demo-basic",
+                      "title": "Basic demo"
+                    },
+                    {
+                      "key": "2",
+                      "href": "#components-anchor-demo-static",
+                      "title": "Static demo"
+                    },
+                    {
+                      "key": "3",
+                      "href": "#api",
+                      "title": "API",
+                      "children": [
+                        {
+                          "key": "4",
+                          "href": "#anchor-props",
+                          "title": "Anchor Props"
+                        },
+                        {
+                          "key": "5",
+                          "href": "#link-props",
+                          "title": "Link Props"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
             },
             {
               "name": {
@@ -44293,7 +44460,23 @@
               "icon": "auto-complete",
               "screenshot": "",
               "snippetName": "AAutoComplete",
-              "schema": {}
+              "schema": {
+                "componentName": "AAutoComplete",
+                "props": {
+                  "style": "width: 200px",
+                  "options": [
+                    {
+                      "value": "Burns Bay Road"
+                    },
+                    {
+                      "value": "Downing Street"
+                    },
+                    {
+                      "value": "Wall Street"
+                    }
+                  ]
+                }
+              }
             },
             {
               "name": {
@@ -44316,12 +44499,49 @@
             },
             {
               "name": {
-                "zh_CN": "头像"
+                "zh_CN": "头像组"
               },
               "icon": "avatar-group",
               "screenshot": "",
               "snippetName": "AAvatarGroup",
-              "schema": {}
+              "schema": {
+                "componentName": "AAvatarGroup",
+                "children": [
+                  {
+                    "componentName": "AAvatar",
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "A"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "componentName": "AAvatar",
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "B"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "componentName": "AAvatar",
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "C"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -44352,12 +44572,30 @@
             },
             {
               "name": {
-                "zh_CN": "徽标数"
+                "zh_CN": "徽标缎带"
               },
               "icon": "badge-ribbon",
               "screenshot": "",
               "snippetName": "ABadgeRibbon",
-              "schema": {}
+              "schema": {
+                "componentName": "ABadgeRibbon",
+                "props": {
+                  "text": "Hippies"
+                },
+                "children": [
+                  {
+                    "componentName": "AButton",
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "徽标缎带"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -44371,36 +44609,28 @@
                 "children": [
                   {
                     "componentName": "ABreadcrumbItem",
-                    "props": {
-                      "text": "一级"
-                    }
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "一级"
+                        }
+                      }
+                    ]
                   },
                   {
                     "componentName": "ABreadcrumbItem",
-                    "props": {
-                      "text": "二级"
-                    }
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "二级"
+                        }
+                      }
+                    ]
                   }
                 ]
               }
-            },
-            {
-              "name": {
-                "zh_CN": "面包屑"
-              },
-              "icon": "breadcrumb-item",
-              "screenshot": "",
-              "snippetName": "ABreadcrumbItem",
-              "schema": {}
-            },
-            {
-              "name": {
-                "zh_CN": "面包屑"
-              },
-              "icon": "breadcrumb-separator",
-              "screenshot": "",
-              "snippetName": "ABreadcrumbSeparator",
-              "schema": {}
             },
             {
               "name": {
@@ -44439,6 +44669,9 @@
               "snippetName": "ACard",
               "schema": {
                 "componentName": "ACard",
+                "props": {
+                  "title": "Card Title"
+                },
                 "children": [
                   {
                     "componentName": "Template",
@@ -44470,15 +44703,6 @@
             },
             {
               "name": {
-                "zh_CN": "卡片"
-              },
-              "icon": "card-meta",
-              "screenshot": "",
-              "snippetName": "ACardMeta",
-              "schema": {}
-            },
-            {
-              "name": {
                 "zh_CN": "走马灯"
               },
               "icon": "carousel",
@@ -44488,26 +44712,20 @@
                 "componentName": "ACarousel",
                 "children": [
                   {
-                    "componentName": "div",
-                    "children": [
-                      {
-                        "componentName": "Text",
-                        "props": {
-                          "text": "1"
-                        }
-                      }
-                    ]
+                    "componentName": "AImage",
+                    "props": {
+                      "placeholder": true,
+                      "width": "100%",
+                      "height": "140px"
+                    }
                   },
                   {
-                    "componentName": "div",
-                    "children": [
-                      {
-                        "componentName": "Text",
-                        "props": {
-                          "text": "2"
-                        }
-                      }
-                    ]
+                    "componentName": "AImage",
+                    "props": {
+                      "placeholder": true,
+                      "width": "100%",
+                      "height": "140px"
+                    }
                   }
                 ]
               }
@@ -44587,9 +44805,16 @@
               "snippetName": "ACollapse",
               "schema": {
                 "componentName": "ACollapse",
+                "props": {
+                  "activeKey": "1"
+                },
                 "children": [
                   {
                     "componentName": "ACollapsePanel",
+                    "props": {
+                      "header": "panel header 1",
+                      "key": "1"
+                    },
                     "children": [
                       {
                         "componentName": "div",
@@ -44597,7 +44822,7 @@
                           {
                             "componentName": "Text",
                             "props": {
-                              "text": "1"
+                              "text": "panel content 1"
                             }
                           }
                         ]
@@ -44606,6 +44831,10 @@
                   },
                   {
                     "componentName": "ACollapsePanel",
+                    "props": {
+                      "header": "panel header 2",
+                      "key": "2"
+                    },
                     "children": [
                       {
                         "componentName": "div",
@@ -44613,7 +44842,7 @@
                           {
                             "componentName": "Text",
                             "props": {
-                              "text": "2"
+                              "text": "panel content 2"
                             }
                           }
                         ]
@@ -44625,30 +44854,73 @@
             },
             {
               "name": {
-                "zh_CN": "折叠面板"
-              },
-              "icon": "collapse-panel",
-              "screenshot": "",
-              "snippetName": "ACollapsePanel",
-              "schema": {}
-            },
-            {
-              "name": {
                 "zh_CN": "评论"
               },
               "icon": "comment",
               "screenshot": "",
               "snippetName": "AComment",
-              "schema": {}
-            },
-            {
-              "name": {
-                "zh_CN": "全局化配置"
-              },
-              "icon": "config-provider",
-              "screenshot": "",
-              "snippetName": "AConfigProvider",
-              "schema": {}
+              "schema": {
+                "componentName": "AComment",
+                "children": [
+                  {
+                    "componentName": "Template",
+                    "props": {
+                      "slot": "content"
+                    },
+                    "children": [
+                      {
+                        "componentName": "P",
+                        "children": [
+                          {
+                            "componentName": "Text",
+                            "props": {
+                              "text": "We supply a series of design principles, practical patterns and high quality design\n        resources (Sketch and Axure), to help people create their product prototypes beautifully and\n        efficiently."
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "componentName": "Template",
+                    "props": {
+                      "slot": "author"
+                    },
+                    "children": [
+                      {
+                        "componentName": "A",
+                        "children": [
+                          {
+                            "componentName": "Text",
+                            "props": {
+                              "text": "Artifyfun"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "componentName": "Template",
+                    "props": {
+                      "slot": "avatar"
+                    },
+                    "children": [
+                      {
+                        "componentName": "AAvatar",
+                        "children": [
+                          {
+                            "componentName": "Text",
+                            "props": {
+                              "text": "A"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -44705,12 +44977,25 @@
             },
             {
               "name": {
-                "zh_CN": "树形控件"
+                "zh_CN": "描述列表子项"
               },
-              "icon": "directory-tree",
+              "icon": "descriptions",
               "screenshot": "",
-              "snippetName": "ADirectoryTree",
-              "schema": {}
+              "snippetName": "ADescriptionsItem",
+              "schema": {
+                "componentName": "ADescriptionsItem",
+                "props": {
+                  "label": "UserName"
+                },
+                "children": [
+                  {
+                    "componentName": "Text",
+                    "props": {
+                      "text": "Artifyfun"
+                    }
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -44791,7 +45076,7 @@
             },
             {
               "name": {
-                "zh_CN": "下拉菜单"
+                "zh_CN": "下拉按钮"
               },
               "icon": "dropdown-button",
               "screenshot": "",
@@ -44884,15 +45169,6 @@
             },
             {
               "name": {
-                "zh_CN": "表单"
-              },
-              "icon": "form-item",
-              "screenshot": "",
-              "snippetName": "AFormItem",
-              "schema": {}
-            },
-            {
-              "name": {
                 "zh_CN": "图片"
               },
               "icon": "image",
@@ -44918,7 +45194,7 @@
             },
             {
               "name": {
-                "zh_CN": "输入框"
+                "zh_CN": "输入框组"
               },
               "icon": "input-group",
               "screenshot": "",
@@ -44936,7 +45212,7 @@
             },
             {
               "name": {
-                "zh_CN": "输入框"
+                "zh_CN": "密码输入框"
               },
               "icon": "input-password",
               "screenshot": "",
@@ -44945,7 +45221,7 @@
             },
             {
               "name": {
-                "zh_CN": "输入框"
+                "zh_CN": "搜索框"
               },
               "icon": "input-search",
               "screenshot": "",
@@ -44996,15 +45272,6 @@
             },
             {
               "name": {
-                "zh_CN": "列表"
-              },
-              "icon": "list-item",
-              "screenshot": "",
-              "snippetName": "AListItem",
-              "schema": {}
-            },
-            {
-              "name": {
                 "zh_CN": "提及"
               },
               "icon": "mentions",
@@ -45036,33 +45303,6 @@
                   ]
                 }
               }
-            },
-            {
-              "name": {
-                "zh_CN": "导航菜单"
-              },
-              "icon": "menu-divider",
-              "screenshot": "",
-              "snippetName": "AMenuDivider",
-              "schema": {}
-            },
-            {
-              "name": {
-                "zh_CN": "导航菜单"
-              },
-              "icon": "menu-item",
-              "screenshot": "",
-              "snippetName": "AMenuItem",
-              "schema": {}
-            },
-            {
-              "name": {
-                "zh_CN": "导航菜单"
-              },
-              "icon": "menu-item-group",
-              "screenshot": "",
-              "snippetName": "AMenuItemGroup",
-              "schema": {}
             },
             {
               "name": {
@@ -45177,7 +45417,7 @@
             },
             {
               "name": {
-                "zh_CN": "单选框"
+                "zh_CN": "单选按钮"
               },
               "icon": "radio-button",
               "screenshot": "",
@@ -45186,7 +45426,7 @@
             },
             {
               "name": {
-                "zh_CN": "单选框"
+                "zh_CN": "单选组"
               },
               "icon": "radio-group",
               "screenshot": "",
@@ -45293,20 +45533,11 @@
             },
             {
               "name": {
-                "zh_CN": "统计数值"
+                "zh_CN": "数字倒计时"
               },
               "icon": "statistic-countdown",
               "screenshot": "",
               "snippetName": "AStatisticCountdown",
-              "schema": {}
-            },
-            {
-              "name": {
-                "zh_CN": "步骤条"
-              },
-              "icon": "step",
-              "screenshot": "",
-              "snippetName": "AStep",
               "schema": {}
             },
             {
@@ -45339,29 +45570,11 @@
             },
             {
               "name": {
-                "zh_CN": "导航菜单"
-              },
-              "icon": "sub-menu",
-              "screenshot": "",
-              "snippetName": "ASubMenu",
-              "schema": {}
-            },
-            {
-              "name": {
                 "zh_CN": "开关"
               },
               "icon": "switch",
               "screenshot": "",
               "snippetName": "ASwitch",
-              "schema": {}
-            },
-            {
-              "name": {
-                "zh_CN": "标签页"
-              },
-              "icon": "tab-pane",
-              "screenshot": "",
-              "snippetName": "ATabPane",
               "schema": {}
             },
             {
@@ -45437,7 +45650,7 @@
             },
             {
               "name": {
-                "zh_CN": "输入框"
+                "zh_CN": "多行输入框"
               },
               "icon": "textarea",
               "screenshot": "",
@@ -45487,15 +45700,6 @@
                   }
                 ]
               }
-            },
-            {
-              "name": {
-                "zh_CN": "时间轴"
-              },
-              "icon": "timeline-item",
-              "screenshot": "",
-              "snippetName": "ATimelineItem",
-              "schema": {}
             },
             {
               "name": {
@@ -45559,15 +45763,6 @@
             },
             {
               "name": {
-                "zh_CN": "树形控件"
-              },
-              "icon": "tree-node",
-              "screenshot": "",
-              "snippetName": "ATreeNode",
-              "schema": {}
-            },
-            {
-              "name": {
                 "zh_CN": "树选择"
               },
               "icon": "tree-select",
@@ -45617,7 +45812,7 @@
             },
             {
               "name": {
-                "zh_CN": "排版"
+                "zh_CN": "排版容器"
               },
               "icon": "typography",
               "screenshot": "",
@@ -45626,7 +45821,7 @@
             },
             {
               "name": {
-                "zh_CN": "排版"
+                "zh_CN": "排版段落"
               },
               "icon": "typography-paragraph",
               "screenshot": "",
@@ -45635,7 +45830,7 @@
             },
             {
               "name": {
-                "zh_CN": "排版"
+                "zh_CN": "排版文字"
               },
               "icon": "typography-text",
               "screenshot": "",
@@ -45644,7 +45839,7 @@
             },
             {
               "name": {
-                "zh_CN": "排版"
+                "zh_CN": "排版标题"
               },
               "icon": "typography-title",
               "screenshot": "",
@@ -45677,7 +45872,7 @@
             },
             {
               "name": {
-                "zh_CN": "上传"
+                "zh_CN": "文件上传"
               },
               "icon": "upload-file",
               "screenshot": "",

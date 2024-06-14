@@ -312,7 +312,13 @@
       "icon": "alert",
       "screenshot": "",
       "snippetName": "AAlert",
-      "schema": {}
+      "schema": {
+        "componentName": "AAlert",
+        "props": {
+          "message": "告警提示信息",
+          "showIcon": true
+        }
+      }
     }
   ]
 }

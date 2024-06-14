@@ -17619,6 +17619,25 @@
         }
       },
       {
+        "component": "ADescriptionsItem",
+        "npm": {
+          "package": "ant-design-vue",
+          "version": "",
+          "dependencies": [
+            "https://unpkg.com/dayjs/dayjs.min.js",
+            "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+            "https://unpkg.com/dayjs/plugin/weekday.js",
+            "https://unpkg.com/dayjs/plugin/localeData.js",
+            "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+            "https://unpkg.com/dayjs/plugin/weekYear.js",
+            "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+            "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+          ],
+          "exportName": "Descriptions",
+          "destructuring": true
+        }
+      },
+      {
         "component": "ADirectoryTree",
         "npm": {
           "package": "ant-design-vue",
