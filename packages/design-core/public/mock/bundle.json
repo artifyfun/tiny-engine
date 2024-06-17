@@ -4317,15 +4317,7 @@
               ""
             ],
             "clickCapture": true,
-            "framework": "Vue",
-            "renderConfig": {
-              "wrapElement": "div",
-              "wrapProps": {
-                "style": {
-                  "display": "inline-block"
-                }
-              }
-            }
+            "framework": "Vue"
           },
           "schema": {
             "properties": [
@@ -8088,7 +8080,7 @@
             "rootSelector": "",
             "shortcuts": {
               "properties": [
-                "visible",
+                "open",
                 "width"
               ]
             },
@@ -12518,6 +12510,30 @@
                 },
                 "content": [
                   {
+                    "property": "dataSource",
+                    "label": {
+                      "text": {
+                        "zh_CN": "dataSource"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "数据源"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "object",
+                    "widget": {
+                      "component": "MetaCodeEditor",
+                      "props": {
+                        "language": "json"
+                      }
+                    },
+                    "device": []
+                  },
+                  {
                     "property": "bordered",
                     "label": {
                       "text": {
@@ -14573,7 +14589,7 @@
             "rootSelector": "",
             "shortcuts": {
               "properties": [
-                "visible",
+                "open",
                 "width"
               ]
             },
@@ -22803,6 +22819,30 @@
                 },
                 "content": [
                   {
+                    "property": "dataSource",
+                    "label": {
+                      "text": {
+                        "zh_CN": "dataSource"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "数据源"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "object",
+                    "widget": {
+                      "component": "MetaCodeEditor",
+                      "props": {
+                        "language": "json"
+                      }
+                    },
+                    "device": []
+                  },
+                  {
                     "property": "bordered",
                     "label": {
                       "text": {
@@ -26562,6 +26602,30 @@
                 },
                 "content": [
                   {
+                    "property": "dataSource",
+                    "label": {
+                      "text": {
+                        "zh_CN": "dataSource"
+                      }
+                    },
+                    "description": {
+                      "zh_CN": "数据源"
+                    },
+                    "required": false,
+                    "readOnly": false,
+                    "disabled": false,
+                    "cols": 12,
+                    "labelPosition": "top",
+                    "type": "object",
+                    "widget": {
+                      "component": "MetaCodeEditor",
+                      "props": {
+                        "language": "json"
+                      }
+                    },
+                    "device": []
+                  },
+                  {
                     "property": "disabled",
                     "label": {
                       "text": {
@@ -26693,7 +26757,7 @@
                     "cols": 12,
                     "labelPosition": "top",
                     "type": "function",
-                    "defaultValue": "",
+                    "defaultValue": "item => item.title",
                     "widget": {
                       "component": "MetaCodeEditor",
                       "props": {}
@@ -44999,7 +45063,18 @@
               "icon": "drawer",
               "screenshot": "",
               "snippetName": "ADrawer",
-              "schema": {}
+              "schema": {
+                "componentName": "ADrawer",
+                "props": {
+                  "open": true,
+                  "title": "Drawer title"
+                },
+                "children": [
+                  {
+                    "componentName": "div"
+                  }
+                ]
+              }
             },
             {
               "name": {
@@ -45420,7 +45495,7 @@
               "screenshot": "",
               "snippetName": "AQrcode",
               "schema": {
-                "componentName": "AQRCode",
+                "componentName": "AQrcode",
                 "props": {
                   "value": "http://www.antdv.com",
                   "color": "#1677ff",
@@ -46030,7 +46105,64 @@
               "icon": "tree",
               "screenshot": "",
               "snippetName": "ATree",
-              "schema": {}
+              "schema": {
+                "componentName": "ATree",
+                "props": {
+                  "expandedKeys": [
+                    "0-0-0"
+                  ],
+                  "treeData": [
+                    {
+                      "title": "parent 1",
+                      "key": "0-0",
+                      "children": [
+                        {
+                          "title": "parent 1-0",
+                          "key": "0-0-0",
+                          "children": [
+                            {
+                              "title": "leaf",
+                              "key": "0-0-0-0"
+                            },
+                            {
+                              "title": "leaf",
+                              "key": "0-0-0-1"
+                            },
+                            {
+                              "title": "leaf",
+                              "key": "0-0-0-2"
+                            }
+                          ]
+                        },
+                        {
+                          "title": "parent 1-1",
+                          "key": "0-0-1",
+                          "children": [
+                            {
+                              "title": "leaf",
+                              "key": "0-0-1-0"
+                            }
+                          ]
+                        },
+                        {
+                          "title": "parent 1-2",
+                          "key": "0-0-2",
+                          "children": [
+                            {
+                              "title": "leaf",
+                              "key": "0-0-2-0"
+                            },
+                            {
+                              "title": "leaf",
+                              "key": "0-0-2-1"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
             },
             {
               "name": {

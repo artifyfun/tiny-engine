@@ -46,7 +46,7 @@
     "rootSelector": "",
     "shortcuts": {
       "properties": [
-        "visible",
+        "open",
         "width"
       ]
     },

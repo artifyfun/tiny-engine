@@ -47,7 +47,7 @@
     "rootSelector": "",
     "shortcuts": {
       "properties": [
-        "visible",
+        "open",
         "width"
       ]
     },
@@ -582,7 +582,18 @@
       "icon": "drawer",
       "screenshot": "",
       "snippetName": "ADrawer",
-      "schema": {}
+      "schema": {
+        "componentName": "ADrawer",
+        "props": {
+          "open": true,
+          "title": "Drawer title"
+        },
+        "children": [
+          {
+            "componentName": "div"
+          }
+        ]
+      }
     }
   ]
 }
