@@ -4,7 +4,13 @@
       <template #prefix> <icon-search /> </template>
     </tiny-search>
     <tiny-collapse v-model="state.activeName" class="lowcode-scrollbar">
-      <tiny-collapse-item v-for="(item, index) in state.components" :key="item.group" :title="item.group" :name="index">
+      <tiny-collapse-item
+        v-for="(item, index) in state.components"
+        :key="item.group"
+        :title="item.group"
+        :name="index"
+        :title-right="item.children.length"
+      >
         <ul class="component-group" :style="{ gridTemplateColumns }">
           <template v-for="child in item.children" :key="child.component">
             <canvas-drag-item
