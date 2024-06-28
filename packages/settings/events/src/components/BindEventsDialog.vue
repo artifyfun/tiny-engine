@@ -10,14 +10,14 @@
   >
     <div class="bind-event-dialog-content">
       <tiny-tabs v-model="bindType" class="bind-type-tabs" tab-style="button-card">
-        <tiny-tab-item class="tab-item-content" title="常用" name="normal">
+        <tiny-tab-item class="tab-item-content" title="常用" name="builtin">
           <div class="dialog-content-left">
             <div class="left-title">响应方法</div>
             <div class="left-list-wrap">
               <div class="left-action-list">
-                <tiny-search v-model="state.searchValue" placeholder="搜索"></tiny-search>
+                <tiny-search v-model="state.searchBuiltinValue" placeholder="搜索"></tiny-search>
                 <ul class="action-list-wrap">
-                  <li v-for="item in state.filterMethodList" :key="item.name" @click="selectMethod(item)">
+                  <li v-for="item in state.filterBuiltinMethodList" :key="item.name" @click="selectMethod(item)">
                     <div :class="['action-name', { active: item.name === state.bindMethodInfo.name }]">
                       {{ item.title || item.name }}
                       <icon-yes v-if="item.name === state.bindMethodInfo.name" class="action-selected-icon"></icon-yes>
@@ -32,10 +32,7 @@
               <div class="content-right-title">方法名称</div>
               <tiny-input
                 v-model="state.bindMethodInfo.name"
-                :disabled="state.bindMethodInfo.type !== NEW_METHOD_TYPE"
-                :class="[{ 'status-error': state.tipError }]"
-                placeholder="请从左侧选择一个方法进行绑定，或者选择添加新方法，输入自定义方法名称。"
-                @update:modelValue="change"
+                :disabled="true"
               ></tiny-input>
               <div class="new-action-tip">{{ state.tip }}</div>
             </div>
@@ -136,6 +133,74 @@
             </div>
           </div>
         </tiny-tab-item>
+        <tiny-tab-item class="tab-item-content" title="自定义" name="custom">
+          <div class="dialog-content-left">
+            <div class="left-title">响应方法</div>
+            <div class="left-list-wrap">
+              <div class="left-action-list">
+                <tiny-search v-model="state.searchValue" placeholder="搜索"></tiny-search>
+                <ul class="action-list-wrap">
+                  <li v-for="item in state.filterMethodList" :key="item.name" @click="selectMethod(item)">
+                    <div :class="['action-name', { active: item.name === state.bindMethodInfo.name }]">
+                      {{ item.title || item.name }}
+                      <icon-yes v-if="item.name === state.bindMethodInfo.name" class="action-selected-icon"></icon-yes>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="content-right">
+            <div :class="['content-right-top', { 'tip-error': state.tipError }]">
+              <div class="content-right-title">方法名称</div>
+              <tiny-input
+                v-model="state.bindMethodInfo.name"
+                :disabled="state.bindMethodInfo.type !== NEW_METHOD_TYPE"
+                :class="[{ 'status-error': state.tipError }]"
+                placeholder="请从左侧选择一个方法进行绑定，或者选择添加新方法，输入自定义方法名称。"
+                @update:modelValue="change"
+              ></tiny-input>
+              <div class="new-action-tip">{{ state.tip }}</div>
+            </div>
+            <div :class="['content-right-bottom', { 'tip-error': !state.isValidParams }]">
+              <div class="content-right-title">
+                <span class="set-params-tip">扩展参数设置</span>
+                <tiny-popover placement="top-start" width="350" trigger="hover">
+                  <template #reference>
+                    <icon-help-query></icon-help-query>
+                  </template>
+                  <p>
+                    扩展参数：调用当前事件传入的真实参数，数组格式，追加在原有事件参数之后<br />
+                    如:
+                    {{ state.bindMethodInfo.name }}(eventArgs, extParam1, extParam2, ...)
+                  </p>
+                </tiny-popover>
+
+                <tiny-switch v-model="state.enableExtraParams" class="set-switch" :show-text="true">
+                  <template #open>
+                    <span>开启</span>
+                  </template>
+                  <template #close>
+                    <span>关闭</span>
+                  </template>
+                </tiny-switch>
+              </div>
+              <div class="content-right-monaco">
+                <monaco-editor
+                  v-if="dialogVisible"
+                  ref="editor"
+                  :value="state.editorContent"
+                  :options="editorOptions"
+                  class="monaco-editor"
+                />
+                <div v-if="!state.enableExtraParams" class="mark"></div>
+              </div>
+              <div v-if="!state.isValidParams && state.enableExtraParams" class="params-tip">
+                请输入数组格式的参数，参数可以为表达式。例如：["extParam1", "item.status", 1, "getNames()"]
+              </div>
+            </div>
+          </div>
+        </tiny-tab-item>
       </tiny-tabs>
     </div>
     <template #footer>
@@ -185,15 +250,27 @@ export const close = () => {
 }
 
 const NEW_METHOD_TYPE = 'newMethod'
+
+const BUILTIN_METHOD_TYPE = 'builtinMethod'
+
+const BUILTIN_METHOD_KEY = '_'
 const invalidVarNameCharRE = /[^0-9a-zA-Z_$]/
 const validVarNameRE = /^[a-zA-Z_$][0-9a-zA-Z_$]*$/
 
 const METHOD_TIPS_MAP = {
   default: '选择已有方法或者添加新方法(点击 确定 之后将在JS面板中创建一个该名称的新方法)',
   exist: '方法名称已存在',
-  ruleInvalid: '请输入有效的方法名，可以由字母、数字、下划线、$ 符号组成，不能以数字开头',
+  ruleInvalid: `请输入有效的方法名，可以由字母、数字、_、$ 符号组成，但不能以数字、${BUILTIN_METHOD_KEY}、$ 符号开头`,
   empty: '方法名称不能为空'
 }
+
+const builtinMethods = [
+  {
+    title: '页面跳转',
+    name: `${BUILTIN_METHOD_KEY}navigateTo`,
+    type: BUILTIN_METHOD_TYPE
+  }
+]
 
 export default {
   components: {
@@ -219,7 +296,7 @@ export default {
     }
   },
   setup(props) {
-    const bindType = ref('normal')
+    const bindType = ref('builtin')
     const { PLUGIN_NAME, getPluginApi, activePlugin } = useLayout()
     const { pageState } = useCanvas()
     const { getMethodNameList, getMethods, saveMethod, highlightMethod } = getPluginApi(PLUGIN_NAME.PageController)
@@ -232,9 +309,11 @@ export default {
 
     const state = reactive({
       searchValue: '',
+      searchBuiltinValue: '',
       editorContent: '',
       bindMethodInfo: {},
       filterMethodList: [],
+      filterBuiltinMethodList: [],
       tip: METHOD_TIPS_MAP.default,
       tipError: false,
       enableExtraParams: false,
@@ -282,14 +361,6 @@ export default {
         type: NEW_METHOD_TYPE
       }
 
-      if (props.eventBinding?.ref) {
-        state.bindMethodInfo = {
-          name: props.eventBinding.ref
-        }
-      } else {
-        state.bindMethodInfo = newMethod
-      }
-
       if (props.eventBinding?.ref?.startsWith(WORKSPACE_KEY)) {
         const workflowKey = props.eventBinding.params[0]
         const workflow = workflowState.workflows.find((item) => item.key === workflowKey.replaceAll(`'`, ''))
@@ -302,17 +373,31 @@ export default {
           setWorkflowMethod(method)
         }
         bindType.value = 'workflow'
+      }
+
+      if (props.eventBinding?.ref?.startsWith(BUILTIN_METHOD_KEY)) {
+        bindType.value = 'builtin'
+      }
+
+      if (props.eventBinding?.ref) {
         state.bindMethodInfo = {
           name: props.eventBinding.ref
         }
+      } else {
+        state.bindMethodInfo = builtinMethods[0]
       }
 
       const methodList =
         getMethodNameList?.()
           .filter((item) => item.indexOf(state.searchValue) > -1)
           .map((name) => ({ name })) || []
+      
+      const builtinMethodList = 
+        builtinMethods
+          .filter((item) => item.name.indexOf(state.searchBuiltinValue) > -1)
 
-      state.filterMethodList = [newMethod, ...methodList].filter((item) => !item.name.startsWith(WORKSPACE_KEY))
+      state.filterMethodList = [newMethod, ...methodList].filter((item) => ![WORKSPACE_KEY, BUILTIN_METHOD_KEY].some(key => item.name.startsWith(key)))
+      state.filterBuiltinMethodList = builtinMethodList
     })
 
     const selectMethod = (data) => {
@@ -368,7 +453,7 @@ export default {
 
     const validMethodNameExist = (name) => getMethodNameList?.().includes(name)
 
-    const invalidMethodName = (name) => !validVarNameRE.test(name)
+    const invalidMethodName = (name) => !(validVarNameRE.test(name) && ![BUILTIN_METHOD_KEY, '$'].some(key => name.startsWith(key)))
 
     const change = (value) => {
       const validRules = [
@@ -535,7 +620,9 @@ export default {
           : `function ${state.bindMethodInfo.name}(${formatParams})  ${functionBody}`
       })
 
-      activePagePlugin()
+      if (bindType.value !== 'builtin') {
+        activePagePlugin()
+      }
       close()
     }
 
