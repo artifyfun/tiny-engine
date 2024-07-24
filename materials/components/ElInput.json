@@ -18,9 +18,11 @@
     "script": "https://npm.onmicrosoft.cn/element-plus@2.4.2/dist/index.full.mjs",
     "css": "https://npm.onmicrosoft.cn/element-plus@2.4.2/dist/index.css",
     "dependencies": null,
-    "exportName": "ElInput"
+    "exportName": "ElInput",
+    "destructuring": true
   },
   "group": "表单组件",
+  "category": "element-plus",
   "configure": {
     "loop": true,
     "condition": true,
@@ -298,6 +300,5 @@
       "snippetName": "ElInput",
       "schema": {}
     }
-  ],
-  "category": "element-plus"
+  ]
 }

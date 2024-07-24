@@ -18,9 +18,11 @@
     "script": "https://npm.onmicrosoft.cn/element-plus@2.4.2/dist/index.full.mjs",
     "css": "https://npm.onmicrosoft.cn/element-plus@2.4.2/dist/index.css",
     "dependencies": null,
+    "destructuring": true,
     "exportName": "ElTable"
   },
   "group": "数据展示",
+  "category": "element-plus",
   "configure": {
     "loop": true,
     "condition": true,
@@ -1300,6 +1302,5 @@
         }
       }
     }
-  ],
-  "category": "element-plus"
+  ]
 }

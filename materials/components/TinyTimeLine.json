@@ -225,7 +225,7 @@
       "schema": {
         "componentName": "TinyTimeLine",
         "props": {
-          "active": "2",
+          "active": 2,
           "data": [
             {
               "name": "已下单"

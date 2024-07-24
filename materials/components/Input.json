@@ -12,6 +12,7 @@
   "devMode": "proCode",
   "npm": {},
   "group": "component",
+  "category": "html",
   "priority": 40,
   "schema": {
     "properties": [
@@ -292,6 +293,5 @@
         }
       }
     }
-  ],
-  "category": "html"
+  ]
 }

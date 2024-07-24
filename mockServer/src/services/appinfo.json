@@ -18957,7 +18957,8 @@
           "script": "https://npm.onmicrosoft.cn/element-plus@2.4.2/dist/index.full.mjs",
           "css": "https://npm.onmicrosoft.cn/element-plus@2.4.2/dist/index.css",
           "dependencies": null,
-          "exportName": "ElButton"
+          "exportName": "ElButton",
+          "destructuring": true
         }
       },
       {
@@ -18968,6 +18969,7 @@
           "script": "https://npm.onmicrosoft.cn/element-plus@2.4.2/dist/index.full.mjs",
           "css": "https://npm.onmicrosoft.cn/element-plus@2.4.2/dist/index.css",
           "dependencies": null,
+          "destructuring": true,
           "exportName": "ElForm"
         }
       },
@@ -18979,6 +18981,7 @@
           "script": "https://npm.onmicrosoft.cn/element-plus@2.4.2/dist/index.full.mjs",
           "css": "https://npm.onmicrosoft.cn/element-plus@2.4.2/dist/index.css",
           "dependencies": null,
+          "destructuring": true,
           "exportName": "ElFormItem"
         }
       },
@@ -18990,7 +18993,8 @@
           "script": "https://npm.onmicrosoft.cn/element-plus@2.4.2/dist/index.full.mjs",
           "css": "https://npm.onmicrosoft.cn/element-plus@2.4.2/dist/index.css",
           "dependencies": null,
-          "exportName": "ElInput"
+          "exportName": "ElInput",
+          "destructuring": true
         }
       },
       {
@@ -19001,6 +19005,7 @@
           "script": "https://npm.onmicrosoft.cn/element-plus@2.4.2/dist/index.full.mjs",
           "css": "https://npm.onmicrosoft.cn/element-plus@2.4.2/dist/index.css",
           "dependencies": null,
+          "destructuring": true,
           "exportName": "ElTable"
         }
       },
@@ -19012,6 +19017,7 @@
           "script": "https://npm.onmicrosoft.cn/element-plus@2.4.2/dist/index.full.mjs",
           "css": "https://npm.onmicrosoft.cn/element-plus@2.4.2/dist/index.css",
           "dependencies": null,
+          "destructuring": true,
           "exportName": "ElTableColumn"
         }
       },
@@ -19106,7 +19112,7 @@
         "component": "TinyBreadcrumb",
         "npm": {
           "package": "@opentiny/vue",
-          "exportName": "Select",
+          "exportName": "Breadcrumb",
           "version": "",
           "destructuring": true
         }

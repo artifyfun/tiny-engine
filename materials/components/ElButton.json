@@ -18,9 +18,11 @@
     "script": "https://npm.onmicrosoft.cn/element-plus@2.4.2/dist/index.full.mjs",
     "css": "https://npm.onmicrosoft.cn/element-plus@2.4.2/dist/index.css",
     "dependencies": null,
-    "exportName": "ElButton"
+    "exportName": "ElButton",
+    "destructuring": true
   },
   "group": "基础组件",
+  "category": "element-plus",
   "configure": {
     "loop": true,
     "condition": true,
@@ -348,6 +350,5 @@
         ]
       }
     }
-  ],
-  "category": "element-plus"
+  ]
 }
