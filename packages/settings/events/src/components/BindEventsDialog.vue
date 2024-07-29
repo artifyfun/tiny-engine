@@ -1,6 +1,6 @@
 <template>
   <tiny-dialog-box
-    v-show="dialogVisible"
+    :visible="dialogVisible"
     title="事件绑定"
     width="1000"
     :style="{ zIndex: 1 }"
