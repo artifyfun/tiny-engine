@@ -3,13 +3,12 @@
     :visible="dialogVisible"
     title="事件绑定"
     width="1000"
-    :style="{ zIndex: 1 }"
     :append-to-body="true"
     @close="closeDialog"
     @opened="openedDialog"
   >
     <div class="bind-event-dialog-content">
-      <tiny-tabs v-model="bindType" class="bind-type-tabs" tab-style="button-card">
+      <tiny-tabs v-model="bindType" class="bind-type-tabs" tab-style="button-card" @click="handleTabClick">
         <tiny-tab-item class="tab-item-content" title="常用" name="builtin">
           <div class="dialog-content-left">
             <div class="left-title">响应方法</div>
@@ -400,6 +399,23 @@ export default {
       state.filterBuiltinMethodList = builtinMethodList
     })
 
+    const handleTabClick = (tab) => {
+      if (tab.name === 'builtin') {
+        state.bindMethodInfo = builtinMethods[0]
+      }
+      if (tab.name === 'custom') {
+        const eventName = props.eventBinding?.eventName
+        const nameList = getMethodNameList?.().filter((action) => action.indexOf(eventName) > -1) || []
+        const newMethodName = generateMethodName(nameList, eventName)
+        const newMethod = {
+          title: '添加新方法',
+          name: newMethodName,
+          type: NEW_METHOD_TYPE
+        }
+        state.bindMethodInfo = newMethod
+      }
+    }
+
     const selectMethod = (data) => {
       state.bindMethodInfo = data
     }
@@ -654,6 +670,7 @@ export default {
       workflowMethodState,
       setWorkflow,
       selectWorkflowMethod,
+      handleTabClick,
       selectMethod
     }
   }
