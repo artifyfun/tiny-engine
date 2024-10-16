@@ -785,7 +785,7 @@ const genWorkflowMethodToLifeCycle = () => {
   const pageSchema = getSchema()
   const workflowLifecycles = getWorkflowLifecycle()
   Object.keys(workflowLifecycles).forEach((key) => {
-    const { method, initialLifeCycleValue, comments } = getWorkflowLifecycle()[key]
+    const { method, initialLifeCycleValue, comments } = workflowLifecycles[key]
     genMethodToLifeCycle({
       pageSchema,
       lifeCycleKey: key,

@@ -27,50 +27,43 @@
             </div>
           </div>
           <div class="content-right">
-            <div :class="['content-right-top', { 'tip-error': state.tipError }]">
+            <div :class="['content-right-top']">
               <div class="content-right-title">方法名称</div>
               <tiny-input
                 v-model="state.bindMethodInfo.name"
                 :disabled="true"
               ></tiny-input>
-              <div class="new-action-tip">{{ state.tip }}</div>
+              <div class="new-action-tip">跳转到指定的新页面</div>
             </div>
-            <div :class="['content-right-bottom', { 'tip-error': !state.isValidParams }]">
-              <div class="content-right-title">
-                <span class="set-params-tip">扩展参数设置</span>
-                <tiny-popover placement="top-start" width="350" trigger="hover">
-                  <template #reference>
-                    <icon-help-query></icon-help-query>
-                  </template>
-                  <p>
-                    扩展参数：调用当前事件传入的真实参数，数组格式，追加在原有事件参数之后<br />
-                    如:
-                    {{ state.bindMethodInfo.name }}(eventArgs, extParam1, extParam2, ...)
-                  </p>
-                </tiny-popover>
-
-                <tiny-switch v-model="state.enableExtraParams" class="set-switch" :show-text="true">
-                  <template #open>
-                    <span>开启</span>
-                  </template>
-                  <template #close>
-                    <span>关闭</span>
-                  </template>
-                </tiny-switch>
-              </div>
-              <div class="content-right-monaco">
-                <monaco-editor
-                  v-if="dialogVisible"
-                  ref="editor"
-                  :value="state.editorContent"
-                  :options="editorOptions"
-                  class="monaco-editor"
-                />
-                <div v-if="!state.enableExtraParams" class="mark"></div>
-              </div>
-              <div v-if="!state.isValidParams && state.enableExtraParams" class="params-tip">
-                请输入数组格式的参数，参数可以为表达式。例如：["extParam1", "item.status", 1, "getNames()"]
-              </div>
+            <div :class="['content-right-bottom']">
+              <tiny-form label-width="80px">
+                <tiny-form-item label="跳转类型">
+                  <tiny-button-group v-model="state.bindMethodInfo.config.type" :data="[
+                    { text: '应用内跳转', value: 'page' },
+                    { text: '第三方链接', value: 'url' },
+                  ]"></tiny-button-group>
+                </tiny-form-item>
+                <template v-if="state.bindMethodInfo.config.type === 'page'">
+                  <tiny-form-item label="选择页面">
+                    <tiny-select v-model="state.bindMethodInfo.config.page" placeholder="请选择页面">
+                      <tiny-option v-for="item in state.pageList" :key="item.value" :label="item.label" :value="item.value">
+                      </tiny-option>
+                    </tiny-select>
+                  </tiny-form-item>
+                  <tiny-form-item label="页面参数">
+                    <tiny-input v-model="state.bindMethodInfo.config.query"></tiny-input>
+                  </tiny-form-item>
+                </template>
+                <tiny-form-item v-if="state.bindMethodInfo.config.type === 'url'" label="链接地址">
+                  <tiny-input v-model="state.bindMethodInfo.config.url"></tiny-input>
+                </tiny-form-item>
+                <tiny-form-item label="跳转方式">
+                  <tiny-button-group v-model="state.bindMethodInfo.config.target" :data="[
+                    { text: '当前页', value: '_self' },
+                    { text: '新窗口', value: '_blank' },
+                  ]"></tiny-button-group>
+                </tiny-form-item>
+              </tiny-form>
             </div>
           </div>
         </tiny-tab-item>
@@ -110,7 +103,7 @@
             </div>
           </div>
           <div class="content-left variable">
-            <span class="content-left__title">响应方法</span>
+            <span class="content-left__title">方法名称</span>
             <div class="list-wrap">
               <div class="item-content">
                 <div class="item-content-list lowcode-scrollbar-thin">
@@ -223,7 +216,12 @@ import {
   Switch,
   Tooltip,
   Tabs as TinyTabs,
-  TabItem as TinyTabItem
+  TabItem as TinyTabItem,
+  Form as TinyForm,
+  FormItem as TinyFormItem,
+  ButtonGroup as TinyButtonGroup,
+  Select as TinySelect,
+  Option as TinyOption,
 } from '@opentiny/vue'
 import { WORKSPACE_KEY } from '@opentiny/tiny-engine-controller/js/constants'
 import {
@@ -263,14 +261,6 @@ const METHOD_TIPS_MAP = {
   empty: '方法名称不能为空'
 }
 
-const builtinMethods = [
-  {
-    title: '页面跳转',
-    name: `${BUILTIN_METHOD_KEY}navigateTo`,
-    type: BUILTIN_METHOD_TYPE
-  }
-]
-
 export default {
   components: {
     MonacoEditor: VueMonaco,
@@ -285,7 +275,12 @@ export default {
     ComfyuiIcon,
     IconYes: iconYes(),
     IconHelpQuery: iconHelpQuery(),
-    TinySwitch: Switch
+    TinySwitch: Switch,
+    TinyForm,
+    TinyFormItem,
+    TinyButtonGroup,
+    TinySelect,
+    TinyOption
   },
   inheritAttrs: false,
   props: {
@@ -310,13 +305,16 @@ export default {
       searchValue: '',
       searchBuiltinValue: '',
       editorContent: '',
-      bindMethodInfo: {},
+      bindMethodInfo: {
+        config: {}
+      },
       filterMethodList: [],
       filterBuiltinMethodList: [],
       tip: METHOD_TIPS_MAP.default,
       tipError: false,
       enableExtraParams: false,
-      isValidParams: true
+      isValidParams: true,
+      pageList: []
     })
 
     const editorOptions = {
@@ -349,15 +347,57 @@ export default {
       return name
     }
 
-    watchEffect(() => {
+    const getNewMethod = () => {
       const eventName = props.eventBinding?.eventName
       const nameList = getMethodNameList?.().filter((action) => action.indexOf(eventName) > -1) || []
       const newMethodName = generateMethodName(nameList, eventName)
-
       const newMethod = {
         title: '添加新方法',
         name: newMethodName,
-        type: NEW_METHOD_TYPE
+        type: NEW_METHOD_TYPE,
+        config: {}
+      }
+      return newMethod
+    }
+
+    const getBuiltinMethodList = () => {
+      const builtinMethods = [
+        {
+          title: '页面跳转',
+          name: `${BUILTIN_METHOD_KEY}navigateTo`,
+          type: BUILTIN_METHOD_TYPE,
+          getFunctionBody: (config) => {
+            return `{
+  if (config.type === 'page') {
+    this.$router.push({ path: config.page, query: config.query})
+  } else if (config.type === 'url') {
+    window.open(config.url, config.target)
+  }
+}
+`
+          },
+          config: {
+            type: 'page', // page | url
+            target: '_self', // _self | _blank
+            url: '',
+            page: '',
+            query: ''
+          }
+        }
+      ]
+      return builtinMethods
+    }
+
+    watchEffect(() => {
+      const newMethod = getNewMethod()
+
+      if (props.eventBinding?.ref) {
+        state.bindMethodInfo = {
+          name: props.eventBinding.ref,
+          config: {}
+        }
+      } else {
+        state.bindMethodInfo = getBuiltinMethodList()[0]
       }
 
       if (props.eventBinding?.ref?.startsWith(WORKSPACE_KEY)) {
@@ -373,17 +413,9 @@ export default {
         }
         bindType.value = 'workflow'
       }
-
-      if (props.eventBinding?.ref?.startsWith(BUILTIN_METHOD_KEY)) {
+      else if (props.eventBinding?.ref?.startsWith(BUILTIN_METHOD_KEY)) {
         bindType.value = 'builtin'
-      }
-
-      if (props.eventBinding?.ref) {
-        state.bindMethodInfo = {
-          name: props.eventBinding.ref
-        }
-      } else {
-        state.bindMethodInfo = builtinMethods[0]
+        state.bindMethodInfo = getMethods()?.[props.eventBinding?.ref] || getBuiltinMethodList()[0]
       }
 
       const methodList =
@@ -392,29 +424,12 @@ export default {
           .map((name) => ({ name })) || []
       
       const builtinMethodList = 
-        builtinMethods
+        getBuiltinMethodList()
           .filter((item) => item.name.indexOf(state.searchBuiltinValue) > -1)
 
       state.filterMethodList = [newMethod, ...methodList].filter((item) => ![WORKSPACE_KEY, BUILTIN_METHOD_KEY].some(key => item.name.startsWith(key)))
       state.filterBuiltinMethodList = builtinMethodList
     })
-
-    const handleTabClick = (tab) => {
-      if (tab.name === 'builtin') {
-        state.bindMethodInfo = builtinMethods[0]
-      }
-      if (tab.name === 'custom') {
-        const eventName = props.eventBinding?.eventName
-        const nameList = getMethodNameList?.().filter((action) => action.indexOf(eventName) > -1) || []
-        const newMethodName = generateMethodName(nameList, eventName)
-        const newMethod = {
-          title: '添加新方法',
-          name: newMethodName,
-          type: NEW_METHOD_TYPE
-        }
-        state.bindMethodInfo = newMethod
-      }
-    }
 
     const selectMethod = (data) => {
       state.bindMethodInfo = data
@@ -463,6 +478,17 @@ export default {
     const resetTipError = () => {
       state.tipError = false
       state.tip = METHOD_TIPS_MAP.default
+    }
+
+    const handleTabClick = (tab) => {
+      resetTipError()
+      if (tab.name === 'builtin') {
+        state.bindMethodInfo = getBuiltinMethodList()[0]
+      }
+      if (tab.name === 'custom') {
+        const newMethod = getNewMethod()
+        state.bindMethodInfo = newMethod
+      }
     }
 
     const validMethodNameEmpty = (name) => !name
@@ -607,6 +633,25 @@ export default {
         return
       }
 
+      if (bindType.value === 'builtin') {
+        bindMethod(state.bindMethodInfo)
+
+        // 需要在bindMethod之后
+        const functionBody = state.bindMethodInfo.getFunctionBody(state.bindMethodInfo.config)
+
+        saveMethod?.({
+          name: state.bindMethodInfo.name,
+          content: `function ${state.bindMethodInfo.name}(event, config = ${JSON.stringify(state.bindMethodInfo.config)})  ${functionBody}`,
+          config: state.bindMethodInfo.config
+        })
+        console.log(getMethods())
+
+        // activePagePlugin()
+        close()
+
+        return
+      }
+
       if (state.tipError) {
         return
       }
@@ -636,9 +681,7 @@ export default {
           : `function ${state.bindMethodInfo.name}(${formatParams})  ${functionBody}`
       })
 
-      if (bindType.value !== 'builtin') {
-        activePagePlugin()
-      }
+      activePagePlugin()
       close()
     }
 

@@ -63,7 +63,7 @@ const change = (value) => {
   lint(monacoModel, state.linterWorker)
 }
 
-export const saveMethod = ({ name, content }) => {
+export const saveMethod = ({ name, content, config = {} }) => {
   if (!name) {
     return
   }
@@ -73,11 +73,13 @@ export const saveMethod = ({ name, content }) => {
   if (!methods[name]) {
     methods[name] = {
       type: SCHEMA_DATA_TYPE.JSFunction,
-      value: ''
+      value: '',
+      config
     }
   }
 
   methods[name].value = content
+  methods[name].config = config
 }
 
 const saveMethods = () => {
@@ -96,6 +98,7 @@ const saveMethods = () => {
 
   const editorContent = monaco.value.getEditor().getValue()
   const ast = string2Ast(editorContent)
+  const methods = getMethods()
   useCanvas().canvasApi.value.getSchema().methods = {}
 
   ast.program.body.forEach((declaration, index) => {
@@ -110,8 +113,7 @@ const saveMethods = () => {
     }
 
     const content = formatString(ast2String(declaration).trim(), 'javascript')
-
-    saveMethod({ name, content })
+    saveMethod({ name, content, config: methods[name].config })
   })
   useCanvas().setSaved(false)
   state.isChanged = false
